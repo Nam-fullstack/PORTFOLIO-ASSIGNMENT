@@ -1,57 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
     <title>Contact</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="navigation">
-            <div class="navbar">
-                <ul class="navigation-pages">
-                    <li>
-                        <a href="index.html" alt="link to home page">Home</a>
-                    </li>
-                    <li>
-                        <a href="portfolio.html" alt="link to portfolio page">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="skills.html" alt="link to skills page">Skills</a>
-                    </li>
-                    <li>
-                        <a href="experience.html" alt="link to experience page">Experience</a>
-                    </li>
-                    <li>
-                        <a href="about-me.html" alt="link to about me page">About Me</a>
-                    </li>
-                    <li>
-                        <a href="blog.html" alt="link to blog page">Blog</a>
-                    </li>
-                    <li>
-                        <a href="contact.html" alt="link to contact page">Contact</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="navigation">
+        <div class="navbar">
+          <ul class="navigation-pages">
+            <li>
+              <a href="index.html" alt="link to home page">Home</a>
+            </li>
+            <li>
+              <a href="portfolio.html" alt="link to portfolio page"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="skills.html" alt="link to skills page">Skills</a>
+            </li>
+            <li>
+              <a href="experience.html" alt="link to experience page"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a href="about-me.html" alt="link to about me page">About Me</a>
+            </li>
+            <li>
+              <a href="blog.html" alt="link to blog page">Blog</a>
+            </li>
+            <li>
+              <a href="contact.html" alt="link to contact page">Contact</a>
+            </li>
+          </ul>
         </div>
-
+      </div>
     </header>
     <main>
-        <h1>Contact</h1>
-        <div class="container">
-            
-        </div>
+      <h1>Contact</h1>
+      <div class="container">
+        <p>Get in touch.</p>
+        <p>Let's talk about your project.</p>
+        <form>
+          <div class="name">
+            <label for="fullname">Full Name: </label>
+            <input
+              type="text"
+              name="fullname"
+              placeholder="Full Name"
+              id="fullname"
+              required
+            />
+          </div>
+          <div class="email">
+            <label for="email">Email: </label>
+            <input
+              type="text"
+              name="email"
+              placeholder="Email"
+              id="email"
+              required
+            />
+          </div>
+          <div class="message">
+            <label for="message">Message: </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message here"
+              style="height: 200px"
+              required
+            ></textarea>
+          </div>
+          <div class="bot-checkbox">
+            <p>How's your math?</p>
+            <img src="" alt="What is 4 plus 2?" />
+            <input type="text" name="maths" id="mathcheck" required />
+          </div>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     </main>
 
     <footer>
-        <div class="site-map">
-
-        </div>
-        <div class="copyright">
-
-        </div>
+      <div class="site-map"></div>
+      <div class="copyright"></div>
     </footer>
-</body>
+  </body>
 </html>
