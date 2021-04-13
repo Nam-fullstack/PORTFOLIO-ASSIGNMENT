@@ -1,1 +1,42 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+.navigation {
+  background-color: rgba(19, 19, 19, 0.893);
+  height: 80px;
+  box-shadow: 1px 1px 3px 1px rgba(28, 28, 28, 0.92);
+  padding: 1px;
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style-type: none;
+  /* removes bullets from ul */
+  margin-top: 30px;
+}
+
+.navbar li {
+  text-decoration: none;
+}
+
+.navbar a {
+  padding: 25px 4vw;
+  text-decoration: none;
+  color: white;
+  font-family: Roboto, helvetica;
+  font-weight: 600;
+}
+
+.navbar li:hover a {
+  color: rgba(252, 39, 39, 0.954);
+}/*# sourceMappingURL=main.css.map */

@@ -1,8 +1,8 @@
 $white-text: white;
-$red-text: red;
+$red-text: rgba(252, 39, 39, 0.954);
 
-$bgcolor1: black;
-$bgcolor2: red;
+$bgcolor1: rgba(19, 19, 19, 0.893);
+$bgcolor2: rgba(252, 39, 39, 0.954);
 
 $size-s: 10px;
 $size-m: 20px;
@@ -23,20 +23,19 @@ $margin-center: 0 auto;
 $width: 100%;
 $height: 100%;
 
-$box-shadow: 1px 1px 3px 5px rgba(28, 28, 28, 0.92);
-$text-shadow: 1px 1px 2px 5px rgba(26, 26, 26, 0.934);
 
 $min: 10px;
 $x: 4;
 $y: 2;
 
-$grid-cols: repeat($y, minmax($min, 1fr));
-// $grid-cols3: repeat(3, minmax($min, 1fr));
-// $grid-cols4: repeat(4, minmax($min, 1fr));
+// $grid-cols: repeat($y, minmax($min, 1fr));
+$grid-cols2: repeat(2, minmax($min, 1fr));
+$grid-cols3: repeat(3, minmax($min, 1fr));
+$grid-cols4: repeat(4, minmax($min, 1fr));
 
 
 $cell-height: 400px;
-$grid-rows: repeat($x, minmax($min, $cell-height));
+// $grid-rows: repeat($x, minmax($min, $cell-height));
 
 $opacity1: 0.7;
 $opacity2: 1;
@@ -44,5 +43,5 @@ $opacity2: 1;
 $unhide: block;
 $hide: none;
 
-
+$font: Roboto, helvetica;
 
