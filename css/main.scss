@@ -1,7 +1,7 @@
 @import "partials/variables";
+@import "partials/mixins";
 @import "partials/reset";
 @import "partials/home";
-@import "partials/mixins";
 @import "partials/portfolio";
 @import "partials/skills";
 @import "partials/experience";
@@ -9,47 +9,6 @@
 @import "partials/blog";
 @import "partials/contact";
 
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    text-decoration: none;
-}
 
-a:visited {
-    color: white;
-}
-
-.navigation {
-    background-color: $bgcolor1;
-    height: 80px;
-    @include box-shadow;
-    padding: 1px;
-}
-
-.navbar ul {
-    @include flex;
-    justify-content: flex-start;
-    list-style-type: none;         /* removes bullets from ul */
-    margin-top: 30px
-}
-
-.navbar li { 
-    text-decoration: none;  
-}
-
-.navbar a {
-    padding: 25px 4vw;
-    text-decoration: none;
-    color: $white-text;
-    font-family: $font;
-    font-weight: 600;
-}
-
-
-
-.navbar li:hover a {
-    color: $red-text;
-}
 
 

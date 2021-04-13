@@ -26,16 +26,16 @@ $height: 100%;
 
 $min: 10px;
 $x: 4;
-$y: 2;
+$y: 4;
 
-// $grid-cols: repeat($y, minmax($min, 1fr));
+$grid-cols-y: repeat($y, minmax($min, 1fr));
 $grid-cols2: repeat(2, minmax($min, 1fr));
 $grid-cols3: repeat(3, minmax($min, 1fr));
 $grid-cols4: repeat(4, minmax($min, 1fr));
 
 
 $cell-height: 400px;
-// $grid-rows: repeat($x, minmax($min, $cell-height));
+$grid-rows: repeat($x, minmax($min, $cell-height));
 
 $opacity1: 0.7;
 $opacity2: 1;

@@ -8,12 +8,15 @@
     border: 1px solid yellow;
 }
 
-// @mixin grid {
-//     display: grid;
-//     grid-template-columns: $grid-cols2;
-//     grid-template-rows: $grid-rows;
-//     grid-auto-rows: $cell-height;
-// }
+@mixin grid {
+    display: grid;
+    grid-auto-rows: $cell-height;
+}
+
+@mixin grid-temp {
+    grid-template-columns: $grid-cols-y;
+    grid-template-rows: $grid-rows;
+}
 
 @mixin flex {
     display: flex;

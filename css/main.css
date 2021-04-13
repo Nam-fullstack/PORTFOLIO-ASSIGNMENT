@@ -39,4 +39,107 @@ a:visited {
 
 .navbar li:hover a {
   color: rgba(252, 39, 39, 0.954);
+}
+
+.navigation {
+  background-color: rgba(19, 19, 19, 0.893);
+  height: 80px;
+  box-shadow: 1px 1px 3px 1px rgba(28, 28, 28, 0.92);
+  padding: 1px;
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style-type: none;
+  /* removes bullets from ul */
+  margin-top: 30px;
+}
+
+.navbar li {
+  text-decoration: none;
+}
+
+.navbar a {
+  padding: 25px 4vw;
+  text-decoration: none;
+  color: white;
+  font-family: Roboto, helvetica;
+  font-weight: 600;
+}
+
+.navbar li:hover a {
+  color: rgba(252, 39, 39, 0.954);
+}
+
+h1 {
+  font-family: Roboto, helvetica;
+  font-weight: 900;
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw;
+  gap: 10vw;
+}
+
+@media screen and (min-width: 300px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  img {
+    width: 18%;
+  }
+
+  .container {
+    gap: 15vw;
+  }
+}
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  img {
+    width: 15%;
+  }
+
+  .container {
+    gap: 10vw;
+  }
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  img {
+    width: 128px;
+  }
+
+  .container {
+    gap: 8vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  img {
+    width: 11%;
+  }
+
+  .container {
+    gap: 7vw;
+  }
 }/*# sourceMappingURL=main.css.map */

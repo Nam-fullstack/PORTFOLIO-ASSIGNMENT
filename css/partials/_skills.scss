@@ -1,0 +1,59 @@
+.container {
+    @include flex;
+    justify-content: center;
+    align-items: center;
+    padding: $pad-all;
+    gap: 10vw;
+}
+
+@media screen and (min-width: 300px){
+    h1 {
+        font-size: 3rem;
+    }
+    img {
+        width: 18%;
+    }
+    .container {
+        gap: 15vw;
+    }
+} 
+
+@media screen and (min-width: 600px){
+    h1 {
+        font-size: 4rem;
+    }
+    img {
+        width: 15%;
+    }
+    .container {
+        gap: 10vw;
+    }
+} 
+
+@media screen and (min-width: 800px){
+    h1 {
+        font-size: 5rem;
+    }
+    img {
+        width: 128px;
+    }
+    .container {
+        gap: 8vw;
+    }
+} 
+
+@media screen and (min-width: 1024px){
+    h1 {
+        font-size: 5rem;
+    }
+    img {
+        width: 11%;
+    }
+    .container {
+        gap: 7vw;
+    }
+} 
+
+
+
+
