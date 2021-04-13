@@ -1,0 +1,47 @@
+$white-text: white;
+$red-text: red;
+
+$bgcolor1: black;
+$bgcolor2: red;
+
+$size-s: 10px;
+$size-m: 20px;
+$size-l: 40px;
+
+$trans-time: 2s;
+$trans-delay: 1s;
+$trans-type: ease-in-out;
+
+$pad-l: 5vw;
+$pad-r: 5vw;
+$pad-t: 10px;
+$pad-b: 30px;
+$pad-all: 3vw;
+$pad-top-sides: 0 5vw;
+$margin-center: 0 auto;
+
+$width: 100%;
+$height: 100%;
+
+$box-shadow: 1px 1px 3px 5px rgba(28, 28, 28, 0.92);
+$text-shadow: 1px 1px 2px 5px rgba(26, 26, 26, 0.934);
+
+$min: 10px;
+$x: 4;
+
+$grid-cols2: repeat(2, minmax($min, 1fr));
+$grid-cols3: repeat(3, minmax($min, 1fr));
+$grid-cols4: repeat(4, minmax($min, 1fr));
+
+
+$cell-height: 400px;
+$grid-rows: repeat($x, minmax($min, $cell-height));
+
+$opacity1: 0.7;
+$opacity2: 1;
+
+$unhide: block;
+$hide: none;
+
+
+
