@@ -28,10 +28,11 @@ $text-shadow: 1px 1px 2px 5px rgba(26, 26, 26, 0.934);
 
 $min: 10px;
 $x: 4;
+$y: 2;
 
-$grid-cols2: repeat(2, minmax($min, 1fr));
-$grid-cols3: repeat(3, minmax($min, 1fr));
-$grid-cols4: repeat(4, minmax($min, 1fr));
+$grid-cols: repeat($y, minmax($min, 1fr));
+// $grid-cols3: repeat(3, minmax($min, 1fr));
+// $grid-cols4: repeat(4, minmax($min, 1fr));
 
 
 $cell-height: 400px;
