@@ -1,6 +1,7 @@
 # portfolio-Assignment
 
 ## Created css and scss files and structured/linked accordingly
+
 ## Created HTML files for all pages
 
 ## Added main skeleton tags and classes for html pages
