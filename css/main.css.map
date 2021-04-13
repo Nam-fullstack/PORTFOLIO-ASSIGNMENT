@@ -1,0 +1,19 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "main.scss",
+        "partials/_variables.scss",
+        "partials/_reset.scss",
+        "partials/_home.scss",
+        "partials/_mixins.scss",
+        "partials/_portfolio.scss",
+        "partials/_skills.scss",
+        "partials/_experience.scss",
+        "partials/_about-me.scss",
+        "partials/_blog.scss",
+        "partials/_contact.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
