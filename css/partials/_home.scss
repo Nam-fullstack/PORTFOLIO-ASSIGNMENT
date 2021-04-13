@@ -1,0 +1,39 @@
+
+.navigation {
+    background-color: $bgcolor1;
+    height: 80px;
+    @include box-shadow;
+    padding: 1px;
+}
+
+.navbar ul {
+    @include flex;
+    justify-content: flex-start;
+    list-style-type: none;         /* removes bullets from ul */
+    margin-top: 30px
+}
+
+.navbar li { 
+    text-decoration: none;  
+}
+
+.navbar a {
+    padding: 25px 4vw;
+    text-decoration: none;
+    color: $white-text;
+    font-family: $font;
+    font-weight: 600;
+}
+
+.navbar li:hover a {
+    color: $red-text;
+}
+
+h1 {
+    font-family: $font;
+    font-weight: 900;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
