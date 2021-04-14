@@ -217,6 +217,48 @@
             />
           </div>
         </div>
+
+        <script>
+          var slideNumber = 1;
+          showSlides(slideNumber);
+
+          // Next and Previous image controls
+          function plusSlides(n) {
+            showSlides(slideNumber += n);
+          }
+
+          // Thumbnail image selection control
+          function currentSlide(n) {
+            showSlides(slideNumber = n);
+          }
+
+          function displaySlide(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var thumbnails = document.getElementsByClassName("thumbnail");
+            var textCaption = document.getElementById("caption");
+
+            // If it goes past the last slide, returns to Slide 1
+            if (n > slides.length) {
+              slideNumber = 1
+            }
+
+            // If it goes left past first slide, goes to the last slide
+            if (n < 1) {
+              slideNumber = slides.length
+            }
+
+            for (i = 0; i < slides.length; i++){
+              thumbnails[i].className = thumbnails[i].className.replace(" active", "");
+            }
+              slides[slideNumber-1].style.display = "block";
+              thumbnails[slideNumber-1].className += " active";     //adds .active class to thumbnail image
+              textCaption.innerHTML = thumbnails[slideNumber-1].alt;            
+          }
+
+        </script>
+
+
       </section>
       <article>
         <p></p>
