@@ -158,7 +158,7 @@ h1 {
   resize: vertical;
   /* disables horizontal resizing of textarea */
   min-height: 150px;
-  max-height: 700px;
+  max-height: 450px;
 }
 
 #name:hover, #email:hover, #message:hover {
@@ -204,8 +204,8 @@ h1 {
   width: 64px;
   justify-self: flex-end;
 }
-.form-row4 .recaptcha #bot-checkbox::hover {
-  transform: scale 1.5;
+.form-row4 .recaptcha #bot-checkbox {
+  transform: scale(1.5);
 }
 .form-row4 .math-container {
   width: 40%;
