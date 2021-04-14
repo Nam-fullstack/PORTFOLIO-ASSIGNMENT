@@ -65,7 +65,7 @@ h1 {
     font-size: 3rem;
   }
 
-  img {
+  .skills-icon {
     width: 18%;
   }
 
@@ -78,7 +78,7 @@ h1 {
     font-size: 4rem;
   }
 
-  img {
+  .skills-icon {
     width: 15%;
   }
 
@@ -91,7 +91,7 @@ h1 {
     font-size: 5rem;
   }
 
-  img {
+  .skills-icon {
     width: 128px;
   }
 
@@ -104,7 +104,7 @@ h1 {
     font-size: 5rem;
   }
 
-  img {
+  .skills-icon {
     width: 11%;
   }
 
