@@ -1,0 +1,111 @@
+.image-container {
+    position: relative;
+    background-color: black;
+    width: 100% !important;
+    // margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+// Hides the images by default
+.slidePics {
+    display: none;
+    width: 100%;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+// Adds a hand pointer when mouse hovers over the thumbnail and < > buttons 
+.cursor {
+    cursor: pointer;
+}
+
+.carousel-image {
+    vertical-align: middle;
+}
+
+.previous, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    width: auto;
+    padding: 2%;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    user-select: none;
+    cursor: pointer;
+    background-color: rgba(148, 148, 148, 0475);
+}
+
+.previous {
+    left: 0;
+    margin-left: 5%;
+    border-radius: 5px;
+}
+
+.next {
+    right: 0;
+    margin-right: 5%;
+    border-radius: 5px;
+}
+
+.previous:hover, .next:hover {
+    background-color: $red-theme;
+}
+
+.container-image-caption {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(33, 33, 33, 0.598);
+    padding: 20px;
+    color: white;
+    bottom: 20%;
+    @include bred;
+}
+
+.thumbnail-container {
+    content: "";
+    // display: table;
+    // clear: both;
+
+    // display: grid;
+    // grid-template-rows: repeat(1, minmax(10px, 62px)); 
+    // grid-template-columns: repeat(7, minmax(10px, 1fr));
+
+    display: flex;
+    flex-wrap: none;
+    justify-content: center;
+}
+
+.thumbnail {
+    opacity: 0.6;
+    margin: 20px 1vw;
+    width: 100% !important;
+    cursor: pointer;
+}
+
+.thumbnail-box {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.active, .thumbnail:hover {
+    opacity: 1;
+    transform: scale(1.4);
+    transition: transform 0.25s ease-in-out;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0
+    }
+    to {opacity: 1
+    }
+}
+

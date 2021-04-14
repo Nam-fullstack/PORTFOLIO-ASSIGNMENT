@@ -112,6 +112,126 @@ h1 {
     gap: 7vw;
   }
 }
+.image-container {
+  position: relative;
+  background-color: black;
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.slidePics {
+  display: none;
+  width: 100%;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.carousel-image {
+  vertical-align: middle;
+}
+
+.previous, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: auto;
+  padding: 2%;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  background-color: #949494;
+}
+
+.previous {
+  left: 0;
+  margin-left: 5%;
+  border-radius: 5px;
+}
+
+.next {
+  right: 0;
+  margin-right: 5%;
+  border-radius: 5px;
+}
+
+.previous:hover, .next:hover {
+  background-color: rgba(252, 53, 53, 0.838);
+}
+
+.container-image-caption {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(33, 33, 33, 0.598);
+  padding: 20px;
+  color: white;
+  bottom: 20%;
+  border: 1px solid red;
+}
+
+.thumbnail-container {
+  content: "";
+  display: flex;
+  flex-wrap: none;
+  justify-content: center;
+}
+
+.thumbnail {
+  opacity: 0.6;
+  margin: 20px 1vw;
+  width: 100% !important;
+  cursor: pointer;
+}
+
+.thumbnail-box {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+.active, .thumbnail:hover {
+  opacity: 1;
+  transform: scale(1.4);
+  transition: transform 0.25s ease-in-out;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .contact {
   background-color: rgba(19, 19, 19, 0.893);
 }

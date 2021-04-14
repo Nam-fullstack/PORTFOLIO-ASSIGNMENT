@@ -45,7 +45,7 @@
     <main>
       <h1>About Me</h1>
       <section class="image-container">
-        <div class="mySlides fade">
+        <div class="slidePics">
           <!-- 
               Img srcset essentially allows you to have a selection of images to pick from and you can choose which one is displayed
               based on the screen width. Define the image's directory and then width followed by w and a comma to separate each image. 
@@ -60,13 +60,13 @@
               photos/Concert2_1024.jpg 1024w,
               photos/Concert2_2048.jpg 2048w
             "
-            sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) 1024px, 2048px"
+            sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
             src="photos/Concert2_2048.jpg"
             class="carousel-image"
             alt="Concert Light Show Photo"
           />
         </div>
-        <div class="mySlides fade">
+        <div class="slidePics">
           <img
             srcset="
               photos/Concert1_400.png   400w,
@@ -74,13 +74,13 @@
               photos/Concert1_1024.png 1024w,
               photos/Concert1_2048.png 2048w
             "
-            sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) 1024px, 2048px"
+            sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
             src="photos/Concert1_2048.png"
             class="carousel-image"
             alt="Concert Photo"
           />
         </div>
-        <div class="mySlides fade">
+        <div class="slidePics">
           <img
             srcset="
               photos/Keys_400.png   400w,
@@ -88,13 +88,13 @@
               photos/Keys_1024.png 1024w,
               photos/Keys_2048.png 2048w
             "
-            sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) 1024px, 2048px"
+            sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
             src="photos/Keys_2048.png"
             class="carousel-image"
-            alt="Photo of my playing keyboard at the concert"
+            alt="Me on keys"
           />
         </div>
-        <div class="mySlides fade">
+        <div class="slidePics">
           <img
             srcset="
               photos/Milo_400.jpg   400w,
@@ -102,13 +102,13 @@
               photos/Milo_1024.jpg 1024w,
               photos/Milo_2048.jpg 2048w
             "
-            sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) 1024px, 2048px"
+            sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
             src="photos/Milo_2048.jpg"
             class="carousel-image"
-            alt="Photo of my little prince charming sleeping, Milo"
+            alt="My little munchkin sleeping"
           />
         </div>
-        <div class="mySlides fade">
+        <div class="slidePics">
           <img
             srcset="
               photos/Engine_400.jpg   400w,
@@ -116,13 +116,13 @@
               photos/Engine_1024.jpg 1024w,
               photos/Engine_2048.jpg 2048w
             "
-            sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) 1024px, 2048px"
+            sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
             src="photos/Engine_2048.jpg"
             class="carousel-image"
             alt="Photo of my S2000 engine bay, with neochrome velocity stacks"
           />
         </div>
-        <div class="mySlides fade">
+        <div class="slidePics">
           <img
             srcset="
               photos/S2k-1_400.jpg   400w,
@@ -130,13 +130,13 @@
               photos/S2k-1_1024.jpg 1024w,
               photos/S2k-1_2048.jpg 2048w
             "
-            sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) 1024px, 2048px"
+            sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
             src="photos/S2k-1_2048.jpg"
             class="carousel-image"
             alt="Rear view photo of my S2000 with purple charmeleon paint"
           />
         </div>
-        <div class="mySlides fade">
+        <div class="slidePics">
           <img
             srcset="
               photos/S2k-2_400.jpg   400w,
@@ -144,7 +144,7 @@
               photos/S2k-2_1024.jpg 1024w,
               photos/S2k-2_2048.jpg 2048w
             "
-            sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) 1024px, 2048px"
+            sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
             src="photos/S2k-2_2048.jpg"
             class="carousel-image"
             alt="Side shot of my S2000"
@@ -152,7 +152,7 @@
         </div>
         <!-- &#10094 and &#10095 are unicode symbols for < and > -->
         <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
         <div class="container-image-caption">
           <p id="caption"></p>
@@ -163,57 +163,57 @@
           <div class="thumbnail-box">
             <img
               src="/photos/Concert2_100.jpg"
-              class="thumbnail cursor fade"
+              class="thumbnail"
               onclick="currentSlide(1)"
-              alt=""
+              alt="Concert Light Show"
             />
           </div>
           <div class="thumbnail-box">
             <img
               src="/photos/Concert1_100.png"
-              class="thumbnail cursor fade"
+              class="thumbnail"
               onclick="currentSlide(2)"
-              alt="Slide 2 thumbnail"
+              alt="Concert tour in China"
             />
           </div>
           <div class="thumbnail-box">
             <img
               src="/photos/Keys_100.png"
-              class="thumbnail cursor fade"
+              class="thumbnail"
               onclick="currentSlide(3)"
-              alt="Slide 3 thumbnail"
+              alt="Me on keys"
             />
           </div>
           <div class="thumbnail-box">
             <img
               src="/photos/Milo_100.jpg"
-              class="thumbnail cursor fade"
+              class="thumbnail"
               onclick="currentSlide(4)"
-              alt="Slide 4 thumbnail"
+              alt="Milo sleeping"
             />
           </div>
           <div class="thumbnail-box">
             <img
               src="/photos/Engine_100.jpg"
-              class="thumbnail cursor fade"
+              class="thumbnail"
               onclick="currentSlide(5)"
-              alt="Slide 5 thumbnail"
+              alt="S2000 engine bay, neochrome velocity stacks"
             />
           </div>
           <div class="thumbnail-box">
             <img
               src="/photos/S2k-1_100.jpg"
-              class="thumbnail cursor fade"
+              class="thumbnail"
               onclick="currentSlide(6)"
-              alt="Slide 6 thumbnail"
+              alt="Vortex carbon fibre wing, rear diffuser"
             />
           </div>
           <div class="thumbnail-box">
             <img
               src="/photos/S2k-2_100.jpg"
-              class="thumbnail cursor fade"
+              class="thumbnail"
               onclick="currentSlide(7)"
-              alt="Slide 7 thumbnail"
+              alt="Vortex CF canards, front diffuser, custom CF roof"
             />
           </div>
         </div>
@@ -232,30 +232,34 @@
             showSlides(slideNumber = n);
           }
 
-          function displaySlide(n) {
+          function showSlides(n) {
             var i;
-            var slides = document.getElementsByClassName("mySlides");
+            var slides = document.getElementsByClassName("slidePics");
             var thumbnails = document.getElementsByClassName("thumbnail");
             var textCaption = document.getElementById("caption");
 
             // If it goes past the last slide, returns to Slide 1
             if (n > slides.length) {
-              slideNumber = 1
+              slideNumber = 1;
             }
 
             // If it goes left past first slide, goes to the last slide
             if (n < 1) {
-              slideNumber = slides.length
+              slideNumber = slides.length;
             }
 
             for (i = 0; i < slides.length; i++){
+              slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < thumbnails.length; i++) {
               thumbnails[i].className = thumbnails[i].className.replace(" active", "");
             }
-              slides[slideNumber-1].style.display = "block";
-              thumbnails[slideNumber-1].className += " active";     //adds .active class to thumbnail image
-              textCaption.innerHTML = thumbnails[slideNumber-1].alt;            
-          }
 
+            slides[slideNumber-1].style.display = "block";
+            thumbnails[slideNumber-1].className += " active";
+            textCaption.innerHTML = thumbnails[slideNumber-1].alt;            
+        }
         </script>
 
 
@@ -263,7 +267,8 @@
       <article>
         <p></p>
       </article>
-      <section class="media">
+
+      <!-- <section class="media">
         <section class="youtube">
           <!-- YouTube embed of Reminisce Javascript Automation -->
           <iframe
@@ -382,7 +387,7 @@
             <!-- alt="Soundcloud file for My Heart, one of my band's number one hit singles from our EP My Heart"  -->
           </div>
         </section>
-      </section>
+      </section> -->
     </main>
 
     <footer>
