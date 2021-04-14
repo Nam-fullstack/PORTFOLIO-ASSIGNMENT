@@ -144,41 +144,55 @@ h1 {
   width: 50%;
 }
 
-#name, #email, #message {
-  width: 100%;
-  height: 40px;
-  padding-left: 10px;
-  border: 5px solid white;
-  font-size: 1.2rem;
-  font-weight: 700;
+input {
+  background-color: #d7d7d7;
+  border: 1px solid white;
 }
 
-#message {
+textarea {
+  background-color: #d7d7d7;
   padding-top: 10px;
   resize: vertical;
   /* disables horizontal resizing of textarea */
   min-height: 150px;
+  /* sets smallest text-area height */
   max-height: 450px;
+  /* sets largest text-area height */
 }
 
-#name:hover, #email:hover, #message:hover {
-  border: 2px solid rgba(252, 53, 53, 0.838);
+#name, #email, #message {
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+input::placeholder, textarea::placeholder {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+input:focus {
+  background-color: white;
+  border: 1px solid rgba(252, 53, 53, 0.838);
   box-shadow: 0px 0px 5px #f55656;
 }
 
-#name::-moz-placeholder, #email::-moz-placeholder, #message::-moz-placeholder, #mathcheck::-moz-placeholder {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-#name:-ms-input-placeholder, #email:-ms-input-placeholder, #message:-ms-input-placeholder, #mathcheck:-ms-input-placeholder {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-#name::placeholder, #email::placeholder, #message::placeholder, #mathcheck::placeholder {
-  font-size: 1rem;
-  font-weight: 600;
+input:hover, textarea:hover {
+  background-color: white;
+  border: 1px solid rgba(252, 53, 53, 0.838);
+  box-shadow: 0px 0px 5px #f55656;
 }
 
 .form-row4 {
@@ -193,7 +207,7 @@ h1 {
   padding-left: 15px;
   align-items: flex-end;
   background-color: rgba(255, 255, 255, 0.906);
-  border: 2px solid black;
+  border: 1px solid black;
 }
 .form-row4 .recaptcha #recaptcha-text {
   padding: 0 50px 0 10px;
@@ -220,7 +234,7 @@ h1 {
   align-items: center;
   padding: 5px 0px 5px 0px;
   background-color: rgba(255, 255, 255, 0.906);
-  border: 2px solid black;
+  border: 1px solid black;
 }
 .form-row4 .math-container img {
   width: 60%;
@@ -245,6 +259,7 @@ h1 {
 }
 .form-row4 .math-container #mathcheck:hover {
   box-shadow: 0px 0px 7px red;
+  border: 1px solid red;
 }
 
 .form-row5 {
@@ -260,6 +275,6 @@ h1 {
   font-weight: 800;
 }
 .form-row5 #submit-button:hover {
-  background-color: #3aa3ff;
+  background-color: red;
   box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
 }/*# sourceMappingURL=main.css.map */
