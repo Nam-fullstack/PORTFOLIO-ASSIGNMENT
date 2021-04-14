@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="contact">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -42,48 +42,78 @@
       </div>
     </header>
     <main>
-      <h1>Contact</h1>
+      <!-- <h1>Contact</h1> -->
       <div class="container">
-        <p>Get in touch.</p>
-        <p>Let's talk about your project.</p>
-        <form>
-          <div class="name">
-            <label for="fullname">Full Name: </label>
-            <input
-              type="text"
-              name="fullname"
-              placeholder="Full Name"
-              id="fullname"
-              required
-            />
-          </div>
-          <div class="email">
-            <label for="email">Email: </label>
-            <input
-              type="text"
-              name="email"
-              placeholder="Email"
-              id="email"
-              required
-            />
-          </div>
-          <div class="message">
-            <label for="message">Message: </label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Enter your message here"
-              style="height: 200px"
-              required
-            ></textarea>
-          </div>
-          <div class="bot-checkbox">
-            <p>How's your math?</p>
-            <img src="" alt="What is 4 plus 2?" />
-            <input type="text" name="maths" id="mathcheck" required />
-          </div>
-          <input type="submit" value="Submit" />
-        </form>
+        <h2>Get in touch</h2>
+        <h3>Let's talk about <em id="client-project">your project</em></h3>
+
+        <div class="left-side-box"></div>
+        <div class="right-side-box">
+          <form
+            action="https://formspree.io/f/xnqlqegl"
+            method="POST"
+            class="contact-form"
+          >
+            <div class="form-row1">
+              <input
+                type="name"
+                name="name"
+                placeholder="Full name"
+                id="name"
+                required
+              />
+            </div>
+            <div class="form-row2">
+              <input
+                type="email"
+                name="_replyto"
+                placeholder="Email address"
+                id="email"
+                required
+              />
+            </div>
+            <div class="form-row3">
+              <textarea
+                name="message"
+                placeholder="Enter your message here"
+                id="message"
+                style="width: 100%; height: 150px"
+                required
+              ></textarea>
+            </div>
+            <div class="form-row4">
+              <div class="recaptcha">
+                <div class="check">
+                  <input type="checkbox" id="bot-checkbox" required />
+                  <label for="bot-checkbox" id="recaptcha-text"
+                    >I am not a robot</label
+                  >
+                </div>
+                <img
+                  src="icons/RecaptchaLogo2.png"
+                  id="recaptcha-icon"
+                  alt="I am not a bot"
+                />
+              </div>
+
+              <div class="math-container">
+                <label for="bot-validation" id="math-text">How's your math?</label>
+                <img src="photos/Math Validation.png" alt="What is 4 plus 3" />
+                <input
+                  type="text"
+                  name="bot-validation"
+                  id="mathcheck"
+                  placeholder="Equals"
+                  style="width: 100px; height: 30px"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-row5">
+              <button type="submit" id="submit-button">Submit</button>
+            </div>
+          </form>
+        </div>
 
         <div class="social">
           <h2>Follow Me</h2>
