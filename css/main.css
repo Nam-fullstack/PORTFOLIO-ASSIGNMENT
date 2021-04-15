@@ -8,7 +8,7 @@
 }
 
 a:visited {
-  color: white;
+  color: blue;
 }
 
 .navigation {
@@ -143,8 +143,8 @@ iframe {
   height: auto;
   justify-content: center;
   align-items: center;
-  -webkit-animation: 1.5s fade linear, 5s autozoom linear;
-          animation: 1.5s fade linear, 5s autozoom linear;
+  -webkit-animation: fade 1.5s linear, autozoom 5s linear;
+          animation: fade 1.5s linear, autozoom 5s linear;
   transform: scale(1.2);
 }
 
@@ -217,7 +217,7 @@ iframe {
 .thumbnail-container {
   content: "";
   display: grid;
-  grid-template-rows: repeat(1, minmax(10px, 62px));
+  grid-template-rows: repeat(1, minmax(10px, 1fr));
   grid-template-columns: repeat(7, minmax(10px, 1fr));
   width: 100vw;
   margin: 1vw auto;
@@ -231,10 +231,8 @@ iframe {
 }
 
 .thumbnail-box {
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  -webkit-animation: fade 1.5s linear;
+          animation: fade 1.5s linear;
 }
 
 .active {
@@ -245,6 +243,16 @@ iframe {
 .thumbnail:hover {
   opacity: 1;
   border: 1px solid rgba(252, 53, 53, 0.838);
+}
+
+.details-about-me {
+  width: 80%;
+  margin: 0 auto;
+}
+.details-about-me p {
+  margin: 20px 10%;
+  line-height: 2;
+  text-align: justify;
 }
 
 @-webkit-keyframes fade {
@@ -282,7 +290,7 @@ iframe {
 }
 @media screen and (min-width: 800px) {
   .carousel-container {
-    width: 90vw;
+    width: 80vw;
     margin: 0 auto;
   }
 
@@ -294,11 +302,17 @@ iframe {
 
   .caption-thumbnail-container {
     padding-bottom: 3%;
+  }
+  .caption-thumbnail-container .caption-container {
+    padding: 1.5vw;
+  }
+  .caption-thumbnail-container .caption-container #caption {
+    font-size: 1.5vw;
   }
 }
 @media screen and (min-width: 1024px) {
   .carousel-container {
-    width: 60vw;
+    width: 70vw;
     margin: 0 auto;
   }
 
@@ -310,6 +324,12 @@ iframe {
 
   .caption-thumbnail-container {
     padding-bottom: 3%;
+  }
+  .caption-thumbnail-container .caption-container {
+    padding: 1vw;
+  }
+  .caption-thumbnail-container .caption-container #caption {
+    font-size: 1vw;
   }
 
   .button-container {
