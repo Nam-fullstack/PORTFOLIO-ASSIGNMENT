@@ -14,7 +14,6 @@
 .overflow-container {
     @include flex;
     overflow: hidden;
-    
 }
 
 .slidePics {
@@ -23,7 +22,7 @@
     height: auto;
     justify-content: center;
     align-items: center;
-    animation: 1.5s fade linear, 5s autozoom linear;
+    animation: fade 1.5s linear, autozoom 5s linear;
     transform: scale(1.2);
 }
 
@@ -94,7 +93,7 @@
 .thumbnail-container {
     content: "";
     display: grid;
-    grid-template-rows: repeat(1, minmax(10px, 62px)); 
+    grid-template-rows: repeat(1, minmax(10px, 1fr)); 
     grid-template-columns: repeat(7, minmax(10px, 1fr));
     width: 100vw;
     margin: 1vw auto;
@@ -109,8 +108,7 @@
 }
 
 .thumbnail-box {
-    animation-name: fade;
-    animation-duration: 1.5s;
+    animation: fade 1.5s linear;
 }
 
 .active {
@@ -124,6 +122,18 @@
     // transform: scale(1.02);
     // transition: transform 0.25s ease-in-out;
 }
+
+.details-about-me {
+    width: 80%;
+    margin: 0 auto;
+    p {
+        margin: 20px 10%;
+        line-height: 2;
+        text-align: justify;
+    }
+}
+
+
 
 @keyframes fade {
     from {
@@ -145,7 +155,7 @@
 
 @media screen and (min-width:800px) {
     .carousel-container {
-        width: 90vw;
+        width: 80vw;
         margin: 0 auto;
     }
     .slidePics {
@@ -155,12 +165,18 @@
     }
     .caption-thumbnail-container {
         padding-bottom: 3%;
+        .caption-container {
+            padding: 1.5vw;
+            #caption {
+                font-size: 1.5vw;
+            }
+        }
     }
 }
 
 @media screen and (min-width:1024px) {
     .carousel-container {
-        width: 60vw;
+        width: 70vw;
         margin: 0 auto;
     }
     .slidePics {
@@ -170,6 +186,12 @@
     }
     .caption-thumbnail-container {
         padding-bottom: 3%;
+        .caption-container {
+            padding: 1vw;
+            #caption {
+                font-size: 1vw;
+            }
+        }
     }
 
     .button-container {
