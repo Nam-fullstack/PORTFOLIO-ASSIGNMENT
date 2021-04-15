@@ -4,6 +4,7 @@
     .container {
         display: inline-block;
         width: 100%;
+        height: 94vh;
     }
 
     h2 {
@@ -15,6 +16,14 @@
         color: $white-text;
         text-align: center;   
     }
+}
+
+.left-side-box {
+    display: none;
+}
+
+.right-side-box {
+    // display: none;
 }
 
 #client-project {
@@ -132,7 +141,7 @@ input:hover, textarea:hover {
     #submit-button {
         color: white;
         background-color: rgba(58, 163, 255, 0.762);
-        padding: 10px 40px;
+        padding: 8px 40px;
         font-size: 1.3rem;
         font-weight: 800;
     }
@@ -146,11 +155,12 @@ input:hover, textarea:hover {
 .social {
     display: flex; 
     flex-direction: column;
-
-    
+    justify-items: center;
+    padding-top: 0px;
 }
 
 .social-icons {
+
     display: flex;
     justify-content: center;
     gap: 3vw;
@@ -161,7 +171,17 @@ input:hover, textarea:hover {
     }
 }
 
-
+.copyright {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1.5vh 5vw;
+    background-color: black;
+    p {
+        color: $white-text;
+        font-size: 0.6rem;
+    }
+}
 
 @media screen and (min-width: 400px) {
 
