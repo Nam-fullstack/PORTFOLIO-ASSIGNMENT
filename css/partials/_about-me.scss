@@ -2,24 +2,38 @@
     display: none;
 }
 
-.image-container {
+.carousel-container {
     position: relative;
     background-color: black;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    // overflow-x: hidden;
-    min-height: 0;
+    flex-direction: row;
 }
 
-// Hides the images by default
+.overflow-container {
+    @include flex;
+    overflow: hidden;
+    
+}
+
 .slidePics {
-    display: none;
-    width: 100%;
+    display: none;                      // Hides the images by default
+    width: 100vw;
     height: auto;
-    animation-name: fade;
-    animation-duration: 1.5s;
+    justify-content: center;
+    align-items: center;
+    animation: 1.5s fade linear, 5s autozoom linear;
+    transform: scale(1.2);
+}
+
+.button-container {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    left: 0;                    // Keeps the container on the left of the page (it was having blow-out issues for some reason)
+    top: 28vw;                  // Sets the < > buttons in the middle of the photo based on the screen width so it's fully responsive)
 }
 
 // Adds a hand pointer when mouse hovers over the thumbnail and < > buttons 
@@ -29,32 +43,28 @@
 
 .carousel-image {
     vertical-align: middle;
-    width: 100%;
+    width: 100vw;
 }
 
 .previous, .next {
     cursor: pointer;
-    position: absolute;
-    top: 30%;
     width: auto;
     padding: 2%;
     color: white;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 2.5vw;
     user-select: none;
     cursor: pointer;
-    background-color: rgba(148, 148, 148, 0475);
+    background-color: $gray-transparent;
 }
 
 .previous {
-    left: 0;
-    margin-left: 5%;
+    margin-left: 3%;
     border-radius: 5px;
 }
 
 .next {
-    right: 0;
-    margin-right: 5%;
+    margin-right: 3%;
     border-radius: 5px;
 }
 
@@ -62,35 +72,39 @@
     background-color: $red-theme;
 }
 
-.container-image-caption {
-    position: absolute;
+.caption-thumbnail-container {
+    width: 100%;
+    height: auto;
+    padding-bottom: 1%;
+}
+
+.caption-container {
+    bottom: 7vw;
     width: 100%;
     text-align: center;
     background-color: $red-transparent;
-    padding: 20px;
+    padding: 2vw;
     color: white;
-    bottom: 19%;
+}
+
+#caption {
+    font-size: 2vw;
 }
 
 .thumbnail-container {
     content: "";
-    // display: table;
-    // clear: both;
-
-    // display: grid;
-    // grid-template-rows: repeat(1, minmax(10px, 62px)); 
-    // grid-template-columns: repeat(7, minmax(10px, 1fr));
-
-    display: flex;
-    flex-wrap: none;
-    justify-content: center;
-    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(1, minmax(10px, 62px)); 
+    grid-template-columns: repeat(7, minmax(10px, 1fr));
+    width: 100vw;
+    margin: 1vw auto;
 }
 
 .thumbnail {
-    opacity: 0.6;
-    margin: 20px 1vw;
-    width: 100%;
+    opacity: 0.4;
+    // margin: 20px 1vw;
+    padding: 5px 0;
+    width: 100vw;
     cursor: pointer;
 }
 
@@ -99,28 +113,66 @@
     animation-duration: 1.5s;
 }
 
-.active, .thumbnail:hover {
+.active {
     opacity: 1;
     border: 1px solid white;
-    transform: scale(1.02);
-    transition: transform 0.25s ease-in-out;
 }
 
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+.thumbnail:hover {
+    opacity: 1;
+    border: 1px solid $red-theme;
+    // transform: scale(1.02);
+    // transition: transform 0.25s ease-in-out;
 }
 
 @keyframes fade {
-    from {opacity: 0
+    from {
+        opacity: 0
     }
-    to {opacity: 1
+    to {
+        opacity: 1
     }
 }
 
-iframe {
-    // display: block;
-    // width: 100%;
-    // height: auto;
-    margin-top: 3vw;
+@keyframes autozoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (min-width:800px) {
+    .carousel-container {
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .slidePics {
+        width: 100vw;
+        transform: scale(1.2);
+        transition: transform 5s linear;       
+    }
+    .caption-thumbnail-container {
+        padding-bottom: 3%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .carousel-container {
+        width: 60vw;
+        margin: 0 auto;
+    }
+    .slidePics {
+        width: 100vw;
+        transform: scale(1.2);
+        transition: transform 5s linear;
+    }
+    .caption-thumbnail-container {
+        padding-bottom: 3%;
+    }
+
+    .button-container {
+        top: 17vw;
+    }
 }

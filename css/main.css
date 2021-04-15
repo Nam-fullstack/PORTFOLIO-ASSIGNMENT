@@ -53,6 +53,10 @@ h1 {
   padding-bottom: 20px;
 }
 
+iframe {
+  margin-top: 3vw;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -118,24 +122,39 @@ h1 {
   display: none;
 }
 
-.image-container {
+.carousel-container {
   position: relative;
   background-color: black;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  min-height: 0;
+  flex-direction: row;
+}
+
+.overflow-container {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .slidePics {
   display: none;
-  width: 100%;
+  width: 100vw;
   height: auto;
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: 1.5s fade linear, 5s autozoom linear;
+          animation: 1.5s fade linear, 5s autozoom linear;
+  transform: scale(1.2);
+}
+
+.button-container {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  top: 28vw;
 }
 
 .cursor {
@@ -144,35 +163,31 @@ h1 {
 
 .carousel-image {
   vertical-align: middle;
-  width: 100%;
+  width: 100vw;
 }
 
 .previous, .next {
   cursor: pointer;
-  position: absolute;
-  top: 30%;
   width: auto;
   padding: 2%;
   color: white;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 2.5vw;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
-  background-color: #949494;
+  background-color: rgba(148, 148, 148, 0.557);
 }
 
 .previous {
-  left: 0;
-  margin-left: 5%;
+  margin-left: 3%;
   border-radius: 5px;
 }
 
 .next {
-  right: 0;
-  margin-right: 5%;
+  margin-right: 3%;
   border-radius: 5px;
 }
 
@@ -180,28 +195,38 @@ h1 {
   background-color: rgba(252, 53, 53, 0.838);
 }
 
-.container-image-caption {
-  position: absolute;
+.caption-thumbnail-container {
+  width: 100%;
+  height: auto;
+  padding-bottom: 1%;
+}
+
+.caption-container {
+  bottom: 7vw;
   width: 100%;
   text-align: center;
-  background-color: rgba(255, 30, 30, 0.358);
-  padding: 20px;
+  background-color: rgba(255, 30, 30, 0.584);
+  padding: 2vw;
   color: white;
-  bottom: 19%;
+}
+
+#caption {
+  font-size: 2vw;
 }
 
 .thumbnail-container {
   content: "";
-  display: flex;
-  flex-wrap: none;
-  justify-content: center;
-  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(1, minmax(10px, 62px));
+  grid-template-columns: repeat(7, minmax(10px, 1fr));
+  width: 100vw;
+  margin: 1vw auto;
 }
 
 .thumbnail {
-  opacity: 0.6;
-  margin: 20px 1vw;
-  width: 100%;
+  opacity: 0.4;
+  padding: 5px 0;
+  width: 100vw;
   cursor: pointer;
 }
 
@@ -212,18 +237,14 @@ h1 {
           animation-duration: 1.5s;
 }
 
-.active, .thumbnail:hover {
+.active {
   opacity: 1;
   border: 1px solid white;
-  transform: scale(1.02);
-  transition: transform 0.25s ease-in-out;
 }
 
-.fade {
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+.thumbnail:hover {
+  opacity: 1;
+  border: 1px solid rgba(252, 53, 53, 0.838);
 }
 
 @-webkit-keyframes fade {
@@ -243,10 +264,58 @@ h1 {
     opacity: 1;
   }
 }
-iframe {
-  margin-top: 3vw;
+@-webkit-keyframes autozoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
 }
+@keyframes autozoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+@media screen and (min-width: 800px) {
+  .carousel-container {
+    width: 90vw;
+    margin: 0 auto;
+  }
 
+  .slidePics {
+    width: 100vw;
+    transform: scale(1.2);
+    transition: transform 5s linear;
+  }
+
+  .caption-thumbnail-container {
+    padding-bottom: 3%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .carousel-container {
+    width: 60vw;
+    margin: 0 auto;
+  }
+
+  .slidePics {
+    width: 100vw;
+    transform: scale(1.2);
+    transition: transform 5s linear;
+  }
+
+  .caption-thumbnail-container {
+    padding-bottom: 3%;
+  }
+
+  .button-container {
+    top: 17vw;
+  }
+}
 .contact {
   background-color: rgba(19, 19, 19, 0.893);
 }
