@@ -1,0 +1,178 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-container {
+    position: relative;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.overflow-container {
+    @include flex;
+    overflow: hidden;
+    
+}
+
+.slidePics {
+    display: none;                      // Hides the images by default
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    animation: 1.5s fade linear, 5s autozoom linear;
+    transform: scale(1.2);
+}
+
+.button-container {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    left: 0;                    // Keeps the container on the left of the page (it was having blow-out issues for some reason)
+    top: 28vw;                  // Sets the < > buttons in the middle of the photo based on the screen width so it's fully responsive)
+}
+
+// Adds a hand pointer when mouse hovers over the thumbnail and < > buttons 
+.cursor {
+    cursor: pointer;
+}
+
+.carousel-image {
+    vertical-align: middle;
+    width: 100vw;
+}
+
+.previous, .next {
+    cursor: pointer;
+    width: auto;
+    padding: 2%;
+    color: white;
+    font-weight: bold;
+    font-size: 2.5vw;
+    user-select: none;
+    cursor: pointer;
+    background-color: $gray-transparent;
+}
+
+.previous {
+    margin-left: 3%;
+    border-radius: 5px;
+}
+
+.next {
+    margin-right: 3%;
+    border-radius: 5px;
+}
+
+.previous:hover, .next:hover {
+    background-color: $red-theme;
+}
+
+.caption-thumbnail-container {
+    width: 100%;
+    height: auto;
+    padding-bottom: 1%;
+}
+
+.caption-container {
+    bottom: 7vw;
+    width: 100%;
+    text-align: center;
+    background-color: $red-transparent;
+    padding: 2vw;
+    color: white;
+}
+
+#caption {
+    font-size: 2vw;
+}
+
+.thumbnail-container {
+    content: "";
+    display: grid;
+    grid-template-rows: repeat(1, minmax(10px, 62px)); 
+    grid-template-columns: repeat(7, minmax(10px, 1fr));
+    width: 100vw;
+    margin: 1vw auto;
+}
+
+.thumbnail {
+    opacity: 0.4;
+    // margin: 20px 1vw;
+    padding: 5px 0;
+    width: 100vw;
+    cursor: pointer;
+}
+
+.thumbnail-box {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.active {
+    opacity: 1;
+    border: 1px solid white;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+    border: 1px solid $red-theme;
+    // transform: scale(1.02);
+    // transition: transform 0.25s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes autozoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (min-width:800px) {
+    .carousel-container {
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .slidePics {
+        width: 100vw;
+        transform: scale(1.2);
+        transition: transform 5s linear;       
+    }
+    .caption-thumbnail-container {
+        padding-bottom: 3%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .carousel-container {
+        width: 60vw;
+        margin: 0 auto;
+    }
+    .slidePics {
+        width: 100vw;
+        transform: scale(1.2);
+        transition: transform 5s linear;
+    }
+    .caption-thumbnail-container {
+        padding-bottom: 3%;
+    }
+
+    .button-container {
+        top: 17vw;
+    }
+}
