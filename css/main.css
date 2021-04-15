@@ -383,7 +383,7 @@ textarea {
   padding-top: 10px;
   resize: none;
   /* disables resizing of textarea, can still type extra, but need to scroll/swipe */
-  min-height: 150px;
+  min-height: 200px;
   /* sets the text-area height */
 }
 
