@@ -7,6 +7,7 @@
     background-color: black;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     // overflow-x: hidden;
     min-height: 0;
@@ -28,6 +29,7 @@
 
 .carousel-image {
     vertical-align: middle;
+    width: 100%;
 }
 
 .previous, .next {
@@ -64,10 +66,10 @@
     position: absolute;
     width: 100%;
     text-align: center;
-    background-color: rgba(33, 33, 33, 0.598);
+    background-color: $red-transparent;
     padding: 20px;
     color: white;
-    bottom: 20%;
+    bottom: 19%;
 }
 
 .thumbnail-container {
@@ -117,6 +119,8 @@
 }
 
 iframe {
-    width: 100%;
-    height: auto;
+    // display: block;
+    // width: 100%;
+    // height: auto;
+    margin-top: 3vw;
 }

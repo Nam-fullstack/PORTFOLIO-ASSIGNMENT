@@ -55,7 +55,13 @@
                 optimized for the device based on its screen size using image re-sizing and optimization.     
             -->
             <img
-              
+              srcset="
+                photos/Concert2_400.jpg   400w,
+                photos/Concert2_720.jpg   720w,
+                photos/Concert2_1024.jpg 1024w,
+                photos/Concert2_2048.jpg 2048w
+              "
+              sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
               src="photos/Concert2_2048.jpg"
               class="carousel-image"
               alt="Concert Light Show Photo"
@@ -63,7 +69,13 @@
           </div>
           <div class="slidePics">
             <img
-              
+              srcset="
+                photos/Concert1_400.png   400w,
+                photos/Concert1_720.png   720w,
+                photos/Concert1_1024.png 1024w,
+                photos/Concert1_2048.png 2048w
+              "
+              sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
               src="photos/Concert1_2048.png"
               class="carousel-image"
               alt="Concert Photo"
@@ -71,7 +83,13 @@
           </div>
           <div class="slidePics">
             <img
-              
+              srcset="
+                photos/Keys_400.png   400w,
+                photos/Keys_720.png   720w,
+                photos/Keys_1024.png 1024w,
+                photos/Keys_2048.png 2048w
+              "
+              sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
               src="photos/Keys_2048.png"
               class="carousel-image"
               alt="Me on keys"
@@ -79,7 +97,13 @@
           </div>
           <div class="slidePics">
             <img
-              
+              srcset="
+                photos/Milo_400.jpg   400w,
+                photos/Milo_720.jpg   720w,
+                photos/Milo_1024.jpg 1024w,
+                photos/Milo_2048.jpg 2048w
+              "
+              sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
               src="photos/Milo_2048.jpg"
               class="carousel-image"
               alt="My little munchkin sleeping"
@@ -87,7 +111,13 @@
           </div>
           <div class="slidePics">
             <img
-              
+              srcset="
+                photos/Engine_400.jpg   400w,
+                photos/Engine_720.jpg   720w,
+                photos/Engine_1024.jpg 1024w,
+                photos/Engine_2048.jpg 2048w
+              "
+              sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
               src="photos/Engine_2048.jpg"
               class="carousel-image"
               alt="Photo of my S2000 engine bay, with neochrome velocity stacks"
@@ -95,7 +125,13 @@
           </div>
           <div class="slidePics">
             <img
-              
+              srcset="
+                photos/S2k-1_400.jpg   400w,
+                photos/S2k-1_720.jpg   720w,
+                photos/S2k-1_1024.jpg 1024w,
+                photos/S2k-1_2048.jpg 2048w
+              "
+              sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
               src="photos/S2k-1_2048.jpg"
               class="carousel-image"
               alt="Rear view photo of my S2000 with purple charmeleon paint"
@@ -103,7 +139,13 @@
           </div>
           <div class="slidePics">
             <img
-              
+              srcset="
+                photos/S2k-2_400.jpg   400w,
+                photos/S2k-2_720.jpg   720w,
+                photos/S2k-2_1024.jpg 1024w,
+                photos/S2k-2_2048.jpg 2048w
+              "
+              sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
               src="photos/S2k-2_2048.jpg"
               class="carousel-image"
               alt="Side shot of my S2000"
@@ -227,107 +269,7 @@
       <article>
         <p></p>
       </article>
-      <section class="media">
-        <section class="youtube">
-          <!-- YouTube embed of Reminisce Javascript Automation -->
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/dgJ6mAUf64M"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            alt="YouTube music video for Reminisce, a song I co-produced using Javascript and other various automation techniques."
-          >
-          </iframe>
-
-          <!-- YouTube embed of a music video cover of Mr. Loser, I composed the piano accompaniment -->
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/w6makw8QFVI"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            alt="YouTube music video of a cover song, Mr. Loser, that I composed the piano accompaniment for"
-          ></iframe>
-
-          <h3>Two #1 hit singles from our album, My Heart</h3>
-        </section>
-        <section class="soundcloud">
-          <!-- SoundCloud embed of You're The Only One -->
-          <iframe
-            width="100%"
-            height="300"
-            scrolling="no"
-            frameborder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1025093854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-          ></iframe>
-          <div
-            style="
-              font-size: 10px;
-              color: #cccccc;
-              line-break: anywhere;
-              word-break: normal;
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-              font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
-                Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-              font-weight: 100;
-            "
-          >
-            <!-- <a
-              href="https://soundcloud.com/nam-nguyen-421554775"
-              title="Nam Nguyen"
-              target="_blank"
-              style="color: #cccccc; text-decoration: none"
-              >Nam Nguyen</a
-            >
-            
-            <a
-              href="https://soundcloud.com/nam-nguyen-421554775/01-youre-the-only-one-3"
-              title="01 You&#x27;re The Only One"
-              target="_blank"
-              style="color: #cccccc; text-decoration: none"
-             
-              >01 You&#x27;re The Only One</a
-            > 
-          Don't think this code is necessary, just has text with hyperlink.
-          -->
-
-            <!-- alt="Soundcloud file for You're The Only One, one of my band's number one hit singles from our EP My Heart" -->
-          </div>
-
-          <!-- Soundcloud embed of My Heart -->
-          <iframe
-            width="100%"
-            height="300"
-            scrolling="no"
-            frameborder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1025099812&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-          ></iframe>
-          <div
-            style="
-              font-size: 10px;
-              color: #cccccc;
-              line-break: anywhere;
-              word-break: normal;
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-              font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
-                Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-              font-weight: 100;
-            "
-          >
-          </div>
-        </section>
-      </section>
+      
     </main>
 
     <footer>
@@ -336,56 +278,3 @@
     </footer>
   </body>
 </html>
-
-
-
-<!-- 
-srcset="
-                photos/Concert2_400.jpg   400w,
-                photos/Concert2_720.jpg   720w,
-                photos/Concert2_1024.jpg 1024w,
-                photos/Concert2_2048.jpg 2048w
-              "
-              sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
-srcset="
-                photos/Concert1_400.png   400w,
-                photos/Concert1_720.png   720w,
-                photos/Concert1_1024.png 1024w,
-                photos/Concert1_2048.png 2048w
-              "
-              sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
-srcset="
-                photos/Keys_400.png   400w,
-                photos/Keys_720.png   720w,
-                photos/Keys_1024.png 1024w,
-                photos/Keys_2048.png 2048w
-              "
-              sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
-srcset="
-                photos/Milo_400.jpg   400w,
-                photos/Milo_720.jpg   720w,
-                photos/Milo_1024.jpg 1024w,
-                photos/Milo_2048.jpg 2048w
-              "
-              sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
-srcset="
-                photos/Engine_400.jpg   400w,
-                photos/Engine_720.jpg   720w,
-                photos/Engine_1024.jpg 1024w,
-                photos/Engine_2048.jpg 2048w
-              "
-              sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
-srcset="
-                photos/S2k-1_400.jpg   400w,
-                photos/S2k-1_720.jpg   720w,
-                photos/S2k-1_1024.jpg 1024w,
-                photos/S2k-1_2048.jpg 2048w
-              "
-              sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%"
-srcset="
-                photos/S2k-2_400.jpg   400w,
-                photos/S2k-2_720.jpg   720w,
-                photos/S2k-2_1024.jpg 1024w,
-                photos/S2k-2_2048.jpg 2048w
-              "
-              sizes="(max-width: 450px) 400px, (max-width: 800px) 720px, (max-width:1500px) clamp(750px,1024px), 100%" -->
