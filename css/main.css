@@ -343,7 +343,7 @@ iframe {
 .contact .container {
   display: inline-block;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   border: 1px solid yellow;
   padding-bottom: 5vh;
 }
@@ -544,9 +544,13 @@ textarea:hover {
   gap: 2vh;
   align-items: center;
 }
+.telephone .call-area #call-button {
+  border-radius: 100%;
+  box-shadow: 0 0 3px white;
+}
 .telephone .call-area:hover #call-button {
   border-radius: 100%;
-  box-shadow: 0 0 7px white;
+  box-shadow: 0 0 10px white;
   -webkit-animation: rumble 0.0625s infinite linear;
           animation: rumble 0.0625s infinite linear;
 }
@@ -556,11 +560,12 @@ textarea:hover {
 }
 
 .copyright {
-  position: absolute;
+  align-self: flex-end;
+  justify-self: flex-end;
   bottom: 0;
   height: 20px;
   width: 100%;
-  padding: 1.5vh 5vw;
+  padding: 1.5vh 5vw 3vh;
   background-color: black;
 }
 .copyright p {
