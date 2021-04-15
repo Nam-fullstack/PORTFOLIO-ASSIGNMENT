@@ -344,7 +344,6 @@ iframe {
   display: inline-block;
   width: 100%;
   min-height: 100vh;
-  border: 1px solid yellow;
   padding-bottom: 5vh;
 }
 .contact h2 {
@@ -560,9 +559,6 @@ textarea:hover {
 }
 
 .copyright {
-  align-self: flex-end;
-  justify-self: flex-end;
-  bottom: 0;
   height: 20px;
   width: 100%;
   padding: 1.5vh 5vw 3vh;
