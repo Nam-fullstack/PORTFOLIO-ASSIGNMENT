@@ -9,13 +9,13 @@
     }
 
     h2 {
-        color: $white-text;
+        color: $white-theme;
         text-align: center;
         padding: 15px 0px;
     }
 
     h3 {
-        color: $white-text;
+        color: $white-theme;
         text-align: center;
     }
 }
@@ -234,7 +234,7 @@ textarea:hover {
     background-color: black;
 
     p {
-        color: $white-text;
+        color: $white-theme;
         font-size: 0.6rem;
     }
 }
