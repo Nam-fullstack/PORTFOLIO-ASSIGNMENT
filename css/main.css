@@ -23,6 +23,7 @@ main {
   box-shadow: 1px 1px 3px 1px rgba(28, 28, 28, 0.92);
   position: fixed;
   top: 0;
+  transition: top 0.7s;
 }
 
 .navbar ul {
