@@ -5,11 +5,11 @@ var prevScrollPosition = window.pageYOffset
 window.onscroll = function() {
   var currentScrollPosition = window.pageYOffset
   if (prevScrollPosition > currentScrollPosition) {
-    document.getElementById("navbar").style.top = "0";
+    document.getElementById("navigation-bar").style.top = "0";
   }
 
   else {
-    document.getElementById("navbar").style.top = "-70px";
+    document.getElementById("navigation-bar").style.top = "-70px";
   }
   prevScrollPosition = currentScrollPosition
 }
