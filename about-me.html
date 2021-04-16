@@ -222,54 +222,56 @@
           </div>
           <div class="button-container">
             <!-- &#10094 and &#10095 are unicode symbols for < and > -->
-            <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="previous" onclick="plusSlides(-1)" alt="button to view previous photo">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)" alt="button to view next photo">&#10095;</a>
           </div>
         </div>
 
         <script>
+
           var slideNumber = 1;
           showSlides(slideNumber);
-
+          
           // Next and Previous image controls
           function plusSlides(n) {
             showSlides(slideNumber += n);
           }
-
+          
           // Thumbnail image selection control
           function currentSlide(n) {
             showSlides(slideNumber = n);
           }
-
+          
           function showSlides(n) {
             var i;
             var slides = document.getElementsByClassName("slidePics");
             var thumbnails = document.getElementsByClassName("thumbnail");
             var textCaption = document.getElementById("caption");
-
+          
             // If it goes past the last slide, returns to Slide 1
             if (n > slides.length) {
               slideNumber = 1;
             }
-
+          
             // If it goes left past first slide, goes to the last slide
             if (n < 1) {
               slideNumber = slides.length;
             }
-
+          
             for (i = 0; i < slides.length; i++){
               slides[i].style.display = "none";
             }
-
+          
             for (i = 0; i < thumbnails.length; i++) {
               thumbnails[i].className = thumbnails[i].className.replace(" active", "");
             }
-
+          
             slides[slideNumber-1].style.display = "block";
             thumbnails[slideNumber-1].className += " active";
-            textCaption.innerHTML = thumbnails[slideNumber-1].alt;            
-        }
+            textCaption.innerHTML = thumbnails[slideNumber-1].alt;
+          }
         </script>
+
       </div> 
       <article class="details-about-me">
         <p>
@@ -292,7 +294,9 @@
 
     <footer>
       <div class="site-map"></div>
-      <div class="copyright"></div>
+      <div class="copyright">
+        <p>&copy Nam Nguyen 2021. All rights reserved.</p>
+      </div>
     </footer>
   </body>
 </html>
