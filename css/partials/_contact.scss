@@ -20,6 +20,13 @@
     }
 }
 
+.wrapper {
+    width: 95%;
+    margin: 8px 3%;
+    position: relative;
+    // necessary to give position: relative to parent for text.
+} 
+
 .left-side-box {
     display: none;
 }
@@ -49,10 +56,11 @@ input {
 textarea {
     background-color: $form-color;
     padding-top: 10px;
+    // disables resizing of textarea, can still type extra, but need to scroll/swipe
     resize: none;
-    /* disables resizing of textarea, can still type extra, but need to scroll/swipe */
+    
+    // sets the text-area height
     min-height: 200px;
-    /* sets the text-area height */
 }
 
 #name,
@@ -65,6 +73,98 @@ textarea {
     font-weight: 700;
 }
 
+/* styling for the text field */
+.box {
+    border: 1px solid #ccc;
+    padding: 7px 14px;
+    transition: 0.4s;         /* how fast it goes back to default color */
+    background-color: rgba(255, 255, 255, 0.112);
+}
+  
+/*  Top and bottom border */
+.box ~ .border:before,
+.box ~ .border:after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 2px;
+background-color: $red-theme;
+transition: 0.55s;
+}
+
+/* Bottom border */
+.box ~ .border:after {
+top: auto;
+bottom: 0;
+left: auto;
+right: 0;
+}
+
+/* Top and bottom borders */
+.box ~ .border i:before,
+.box ~ .border i:after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 2px;
+height: 0;
+background-color: $red-theme;
+transition: 0.55s;
+}
+
+/* Right border */
+.box ~ .border i:after {
+left: auto;
+right: 0;
+top: auto;
+bottom: 0;
+}
+
+/*  top and bottom border animation */
+.box:focus ~ .border:before,
+.box:focus ~ .border:after,
+.selected.box ~ .border:before,
+.selected.box ~ .border:after {
+width: 100%;
+transition: 0.55s;
+}
+
+/* side border animation */
+.box:focus ~ .border i:before,
+.box:focus ~ .border i:after,
+.selected.box ~ .border i:before,
+.selected.box ~ .border i:after {
+height: 100%;
+transition: 0.55s;
+}
+
+.box ~ label {
+position: absolute;                     /* sets it so it can move outside the box */
+left: 14px;                             /* absolute places it on the right of the textbox, this places it inside */
+top: 10px;                              /* positions it in the center vertically */
+color: #aaa;                          /* sets color of placeholder text */
+transition: 0.9s;                       /* time it takes to go back into the box */
+z-index: -1;
+font-size: 18px;
+}
+
+.box:focus ~ label,
+.selected.box ~ label {
+top: -18px;                             /* this moves text to be outside on top of the textbox */
+left: 0;                                /* makes it aligned to the very left */
+font-size: 16px;                        /* smaller font size */
+color: $red-theme;      
+font-weight: 800;
+transition: 0.7s;
+}
+
+.box:hover ~ label {
+    color: $red-theme;
+}
+
 input::placeholder,
 textarea::placeholder {
     font-size: 1rem;
@@ -72,17 +172,18 @@ textarea::placeholder {
 }
 
 input:focus, textarea:focus {
-    background-color: white;
-    border: 1px solid $red-theme;
-    box-shadow: 0px 0px 5px rgb(245, 86, 86);
+    background-color: rgba(255, 255, 255, 0.20);
+    // border: 1px solid $red-theme;
+    // box-shadow: 0px 0px 5px rgb(245, 86, 86);
     outline: none;
 }
 
 input:hover,
 textarea:hover {
-    background-color: white;
-    border: 1px solid $red-theme;
-    box-shadow: 0px 0px 5px rgb(245, 86, 86);
+    background-color: rgba(255, 255, 255, 0.20);
+    // border: 2px solid $red-theme;
+    // box-shadow: 0px 0px 5px rgb(245, 86, 86);
+
 }
 
 .form-row4 {
@@ -224,7 +325,6 @@ textarea:hover {
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.934);
         }
     }
-    
 }
 
 .copyright {

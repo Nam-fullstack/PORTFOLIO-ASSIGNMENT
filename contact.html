@@ -1,208 +1,146 @@
 <!DOCTYPE html>
 <html lang="en" class="contact">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
-    <script src="navbar.js"></script>
-    <title>Contact</title>
-  </head>
-  <body>
-    <header>
-      <div class="navigation" id="navigation-bar">
-        <div class="navbar">
-          <ul class="navigation-pages">
-            <li>
-              <a href="index.html" alt="link to home page">Home</a>
-            </li>
-            <li>
-              <a href="portfolio.html" alt="link to portfolio page"
-                >Portfolio</a
-              >
-            </li>
-            <li>
-              <a href="skills.html" alt="link to skills page">Skills</a>
-            </li>
-            <li>
-              <a href="experience.html" alt="link to experience page"
-                >Experience</a
-              >
-            </li>
-            <li>
-              <a href="about-me.html" alt="link to about me page">About Me</a>
-            </li>
-            <li>
-              <a href="blog.html" alt="link to blog page">Blog</a>
-            </li>
-            <li>
-              <a href="contact.html" id="current-page" alt="link to contact page">Contact</a>
-            </li>
-          </ul>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+  <script src="navbar.js"></script>
+  <title>Contact</title>
+</head>
+
+<body>
+  <header>
+    <div class="navigation" id="navigation-bar">
+      <div class="navbar">
+        <ul class="navigation-pages">
+          <li>
+            <a href="index.html" alt="link to home page">Home</a>
+          </li>
+          <li>
+            <a href="portfolio.html" alt="link to portfolio page">Portfolio</a>
+          </li>
+          <li>
+            <a href="skills.html" alt="link to skills page">Skills</a>
+          </li>
+          <li>
+            <a href="experience.html" alt="link to experience page">Experience</a>
+          </li>
+          <li>
+            <a href="about-me.html" alt="link to about me page">About Me</a>
+          </li>
+          <li>
+            <a href="blog.html" alt="link to blog page">Blog</a>
+          </li>
+          <li>
+            <a href="contact.html" id="current-page" alt="link to contact page">Contact</a>
+          </li>
+        </ul>
       </div>
-    </header>
-    <main>
-      <!-- <h1>Contact</h1> -->
-      <div class="container">
-        <h2>Get in touch</h2>
-        <h3>Let's talk about <em id="client-project">your project</em></h3>
+    </div>
+  </header>
+  <main>
+    <!-- <h1>Contact</h1> -->
+    <div class="container">
+      <h1>Get in touch</h1>
+      <h2>Let's talk about <em id="client-project">your project</em></h2>
 
-        <div class="left-side-box"></div>
-        <div class="right-side-box">
-          <form
-            action="https://formspree.io/f/xnqlqegl"
-            method="POST"
-            class="contact-form"
-          >
+      <div class="left-side-box"></div>
+      <div class="right-side-box">
+        <form action="https://formspree.io/f/xnqlqegl" method="POST" class="contact-form">
+          <div class="wrapper out">
             <div class="form-row1">
-              <input
-                type="name"
-                name="name"
-                placeholder="Full name"
-                id="name"
-                required
-              />
+              <input type="name" class="box" name="name" id="name" placeholder="" required />
+              <label>Full Name</label>
+              <span class="border">
+                <i></i>
+              </span>
             </div>
-            <div class="form-row2">
-              <input
-                type="email"
-                name="_replyto"
-                placeholder="Email address"
-                id="email"
-                required
-              />
+          </div>
+          <div class="form-row2">
+            <div class="wrapper out">
+              <input type="email" class="box" name="_replyto" id="email" placeholder="" required />
+              <label>Email Address</label>
+              <span class="border">
+                <i></i>
+              </span>
             </div>
-            <div class="form-row3">
-              <textarea
-                name="message"
-                placeholder="Enter your message here"
-                id="message"
-                style="width: 100%; height: 150px"
-                required
-              ></textarea>
+          </div>
+          <div class="form-row3">
+            <div class="wrapper out">
+              <textarea name="message" class="box" id="message" style="width: 100%; height: 150px" placeholder=""
+                required></textarea>
+              <label>Enter your message here</label>
+              <span class="border">
+                <i></i>
+              </span>
             </div>
-            <div class="form-row4">
-              <div class="recaptcha">
-                <div class="check">
-                  <input type="checkbox" id="bot-checkbox" required />
-                  <label for="bot-checkbox" id="recaptcha-text"
-                    >I am not a robot</label
-                  >
-                </div>
-                <img
-                  src="icons/RecaptchaLogo2.png"
-                  id="recaptcha-icon"
-                  alt="I am not a bot"
-                />
+          </div>
+          <div class="form-row4">
+            <div class="recaptcha">
+              <div class="check">
+                <input type="checkbox" id="bot-checkbox" required />
+                <label for="bot-checkbox" id="recaptcha-text">I am not a robot</label>
               </div>
+              <img src="icons/RecaptchaLogo2.png" id="recaptcha-icon" alt="I am not a bot" />
+            </div>
 
-              <div class="math-container">
-                <label for="bot-validation" id="math-text"
-                  >How's your math?</label
-                >
-                <img src="photos/Math Validation.png" alt="What is 4 plus 3" />
-                <input
-                  type="text"
-                  name="bot-validation"
-                  id="mathcheck"
-                  placeholder="Equals"
-                  style="width: 100px; height: 30px"
-                  required
-                />
-              </div>
+            <div class="math-container">
+              <label for="bot-validation" id="math-text">How's your math?</label>
+              <img src="photos/Math Validation.png" alt="What is 4 plus 3" />
+              <input type="text" name="bot-validation" id="mathcheck" placeholder="Equals"
+                style="width: 100px; height: 30px" required />
             </div>
-            <div class="form-row5">
-              <button type="submit" id="submit-button">Email Me</button>
-            </div>
-          </form>
-        </div>
-        <div class="telephone">
-          <div class="call-area">
-            <a href="tel:0430954634">
-              <img
-                srcset="    
+          </div>
+
+          <div class="form-row5">
+            <button type="submit" id="submit-button">Email Me</button>
+          </div>
+      </div>
+      </form>
+    </div>
+    <div class="telephone">
+      <div class="call-area">
+        <a href="tel:0430954634">
+          <img srcset="    
                   icons/Telephone_64.png 64w,
                   icons/Telephone_96.png 96w
-                "
-                sizes="(max-width: 400px) 64px, (max-width: 600px) 96px, 96px"
-                src="Telephone_96.png"
-                id="call-button"
-                alt="call my mobile"
-              />
-            </a>
-            <h3>Let's have a chat</h3>
-          </div>
-        </div>
-        <div class="social">
-          <h2>Connect with me</h2>
-          <div class="social-icons">
-            <a
-              href="https://github.com/Nam-fullstack"
-              alt="GitHub"
-              target="_blank"
-            >
-              <img
-                src="icons/GitHub-Light_64.png"
-                class="social-icon"
-                id="github"
-                alt="GitHub"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/nam-nguyen-full-stack-dev"
-              alt="Linkedin"
-              target="_blank"
-            >
-              <img
-                src="icons/Linkedin_32.png"
-                class="social-icon"
-                alt="Linkedin"
-              />
-            </a>
-            <a
-              href="https://www.facebook.com/nam.nguyen.16906715"
-              alt="facebook"
-              target="_blank"
-              >
-              <img
-              src="icons/Facebook_32.png"
-              class="social-icon"
-              alt="Facebook"
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/wammies_/"
-              alt="Instagram"
-              target="_blank"
-            >
-              <img
-                src="icons/Instagram_32.png"
-                class="social-icon"
-                alt="Instagram"
-              />
-            </a>
-            <a
-              href="https://twitter.com/NamNguy86048812"
-              alt="Twitter"
-              target="_blank"
-            >
-              <img
-                src="icons/Twitter_32.png"
-                class="social-icon"
-                alt="Twitter"
-              />
-            </a>
-          </div>          <!-- close .social-icons -->
-        </div>        <!-- close .social -->       
-      </div>      <!-- close .container -->
-    </main>
-
-    <footer>
-      <div class="site-map"></div>
-      <div class="copyright">
-        <p>&copy Nam Nguyen 2021. All rights reserved.</p>
+                " sizes="(max-width: 400px) 64px, (max-width: 600px) 96px, 96px" src="Telephone_96.png"
+            id="call-button" alt="call my mobile" />
+        </a>
+        <h3>Let's have a chat</h3>
       </div>
-    </footer>
-  </body>
+    </div>
+    <div class="social">
+      <h2>Connect with me</h2>
+      <div class="social-icons">
+        <a href="https://github.com/Nam-fullstack" alt="GitHub" target="_blank">
+          <img src="icons/GitHub-Light_64.png" class="social-icon" id="github" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/nam-nguyen-full-stack-dev" alt="Linkedin" target="_blank">
+          <img src="icons/Linkedin_32.png" class="social-icon" alt="Linkedin" />
+        </a>
+        <a href="https://www.facebook.com/nam.nguyen.16906715" alt="facebook" target="_blank">
+          <img src="icons/Facebook_32.png" class="social-icon" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/wammies_/" alt="Instagram" target="_blank">
+          <img src="icons/Instagram_32.png" class="social-icon" alt="Instagram" />
+        </a>
+        <a href="https://twitter.com/NamNguy86048812" alt="Twitter" target="_blank">
+          <img src="icons/Twitter_32.png" class="social-icon" alt="Twitter" />
+        </a>
+      </div> <!-- close .social-icons -->
+    </div> <!-- close .social -->
+    </div> <!-- close .container -->
+  </main>
+
+  <footer>
+    <div class="site-map"></div>
+    <div class="copyright">
+      <p>&copy Nam Nguyen 2021. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
 </html>
