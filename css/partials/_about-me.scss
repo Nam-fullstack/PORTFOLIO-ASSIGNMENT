@@ -179,6 +179,9 @@
     }
     .details-about-me {
         width: $tablet;
+        p {
+            line-height: 2;
+        }
     }
 }
 

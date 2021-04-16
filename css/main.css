@@ -347,6 +347,9 @@ h1 {
   .details-about-me {
     width: 75%;
   }
+  .details-about-me p {
+    line-height: 2;
+  }
 }
 @media screen and (min-width: 1024px) {
   .carousel-container {
