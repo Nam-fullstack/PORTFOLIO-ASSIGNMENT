@@ -36,9 +36,10 @@
 
 #current-page {
     color: red;
-    @include bred;
+    // border: 1px solid #ccc; 
+    padding: 20px 4vw;
+    transition: 0.4s;
 }
-
 
 h1 {
     font-family: $font;

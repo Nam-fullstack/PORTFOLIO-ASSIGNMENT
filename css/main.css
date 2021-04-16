@@ -6,6 +6,9 @@
   font-family: Roboto, helvetica, sans-serif;
   max-width: 100% !important;
 }
+*:focus {
+  outline: none;
+}
 
 a:visited {
   color: blue;
@@ -54,7 +57,8 @@ main {
 
 #current-page {
   color: red;
-  border: 1px solid red;
+  padding: 20px 4vw;
+  transition: 0.4s;
 }
 
 h1 {
