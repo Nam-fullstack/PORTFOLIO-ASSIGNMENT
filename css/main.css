@@ -33,7 +33,7 @@ main {
   justify-content: flex-start;
   list-style-type: none;
   /* removes bullets from ul */
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
 .navbar li {
@@ -41,7 +41,7 @@ main {
 }
 
 .navbar a {
-  padding: 0px 4vw;
+  padding: 20px 4vw;
   text-decoration: none;
   color: white;
   font-family: Roboto, helvetica;
@@ -50,6 +50,11 @@ main {
 
 .navbar li:hover a {
   color: rgba(252, 53, 53, 0.838);
+}
+
+#current-page {
+  color: red;
+  border: 1px solid red;
 }
 
 h1 {
@@ -74,9 +79,6 @@ h1 {
 .soundcloud iframe {
   height: 20vw;
   margin: 3vw 0;
-}
-.soundcloud iframe:hover {
-  border: 1px solid red;
 }
 
 .container {

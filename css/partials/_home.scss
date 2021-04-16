@@ -3,7 +3,7 @@
     width: 100%;
     background-color: $bgcolor1;
     height: 60px;
-    @include box-shadow;
+    @include bsb;
     position: fixed;                // Remains in this position irrespective of scrolling
     top: 0;                         // Stays on the top of the page
     transition: top 0.7s;           // Smoothly transitions in and out when scrolling down/up
@@ -15,7 +15,7 @@
     @include flex;
     justify-content: flex-start;
     list-style-type: none;         /* removes bullets from ul */
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 .navbar li { 
@@ -23,7 +23,7 @@
 }
 
 .navbar a {
-    padding: 0px 4vw;
+    padding: 20px 4vw;
     text-decoration: none;
     color: $white-theme;
     font-family: $font;
@@ -34,10 +34,11 @@
     color: $red-theme;
 }
 
-.current-page {
-    text-decoration: underline;
+#current-page {
     color: red;
+    @include bred;
 }
+
 
 h1 {
     font-family: $font;
