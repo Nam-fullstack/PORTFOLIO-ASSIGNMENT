@@ -25,13 +25,18 @@
 .navbar a {
     padding: 0px 4vw;
     text-decoration: none;
-    color: $white-text;
+    color: $white-theme;
     font-family: $font;
     font-weight: 600;
 }
 
 .navbar li:hover a {
     color: $red-theme;
+}
+
+.current-page {
+    text-decoration: underline;
+    color: red;
 }
 
 h1 {
