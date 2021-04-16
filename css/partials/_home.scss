@@ -7,7 +7,7 @@
     position: fixed;                // Remains in this position irrespective of scrolling
     top: 0;                         // Stays on the top of the page
     transition: top 0.7s;           // Smoothly transitions in and out when scrolling down/up
-    
+    z-index: 100;                   // So it is displayed in top of everything else.
     // display: none;
 }
 
