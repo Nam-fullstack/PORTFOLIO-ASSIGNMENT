@@ -124,13 +124,16 @@
 }
 
 .details-about-me {
+    height: auto;
     width: 80%;
     margin: 0 auto;
     p {
         margin: 20px 0;
-        line-height: 1.5;
+        font-size: 12px;
+        line-height: 2;
         text-align: justify;
     }
+    padding-bottom: 40px;
 }
 
 
@@ -158,7 +161,7 @@
     }
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width:750px) {
     .carousel-container {
         width: $tablet;
         margin: 0 auto;
@@ -177,10 +180,12 @@
             }
         }
     }
+
     .details-about-me {
         width: $tablet;
         p {
-            line-height: 2;
+            font-size: 15px;
+            line-height: 2.5;
         }
     }
 }
@@ -211,5 +216,11 @@
 
     .details-about-me {
         width: $desktop;
+        
+        p {
+            font-size: 18px;
+            line-height: 3;
+            padding-bottom: 10px;
+        }
     }
 }

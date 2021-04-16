@@ -274,12 +274,15 @@ h1 {
 }
 
 .details-about-me {
+  height: auto;
   width: 80%;
   margin: 0 auto;
+  padding-bottom: 40px;
 }
 .details-about-me p {
   margin: 20px 0;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 2;
   text-align: justify;
 }
 
@@ -322,7 +325,7 @@ h1 {
     transform: scale(1.2);
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 750px) {
   .carousel-container {
     width: 75%;
     margin: 0 auto;
@@ -348,7 +351,8 @@ h1 {
     width: 75%;
   }
   .details-about-me p {
-    line-height: 2;
+    font-size: 15px;
+    line-height: 2.5;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -379,6 +383,11 @@ h1 {
 
   .details-about-me {
     width: 70%;
+  }
+  .details-about-me p {
+    font-size: 18px;
+    line-height: 3;
+    padding-bottom: 10px;
   }
 }
 .contact {
