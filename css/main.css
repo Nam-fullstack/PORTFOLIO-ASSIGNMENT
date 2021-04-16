@@ -61,8 +61,19 @@ h1 {
   padding-bottom: 20px;
 }
 
-iframe {
-  margin-top: 3vw;
+.youtube {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5vw;
+}
+
+.soundcloud h3 {
+  padding: 40px 0 0 2vw;
+}
+.soundcloud iframe {
+  height: 20vw;
+  margin: 3vw 0;
 }
 
 .container {
