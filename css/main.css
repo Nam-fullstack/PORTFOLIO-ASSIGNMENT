@@ -13,14 +13,16 @@ a:visited {
 
 main {
   min-height: 100vh;
+  margin-top: 60px;
 }
 
 .navigation {
   width: 100%;
   background-color: rgba(19, 19, 19, 0.893);
-  height: 80px;
+  height: 60px;
   box-shadow: 1px 1px 3px 1px rgba(28, 28, 28, 0.92);
-  padding: 1px;
+  position: fixed;
+  top: 0;
 }
 
 .navbar ul {
@@ -29,7 +31,7 @@ main {
   justify-content: flex-start;
   list-style-type: none;
   /* removes bullets from ul */
-  margin-top: 30px;
+  margin: 20px 0;
 }
 
 .navbar li {
@@ -37,7 +39,7 @@ main {
 }
 
 .navbar a {
-  padding: 25px 4vw;
+  padding: 0px 4vw;
   text-decoration: none;
   color: white;
   font-family: Roboto, helvetica;
