@@ -30,7 +30,12 @@
               >
             </li>
             <li>
-              <a href="about-me.html" id="current-page" alt="link to about me page">About Me</a>
+              <a
+                href="about-me.html"
+                id="current-page"
+                alt="link to about me page"
+                >About Me</a
+              >
             </li>
             <li>
               <a href="blog.html" alt="link to blog page">Blog</a>
@@ -49,7 +54,6 @@
         <div class="overflow-container">
           <div class="image-container">
             <div class="slidePics">
-              
               <!-- 
                   Img srcset essentially allows you to have a selection of images to pick from and you can choose which one is displayed
                   based on the screen width. Define the image's directory and then width followed by w and a comma to separate each image. 
@@ -154,8 +158,10 @@
                 alt="Side shot of my S2000"
               />
             </div>
-          </div> <!-- close overflow-container -->
-        </div>   <!-- close image-container -->
+          </div>
+          <!-- close overflow-container -->
+        </div>
+        <!-- close image-container -->
 
         <div class="caption-thumbnail-container">
           <div class="caption-container">
@@ -223,73 +229,100 @@
           </div>
           <div class="button-container">
             <!-- &#10094 and &#10095 are unicode symbols for < and > -->
-            <a class="previous" onclick="plusSlides(-1)" alt="button to view previous photo">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)" alt="button to view next photo">&#10095;</a>
+            <a
+              class="previous"
+              onclick="plusSlides(-1)"
+              alt="button to view previous photo"
+              >&#10094;</a
+            >
+            <a
+              class="next"
+              onclick="plusSlides(1)"
+              alt="button to view next photo"
+              >&#10095;</a
+            >
           </div>
         </div>
 
         <script>
-
           var slideNumber = 1;
           showSlides(slideNumber);
-          
+
           // Next and Previous image controls
           function plusSlides(n) {
-            showSlides(slideNumber += n);
+            showSlides((slideNumber += n));
           }
-          
+
           // Thumbnail image selection control
           function currentSlide(n) {
-            showSlides(slideNumber = n);
+            showSlides((slideNumber = n));
           }
-          
+
           function showSlides(n) {
             var i;
             var slides = document.getElementsByClassName("slidePics");
             var thumbnails = document.getElementsByClassName("thumbnail");
             var textCaption = document.getElementById("caption");
-          
+
             // If it goes past the last slide, returns to Slide 1
             if (n > slides.length) {
               slideNumber = 1;
             }
-          
+
             // If it goes left past first slide, goes to the last slide
             if (n < 1) {
               slideNumber = slides.length;
             }
-          
-            for (i = 0; i < slides.length; i++){
+
+            for (i = 0; i < slides.length; i++) {
               slides[i].style.display = "none";
             }
-          
+
             for (i = 0; i < thumbnails.length; i++) {
-              thumbnails[i].className = thumbnails[i].className.replace(" active", "");
+              thumbnails[i].className = thumbnails[i].className.replace(
+                " active",
+                ""
+              );
             }
-          
-            slides[slideNumber-1].style.display = "block";
-            thumbnails[slideNumber-1].className += " active";
-            textCaption.innerHTML = thumbnails[slideNumber-1].alt;
+
+            slides[slideNumber - 1].style.display = "block";
+            thumbnails[slideNumber - 1].className += " active";
+            textCaption.innerHTML = thumbnails[slideNumber - 1].alt;
           }
         </script>
-
-      </div> 
+      </div>
       <article class="details-about-me">
         <p>
-          Music has been an integral part of my entire life. From song-writing to recording and producing to live mixing and performances, I enjoy the entire process and enjoy working with all the industry professionals along the way. I've recorded at some of the biggest studios in Australia, like The Grove, and toured overseas. 
+          Music has been an integral part of my entire life. From song-writing
+          to recording and producing to live mixing and performances, I enjoy
+          the entire process and enjoy working with all the industry
+          professionals along the way. I've recorded at some of the biggest
+          studios in Australia, like The Grove, and toured in multiple overseas.
         </p>
         <p>
-          Our band, Salt+Light, released an EP with two #1 hit singles, <a href="portfolio.html#youretheonlyone">You're The Only One</a> and <a href="portfolio.html#myheart" target="_blank">My Heart</a>, which can be previewed in my <a href="portfolio.html">portfolio page</a>.
+          Our band, Salt+Light, released an EP with two #1 hit singles,
+          <a href="portfolio.html#youretheonlyone">You're The Only One</a> and
+          <a href="portfolio.html#myheart" target="_blank">My Heart</a>, which
+          can be previewed in my <a href="portfolio.html">portfolio page</a>.
         </p>
         <p>
-          In today's evolving era of modern music, keyboardists are required to dive into the deep end of the virtual software instrument world. Having strong sound design skills is an unspoken expectation to deliver high fidelity sounds that add elements which elevate and enhance the song. Creating custom automation and mapping scripts enables the user to wield the power of computational processing and manipulation to achieve feats that are not humanly possible. 
+          In today's evolving era of modern music, keyboardists are required to
+          dive into the deep end of the virtual software instrument world.
+          Having strong sound design skills is an unspoken expectation to
+          deliver high fidelity sounds that add elements which are essential to
+          elevate and enhance any song. Creating custom automation and mapping
+          scripts enables the user to wield the power of computational
+          processing and manipulation to achieve feats that wouldn't otherwise
+          be humanly possible.
         </p>
         <p>
-          I'm also a car enthusiast, I enjoy tinkering with things, understanding how it all works, pulling things apart and building something from the ground up. It's a delicate fine art to find the perfect balance between performance and efficiency. Optimizing power without compromising practicality. 
+          I'm also an avid car enthusiast. I enjoy tinkering with things,
+          understanding how it all works, pulling things apart and building it
+          all from the ground up. Finding the perfect balance between
+          performance and efficiency is a delicate art - optimizing power
+          without compromising practicality.
         </p>
-
       </article>
-      
     </main>
 
     <footer>
