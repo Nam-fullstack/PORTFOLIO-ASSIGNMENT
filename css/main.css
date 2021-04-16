@@ -539,6 +539,10 @@ textarea:hover {
   transition: transform 0.3s linear;
 }
 
+#github {
+  width: 32px;
+}
+
 .telephone {
   display: flex;
   align-items: center;
