@@ -127,8 +127,8 @@
     width: 80%;
     margin: 0 auto;
     p {
-        margin: 20px 10%;
-        line-height: 2;
+        margin: 20px 0;
+        line-height: 1.5;
         text-align: justify;
     }
 }
@@ -160,7 +160,7 @@
 
 @media screen and (min-width:800px) {
     .carousel-container {
-        width: 80vw;
+        width: $tablet;
         margin: 0 auto;
     }
     .slidePics {
@@ -177,11 +177,14 @@
             }
         }
     }
+    .details-about-me {
+        width: $tablet;
+    }
 }
 
 @media screen and (min-width:1024px) {
     .carousel-container {
-        width: 70vw;
+        width: $desktop;
         margin: 0 auto;
     }
     .slidePics {
@@ -201,5 +204,9 @@
 
     .button-container {
         top: 17vw;
+    }
+
+    .details-about-me {
+        width: $desktop;
     }
 }
