@@ -422,10 +422,11 @@ textarea::placeholder {
   font-weight: 600;
 }
 
-input:focus {
+input:focus, textarea:focus {
   background-color: white;
   border: 1px solid rgba(252, 53, 53, 0.838);
   box-shadow: 0px 0px 5px #f55656;
+  outline: none;
 }
 
 input:hover,

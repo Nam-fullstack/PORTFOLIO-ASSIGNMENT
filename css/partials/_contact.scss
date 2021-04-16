@@ -71,10 +71,11 @@ textarea::placeholder {
     font-weight: 600;
 }
 
-input:focus {
+input:focus, textarea:focus {
     background-color: white;
     border: 1px solid $red-theme;
     box-shadow: 0px 0px 5px rgb(245, 86, 86);
+    outline: none;
 }
 
 input:hover,
