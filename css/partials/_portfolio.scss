@@ -9,15 +9,18 @@
         @include flex;
             .grid {
                 @include grid;
-                $x: 8;
-                $y: 2;
+                $y: 4;
+                $x: calc(8/$y);
                 grid-template-rows: repeat($x, minmax(10px, auto));
                 grid-template-columns: repeat($y, minmax(10px, 1fr));
-                gap: px;                
+                grid-auto-rows: minmax(10px, auto);
                 .cell {
-                                       
+                    content:""x;
+                    padding-bottom: 0;
+                    border: 1px solid red;
+                    margin: 2px 4px;               
                     img {
-                        // border: 1px solid rgba(103, 103, 103, 0.831);
+                        border: 1px solid rgba(103, 103, 103, 0.831);
                     }
                     
                 }
