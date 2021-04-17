@@ -2,7 +2,33 @@
     h1 {
         font-size: $h1-xs;
     }
+
+    .container {
+        width: 100%;
+        height: auto;
+        @include flex;
+            .grid {
+                @include grid;
+                $y: 4;
+                $x: calc(8/$y);
+                grid-template-rows: repeat($x, minmax(10px, auto));
+                grid-template-columns: repeat($y, minmax(10px, 1fr));
+                grid-auto-rows: minmax(10px, auto);
+                .cell {
+                    content:""x;
+                    padding-bottom: 0;
+                    border: 1px solid red;
+                    margin: 2px 4px;               
+                    img {
+                        border: 1px solid rgba(103, 103, 103, 0.831);
+                    }
+                    
+                }
+            }
+    
+    }
 }
+
 
 
 
@@ -12,8 +38,6 @@
     gap: 5vw;
     width: 100%;
 }
-
-
 
 .soundcloud {
     h3 {
@@ -29,8 +53,6 @@
             
         // }
     }
-
-
 }
 
 @media screen and (min-width: 350px) {

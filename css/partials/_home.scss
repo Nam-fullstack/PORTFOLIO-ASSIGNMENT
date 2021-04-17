@@ -49,6 +49,5 @@ h1 {
     font-weight: 900;
     text-align: center;
     font-size: $h1-xs;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding: $h1-padt 0 $h1-padb 0;
 }

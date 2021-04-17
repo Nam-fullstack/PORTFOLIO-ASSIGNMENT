@@ -58,12 +58,14 @@ input {
     background-color: $form-color;
     border: 1px solid white;
     min-height: 50px;
+    border-radius: 3px;
 }
 
 textarea {
     background-color: $form-color;
     padding-top: 10px;
     min-height: 200px;
+    border-radius: 3px;
     vertical-align: top;    // fixes the extra bottom gap shown by chrome for textareas.
     resize: none;           // disables resizing of textarea, can still type extra, but need to scroll/swipe
 }
@@ -95,7 +97,7 @@ top: 0;
 left: 0;
 width: 0;
 height: 2px;
-background-color: $red-theme;
+background-color: $accent;
 transition: 0.55s;
 }
 
@@ -116,7 +118,7 @@ top: 0;
 left: 0;
 width: 2px;
 height: 0;
-background-color: $red-theme;
+background-color: $accent;
 transition: 0.55s;
 }
 
@@ -163,11 +165,11 @@ left: 0;                       // Positions it to the left
 font-size: 16px;               
 font-weight: 800;
 transition: 0.7s;
-color: $red-theme;      
+color: $accent;      
 }
 
 .box:hover ~ label {
-    color: $red-theme;
+    color: $accent;
 }
 
 // input::placeholder,
