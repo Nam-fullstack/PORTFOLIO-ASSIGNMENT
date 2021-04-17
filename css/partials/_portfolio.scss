@@ -2,7 +2,30 @@
     h1 {
         font-size: $h1-xs;
     }
+
+    .container {
+        width: 100%;
+        height: auto;
+        @include flex;
+            .grid {
+                @include grid;
+                $x: 8;
+                $y: 2;
+                grid-template-rows: repeat($x, minmax(10px, auto));
+                grid-template-columns: repeat($y, minmax(10px, 1fr));
+                gap: px;                
+                .cell {
+                                       
+                    img {
+                        // border: 1px solid rgba(103, 103, 103, 0.831);
+                    }
+                    
+                }
+            }
+    
+    }
 }
+
 
 
 
@@ -12,8 +35,6 @@
     gap: 5vw;
     width: 100%;
 }
-
-
 
 .soundcloud {
     h3 {
@@ -29,8 +50,6 @@
             
         // }
     }
-
-
 }
 
 @media screen and (min-width: 350px) {
