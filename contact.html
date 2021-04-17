@@ -99,40 +99,56 @@
           </div>
       </div>
       </form>
-    </div>
-    <div class="telephone">
-      <div class="call-area">
-        <a href="tel:0430954634">
-          <img srcset="    
-                  icons/Telephone_64.png 64w,
-                  icons/Telephone_96.png 96w
-                " sizes="(max-width: 400px) 64px, (max-width: 600px) 96px, 96px" src="Telephone_96.png"
-            id="call-button" alt="call my mobile" />
-        </a>
-        <h3>Let's have a chat</h3>
+    
+      <div class="telephone">
+        <div class="call-area">
+          <a href="tel:0430954634">
+            <img srcset="    
+                    icons/Telephone_64.png 64w,
+                    icons/Telephone_96.png 96w
+                  " sizes="(max-width: 400px) 64px, (max-width: 600px) 96px, 96px" src="Telephone_96.png"
+              id="call-button" alt="call my mobile" />
+          </a>
+          <h3>Let's have a chat</h3>
+        </div>
       </div>
-    </div>
-    <div class="social">
-      <h2>Connect with me</h2>
-      <div class="social-icons">
-        <a href="https://github.com/Nam-fullstack" alt="GitHub" target="_blank">
-          <img src="icons/GitHub-Light_64.png" class="social-icon" id="github" alt="GitHub" />
-        </a>
-        <a href="https://www.linkedin.com/in/nam-nguyen-full-stack-dev" alt="Linkedin" target="_blank">
-          <img src="icons/Linkedin_32.png" class="social-icon" alt="Linkedin" />
-        </a>
-        <a href="https://www.facebook.com/nam.nguyen.16906715" alt="facebook" target="_blank">
-          <img src="icons/Facebook_32.png" class="social-icon" alt="Facebook" />
-        </a>
-        <a href="https://www.instagram.com/wammies_/" alt="Instagram" target="_blank">
-          <img src="icons/Instagram_32.png" class="social-icon" alt="Instagram" />
-        </a>
-        <a href="https://twitter.com/NamNguy86048812" alt="Twitter" target="_blank">
-          <img src="icons/Twitter_32.png" class="social-icon" alt="Twitter" />
-        </a>
-      </div> <!-- close .social-icons -->
-    </div> <!-- close .social -->
+      <div class="social">
+        <h2>Connect with me</h2>
+        <div class="social-icons">
+          <a href="https://github.com/Nam-fullstack" alt="GitHub" target="_blank">
+            <img src="icons/GitHub-Light_64.png" class="social-icon" id="github" alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/nam-nguyen-full-stack-dev" alt="Linkedin" target="_blank">
+            <img src="icons/Linkedin_32.png" class="social-icon" alt="Linkedin" />
+          </a>
+          <a href="https://www.facebook.com/nam.nguyen.16906715" alt="facebook" target="_blank">
+            <img src="icons/Facebook_32.png" class="social-icon" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/wammies_/" alt="Instagram" target="_blank">
+            <img src="icons/Instagram_32.png" class="social-icon" alt="Instagram" />
+          </a>
+          <a href="https://twitter.com/NamNguy86048812" alt="Twitter" target="_blank">
+            <img src="icons/Twitter_32.png" class="social-icon" alt="Twitter" />
+          </a>
+        </div> <!-- close .social-icons -->
+      </div> <!-- close .social -->
     </div> <!-- close .container -->
+
+    <script>
+      // JavaScript for label effects
+      $(window).load(function(){
+          $(".wrapper input").val("");
+          
+          $(".out input").focusout(function(){
+              if($(this).val() != ""){
+                  $(this).addClass("selected");
+                  // $(this).addparam("display: none");
+              } else{
+                  $(this).removeClass("selected");
+              }
+          })
+      });
+    </script>
   </main>
 
   <footer>

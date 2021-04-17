@@ -1,14 +1,8 @@
-
-
-
-
-
-
-
-
-
-
-
+.portfolio {
+    h1 {
+        font-size: $h1-xs;
+    }
+}
 
 
 
@@ -16,6 +10,7 @@
     @include flex;
     justify-content: center;
     gap: 5vw;
+    width: 100%;
 }
 
 
@@ -36,4 +31,28 @@
     }
 
 
+}
+
+@media screen and (min-width: 350px) {
+    .portfolio {
+        h1 {
+            font-size: $h1-s;
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .portfolio {
+        h1 {
+            font-size: $h1-m;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .portfolio {
+        h1 {
+            font-size: $h1-l;
+        }
+    }
 }

@@ -8,6 +8,12 @@
         padding-bottom: 5vh;
     }
 
+    h1 {
+        color: $white-theme;
+        text-align: center;
+        // font-size: $h1-xs;
+    }
+
     h2 {
         color: $white-theme;
         text-align: center;
@@ -22,7 +28,7 @@
 
 .wrapper {
     width: 95%;
-    margin: 8px 3%;
+    margin: 1px 2%;
     position: relative;
     // necessary to give position: relative to parent for text.
 } 
@@ -51,16 +57,15 @@
 input {
     background-color: $form-color;
     border: 1px solid white;
+    min-height: 50px;
 }
 
 textarea {
     background-color: $form-color;
     padding-top: 10px;
-    // disables resizing of textarea, can still type extra, but need to scroll/swipe
-    resize: none;
-    
-    // sets the text-area height
     min-height: 200px;
+    vertical-align: top;    // fixes the extra bottom gap shown by chrome for textareas.
+    resize: none;           // disables resizing of textarea, can still type extra, but need to scroll/swipe
 }
 
 #name,
@@ -71,12 +76,12 @@ textarea {
     padding: 10px;
     font-size: 12px;
     font-weight: 700;
+    color: $white-theme;
 }
 
 /* styling for the text field */
 .box {
     border: 1px solid #ccc;
-    padding: 7px 14px;
     transition: 0.4s;         /* how fast it goes back to default color */
     background-color: rgba(255, 255, 255, 0.112);
 }
@@ -116,8 +121,8 @@ transition: 0.55s;
 }
 
 /* Right border */
-.box ~ .border i:after {
-left: auto;
+.box ~ .border i:after {            // ~ denotes a general sibling combinator, matches elements that are  
+left: auto;                         // that match .border and are siblings (same parent) of .box and appear it
 right: 0;
 top: auto;
 bottom: 0;
@@ -142,34 +147,34 @@ transition: 0.55s;
 }
 
 .box ~ label {
-position: absolute;                     /* sets it so it can move outside the box */
-left: 14px;                             /* absolute places it on the right of the textbox, this places it inside */
-top: 10px;                              /* positions it in the center vertically */
-color: #aaa;                          /* sets color of placeholder text */
-transition: 0.9s;                       /* time it takes to go back into the box */
-z-index: -1;
-font-size: 18px;
+position: absolute;            // Sets it so it can move outside the box 
+left: 14px;                    // Absolute places it on the right outside of the textbox, this places it inside on the left
+top: 15px;                     // Positions it in the center vertically 
+color: #aaa;                 // Sets color of placeholder text 
+transition: 0.9s;              // Time it takes to go back into the box 
+z-index: -1;                   // Hides the placeholder text label if there's text content.
+font-size: 16px;               // Placeholder text size
 }
 
 .box:focus ~ label,
 .selected.box ~ label {
-top: -18px;                             /* this moves text to be outside on top of the textbox */
-left: 0;                                /* makes it aligned to the very left */
-font-size: 16px;                        /* smaller font size */
-color: $red-theme;      
+top: -18px;                    // This moves text to be outside on top of the textbox
+left: 0;                       // Positions it to the left
+font-size: 16px;               
 font-weight: 800;
 transition: 0.7s;
+color: $red-theme;      
 }
 
 .box:hover ~ label {
     color: $red-theme;
 }
 
-input::placeholder,
-textarea::placeholder {
-    font-size: 1rem;
-    font-weight: 600;
-}
+// input::placeholder,
+// textarea::placeholder {
+//     font-size: 1rem;
+//     font-weight: 600;
+// }
 
 input:focus, textarea:focus {
     background-color: rgba(255, 255, 255, 0.20);
@@ -183,7 +188,10 @@ textarea:hover {
     background-color: rgba(255, 255, 255, 0.20);
     // border: 2px solid $red-theme;
     // box-shadow: 0px 0px 5px rgb(245, 86, 86);
+}
 
+.selected {
+    border: 10px solid pink;
 }
 
 .form-row4 {
@@ -362,34 +370,49 @@ textarea:hover {
 }
 
 
-@media screen and (min-width: 400px) {}
-
-
-@media screen and (min-width: 800px) {
-    textarea {
-        background-color: $form-color;
-        padding-top: 10px;
-        resize: vertical;
-        /* disables horizontal resizing of textarea */
-        min-height: 150px;
-        /* sets smallest text-area height */
-        max-height: 450px;
-        /* sets largest text-area height */
+@media screen and (min-width: 350px) {
+    .wrapper {
+        margin: 2px 3%;
     }
+    .box ~ label {
+        font-size: $form-s;
+    }
+}
 
+@media screen and (min-width: 700px) {
+    .wrapper {
+        margin: px 3%;
+    }
+    .box ~ label {
+        font-size: $form-m;
+    }
     #name,
     #email,
     #message {
-        width: 100%;
-        height: 40px;
-        padding-left: 10px;
-        font-size: 1.2rem;
-        font-weight: 700;
+        padding-left: 15px;
+        font-size: $form-m;
+        font-weight: 500;
     }
+}
 
-    input::placeholder,
-    textarea::placeholder {
-        font-size: 1rem;
-        font-weight: 600;
+
+@media screen and (min-width: 1000px) {
+    .wrapper {
+        margin: 8px 3%;
+    }
+    .box ~ label {
+        font-size: 20px;
+    }
+    textarea {
+        resize: vertical;                   // disables horizontal resizing of textarea
+        min-height: 150px;                  // sets smallest text-area height
+        max-height: 450px;                  // sets largest text-area height
+    }
+    #name,
+    #email,
+    #message {
+        padding-left: 15px;
+        font-size: $form-l;
+        // font-weight: 500;
     }
 }

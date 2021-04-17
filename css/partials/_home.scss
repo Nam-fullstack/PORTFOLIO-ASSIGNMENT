@@ -39,13 +39,16 @@
     // border: 1px solid #ccc; 
     padding: 20px 4vw;
     transition: 0.4s;
+    border-bottom-style: ridge;
+    border-bottom-color: $red-theme;
+    border-bottom-width: 6px;
 }
 
 h1 {
     font-family: $font;
     font-weight: 900;
     text-align: center;
-    font-size: 3rem;
+    font-size: $h1-xs;
     padding-top: 30px;
     padding-bottom: 20px;
 }

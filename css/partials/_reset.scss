@@ -5,12 +5,13 @@
     text-decoration: none;
     font-family: $font, sans-serif;
     max-width: 100% !important;
-    // height: auto !important;
-    &:focus {
-        outline: none;
-      }
+
     //   @include bred;
 }
+
+// :root{
+//     --var $h1
+// }
 
 a:visited {
     color: blue;

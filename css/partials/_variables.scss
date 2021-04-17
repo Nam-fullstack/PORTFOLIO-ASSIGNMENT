@@ -7,12 +7,6 @@ $gray-transparent: rgba(148, 148, 148, 0.557);
 $bgcolor1: rgba(19, 19, 19, 0.893);
 $bgcolor2: rgba(252, 39, 39, 0.954);
 
-$form-color: rgb(215, 215, 215);
-
-$size-s: 10px;
-$size-m: 20px;
-$size-l: 40px;
-
 $trans-time: 2s;
 $trans-delay: 1s;
 $trans-type: ease-in-out;
@@ -25,8 +19,8 @@ $pad-all: 3vw;
 $pad-top-sides: 0 5vw;
 $margin-center: 0 auto;
 
-$width: 100%;
-$height: 100%;
+$maxwidth: 100%;
+$maxheight: 100%;
 
 
 $min: 10px;
@@ -49,6 +43,18 @@ $unhide: block;
 $hide: none;
 
 $font: Roboto, helvetica;
+
+$form-color: rgb(215, 215, 215);
+
+$h1-xs: 2rem;
+$h1-s: 2.5rem;
+$h1-m: 3.5rem;
+$h1-l: 4.5rem;
+
+$form-xs: 14px;
+$form-s: 16px;
+$form-m: 18px;
+$form-l: 20px;
 
 $phone: 100%;
 $tablet: 75%;

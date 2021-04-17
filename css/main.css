@@ -6,9 +6,6 @@
   font-family: Roboto, helvetica, sans-serif;
   max-width: 100% !important;
 }
-*:focus {
-  outline: none;
-}
 
 a:visited {
   color: blue;
@@ -59,15 +56,22 @@ main {
   color: red;
   padding: 20px 4vw;
   transition: 0.4s;
+  border-bottom-style: ridge;
+  border-bottom-color: rgba(252, 53, 53, 0.838);
+  border-bottom-width: 6px;
 }
 
 h1 {
   font-family: Roboto, helvetica;
   font-weight: 900;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   padding-top: 30px;
   padding-bottom: 20px;
+}
+
+.portfolio h1 {
+  font-size: 2rem;
 }
 
 .youtube {
@@ -75,6 +79,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 5vw;
+  width: 100%;
 }
 
 .soundcloud h3 {
@@ -83,6 +88,26 @@ h1 {
 .soundcloud iframe {
   height: 20vw;
   margin: 3vw 0;
+}
+
+@media screen and (min-width: 350px) {
+  .portfolio h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .portfolio h1 {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .portfolio h1 {
+    font-size: 4.5rem;
+  }
+}
+.skills {
+  min-height: 100vh;
+  padding-bottom: 40px;
 }
 
 .container {
@@ -399,6 +424,10 @@ h1 {
   min-height: 100vh;
   padding-bottom: 5vh;
 }
+.contact h1 {
+  color: white;
+  text-align: center;
+}
 .contact h2 {
   color: white;
   text-align: center;
@@ -411,7 +440,7 @@ h1 {
 
 .wrapper {
   width: 95%;
-  margin: 8px 3%;
+  margin: 1px 2%;
   position: relative;
 }
 
@@ -435,13 +464,15 @@ h1 {
 input {
   background-color: #d7d7d7;
   border: 1px solid white;
+  min-height: 50px;
 }
 
 textarea {
   background-color: #d7d7d7;
   padding-top: 10px;
-  resize: none;
   min-height: 200px;
+  vertical-align: top;
+  resize: none;
 }
 
 #name,
@@ -452,12 +483,12 @@ textarea {
   padding: 10px;
   font-size: 12px;
   font-weight: 700;
+  color: white;
 }
 
 /* styling for the text field */
 .box {
   border: 1px solid #ccc;
-  padding: 7px 14px;
   transition: 0.4s;
   /* how fast it goes back to default color */
   background-color: rgba(255, 255, 255, 0.112);
@@ -525,50 +556,26 @@ textarea {
 
 .box ~ label {
   position: absolute;
-  /* sets it so it can move outside the box */
   left: 14px;
-  /* absolute places it on the right of the textbox, this places it inside */
-  top: 10px;
-  /* positions it in the center vertically */
+  top: 15px;
   color: #aaa;
-  /* sets color of placeholder text */
   transition: 0.9s;
-  /* time it takes to go back into the box */
   z-index: -1;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .box:focus ~ label,
 .selected.box ~ label {
   top: -18px;
-  /* this moves text to be outside on top of the textbox */
   left: 0;
-  /* makes it aligned to the very left */
   font-size: 16px;
-  /* smaller font size */
-  color: rgba(252, 53, 53, 0.838);
   font-weight: 800;
   transition: 0.7s;
+  color: rgba(252, 53, 53, 0.838);
 }
 
 .box:hover ~ label {
   color: rgba(252, 53, 53, 0.838);
-}
-
-input::-moz-placeholder, textarea::-moz-placeholder {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-input::placeholder,
-textarea::placeholder {
-  font-size: 1rem;
-  font-weight: 600;
 }
 
 input:focus, textarea:focus {
@@ -579,6 +586,10 @@ input:focus, textarea:focus {
 input:hover,
 textarea:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.selected {
+  border: 10px solid pink;
 }
 
 .form-row4 {
@@ -763,41 +774,51 @@ textarea:hover {
     transform: translate(0px, 2px) rotate(0deg) scale(1.3);
   }
 }
-@media screen and (min-width: 800px) {
-  textarea {
-    background-color: #d7d7d7;
-    padding-top: 10px;
-    resize: vertical;
-    /* disables horizontal resizing of textarea */
-    min-height: 150px;
-    /* sets smallest text-area height */
-    max-height: 450px;
-    /* sets largest text-area height */
+@media screen and (min-width: 350px) {
+  .wrapper {
+    margin: 2px 3%;
+  }
+
+  .box ~ label {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .wrapper {
+    margin: px 3%;
+  }
+
+  .box ~ label {
+    font-size: 18px;
   }
 
   #name,
 #email,
 #message {
-    width: 100%;
-    height: 40px;
-    padding-left: 10px;
-    font-size: 1.2rem;
-    font-weight: 700;
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .wrapper {
+    margin: 8px 3%;
   }
 
-  input::-moz-placeholder, textarea::-moz-placeholder {
-    font-size: 1rem;
-    font-weight: 600;
+  .box ~ label {
+    font-size: 20px;
   }
 
-  input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-    font-size: 1rem;
-    font-weight: 600;
+  textarea {
+    resize: vertical;
+    min-height: 150px;
+    max-height: 450px;
   }
 
-  input::placeholder,
-textarea::placeholder {
-    font-size: 1rem;
-    font-weight: 600;
+  #name,
+#email,
+#message {
+    padding-left: 15px;
+    font-size: 20px;
   }
 }/*# sourceMappingURL=main.css.map */
