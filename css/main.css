@@ -132,6 +132,7 @@ main {
   align-items: center;
   opacity: 1;
   transition: all 0.4s linear;
+  z-index: 50;
 }
 .menu-wrap .menu > div > div {
   text-align: center;
@@ -363,6 +364,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  z-index: 10;
 }
 
 .overflow-container {

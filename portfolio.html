@@ -1,157 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <script src="navbar.js"></script>
     <title>Portfolio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="navigation" id="navigation-bar">
-            <div class="navbar">
-                <ul class="navigation-pages">
-                    <li>
-                        <a href="index.html" alt="link to home page">Home</a>
-                    </li>
-                    <li>
-                        <a href="portfolio.html" id="current-page" alt="link to portfolio page">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="skills.html" alt="link to skills page">Skills</a>
-                    </li>
-                    <li>
-                        <a href="experience.html" alt="link to experience page">Experience</a>
-                    </li>
-                    <li>
-                        <a href="about-me.html" alt="link to about me page">About Me</a>
-                    </li>
-                    <li>
-                        <a href="blog.html" alt="link to blog page">Blog</a>
-                    </li>
-                    <li>
-                        <a href="contact.html" alt="link to contact page">Contact</a>
-                    </li>
+      <div class="navigation" id="navigation-bar">
+        <div class="navbar">
+          <ul class="navigation-pages">
+            <li>
+              <a href="index.html" alt="link to home page">Home</a>
+            </li>
+            <li>
+              <a
+                href="portfolio.html"
+                id="current-page"
+                alt="link to portfolio page"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="experience.html" alt="link to experience page"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a href="about-me.html" alt="link to about me page">About Me</a>
+            </li>
+            <li>
+              <a href="blog.html" alt="link to blog page">Blog</a>
+            </li>
+            <li>
+              <a href="contact.html" alt="link to contact page">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-bar">
+        <div class="menu-wrap">
+          <input type="checkbox" class="toggler" />
+          <div class="hamburger">
+            <div></div>
+          </div>
+          <div class="menu">
+            <div>
+              <div>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="experience.html">Experience</a></li>
+                  <li><a href="about-me.html">About Me</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact</a></li>
                 </ul>
+              </div>
             </div>
+          </div>
         </div>
-
-        <div class="menu-bar">
-
-            <div class="menu-wrap">
-                <input type="checkbox" class="toggler">
-                <div class="hamburger">
-                    <div>
-                    </div>
-                </div>
-                <div class="menu">
-                    <div>
-                        <div>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="portfolio.html">Portfolio</a></li>
-                            <li><a href="experience.html">Experience</a></li>
-                            <li><a href="about-me.html">About Me</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </header>
 
     <main class="portfolio">
-        <h1>Portfolio</h1>
-        <div class="container">
-            <div class="grid">
-                <div class="cell" id="modal">
-                    <a href="https://portfolio-recipe-challenge.netlify.app/" alt="Link to my recipe challenge website">
-                        <img src="photos/sites/Recipe_960.png" alt="Preview of my recipe challenge website" target="" />
-                    </a>
-                </div>
-                <div class="cell" id="modal">
-                    <a href="https://portfolio-band-website.netlify.app/" alt="link to band chalenge website" target="_blank">
-                        <img src="photos/sites/Band1_960.png" alt="Preview of my band challenge website" />
-                    </a>
-                </div>
-                <div class="cell" id="modal">
-                    <a href="https://portfolio-nam-broadway.netlify.app/" alt="link to Broadway website" target="_blank">
-                        <img src="photos/sites/Broadway_960.png" alt="Preview of Broadway website" />
-                    </a>
-                </div>
-                <div class="cell" id="modal">
-                    <a href="https://portfolio-typography.netlify.app/" alt="link to typography website" target="_blank">
-                        <img src="photos/sites/Typography_960.png" alt="Preview of Typography website" />
-                    </a>
-                </div>
-                <div class="cell" id="modal">
-                <a href="https://portfolio-paintstore.netlify.app/" alt="link to Paint Store website" target="_blank">
-                    <img src="photos/sites/PaintStore_960.png" alt="Preview of Paint Store website" />
-                </a>
-                </div>
-                <div class="cell" id="modal">
-                    <a href="https://portfolio-bbqburgers.netlify.app/" alt="link to BBQ Burgers" target="_blank">
-                        <img src="photos/sites/BBQBurger_960.png" alt="Preview of BBQ Burger website" />
-                    </a>
-                </div>
-                <div class="cell" id="modal">
-                    <a href="https://portfolio-savoury.netlify.app/" alt="link to Savoury Grid website" target="_blank">
-                        <img src="photos/sites/Savoury_960.png" alt="Preview of Savoury Grid website" />
-                    </a>
-                </div>
-                <div class="cell" id="modal">
-                    <a href="https://portfolio-innovation-cloud.netlify.app/" alt="link to Innovation Cloud" target="_blank">
-                        <img src="photos/sites/Innovation_960.png" alt="Preview of Innovation Cloud website" />
-                    </a>
-                </div>
-            </div>      <!-- close grid -->
-        </div>      <!-- close container -->
-        <section class="media">
-            <section class="youtube">
-                <!-- YouTube embed of Reminisce Javascript Automation -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/dgJ6mAUf64M"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen id="reminisce"
-                    alt="YouTube music video for Reminisce, a song I co-produced using Javascript and other various automation techniques.">
-                </iframe>
+      <h1>Portfolio</h1>
+      <div class="container">
+        <div class="grid">
+          <div class="cell" id="modal">
+            <a
+              href="https://portfolio-recipe-challenge.netlify.app/"
+              alt="Link to my recipe challenge website"
+            >
+              <img
+                src="photos/sites/Recipe_960.png"
+                alt="Preview of my recipe challenge website"
+                target=""
+              />
+            </a>
+          </div>
+          <div class="cell" id="modal">
+            <a
+              href="https://portfolio-band-website.netlify.app/"
+              alt="link to band chalenge website"
+              target="_blank"
+            >
+              <img
+                src="photos/sites/Band1_960.png"
+                alt="Preview of my band challenge website"
+              />
+            </a>
+          </div>
+          <div class="cell" id="modal">
+            <a
+              href="https://portfolio-nam-broadway.netlify.app/"
+              alt="link to Broadway website"
+              target="_blank"
+            >
+              <img
+                src="photos/sites/Broadway_960.png"
+                alt="Preview of Broadway website"
+              />
+            </a>
+          </div>
+          <div class="cell" id="modal">
+            <a
+              href="https://portfolio-typography.netlify.app/"
+              alt="link to typography website"
+              target="_blank"
+            >
+              <img
+                src="photos/sites/Typography_960.png"
+                alt="Preview of Typography website"
+              />
+            </a>
+          </div>
+          <div class="cell" id="modal">
+            <a
+              href="https://portfolio-paintstore.netlify.app/"
+              alt="link to Paint Store website"
+              target="_blank"
+            >
+              <img
+                src="photos/sites/PaintStore_960.png"
+                alt="Preview of Paint Store website"
+              />
+            </a>
+          </div>
+          <div class="cell" id="modal">
+            <a
+              href="https://portfolio-bbqburgers.netlify.app/"
+              alt="link to BBQ Burgers"
+              target="_blank"
+            >
+              <img
+                src="photos/sites/BBQBurger_960.png"
+                alt="Preview of BBQ Burger website"
+              />
+            </a>
+          </div>
+          <div class="cell" id="modal">
+            <a
+              href="https://portfolio-savoury.netlify.app/"
+              alt="link to Savoury Grid website"
+              target="_blank"
+            >
+              <img
+                src="photos/sites/Savoury_960.png"
+                alt="Preview of Savoury Grid website"
+              />
+            </a>
+          </div>
+          <div class="cell" id="modal">
+            <a
+              href="https://portfolio-innovation-cloud.netlify.app/"
+              alt="link to Innovation Cloud"
+              target="_blank"
+            >
+              <img
+                src="photos/sites/Innovation_960.png"
+                alt="Preview of Innovation Cloud website"
+              />
+            </a>
+          </div>
+        </div>
+        <!-- close grid -->
+      </div>
+      <!-- close container -->
+      <section class="media">
+        <section class="youtube">
+          <!-- YouTube embed of Reminisce Javascript Automation -->
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/dgJ6mAUf64M"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            id="reminisce"
+            alt="YouTube music video for Reminisce, a song I co-produced using Javascript and other various automation techniques."
+          >
+          </iframe>
 
-                <!-- YouTube embed of a music video cover of Mr. Loser, I composed the piano accompaniment -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/w6makw8QFVI"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen id="mrloser"
-                    alt="YouTube music video of a cover song, Mr. Loser, that I composed the piano accompaniment for"></iframe>
-            </section>
-            <section class="soundcloud">
-                <h3>Two #1 hit singles from our album, My Heart</h3>
-                <!-- SoundCloud embed of You're The Only One -->
-                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" id="youretheonlyone"
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1025093854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-                    alt="Soundcloud file for You're The Only One, one of my band's number one hit singles from our EP album My Heart">
-                </iframe>
-
-                <!-- Soundcloud embed of My Heart -->
-                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" id="myheart"
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1025099812&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-                    alt="Soundcloud file for My Heart, one of my band's number one hit singles from our EP album My Heart">
-                </iframe>
-            </section>
+          <!-- YouTube embed of a music video cover of Mr. Loser, I composed the piano accompaniment -->
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/w6makw8QFVI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            id="mrloser"
+            alt="YouTube music video of a cover song, Mr. Loser, that I composed the piano accompaniment for"
+          ></iframe>
         </section>
+        <section class="soundcloud">
+          <h3>Two #1 hit singles from our album, My Heart</h3>
+          <!-- SoundCloud embed of You're The Only One -->
+          <iframe
+            width="100%"
+            height="300"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            id="youretheonlyone"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1025093854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            alt="Soundcloud file for You're The Only One, one of my band's number one hit singles from our EP album My Heart"
+          >
+          </iframe>
+
+          <!-- Soundcloud embed of My Heart -->
+          <iframe
+            width="100%"
+            height="300"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            id="myheart"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1025099812&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            alt="Soundcloud file for My Heart, one of my band's number one hit singles from our EP album My Heart"
+          >
+          </iframe>
+        </section>
+      </section>
     </main>
 
     <footer>
-        <div class="site-map"></div>
-        <div class="copyright">
-            <p>&copy Nam Nguyen 2021. All rights reserved.</p>
-        </div>
+      <div class="site-map"></div>
+      <div class="copyright">
+        <p>&copy Nam Nguyen 2021. All rights reserved.</p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
