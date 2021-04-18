@@ -101,7 +101,7 @@ h1 {
   grid-auto-rows: minmax(10px, auto);
 }
 .portfolio .container .grid .cell {
-  content: "" x;
+  content: "";
   padding-bottom: 0;
   border: 1px solid red;
   margin: 2px 4px;
