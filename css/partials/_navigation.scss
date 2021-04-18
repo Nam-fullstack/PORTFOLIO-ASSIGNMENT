@@ -1,0 +1,82 @@
+.navigation {
+    width: 100%;
+    background-color: $bgcolor1;
+    height: 60px;
+    @include bsb;
+    position: fixed;                // Remains in this position irrespective of scrolling
+    top: 0;                         // Stays on the top of the page
+    transition: top 0.7s;           // Smoothly transitions in and out when scrolling down/up
+    z-index: 400;                   // So it is displayed in top of everything else.
+    display: none;
+}
+
+.navbar ul {
+    @include flex;
+    justify-content: flex-start;
+    list-style-type: none;         /* removes bullets from ul */
+    margin-top: 20px;
+}
+
+.navbar li { 
+    text-decoration: none;  
+}
+
+.navbar a {
+    padding: 20px 4vw;
+    text-decoration: none;
+    color: $white-theme;
+    font-family: $font;
+    font-weight: 600;
+}
+
+.navbar li:hover a {
+    color: $red-theme;
+}
+
+#current-page {
+    color: red;
+    // border: 1px solid #ccc; 
+    padding: 20px 4vw;
+    transition: 0.4s;
+    border-bottom-style: ridge;
+    border-bottom-color: $red-theme;
+    border-bottom-width: 6px;
+}
+
+h1 {
+    font-family: $font;
+    font-weight: 900;
+    text-align: center;
+    font-size: $h1-xs;
+    padding: $h1-padt 0 $h1-padb 0;
+}
+
+@include xsphone {
+    .navigation {
+        display: none;
+    }    
+}
+
+@include tablet {
+    .navigation {
+        display: none;
+    }    
+}
+
+@include laptop {
+    .navigation {
+        display: flex;
+    }
+    .menu-bar, .menu-wrap {
+        display: none;
+    }    
+}
+
+@include desktop {
+    .navigation {
+        display: flex;
+    }
+    .menu-bar, .menu-wrap {
+        display: none;
+    }
+}

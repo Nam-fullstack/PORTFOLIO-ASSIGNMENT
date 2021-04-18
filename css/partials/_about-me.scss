@@ -1,7 +1,3 @@
-::-webkit-scrollbar {
-    display: none;
-}
-
 .carousel-container {
     position: relative;
     background-color: black;
@@ -162,7 +158,11 @@
     }
 }
 
-@media screen and (min-width:750px) {
+@include xsphone {
+
+}
+
+@include tablet {
     .carousel-container {
         width: $tablet;
         margin: 0 auto;
@@ -195,7 +195,7 @@
     }
 }
 
-@media screen and (min-width:1024px) {
+@include laptop {
     .carousel-container {
         width: $desktop;
         margin: 0 auto;

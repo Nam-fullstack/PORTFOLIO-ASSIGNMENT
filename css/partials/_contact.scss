@@ -24,11 +24,12 @@
         color: $white-theme;
         text-align: center;
     }
+
 }
 
 .wrapper {
     width: 95%;
-    margin: 1px 2%;
+    margin: 2px 3%;
     position: relative;
     // necessary to give position: relative to parent for text.
 } 
@@ -155,7 +156,7 @@ top: 15px;                     // Positions it in the center vertically
 color: #aaa;                 // Sets color of placeholder text 
 transition: 0.9s;              // Time it takes to go back into the box 
 z-index: -1;                   // Hides the placeholder text label if there's text content.
-font-size: 16px;               // Placeholder text size
+font-size: $form-s;            // Placeholder text size
 }
 
 .box:focus ~ label,
@@ -372,16 +373,16 @@ textarea:hover {
 }
 
 
-@media screen and (min-width: 350px) {
+@include xsphone {
     .wrapper {
-        margin: 2px 3%;
+    margin: 1px 2%;
     }
     .box ~ label {
-        font-size: $form-s;
+        font-size: $form-xs;
     }
 }
 
-@media screen and (min-width: 700px) {
+@include tablet {
     .wrapper {
         margin: px 3%;
     }
@@ -398,7 +399,7 @@ textarea:hover {
 }
 
 
-@media screen and (min-width: 1000px) {
+@include desktop {
     .wrapper {
         margin: 8px 3%;
     }
