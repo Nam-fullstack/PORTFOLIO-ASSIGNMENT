@@ -73,6 +73,28 @@
 
 
 
+.certificates {
+    @include flex;
+    width: 100%;
+    margin: 30px 0;
+    @include bred;
+    justify-content: space-evenly;
+    .overlay {
+        img {
+            border: 1px solid black;
+            width: 100%;
+            height: auto;
+        }
+    
+        @include tablet {
+            width: 30%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
 
 
 
