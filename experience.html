@@ -247,25 +247,79 @@
           </div>
 
           <div class="certificates">
-            <div class="overlay">
+            <img
+              id="myImg0"
+              src="photos/certificates/Command Line Certificate of Completion.png"
+              alt="Codecademy Command Line Certifcate"
+            />
+            <div id="myModal0" class="modal">
               <img
+                class="modal-content"
+                id="large0"
                 src="photos/certificates/Command Line Certificate of Completion.png"
-                alt="Codecademy Command Line Certifcate"
               />
             </div>
-            <div class="overlay">
+
+
+            <img
+              id="myImg1"
+              src="photos/certificates/HTML Certification of Completion.png"
+              alt="Codecademy HTML Certifcate"
+            />
+            <div id="myModal1" class="modal">
               <img
-                src="photos/certificates/HTML Certification of Completion.png"
-                alt="Codecademy HTML Certifcate"
-              />
-            </div>
-            <div class="overlay">
-              <img
+                class="modal-content"
+                id="large1"
                 src="photos/certificates/CSS Certificate of Completion.png"
-                alt="Codecademy CSS Certifcate"
               />
+            </div>
+
+
+            <img
+              id="myImg2"
+              src="photos/certificates/CSS Certificate of Completion.png"
+              alt="Codecademy CSS Certifcate"
+            />         
+            <div
+              id="myModal2"
+              class="modal"
+            >
+              <img
+                class="modal-content" 
+                id="large2" 
+                src="photos/certificates/HTML Certification of Completion.png" 
+              />
+
             </div>
           </div>
+
+          <script>
+            
+            for (i=0; i <=2; i++){
+              // Get the modal
+              var modal = document.getElementById("myModal"+[i]);
+              
+              // Get the image and insert it inside the modal - use its "alt" text as a caption
+             var img = document.getElementById("myImg"+[i]);
+             var modalImg = document.getElementById("large"+[i]);
+             var captionText = document.getElementById("caption");
+             img.onclick = function () {
+               modal.style.display = "block";
+               modalImg.src = this.src;
+               modalImg.alt = this.alt;
+               captionText.innerHTML = this.alt;
+              };
+              
+              // When the user clicks on <span> (x), close the modal
+                modal.onclick = function () {
+                  large[i].className += " out";
+                  setTimeout(function () {
+                    modal.style.display = "none";
+                    large[i].className = "modal-content";
+                  }, 400);
+                };
+            }
+          </script>
         </section>
       </div>
     </main>

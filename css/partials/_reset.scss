@@ -1,4 +1,4 @@
-* {
+*, *:before, *:after {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -9,14 +9,16 @@
     //   @include bred;
 }
 
-// :root{
-//     --var $h1
-// }
-
 a:visited {
     color: blue;
 }
 
 main {
     min-height: 100vh;
+}
+
+// Removes the white space underneath images as it's default is inline and 
+// browser adds some whitespace under the baseline to adjust other inline elements
+img {
+    display: block;         
 }
