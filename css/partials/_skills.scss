@@ -3,6 +3,7 @@
     padding-bottom: 40px;
 }
 
+
 .container {
     @include flex;
     justify-content: center;
@@ -11,7 +12,7 @@
     gap: 10vw;
 }
 
-@media screen and (min-width: 300px){
+@include phone {
     h1 {
         font-size: 3rem;
     }
@@ -21,43 +22,49 @@
     .container {
         gap: 15vw;
     }
-} 
+}
 
-@media screen and (min-width: 600px){
+@include tablet {
     h1 {
         font-size: 4rem;
     }
     .skills-icon {
-        width: 15%;
+        width: 4rem;
     }
     .container {
         gap: 10vw;
     }
-} 
+}
 
-@media screen and (min-width: 800px){
+@include laptop {
     h1 {
         font-size: 5rem;
     }
     .skills-icon {
-        width: 128px;
+        width: 5rem;
     }
     .container {
         gap: 8vw;
     }
-} 
+}
 
-@media screen and (min-width: 1024px){
+@include desktop {
     h1 {
         font-size: 5rem;
     }
     .skills-icon {
-        width: 11%;
+        width: 5rem;
+        margin: 3vh 2vw;
     }
     .container {
-        gap: 7vw;
+        gap: 0;
     }
-} 
+}
+
+
+
+
+
 
 
 
