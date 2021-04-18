@@ -13,6 +13,18 @@
     align-items: center;
 }
 
+@mixin menu-position {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 50;
+}
+
+@mixin menu-sizing {
+    width: $menu-size;
+    height: $menu-size;
+}
+
 @mixin grid {
     display: grid;
     grid-auto-rows: $cell-height;
@@ -42,4 +54,8 @@
 
 @mixin text-shadow {
     $text-shadow: 1px 1px 2px 5px rgba(26, 26, 26, 0.934);
+}
+
+@mixin text-shadow-light {
+    $text-shadow: 1px 1px 2px 5px rgba(255, 255, 255, 0.934);
 }
