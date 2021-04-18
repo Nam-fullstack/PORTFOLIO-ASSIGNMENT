@@ -7,13 +7,12 @@
 }
 
 .menu-wrap {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 100;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
 
-  
   .toggler {
     @include menu-position;
     @include menu-sizing;
@@ -30,6 +29,10 @@
     @include center;
     // background: $gray-transparent;
     background: gray;
+  }
+
+  &:hover .hamburger {
+    background: red;
   }
   
   // Hamburger middle line 
@@ -78,10 +81,13 @@
     transform: rotate(225deg);
   }
 
-  .toggler:checked:hover + .hamburger {
-    background: red;
+  .toggler:checked + .hamburger {
+    background: gray !important;
   }
-  
+
+  .toggler:checked:hover + .hamburger {
+    background: red !important;
+  }
   
   // Show menu
   .toggler:checked ~ .menu {
