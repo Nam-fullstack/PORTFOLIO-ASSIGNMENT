@@ -1,26 +1,31 @@
 .skills {
     min-height: 100vh;
     padding-bottom: 40px;
+    h1 {
+     font-size: 3rem;
+    }
 }
 
+.skills-icon {
+    width: 18%;
+}
 
 .container {
     @include flex;
     justify-content: center;
     align-items: center;
     padding: $pad-all;
-    gap: 10vw;
+    gap: 15vw;
 }
 
-@include phone {
-    h1 {
-        font-size: 3rem;
-    }
-    .skills-icon {
-        width: 18%;
+@include xsphone {
+    .skills {
+        h1 {
+            font-size: 2rem;
+        }
     }
     .container {
-        gap: 15vw;
+        gap: 10vw;
     }
 }
 

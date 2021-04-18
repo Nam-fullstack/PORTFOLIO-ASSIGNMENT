@@ -23,6 +23,11 @@ main {
   height: 40px;
   background-color: rgba(19, 19, 19, 0.893);
 }
+@media screen and (min-width: 481px) {
+  .menu-bar {
+    height: 60px;
+  }
+}
 
 .menu-wrap {
   position: fixed;
@@ -42,6 +47,12 @@ main {
   cursor: pointer;
   opacity: 0;
 }
+@media screen and (min-width: 481px) {
+  .menu-wrap .toggler {
+    width: 60px;
+    height: 60px;
+  }
+}
 .menu-wrap .hamburger {
   position: absolute;
   top: 0;
@@ -55,6 +66,13 @@ main {
   align-items: center;
   background: gray;
 }
+@media screen and (min-width: 481px) {
+  .menu-wrap .hamburger {
+    width: 60px;
+    height: 60px;
+    padding: 12px;
+  }
+}
 .menu-wrap:hover .hamburger {
   background: red;
 }
@@ -63,7 +81,7 @@ main {
   flex: none;
   justify-content: center;
   align-items: center;
-  width: 110%;
+  width: 100%;
   height: 4px;
   background: white;
   display: flex;
@@ -143,13 +161,34 @@ main {
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
   color: white;
-  font-size: 2rem;
-  padding: 3vh;
+  font-size: 1.5rem;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+@media screen and (max-width: 319px) {
+  .menu-wrap .menu > div > div > ul > li {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 481px) {
+  .menu-wrap .menu > div > div > ul > li {
+    font-size: 2rem;
+  }
 }
 .menu-wrap .menu > div > div > ul > li > a {
   color: white;
   transition: color 0.25s linear;
-  padding: 3vh 100px;
+  padding: 3vh 20vw;
+}
+@media screen and (max-width: 319px) {
+  .menu-wrap .menu > div > div > ul > li > a {
+    padding: 3vh 30vw;
+  }
+}
+@media screen and (min-width: 481px) {
+  .menu-wrap .menu > div > div > ul > li > a {
+    padding: 3vh 20vw;
+  }
 }
 .menu-wrap .menu > div > div > ul > li > a:hover {
   color: #ff1818;
@@ -290,6 +329,13 @@ h1 {
   min-height: 100vh;
   padding-bottom: 40px;
 }
+.skills h1 {
+  font-size: 3rem;
+}
+
+.skills-icon {
+  width: 18%;
+}
 
 .container {
   display: flex;
@@ -297,20 +343,16 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 3vw;
-  gap: 10vw;
+  gap: 15vw;
 }
 
-@media screen and (min-width: 320px) {
-  h1 {
-    font-size: 3rem;
-  }
-
-  .skills-icon {
-    width: 18%;
+@media screen and (max-width: 319px) {
+  .skills h1 {
+    font-size: 2rem;
   }
 
   .container {
-    gap: 15vw;
+    gap: 10vw;
   }
 }
 @media screen and (min-width: 481px) {
