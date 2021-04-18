@@ -69,6 +69,21 @@ h1 {
   padding: 20px 0 30px 0;
 }
 
+@media screen and (min-width: 350px) {
+  .navigation {
+    display: none;
+  }
+}
+@media screen and (min-width: 700px) {
+  .navigation {
+    display: none;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .navigation {
+    display: flex;
+  }
+}
 .portfolio h1 {
   font-size: 2rem;
 }
@@ -393,6 +408,10 @@ h1 {
     font-size: 1.5vw;
   }
 
+  .button-container {
+    top: 21vw;
+  }
+
   .details-about-me {
     width: 75%;
   }
@@ -424,7 +443,7 @@ h1 {
   }
 
   .button-container {
-    top: 17vw;
+    top: 18vw;
   }
 
   .details-about-me {

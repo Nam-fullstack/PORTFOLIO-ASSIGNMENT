@@ -142,7 +142,7 @@
           $(".out input").focusout(function(){
               if($(this).val() != ""){
                   $(this).addClass("selected");
-                  // $(this).addparam("display: none");
+                  $(label).value("opacity:0");
               } else{
                   $(this).removeClass("selected");
               }

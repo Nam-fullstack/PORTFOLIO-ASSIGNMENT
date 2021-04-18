@@ -51,3 +51,22 @@ h1 {
     font-size: $h1-xs;
     padding: $h1-padt 0 $h1-padb 0;
 }
+
+
+@media screen and (min-width: 350px) {
+    .navigation {
+        display: none;
+    }    
+}
+
+@media screen and (min-width: 700px) {
+    .navigation {
+        display: none;
+    }    
+}
+
+@media screen and (min-width: 1000px) {
+    .navigation {
+        display: flex;
+    }    
+}
