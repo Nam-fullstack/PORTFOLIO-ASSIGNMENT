@@ -6,31 +6,33 @@
     position: fixed;                // Remains in this position irrespective of scrolling
     top: 0;                         // Stays on the top of the page
     transition: top 0.7s;           // Smoothly transitions in and out when scrolling down/up
-    z-index: 400;                   // So it is displayed in top of everything else.
+    z-index: 50;                    // So it is displayed in top of everything else.
     display: none;
 }
 
-.navbar ul {
-    @include flex;
-    justify-content: flex-start;
-    list-style-type: none;         /* removes bullets from ul */
-    margin-top: 20px;
-}
+.navbar {
+    ul {
+        @include flex;
+        justify-content: flex-start;
+        list-style-type: none;         // removes bullets from ul 
+        margin-top: 20px;
 
-.navbar li { 
-    text-decoration: none;  
-}
+        li { 
+            text-decoration: none;  
+        }
+    }
+    
+    a {
+        padding: 20px 4vw;
+        text-decoration: none;
+        color: $white-theme;
+        font-family: $font;
+        font-weight: 600;
+    }
 
-.navbar a {
-    padding: 20px 4vw;
-    text-decoration: none;
-    color: $white-theme;
-    font-family: $font;
-    font-weight: 600;
-}
-
-.navbar li:hover a {
-    color: $red-theme;
+    li:hover a {
+        color: $red-theme;
+    }  
 }
 
 #current-page {
@@ -40,7 +42,7 @@
     transition: 0.4s;
     border-bottom-style: ridge;
     border-bottom-color: $red-theme;
-    border-bottom-width: 6px;
+    border-bottom-width: 5px;
 }
 
 h1 {

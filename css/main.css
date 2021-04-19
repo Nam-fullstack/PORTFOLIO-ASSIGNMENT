@@ -26,6 +26,7 @@ img {
   width: 100vw;
   height: 40px;
   background-color: rgba(19, 19, 19, 0.893);
+  z-index: 51;
 }
 @media screen and (min-width: 481px) {
   .menu-bar {
@@ -39,6 +40,7 @@ img {
   right: 0;
   z-index: 100;
   width: 100%;
+  z-index: 50;
 }
 .menu-wrap .toggler {
   position: absolute;
@@ -130,7 +132,7 @@ img {
   transition-duration: 0.75s;
 }
 .menu-wrap .toggler:checked ~ .menu > div > div {
-  opacity: 0.75;
+  opacity: 0.9;
   transition: opacity 0.7s ease 0.2s;
 }
 .menu-wrap .menu {
@@ -168,7 +170,7 @@ img {
   font-size: 1.5rem;
   padding-top: 3vh;
   padding-bottom: 3vh;
-  z-index: 100;
+  z-index: 53;
 }
 @media screen and (max-width: 319px) {
   .menu-wrap .menu > div > div > ul > li {
@@ -184,7 +186,7 @@ img {
   color: white;
   transition: color 0.25s linear;
   padding: 3vh 20vw;
-  z-index: 100;
+  z-index: 52;
 }
 @media screen and (max-width: 319px) {
   .menu-wrap .menu > div > div > ul > li > a {
@@ -201,6 +203,10 @@ img {
   border: 1px solid red;
 }
 
+.toggler:checked main {
+  display: none;
+}
+
 .navigation {
   width: 100%;
   background-color: rgba(19, 19, 19, 0.893);
@@ -209,7 +215,7 @@ img {
   position: fixed;
   top: 0;
   transition: top 0.7s;
-  z-index: 400;
+  z-index: 50;
   display: none;
 }
 
@@ -218,14 +224,11 @@ img {
   flex-wrap: wrap;
   justify-content: flex-start;
   list-style-type: none;
-  /* removes bullets from ul */
   margin-top: 20px;
 }
-
-.navbar li {
+.navbar ul li {
   text-decoration: none;
 }
-
 .navbar a {
   padding: 20px 4vw;
   text-decoration: none;
@@ -233,7 +236,6 @@ img {
   font-family: Roboto, helvetica;
   font-weight: 600;
 }
-
 .navbar li:hover a {
   color: rgba(252, 53, 53, 0.838);
 }
@@ -244,7 +246,7 @@ img {
   transition: 0.4s;
   border-bottom-style: ridge;
   border-bottom-color: rgba(252, 53, 53, 0.838);
-  border-bottom-width: 6px;
+  border-bottom-width: 5px;
 }
 
 h1 {
@@ -304,129 +306,133 @@ h1 {
   }
 }
 
-body {
+.testimonials {
   background: linear-gradient(130deg, #07d9a3, #048fee);
   background-size: 400% 400%;
   -webkit-animation: gradient 16s ease infinite;
-  animation: gradient 16s ease infinite;
+          animation: gradient 16s ease infinite;
+  width: 100%;
 }
-
-.content {
+.testimonials .container {
   margin: auto;
   padding: 20px;
-  width: 80%;
-  max-width: 1200px;
-  min-width: 300px;
+  width: 100%;
+  max-width: 1024px;
+  min-width: 280px;
 }
-
-.slick-slider {
-  margin: 30px auto 50px;
+.testimonials .slider {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
-
-.slick-prev,
-.slick-next {
-  color: white;
-  opacity: 1;
-  height: 40px;
-  width: 40px;
-  margin-top: -20px;
-}
-.slick-prev path,
-.slick-next path {
-  fill: rgba(255, 255, 255, 0.4);
-}
-.slick-prev:hover path,
-.slick-next:hover path {
-  fill: #FFFFFF;
-}
-
-.slick-prev {
-  left: -35px;
-}
-
-.slick-next {
-  right: -35px;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  content: none;
-}
-
-.slick-dots li button:before {
-  color: rgba(255, 255, 255, 0.4);
-  opacity: 1;
-  font-size: 8px;
-}
-
-.slick-dots li.slick-active button:before {
-  color: #FFFFFF;
-}
-
-.quote-container {
+.testimonials .slider .quote-container {
   min-height: 200px;
   color: #666666;
   font-size: 36px;
   margin: 0 20px;
   position: relative;
+  width: 100%;
+  padding: 2vw 0;
 }
-.quote-container:hover {
+.testimonials .slider .quote-container:hover {
   cursor: -webkit-grab;
   cursor: grab;
 }
-.quote-container .portrait {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  height: 140px;
-  width: 140px;
-  overflow: hidden;
-}
-.quote-container .portrait img {
-  display: block;
-  height: auto;
+.testimonials .slider .quote-container .quote {
   width: 100%;
-}
-.quote-container .quote {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
   position: relative;
-  z-index: 600;
-  padding: 40px 0 40px 180px;
-  margin: 0;
-  font-size: 20px;
-  font-style: italic;
-  line-height: 1.4 !important;
-  font-family: Calibri;
-  color: white;
+  z-index: 5;
 }
-.quote-container .quote p {
+.testimonials .slider .quote-container .quote blockquote {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0 0;
+}
+.testimonials .slider .quote-container .quote blockquote p {
   position: relative;
   margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.4;
+  font-family: Calibri;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.934);
+  padding: 0 1.5rem;
 }
-.quote-container .quote p:first-child:before {
+.testimonials .slider .quote-container .quote blockquote p:first-child:before {
   content: "“";
+  position: absolute;
   color: rgba(255, 255, 255, 0.44);
-  font-size: 7.5em;
+  font-size: 20rem;
   font-weight: 700;
   opacity: 1;
+  top: -8rem;
+  left: -4rem;
+  z-index: -11;
+}
+.testimonials .slider .quote-container .quote blockquote p:first-child:after {
+  content: "”";
   position: absolute;
-  top: -0.4em;
-  left: -0.2em;
-  text-shadow: none;
+  color: rgba(255, 255, 255, 0.44);
+  font-size: 20rem;
+  font-weight: 700;
+  opacity: 1;
+  top: -5rem;
+  right: 3rem;
   z-index: -10;
 }
-.quote-container .quote cite {
+.testimonials .slider .quote-container .quote .divider-left {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.testimonials .slider .quote-container .quote .divider-left .portrait {
+  box-shadow: 0 0 10px 5px rgba(48, 48, 48, 0.653);
+  height: 20vw;
+  width: 20vw;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.testimonials .slider .quote-container .quote .divider-right {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content: center;
+}
+.testimonials .slider .quote-container .quote .divider-right .quotation-marks {
+  width: 8%;
+  opacity: 0.3;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  display: none;
+}
+.testimonials .slider .quote-container .quote cite {
   display: block;
   font-size: 14px;
 }
-.quote-container .quote cite span {
+.testimonials .slider .quote-container .quote cite span {
   font-size: 16px;
   font-style: normal;
   letter-spacing: 1px;
-  text-transform: uppercase;
 }
-
-.dragging .quote-container {
+.testimonials .slider .quote-container .person {
+  font-style: normal;
+  color: rgba(87, 87, 87, 0.749);
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.619);
+}
+.testimonials .slider .quote-container .role {
+  color: rgba(108, 107, 107, 0.749);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.619);
+}
+.testimonials .slider .quote-container .dragging .quote-container {
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
@@ -442,6 +448,7 @@ body {
     background-position: 5% 0%;
   }
 }
+
 @keyframes gradient {
   0% {
     background-position: 5% 0%;
@@ -653,17 +660,6 @@ body {
 }
 
 /* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
 /* Add Animation */
 .modal-content, #caption {
   -webkit-animation-name: zoom;
@@ -929,7 +925,7 @@ body {
     padding: 1.5vw;
   }
   .caption-thumbnail-container .caption-container #caption {
-    font-size: 1.5vw;
+    font-size: 1.5vw !important;
   }
 
   .button-container {

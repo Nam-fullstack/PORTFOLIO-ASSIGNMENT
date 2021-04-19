@@ -7,6 +7,8 @@
   @include tablet {
     height: 60px;
   }
+
+  z-index: 51
 }
 
 .menu-wrap {
@@ -15,6 +17,7 @@
   right: 0;
   z-index: 100;
   width: 100%;
+  z-index: 50;
 
   .toggler {
     @include menu-position;
@@ -100,6 +103,8 @@
   .toggler:checked:hover + .hamburger {
     background: red !important;
   }
+
+ 
   
   // Show menu
   .toggler:checked ~ .menu {
@@ -112,7 +117,7 @@
   
   // Transition for fading in text items
   .toggler:checked ~ .menu > div > div {
-    opacity: 0.75;
+    opacity: 0.9;
     transition: opacity 0.7s ease 0.2s;
   }
   
@@ -156,7 +161,7 @@
     font-size: 1.5rem;
     padding-top: 3vh;          // gap between items
     padding-bottom: 3vh;
-    z-index: 100;
+    z-index: 53;
     
     @include xsphone {
       font-size: 1rem;
@@ -170,7 +175,7 @@
     color: white;
     transition: color 0.25s linear;
     padding: 3vh 20vw;
-    z-index: 100;
+    z-index: 52;
 
     @include xsphone {
       padding: 3vh 30vw;
@@ -185,4 +190,8 @@
       @include bred;
     }
   }
+}
+
+.toggler:checked main {
+  display: none;
 }
