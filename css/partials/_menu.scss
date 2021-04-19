@@ -11,6 +11,10 @@
   z-index: 51
 }
 
+.menu-bar, .menu-wrap {
+  transition: top 1.1s;     // transition from when sliding from top
+}
+
 .menu-wrap {
   position: fixed;
   top: 0;

@@ -17,56 +17,7 @@
     max-width: 1024px;
     min-width: 280px;
 
-    // .slider {
-    //   width: 100%;
-    // }
   }
-  
-  // .slick-slider {
-  //   margin: 30px auto 50px;
-  // }
-  
-  // .slick-prev,
-  // .slick-next {
-  //   color: white;
-  //   opacity: 1;
-  //   height: 40px;
-  //   width: 40px;
-  //   margin-top: -20px;
-    
-  //   path {
-  //     fill: rgba(255,255,255, 0.4);
-  //   }
-    
-  //   &:hover {
-  //     path {
-  //       fill: #FFFFFF;
-  //     }
-  //   }
-  
-  
-  // .slick-prev {
-  //   left: -35px;
-  // }
-  
-  // .slick-next {
-  //   right: -35px;
-  // }
-  
-  // .slick-prev:before, 
-  // .slick-next:before {
-  //   content: none;
-  // }
-  
-  // .slick-dots li button:before {
-  //   color: rgba(255,255,255, 0.4);
-  //   opacity: 1;
-  //   font-size: 8px;
-  // }
-  
-  // .slick-dots li.slick-active button:before {
-  //   color: #FFFFFF;
-  // }
   
   .slider {
 
@@ -112,20 +63,20 @@
             line-height: 1.4;
             font-family: Calibri;
             font-weight: 500;
-            color: rgba(255, 255, 255, 0.934); 
+            color: rgba(255, 255, 255, 0.988);  // very slight opacity decrease makes it easier on the eyes than 100%
             padding: 0 1.5rem;   
             
             // Left quotation mark
             &:first-child:before {
               content: '\201C';     // unicode for left quotation mark
               position: absolute;
-              color: rgba(255, 255, 255, 0.44); //transparent so will change colour with background
+              color: rgba(255, 255, 255, 0.44); // transparent so will change colour with background
               font-size: 20rem;
               font-weight: 700;
               opacity: 1;
               top: -8rem;
               left: -4rem;    
-              z-index: -11;
+              z-index: -11;             // places it behind the testimonial text
               // font-family: ;
             }
 
@@ -133,14 +84,13 @@
             &:first-child:after {
               content: '\201D';     // unicode for right quotation mark
               position: absolute;
-              color: rgba(255, 255, 255, 0.44); //transparent so will change colour with background
+              color: rgba(255, 255, 255, 0.44); // transparent so will change colour with background
               font-size: 20rem;
               font-weight: 700;
               opacity: 1;
               top: -5rem;
               right: 3rem;    
               z-index: -10;
-              // font-family: ;
             }
           }
         }
@@ -152,9 +102,6 @@
         
           .portrait {
             // position: absolute;
-            // top: 0;
-            // bottom: 0;
-            // margin: auto;
             border: 3px solid rgb(254, 168, 115);
             box-shadow: 1px 1px 9px 3px rgba(48, 48, 48, 0.653);
             height: 20vw;

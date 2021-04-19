@@ -6,8 +6,12 @@ window.onscroll = function () {
   const currentScrollPosition = window.pageYOffset
   if (prevScrollPosition > currentScrollPosition) {
     document.getElementById('navigation-bar').style.top = '0'
+    document.getElementById('menubar').style.top = '0'
+    document.getElementById('menubutton').style.top = '0'
   } else {
     document.getElementById('navigation-bar').style.top = '-70px'
+    document.getElementById('menubar').style.top = '-70px'
+    document.getElementById('menubutton').style.top = '-70px'
   }
   prevScrollPosition = currentScrollPosition
 }
