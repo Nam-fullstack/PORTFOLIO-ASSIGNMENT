@@ -26,6 +26,7 @@ img {
   width: 100vw;
   height: 40px;
   background-color: rgba(19, 19, 19, 0.893);
+  z-index: 51;
 }
 @media screen and (min-width: 481px) {
   .menu-bar {
@@ -39,6 +40,7 @@ img {
   right: 0;
   z-index: 100;
   width: 100%;
+  z-index: 50;
 }
 .menu-wrap .toggler {
   position: absolute;
@@ -130,7 +132,7 @@ img {
   transition-duration: 0.75s;
 }
 .menu-wrap .toggler:checked ~ .menu > div > div {
-  opacity: 0.75;
+  opacity: 0.9;
   transition: opacity 0.7s ease 0.2s;
 }
 .menu-wrap .menu {
@@ -168,7 +170,7 @@ img {
   font-size: 1.5rem;
   padding-top: 3vh;
   padding-bottom: 3vh;
-  z-index: 100;
+  z-index: 53;
 }
 @media screen and (max-width: 319px) {
   .menu-wrap .menu > div > div > ul > li {
@@ -184,7 +186,7 @@ img {
   color: white;
   transition: color 0.25s linear;
   padding: 3vh 20vw;
-  z-index: 100;
+  z-index: 52;
 }
 @media screen and (max-width: 319px) {
   .menu-wrap .menu > div > div > ul > li > a {
@@ -287,10 +289,6 @@ h1 {
   display: none;
 }
 
-header {
-  z-index: 500;
-}
-
 h1 {
   margin-top: 5vh;
   padding-bottom: 2vh;
@@ -312,129 +310,129 @@ h1 {
   background: linear-gradient(130deg, #07d9a3, #048fee);
   background-size: 400% 400%;
   -webkit-animation: gradient 16s ease infinite;
-  animation: gradient 16s ease infinite;
+          animation: gradient 16s ease infinite;
+  width: 100%;
 }
 .testimonials .container {
   margin: auto;
   padding: 20px;
-  width: 80%;
-  max-width: 1200px;
-  min-width: 300px;
+  width: 100%;
+  max-width: 1024px;
+  min-width: 280px;
 }
-.testimonials .slick-slider {
-  margin: 30px auto 50px;
+.testimonials .slider {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
-.testimonials .slick-prev,
-.testimonials .slick-next {
-  color: white;
-  opacity: 1;
-  height: 40px;
-  width: 40px;
-  margin-top: -20px;
-}
-.testimonials .slick-prev path,
-.testimonials .slick-next path {
-  fill: rgba(255, 255, 255, 0.4);
-}
-.testimonials .slick-prev:hover path,
-.testimonials .slick-next:hover path {
-  fill: #FFFFFF;
-}
-.testimonials .slick-prev {
-  left: -35px;
-}
-.testimonials .slick-next {
-  right: -35px;
-}
-.testimonials .slick-prev:before,
-.testimonials .slick-next:before {
-  content: none;
-}
-.testimonials .slick-dots li button:before {
-  color: rgba(255, 255, 255, 0.4);
-  opacity: 1;
-  font-size: 8px;
-}
-.testimonials .slick-dots li.slick-active button:before {
-  color: #FFFFFF;
-}
-.testimonials .quote-container {
+.testimonials .slider .quote-container {
   min-height: 200px;
   color: #666666;
   font-size: 36px;
   margin: 0 20px;
   position: relative;
+  width: 100%;
+  padding: 2vw 0;
 }
-.testimonials .quote-container:hover {
+.testimonials .slider .quote-container:hover {
   cursor: -webkit-grab;
   cursor: grab;
 }
-.testimonials .quote-container .quote {
+.testimonials .slider .quote-container .quote {
   width: 100%;
-  border: 1px solid red;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
   position: relative;
-  z-index: 600;
-  padding: 40px 0 40px 180px;
-  margin: 0;
-  font-size: 20px;
+  z-index: 5;
+}
+.testimonials .slider .quote-container .quote blockquote {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0 0;
+}
+.testimonials .slider .quote-container .quote blockquote p {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
   font-style: italic;
-  line-height: 1.4 !important;
+  line-height: 1.4;
   font-family: Calibri;
-  color: white;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.934);
+  padding: 0 1.5rem;
 }
-.testimonials .quote-container .quote .divider-left {
-  border: 10px solid blue;
-  width: 100%;
-  height: 200px;
-}
-.testimonials .quote-container .quote .divider-right {
-  border: 1px solid yellow;
-  display: block;
-}
-.testimonials .quote-container .quote .portrait {
+.testimonials .slider .quote-container .quote blockquote p:first-child:before {
+  content: "“";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  color: rgba(255, 255, 255, 0.44);
+  font-size: 20rem;
+  font-weight: 700;
+  opacity: 1;
+  top: -8rem;
+  left: -4rem;
+  z-index: -11;
+}
+.testimonials .slider .quote-container .quote blockquote p:first-child:after {
+  content: "”";
+  position: absolute;
+  color: rgba(255, 255, 255, 0.44);
+  font-size: 20rem;
+  font-weight: 700;
+  opacity: 1;
+  top: -5rem;
+  right: 3rem;
+  z-index: -10;
+}
+.testimonials .slider .quote-container .quote .divider-left {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.testimonials .slider .quote-container .quote .divider-left .portrait {
   box-shadow: 0 0 10px 5px rgba(48, 48, 48, 0.653);
   height: 20vw;
   width: 20vw;
   overflow: hidden;
   border-radius: 100%;
 }
-.testimonials .quote-container .quote .quotation-marks {
-  width: 12%;
-  opacity: 0.55;
+.testimonials .slider .quote-container .quote .divider-right {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  justify-content: center;
 }
-.testimonials .quote-container .quote p {
-  position: relative;
-  margin-bottom: 20px;
-}
-.testimonials .quote-container .quote p:first-child:before {
-  content: "“";
-  color: rgba(255, 255, 255, 0.44);
-  font-size: 7.5em;
-  font-weight: 700;
-  opacity: 1;
+.testimonials .slider .quote-container .quote .divider-right .quotation-marks {
+  width: 8%;
+  opacity: 0.3;
   position: absolute;
-  top: -0.4em;
-  left: -0.2em;
-  text-shadow: none;
-  z-index: -10;
+  top: 40px;
+  right: 40px;
+  display: none;
 }
-.testimonials .quote-container .quote cite {
+.testimonials .slider .quote-container .quote cite {
   display: block;
   font-size: 14px;
 }
-.testimonials .quote-container .quote cite span {
+.testimonials .slider .quote-container .quote cite span {
   font-size: 16px;
   font-style: normal;
   letter-spacing: 1px;
-  text-transform: uppercase;
 }
-.testimonials .quote-container .dragging .quote-container {
+.testimonials .slider .quote-container .person {
+  font-style: normal;
+  color: rgba(87, 87, 87, 0.749);
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.619);
+}
+.testimonials .slider .quote-container .role {
+  color: rgba(108, 107, 107, 0.749);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.619);
+}
+.testimonials .slider .quote-container .dragging .quote-container {
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
