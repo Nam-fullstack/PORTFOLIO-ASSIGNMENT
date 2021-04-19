@@ -201,6 +201,10 @@ img {
   border: 1px solid red;
 }
 
+.toggler:checked main {
+  display: none;
+}
+
 .navigation {
   width: 100%;
   background-color: rgba(19, 19, 19, 0.893);
@@ -209,7 +213,7 @@ img {
   position: fixed;
   top: 0;
   transition: top 0.7s;
-  z-index: 400;
+  z-index: 50;
   display: none;
 }
 
@@ -218,14 +222,11 @@ img {
   flex-wrap: wrap;
   justify-content: flex-start;
   list-style-type: none;
-  /* removes bullets from ul */
   margin-top: 20px;
 }
-
-.navbar li {
+.navbar ul li {
   text-decoration: none;
 }
-
 .navbar a {
   padding: 20px 4vw;
   text-decoration: none;
@@ -233,7 +234,6 @@ img {
   font-family: Roboto, helvetica;
   font-weight: 600;
 }
-
 .navbar li:hover a {
   color: rgba(252, 53, 53, 0.838);
 }
@@ -244,7 +244,7 @@ img {
   transition: 0.4s;
   border-bottom-style: ridge;
   border-bottom-color: rgba(252, 53, 53, 0.838);
-  border-bottom-width: 6px;
+  border-bottom-width: 5px;
 }
 
 h1 {
@@ -287,6 +287,10 @@ h1 {
   display: none;
 }
 
+header {
+  z-index: 500;
+}
+
 h1 {
   margin-top: 5vh;
   padding-bottom: 2vh;
@@ -310,82 +314,66 @@ h1 {
   -webkit-animation: gradient 16s ease infinite;
   animation: gradient 16s ease infinite;
 }
-
-.container {
+.testimonials .container {
   margin: auto;
   padding: 20px;
   width: 80%;
   max-width: 1200px;
   min-width: 300px;
 }
-
-.slick-slider {
+.testimonials .slick-slider {
   margin: 30px auto 50px;
 }
-
-.slick-prev,
-.slick-next {
+.testimonials .slick-prev,
+.testimonials .slick-next {
   color: white;
   opacity: 1;
   height: 40px;
   width: 40px;
   margin-top: -20px;
 }
-.slick-prev path,
-.slick-next path {
+.testimonials .slick-prev path,
+.testimonials .slick-next path {
   fill: rgba(255, 255, 255, 0.4);
 }
-.slick-prev:hover path,
-.slick-next:hover path {
+.testimonials .slick-prev:hover path,
+.testimonials .slick-next:hover path {
   fill: #FFFFFF;
 }
-
-.slick-prev {
+.testimonials .slick-prev {
   left: -35px;
 }
-
-.slick-next {
+.testimonials .slick-next {
   right: -35px;
 }
-
-.slick-prev:before,
-.slick-next:before {
+.testimonials .slick-prev:before,
+.testimonials .slick-next:before {
   content: none;
 }
-
-.slick-dots li button:before {
+.testimonials .slick-dots li button:before {
   color: rgba(255, 255, 255, 0.4);
   opacity: 1;
   font-size: 8px;
 }
-
-.slick-dots li.slick-active button:before {
+.testimonials .slick-dots li.slick-active button:before {
   color: #FFFFFF;
 }
-
-.quote-container {
+.testimonials .quote-container {
   min-height: 200px;
   color: #666666;
   font-size: 36px;
   margin: 0 20px;
   position: relative;
 }
-.quote-container:hover {
+.testimonials .quote-container:hover {
   cursor: -webkit-grab;
   cursor: grab;
 }
-.quote-container .portrait {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  border: 5px solid red;
-  height: 20vw;
-  width: 20vw;
-  overflow: hidden;
-}
-
-.quote {
+.testimonials .quote-container .quote {
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
   position: relative;
   z-index: 600;
   padding: 40px 0 40px 180px;
@@ -396,11 +384,35 @@ h1 {
   font-family: Calibri;
   color: white;
 }
-.quote p {
+.testimonials .quote-container .quote .divider-left {
+  border: 10px solid blue;
+  width: 100%;
+  height: 200px;
+}
+.testimonials .quote-container .quote .divider-right {
+  border: 1px solid yellow;
+  display: block;
+}
+.testimonials .quote-container .quote .portrait {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0 0 10px 5px rgba(48, 48, 48, 0.653);
+  height: 20vw;
+  width: 20vw;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.testimonials .quote-container .quote .quotation-marks {
+  width: 12%;
+  opacity: 0.55;
+}
+.testimonials .quote-container .quote p {
   position: relative;
   margin-bottom: 20px;
 }
-.quote p:first-child:before {
+.testimonials .quote-container .quote p:first-child:before {
   content: "“";
   color: rgba(255, 255, 255, 0.44);
   font-size: 7.5em;
@@ -412,18 +424,17 @@ h1 {
   text-shadow: none;
   z-index: -10;
 }
-.quote cite {
+.testimonials .quote-container .quote cite {
   display: block;
   font-size: 14px;
 }
-.quote cite span {
+.testimonials .quote-container .quote cite span {
   font-size: 16px;
   font-style: normal;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
-.dragging .quote-container {
+.testimonials .quote-container .dragging .quote-container {
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
@@ -439,6 +450,7 @@ h1 {
     background-position: 5% 0%;
   }
 }
+
 @keyframes gradient {
   0% {
     background-position: 5% 0%;

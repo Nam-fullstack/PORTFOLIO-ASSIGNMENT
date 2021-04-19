@@ -100,6 +100,8 @@
   .toggler:checked:hover + .hamburger {
     background: red !important;
   }
+
+ 
   
   // Show menu
   .toggler:checked ~ .menu {
@@ -185,4 +187,8 @@
       @include bred;
     }
   }
+}
+
+.toggler:checked main {
+  display: none;
 }

@@ -8,7 +8,7 @@
     -webkit-animation: gradient 16s ease infinite;
     -moz-animation: gradient 16s ease infinite;
     animation: gradient 16s ease infinite;
-  }
+  
   
   .container {
     margin: auto;
@@ -75,36 +75,52 @@
       cursor: grab;
     }
     
-    .portrait {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      border: 5px solid red;
-      height: 20vw;
-      width: 20vw;
-      //border-radius: 50%;
-      overflow: hidden;
-      
-      // display: block;
-      // height: auto;
-      // width: 100%;
-      }
-  }
+   
+  
     
     .quote {
+      width: 100%;
+      @include bred;
+      display: flex;
+      justify-content: space-between;
       position: relative;
-      // display: flex;
       z-index: 600;
       padding: 40px 0 40px 180px;
       margin: 0;
-  
       font-size: 20px;
       font-style: italic;
       line-height: 1.4 !important;
       font-family: Calibri;
       color: white;
+
+      .divider-left {
+        border: 10px solid blue;
+        width: 100%;
+        height: 200px;
+      }
+
+      .divider-right {
+        @include byel;
+        display: block;
+      }
+
+      .portrait {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        // border: 3px solid rgba(48, 48, 48, 0.714);
+        box-shadow: 0 0 10px 5px rgba(48, 48, 48, 0.653);
+        height: 20vw;
+        width: 20vw;
+        overflow: hidden;
+        border-radius: 100%;
+      }
       
+      .quotation-marks {
+        width: 12%;
+        opacity: 0.55;
+      }
       p {
         position: relative;
         margin-bottom: 20px;
@@ -134,25 +150,15 @@
           text-transform: uppercase;
         }
       }
-    }
+    }  
   
-  
-  .dragging .quote-container {
-    cursor: grabbing;
-  }  
-  
-  @-webkit-keyframes gradient {
-      0%{background-position:5% 0%}
-      50%{background-position:96% 100%}
-      100%{background-position:5% 0%}
+    .dragging .quote-container {
+      cursor: grabbing;
+    }  
   }
-  @-moz-keyframes gradient {
-      0%{background-position:5% 0%}
-      50%{background-position:96% 100%}
-      100%{background-position:5% 0%}
-  }
-  @keyframes gradient { 
-      0%{background-position:5% 0%}
-      50%{background-position:96% 100%}
-      100%{background-position:5% 0%}
-  }
+} 
+@keyframes gradient { 
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}
