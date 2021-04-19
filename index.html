@@ -114,7 +114,7 @@
                 alt="image of quotation marks"
               />
               <p>
-                Nam’s an absolute treasure. Utmost pleasure to work with, he’s by far one of the best in the business. He knows exactly what I want, knows where I want to go and I don’t even need to say a single word. From the moment I met him, we instantly had amazing chemistry. Not only is he full of passion and extremely good at what he does, he has a warm and compassionate heart – such a beautiful soul. He is definitely a rare breed indeed.
+                Nam’s an absolute treasure. Utmost pleasure to work with, he’s by far one of the best in the business. He knows exactly what I want, knows where I want to go and I don’t even need to say a single word. From the moment I met him, we instantly clicked. Not only is he full of passion and extremely good at what he does, he has a warm and compassionate heart – such a beautiful soul. He is definitely a rare breed indeed.
               </p>
               <cite>
                 <p>Bianca Groza</p>
@@ -206,6 +206,29 @@
             </div>
           </div>
         </div>
+
+        <script>
+          
+          $('.single-item').slick({
+            infinite: true,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            speed: 1000,
+            cssEase: 'ease-in-out',
+            prevArrow: prevButton,
+            nextArrow: nextButton
+          });
+          
+          $('.quote-container').mousedown(function(){
+            $('.single-item').addClass('dragging');
+          });
+          $('.quote-container').mouseup(function(){
+            $('.single-item').removeClass('dragging');
+          });
+        </script>
+
+        
       </section>
     </main>
     <footer>
