@@ -60,9 +60,9 @@
                 align-items: center;
                 justify-content: center;
                 
-                @include byel;
+      
                 .text-wrapper {
-                    @include bred;
+                    width: 100%;
                 }
 
                 }
@@ -95,7 +95,6 @@
         #skills {
             width: 100%;
 
-            border: 1px solid red;
             
             // @include desktop {
             //     width: 30%;
@@ -191,7 +190,6 @@
     justify-content: space-evenly;
     
     img {
-        @include bred;
         border: 1px solid black;
         width: 320px;
         height: auto;

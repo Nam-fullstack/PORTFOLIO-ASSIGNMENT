@@ -711,10 +711,9 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid yellow;
 }
 .experience .outer-container #academic .studybox .text-wrapper {
-  border: 1px solid red;
+  width: 100%;
 }
 @media screen and (max-width: 319px) {
   .experience .outer-container #academic {
@@ -748,7 +747,6 @@ h1 {
 }
 .experience .outer-container #skills {
   width: 100%;
-  border: 1px solid red;
 }
 .experience .outer-container #skills h2 {
   text-align: center;
@@ -818,7 +816,6 @@ h1 {
   justify-content: space-evenly;
 }
 .certificates img {
-  border: 1px solid red;
   border: 1px solid black;
   width: 320px;
   height: auto;
@@ -1478,6 +1475,6 @@ textarea:hover {
   }
 
   .form-row4 {
-    display: flex;
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */
