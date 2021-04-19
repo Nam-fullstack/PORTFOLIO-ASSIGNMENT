@@ -80,21 +80,21 @@
       top: 0;
       bottom: 0;
       margin: auto;
-      
-      height: 140px;
-      width: 140px;
+      border: 5px solid red;
+      height: 20vw;
+      width: 20vw;
       //border-radius: 50%;
       overflow: hidden;
       
-      img {
-        display: block;
-        height: auto;
-        width: 100%;
+      // display: block;
+      // height: auto;
+      // width: 100%;
       }
-    }
+  }
     
     .quote {
       position: relative;
+      // display: flex;
       z-index: 600;
       padding: 40px 0 40px 180px;
       margin: 0;
@@ -135,7 +135,7 @@
         }
       }
     }
-  }
+  
   
   .dragging .quote-container {
     cursor: grabbing;

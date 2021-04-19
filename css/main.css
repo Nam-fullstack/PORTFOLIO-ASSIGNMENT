@@ -379,16 +379,13 @@ h1 {
   top: 0;
   bottom: 0;
   margin: auto;
-  height: 140px;
-  width: 140px;
+  border: 5px solid red;
+  height: 20vw;
+  width: 20vw;
   overflow: hidden;
 }
-.quote-container .portrait img {
-  display: block;
-  height: auto;
-  width: 100%;
-}
-.quote-container .quote {
+
+.quote {
   position: relative;
   z-index: 600;
   padding: 40px 0 40px 180px;
@@ -399,11 +396,11 @@ h1 {
   font-family: Calibri;
   color: white;
 }
-.quote-container .quote p {
+.quote p {
   position: relative;
   margin-bottom: 20px;
 }
-.quote-container .quote p:first-child:before {
+.quote p:first-child:before {
   content: "“";
   color: rgba(255, 255, 255, 0.44);
   font-size: 7.5em;
@@ -415,11 +412,11 @@ h1 {
   text-shadow: none;
   z-index: -10;
 }
-.quote-container .quote cite {
+.quote cite {
   display: block;
   font-size: 14px;
 }
-.quote-container .quote cite span {
+.quote cite span {
   font-size: 16px;
   font-style: normal;
   letter-spacing: 1px;
@@ -653,18 +650,6 @@ h1 {
 }
 
 /* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-
 /* Add Animation */
 .modal-content, #caption {
   -webkit-animation-name: zoom;
