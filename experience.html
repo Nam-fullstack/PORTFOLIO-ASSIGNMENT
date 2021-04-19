@@ -39,8 +39,8 @@
         </div>
       </div>
 
-      <div class="menu-bar">
-        <div class="menu-wrap">
+      <div class="menu-bar" id="menubar">
+        <div class="menu-wrap" id="menubutton">
           <input type="checkbox" class="toggler" />
           <div class="hamburger">
             <div></div>
@@ -64,27 +64,53 @@
     </header>
 
     <main class="experience">
-      <div class="skills">
-        <h1>Skills</h1>
+      <div class="main-wrapper">
+        <h1></h1>
         <div class="outer-container">
-          <section class="work-experience">
-            <img src="icons/Work_128px.png" alt="briefcase icon">
+          <section id="work-experience">
+            <img src="icons/Work_128px.png" alt="briefcase icon" />
             <div class="workbox">
+              
 
 
-            </div>
-          </section>          
 
-          <section class="academic">
-            <img src="icons/Study_128px.png" alt="academic icon">
-            <div class="studybox">
 
             </div>
           </section>
 
+          <section id="academic">
+            <div class="studybox">
+              <div class="text-wrapper">
+                <img src="icons/Study_128px.png" alt="academic icon" />
+                <h4>2021 - Graduating Feb 2022</h4>
+                <h2>Coder Academy</h2>
+                <h3>Diploma of Information Technology</h3>
 
-          <section class="skills">
+                <h4>2011</h4>
+                <h2>Monash University, Parkville</h2>
+                <h3>Honours Degree of Pharmaceutical Sciences</h3>
+                <h5>H1 First-Class Honours</h5>
+
+                <h4>2010</h5>
+                <h2>Monash University, Parkville</h2>
+                <h3>Bachelor of Pharmaceutical Sciences
+                <br>
+                  Medicinal Chemistry Major</h3>
+                <h5>GPA 3.8</h5>
+                <h4>2006</h4>
+                <h2>Daramalan College</h2>
+                <h5>ATAR: 99.10</h5>
+              </div>
+            </div>
+          </section>
+
+          <!-- Icons -->
+          <section class="skills" id="skills">
+            <h2>
+              I'm work-ready with the latest, most in-demand technology stacks 
+            </h2>
             <div class="container">
+
               <img
                 srcset="
                   icons/HTML_64px.png   64w,
@@ -263,91 +289,82 @@
               />
             </div>
           </section>
-        </div>  <!-- close outer-container -->
+        </div>
+        <!-- close outer-container -->
 
+        <!-- *************** Modal stuff START *************** -->
 
-<!-- *************** Modal stuff END *************** -->
-
-          <div class="certificates">
+        <div class="certificates">
+          <img
+            id="myImg0"
+            src="photos/certificates/Command Line Certificate of Completion.png"
+            alt="Codecademy Command Line Certifcate"
+          />
+          <div id="myModal0" class="modal">
             <img
-              id="myImg0"
+              class="modal-content"
+              id="large0"
               src="photos/certificates/Command Line Certificate of Completion.png"
-              alt="Codecademy Command Line Certifcate"
             />
-            <div id="myModal0" class="modal">
-              <img
-                class="modal-content"
-                id="large0"
-                src="photos/certificates/Command Line Certificate of Completion.png"
-              />
-            </div>
-
-
-            <img
-              id="myImg1"
-              src="photos/certificates/HTML Certification of Completion.png"
-              alt="Codecademy HTML Certifcate"
-            />
-            <div id="myModal1" class="modal">
-              <img
-                class="modal-content"
-                id="large1"
-                src="photos/certificates/CSS Certificate of Completion.png"
-              />
-            </div>
-
-
-            <img
-              id="myImg2"
-              src="photos/certificates/CSS Certificate of Completion.png"
-              alt="Codecademy CSS Certifcate"
-            />         
-            <div
-              id="myModal2"
-              class="modal"
-            >
-              <img
-                class="modal-content" 
-                id="large2" 
-                src="photos/certificates/HTML Certification of Completion.png" 
-              />
-
-            </div>
           </div>
 
-          <script>
+          <img
+            id="myImg1"
+            src="photos/certificates/HTML Certification of Completion.png"
+            alt="Codecademy HTML Certifcate"
+          />
+          <div id="myModal1" class="modal">
+            <img
+              class="modal-content"
+              id="large1"
+              src="photos/certificates/CSS Certificate of Completion.png"
+            />
+          </div>
+
+          <img
+            id="myImg2"
+            src="photos/certificates/CSS Certificate of Completion.png"
+            alt="Codecademy CSS Certifcate"
+          />
+          <div id="myModal2" class="modal">
+            <img
+              class="modal-content"
+              id="large2"
+              src="photos/certificates/HTML Certification of Completion.png"
+            />
+          </div>
+        </div>
+
+        <!-- <script>
+          
+          for (i=0; i <=2; i++){
+            // Get the modal
+            var modal = document.getElementById("myModal"+[i]);
             
-            for (i=0; i <=2; i++){
-              // Get the modal
-              var modal = document.getElementById("myModal"+[i]);
-              
-              // Get the image and insert it inside the modal - use its "alt" text as a caption
-             var img = document.getElementById("myImg"+[i]);
-             var modalImg = document.getElementById("large"+[i]);
-             var captionText = document.getElementById("caption");
-             img.onclick = function () {
-               modal.style.display = "block";
-               modalImg.src = this.src;
-               modalImg.alt = this.alt;
-               captionText.innerHTML = this.alt;
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("myImg"+[i]);
+            var modalImg = document.getElementById("large"+[i]);
+            var captionText = document.getElementById("caption");
+            img.onclick = function () {
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              modalImg.alt = this.alt;
+              captionText.innerHTML = this.alt;
+            };
+            
+            // When the user clicks on <span> (x), close the modal
+              modal.onclick = function () {
+                large[i].className += " out";
+                setTimeout(function () {
+                  modal.style.display = "none";
+                  large[i].className = "modal-content";
+                }, 400);
               };
-              
-              // When the user clicks on <span> (x), close the modal
-                modal.onclick = function () {
-                  large[i].className += " out";
-                  setTimeout(function () {
-                    modal.style.display = "none";
-                    large[i].className = "modal-content";
-                  }, 400);
-                };
-            }
-          </script>
-<!-- *************** Modal stuff END *************** -->
-
-
-
-        
-      </div> <!-- close skills -->
+          }
+        </script> -->
+        <!-- *************** Modal stuff END *************** -->
+      </div>
+      <!-- close skills -->
     </main>
 
     <footer>
