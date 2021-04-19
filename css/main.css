@@ -393,7 +393,8 @@ h1 {
   justify-content: center;
 }
 .testimonials .slider .quote-container .quote .divider-left .portrait {
-  box-shadow: 0 0 10px 5px rgba(48, 48, 48, 0.653);
+  border: 3px solid #fea873;
+  box-shadow: 1px 1px 9px 3px rgba(48, 48, 48, 0.653);
   height: 20vw;
   width: 20vw;
   overflow: hidden;
@@ -426,11 +427,9 @@ h1 {
   font-style: normal;
   color: rgba(87, 87, 87, 0.749);
   font-size: 2rem;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.619);
 }
 .testimonials .slider .quote-container .role {
   color: rgba(108, 107, 107, 0.749);
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.619);
 }
 .testimonials .slider .quote-container .dragging .quote-container {
   cursor: -webkit-grabbing;
@@ -587,7 +586,7 @@ h1 {
 }
 @media screen and (min-width: 1025px) {
   h1 {
-    font-size: 5rem;
+    font-size: 6rem;
   }
 
   .skills-icon {
