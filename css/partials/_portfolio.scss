@@ -4,7 +4,7 @@
     }
 
     .container {
-        width: 80%;
+        width: 100%;
         height: auto;
         margin: 0 auto;
         text-align: right;
@@ -33,13 +33,12 @@
     padding: 20px;
     @include flex;
     gap: 10px;
-    .togglebutton {
-        border: 2px solid blue;
-        @include flex;
-        gap: 20px;
-        // @include byel;
+    justify-content: flex-end;
+    img {
         cursor: pointer;
     }
+
+    
     
 }
 
