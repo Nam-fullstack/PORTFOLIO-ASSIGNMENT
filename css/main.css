@@ -42,9 +42,8 @@ img {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 100;
+  z-index: 52;
   width: 100%;
-  z-index: 50;
 }
 .menu-wrap .toggler {
   position: absolute;
@@ -466,10 +465,15 @@ h1 {
   font-size: 2.5rem;
 }
 .portfolio .container {
-  width: 100%;
+  width: 80%;
   height: auto;
+  margin: 0 auto;
+  text-align: right;
+  border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  display: inline-block;
 }
 .portfolio .container .grid {
   display: grid;
@@ -481,6 +485,20 @@ h1 {
 }
 .portfolio .container .grid .cell {
   border: 1px solid black;
+}
+
+.togglecontainer {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.togglecontainer .togglebutton {
+  border: 2px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  cursor: pointer;
 }
 
 .youtube {

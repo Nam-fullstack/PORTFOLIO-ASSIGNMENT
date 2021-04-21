@@ -4,9 +4,14 @@
     }
 
     .container {
-        width: 100%;
+        width: 80%;
         height: auto;
+        margin: 0 auto;
+        text-align: right;
+        @include bred;
         @include flex;
+        justify-content: center;
+        display: inline-block;
         .grid {
             @include grid;
             $y:4;
@@ -22,6 +27,20 @@
             }
         }
     }
+}
+
+.togglecontainer {
+    padding: 20px;
+    @include flex;
+    gap: 10px;
+    .togglebutton {
+        border: 2px solid blue;
+        @include flex;
+        gap: 20px;
+        // @include byel;
+        cursor: pointer;
+    }
+    
 }
 
 .youtube {
