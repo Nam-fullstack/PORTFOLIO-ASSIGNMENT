@@ -9,6 +9,8 @@
         @include flex;
         .grid {
             @include grid;
+            $y:4;
+            
             $x: (8/$y);
             grid-template-rows: repeat($x, minmax(10px, auto));
             grid-template-columns: repeat($y, minmax(10px, 1fr));
@@ -19,12 +21,8 @@
                 border: 1px solid black;
             }
         }
-    
     }
 }
-
-
-
 
 .youtube {
     @include flex;

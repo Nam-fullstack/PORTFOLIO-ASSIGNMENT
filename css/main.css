@@ -246,7 +246,6 @@ img {
 
 #current-page {
   color: red;
-  padding: 20px 4vw;
   transition: 0.4s;
   border-bottom-style: ridge;
   border-bottom-color: rgba(252, 53, 53, 0.838);
@@ -909,7 +908,7 @@ h1 {
   color: white;
 }
 
-#caption {
+#image-caption {
   font-size: 2vw;
 }
 
@@ -1014,7 +1013,7 @@ h1 {
   .caption-thumbnail-container .caption-container {
     padding: 1.5vw;
   }
-  .caption-thumbnail-container .caption-container #caption {
+  .caption-thumbnail-container .caption-container #image-caption {
     font-size: 1.5vw !important;
   }
 
@@ -1048,7 +1047,7 @@ h1 {
   .caption-thumbnail-container .caption-container {
     padding: 1vw;
   }
-  .caption-thumbnail-container .caption-container #caption {
+  .caption-thumbnail-container .caption-container #image-caption {
     font-size: 1vw;
   }
 
@@ -1475,6 +1474,6 @@ textarea:hover {
   }
 
   .form-row4 {
-    display: none;
+    display: flex;
   }
 }/*# sourceMappingURL=main.css.map */
