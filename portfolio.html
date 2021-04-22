@@ -82,12 +82,18 @@
         document.getElementById("gridToggle").style.display = "grid";
         document.getElementById("gridToggle").style.gridTemplateColumns =
           "minmax(10px, 1fr)";
+        document.getElementById("gridToggle").style.gridTemplateRows =
+          "repeat(8, minmax(10px, auto))";
+
       }
 
       function gridview() {
         document.getElementById("gridToggle").style.display = "grid";
         document.getElementById("gridToggle").style.gridTemplateColumns =
           "repeat(2, minmax(10px, 1fr))";
+        document.getElementById("gridToggle").style.gridTemplateRows =
+          "repeat(4, minmax(10px, auto))";
+
       }
 
       function slideshowview() {
@@ -105,23 +111,23 @@
       <div class="grid" id="gridToggle">
         <div class="cell" class="modal">
           <img class="site" src="photos/sites/Recipe_960.png" alt="Preview of my recipe challenge website" />
-          <div class="overlay" class="overlay-blur">
-            <div class="overlay-title">Recipe Challenge Website</div>
+          <div class="overlay" class="back-blur">
+            <div class="overlay-title">Recipe Challenge</div>
             <button class="preview">Preview</button>
           </div>
         </div>
 
         <div class="cell" class="modal">
           <img class="site" src="photos/sites/Band1_960.png" alt="Preview of my band challenge website" />
-          <div class="overlay" class="overlay-blur">
-            <div class="overlay-title">Band Challenge Website</div>
+          <div class="overlay" class="back-blur">
+            <div class="overlay-title">Band Challenge</div>
             <button class="preview">Preview</button>
           </div>
         </div>
 
         <div class="cell" class="modal">
           <img class="site" src="photos/sites/Broadway_960.png" alt="Preview of Broadway website" />
-          <div class="overlay" class="overlay-blur">
+          <div class="overlay" class="back-blur">
             <div class="overlay-title">Broadway Website</div>
             <button class="preview">Preview</button>
           </div>
@@ -129,31 +135,31 @@
 
         <div class="cell" class="modal">
           <img class="site" src="photos/sites/Typography_960.png" alt="Preview of Typography website" />
-          <div class="overlay" class="overlay-blur">
-            <div class="overlay-title">Recipe Challenge Website</div>
-            <button class="preview">Preview</button>
-          </div>
-        </div>
-
-        <div class="cell" class="modal">
-          <img class="site" src="photos/sites/PaintStore_960.png" alt="Preview of Paint Store website" />
-          <div class="overlay" class="overlay-blur">
-            <div class="overlay-title">Recipe Challenge Website</div>
-            <button class="preview">Preview</button>
-          </div>
-        </div>
-
-        <div class="cell" class="modal">
-          <img class="site" src="photos/sites/BBQBurger_960.png" alt="Preview of BBQ Burger website" />
-          <div class="overlay" class="overlay-blur">
+          <div class="overlay" class="back-blur">
             <div class="overlay-title">Typography Website</div>
             <button class="preview">Preview</button>
           </div>
         </div>
 
         <div class="cell" class="modal">
+          <img class="site" src="photos/sites/PaintStore_960.png" alt="Preview of Paint Store website" />
+          <div class="overlay" class="back-blur">
+            <div class="overlay-title">Paint Store Site</div>
+            <button class="preview">Preview</button>
+          </div>
+        </div>
+
+        <div class="cell" class="modal">
+          <img class="site" src="photos/sites/BBQBurger_960.png" alt="Preview of BBQ Burger website" />
+          <div class="overlay" class="back-blur">
+            <div class="overlay-title">BBQ Burger Site</div>
+            <button class="preview">Preview</button>
+          </div>
+        </div>
+
+        <div class="cell" class="modal">
           <img class="site" src="photos/sites/Savoury_960.png" alt="Preview of Savoury Grid website" />
-          <div class="overlay" class="overlay-blur">
+          <div class="overlay" class="back-blur">
             <div class="overlay-title">Savoury Website</div>
             <button class="preview">Preview</button>
           </div>
@@ -161,8 +167,8 @@
 
         <div class="cell" class="modal">
           <img class="site" src="photos/sites/Innovation_960.png" alt="Preview of Innovation Cloud website" />
-          <div class="overlay" class="overlay-blur">
-            <div class="overlay-title">Innovation Cloud Website</div>
+          <div class="overlay" class="back-blur">
+            <div class="overlay-title">Innovation Cloud Site</div>
             <button class="preview">Preview</button>
           </div>
         </div>

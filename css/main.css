@@ -502,32 +502,24 @@ h1 {
   width: 100%;
   height: 100%;
   background: rgba(143, 16, 16, 0.8);
-  color: #ffffff;
+  color: white;
   opacity: 0;
   transition: opacity 0.55s;
-}
-.portfolio .container .grid .overlay-blur {
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-}
-.portfolio .container .grid .cell-overlay > * {
-  transform: translateY(0px);
-  transition: transform 0.25s;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 .portfolio .container .grid .overlay:hover {
   opacity: 1;
 }
 .portfolio .container .grid .overlay-title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1.5em;
 }
 .portfolio .container .grid .preview {
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-radius: 10px;
-  padding: 15px 40px;
+  padding: 2% 6%;
   position: absolute;
-  bottom: 40px;
-  /* border: 2px solid red; */
+  bottom: 8%;
   background: #25abff;
 }
 .portfolio .container .grid .preview:hover {
@@ -563,6 +555,7 @@ h1 {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
   padding-top: 40px;
@@ -584,7 +577,7 @@ h1 {
 @media screen and (min-width: 769px) {
   .media .youtube .youtube-box {
     width: 100%;
-    height: 50%;
+    height: auto;
     padding-left: 20px;
   }
   .media .youtube .youtube-box h4 {
@@ -594,7 +587,7 @@ h1 {
 }
 @media screen and (min-width: 1025px) {
   .media .youtube .youtube-box {
-    width: 75;
+    width: 75%;
     height: auto;
   }
 }
@@ -648,6 +641,10 @@ h1 {
   .portfolio .container .grid {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  #box1 {
+    order: 1;
   }
 }
 @media screen and (min-width: 1025px) {
