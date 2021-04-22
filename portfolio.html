@@ -112,6 +112,7 @@
         }
       </script>
 
+
       <h1>Portfolio</h1>
       <div class="container">
         <div class="togglecontainer">
@@ -132,97 +133,105 @@
           />
         </div>
         <div class="grid" id="gridToggle">
-          <div class="cell" id="modal">
+          <div class="cell" class="modal">
             <a
               href="https://portfolio-recipe-challenge.netlify.app/"
               alt="Link to my recipe challenge website"
               target="_blank"
             >
               <img
+                class="img"
                 src="photos/sites/Recipe_960.png"
                 alt="Preview of my recipe challenge website"
               />
             </a>
           </div>
-          <div class="cell" id="modal">
+          <div class="cell" class="modal">
             <a
               href="https://portfolio-band-website.netlify.app/"
               alt="link to band chalenge website"
               target="_blank"
             >
               <img
+                class="img"
                 src="photos/sites/Band1_960.png"
                 alt="Preview of my band challenge website"
               />
             </a>
           </div>
-          <div class="cell" id="modal">
+          <div class="cell" class="modal">
             <a
               href="https://portfolio-nam-broadway.netlify.app/"
               alt="link to Broadway website"
               target="_blank"
             >
               <img
+                class="img"
                 src="photos/sites/Broadway_960.png"
                 alt="Preview of Broadway website"
               />
             </a>
           </div>
-          <div class="cell" id="modal">
+          <div class="cell" class="modal">
             <a
               href="https://portfolio-typography.netlify.app/"
               alt="link to typography website"
               target="_blank"
             >
               <img
+                class="img"
                 src="photos/sites/Typography_960.png"
                 alt="Preview of Typography website"
               />
             </a>
           </div>
-          <div class="cell" id="modal">
+          <div class="cell" class="modal">
             <a
               href="https://portfolio-paintstore.netlify.app/"
               alt="link to Paint Store website"
               target="_blank"
             >
               <img
+                class="img"
                 src="photos/sites/PaintStore_960.png"
                 alt="Preview of Paint Store website"
               />
             </a>
           </div>
-          <div class="cell" id="modal">
+          <div class="cell" class="modal">
             <a
               href="https://portfolio-bbqburgers.netlify.app/"
               alt="link to BBQ Burgers"
               target="_blank"
             >
               <img
+                class="img"
                 src="photos/sites/BBQBurger_960.png"
                 alt="Preview of BBQ Burger website"
               />
             </a>
           </div>
-          <div class="cell" id="modal">
+          <div class="cell" class="modal">
             <a
               href="https://portfolio-savoury.netlify.app/"
               alt="link to Savoury Grid website"
               target="_blank"
             >
               <img
+                class="img"
                 src="photos/sites/Savoury_960.png"
                 alt="Preview of Savoury Grid website"
               />
             </a>
           </div>
-          <div class="cell" id="modal">
+          <div class="cell" class="modal">
             <a
               href="https://portfolio-innovation-cloud.netlify.app/"
               alt="link to Innovation Cloud"
               target="_blank"
             >
               <img
+                class="img"
                 src="photos/sites/Innovation_960.png"
                 alt="Preview of Innovation Cloud website"
               />
@@ -234,61 +243,76 @@
       <!-- close container -->
 
       <section class="media">
-        <section class="youtube">
+        <section class="youtube" id="box1">
           <!-- YouTube embed of Reminisce Javascript Automation -->
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/dgJ6mAUf64M"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            id="reminisce"
-            alt="YouTube music video for Reminisce, a song I co-produced using Javascript and other various automation techniques."
-          >
-          </iframe>
-
+          <div class=youtube-box>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/dgJ6mAUf64M"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              id="reminisce"
+              alt="YouTube music video for Reminisce, a song I co-produced using Javascript and other various automation techniques."
+            >
+            </iframe>
+            <h4>Produced using automation scripts in Logic Pro and wide array of VSTs</h4> 
+          </div>
+         
           <!-- YouTube embed of a music video cover of Mr. Loser, I composed the piano accompaniment -->
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/w6makw8QFVI"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            id="mrloser"
-            alt="YouTube music video of a cover song, Mr. Loser, that I composed the piano accompaniment for"
-          ></iframe>
+          <div class="youtube-box">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/w6makw8QFVI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              id="mrloser"
+              alt="YouTube music video of a cover song, Mr. Loser, that I composed the piano accompaniment for"
+            ></iframe>
+            <h4>Cover song of Mr. Loser, composed piano accompaniment</h4>
+          </div>
         </section>
-        <section class="soundcloud">
+        <section class="soundcloud" id="box2">
+
           <h3>Two #1 hit singles from our album, My Heart</h3>
+          
           <!-- SoundCloud embed of You're The Only One -->
-          <iframe
-            width="100%"
-            height="300"
-            scrolling="no"
-            frameborder="no"
-            allow="autoplay"
-            id="youretheonlyone"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1025093854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-            alt="Soundcloud file for You're The Only One, one of my band's number one hit singles from our EP album My Heart"
-          >
-          </iframe>
+          <div class="soundcloud-box">
+            <iframe
+              width="100%"
+              height="300"
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              id="youretheonlyone"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1025093854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+              alt="Soundcloud file for You're The Only One, one of my band's number one hit singles from our EP album My Heart"
+            >
+            </iframe>
+            <h4>You're The Only One</h4>
+          </div>
 
           <!-- Soundcloud embed of My Heart -->
-          <iframe
-            width="100%"
-            height="300"
-            scrolling="no"
-            frameborder="no"
-            allow="autoplay"
-            id="myheart"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1025099812&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-            alt="Soundcloud file for My Heart, one of my band's number one hit singles from our EP album My Heart"
-          >
-          </iframe>
+          <div class="soundcloud-box">
+            <iframe
+              width="100%"
+              height="300"
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              id="myheart"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1025099812&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+              alt="Soundcloud file for My Heart, one of my band's number one hit singles from our EP album My Heart"
+            >
+            </iframe>
+            <h4>My Heart</h4>
+          </div>
+
         </section>
       </section>
     </main>
