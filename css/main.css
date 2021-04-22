@@ -484,7 +484,57 @@ h1 {
   gap: 5px;
 }
 .portfolio .container .grid .cell {
+  position: relative;
   border: 1px solid black;
+}
+.portfolio .container .grid .site {
+  display: block;
+  width: 100%;
+}
+.portfolio .container .grid .overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(143, 16, 16, 0.8);
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.55s;
+}
+.portfolio .container .grid .overlay-blur {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.portfolio .container .grid .cell-overlay > * {
+  transform: translateY(0px);
+  transition: transform 0.25s;
+}
+.portfolio .container .grid .overlay:hover {
+  opacity: 1;
+}
+.portfolio .container .grid .overlay-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.portfolio .container .grid .preview {
+  font-size: 2rem;
+  border-radius: 10px;
+  padding: 15px 40px;
+  position: absolute;
+  bottom: 40px;
+  /* border: 2px solid red; */
+  background: #25abff;
+}
+.portfolio .container .grid .preview:hover {
+  color: white;
+  background: red;
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.68);
+  cursor: pointer;
 }
 
 .togglecontainer {
