@@ -38,7 +38,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-evenly;
                 top: 0;
                 left: 0;
                 width: 100%;
@@ -57,14 +57,18 @@
             
             
             .overlay-title {
-                font-size: 1.5em;
+                font-size: 1rem;
+
+                @include xsphone {
+
+                }
                 // font-weight: bold;
             }
             
             .preview {
-                font-size: 1.5rem;
-                border-radius: 10px;
-                padding: 2% 6%;
+                font-size: 1rem;
+                border-radius: 8px;
+                padding: 1.5% 5%;
                 position: absolute;
                 bottom: 8%;
                 background: rgb(37, 171, 255);    
@@ -75,6 +79,12 @@
                     background: red;
                     box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.68);
                     cursor: pointer;
+                }
+
+                @include tablet {
+                    font-size: 1.5rem;
+                    border-radius: 10px;
+                    padding: 2% 6%;
                 }
             }
         }
@@ -91,6 +101,9 @@
         cursor: pointer;
     }
 
+    @include xsphone {
+        display: none;
+    }
     @include tablet {
         display: none;
     }       
