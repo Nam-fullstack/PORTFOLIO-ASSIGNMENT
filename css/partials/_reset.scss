@@ -9,6 +9,11 @@
     //   @include bred;
 }
 
+// hides scrollbar
+::-webkit-scrollbar {
+    display: none;
+}
+
 a:visited {
     color: blue;
 }
