@@ -344,8 +344,7 @@ h1 {
 
 .homepage .container {
   width: 100%;
-  margin-top: 60px;
-  padding-top: 60px;
+  margin-top: 40px;
   padding: 47vh 30vw;
   display: flex;
   flex-wrap: wrap;
@@ -355,8 +354,13 @@ h1 {
   background-color: rgba(0, 0, 0, 0.982);
   color: white;
   font-weight: 900;
-  font-size: 10rem;
+  font-size: 10vw;
   border: 1px solid red;
+}
+@media screen and (min-width: 481px) {
+  .homepage .container {
+    margin-top: 60px;
+  }
 }
 .homepage .container b {
   color: red;
@@ -378,17 +382,62 @@ h1 {
   text-align: center;
 }
 
+#part1 {
+  opacity: 1;
+}
 #part1 p {
-  font-size: 40rem;
+  font-size: 13vw;
+}
+@media screen and (max-width: 319px) {
+  #part1 p {
+    font-size: 12vw;
+  }
+}
+@media screen and (min-width: 481px) {
+  #part1 p {
+    font-size: 14vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  #part1 p {
+    font-size: 15vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #part1 p {
+    font-size: 40rem;
+  }
 }
 
 #part2 p {
-  font-size: 15rem;
+  font-size: 13vw;
+}
+@media screen and (max-width: 319px) {
+  #part2 p {
+    font-size: 12vw;
+  }
+}
+@media screen and (min-width: 481px) {
+  #part2 p {
+    font-size: 14vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  #part2 p {
+    font-size: 15vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #part2 p {
+    font-size: 15rem;
+  }
 }
 
-#part3 #stack {
-  width: 20%;
-  margin-right: 5vw;
+@media screen and (min-width: 1025px) {
+  #part3 #stack {
+    width: 20%;
+    margin-right: 5vw;
+  }
 }
 #part3 .stack-box {
   display: flex;
@@ -398,25 +447,104 @@ h1 {
   flex-wrap: flex;
 }
 #part3 p {
-  font-size: 10rem;
+  font-size: 13vw;
+}
+@media screen and (max-width: 319px) {
+  #part3 p {
+    font-size: 12vw;
+  }
+}
+@media screen and (min-width: 481px) {
+  #part3 p {
+    font-size: 14vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  #part3 p {
+    font-size: 15vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #part3 p {
+    font-size: 10rem;
+  }
 }
 
 #part4 p, #part5 p, #part6 p, #part7 p, #part8 p {
-  font-size: 14rem;
+  font-size: 13vw;
+}
+@media screen and (max-width: 319px) {
+  #part4 p, #part5 p, #part6 p, #part7 p, #part8 p {
+    font-size: 12vw;
+  }
+}
+@media screen and (min-width: 481px) {
+  #part4 p, #part5 p, #part6 p, #part7 p, #part8 p {
+    font-size: 14vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  #part4 p, #part5 p, #part6 p, #part7 p, #part8 p {
+    font-size: 15vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #part4 p, #part5 p, #part6 p, #part7 p, #part8 p {
+    font-size: 14rem;
+  }
 }
 
 #part9 p {
-  font-size: 40rem;
+  font-size: 13vw;
+}
+@media screen and (max-width: 319px) {
+  #part9 p {
+    font-size: 12vw;
+  }
+}
+@media screen and (min-width: 481px) {
+  #part9 p {
+    font-size: 14vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  #part9 p {
+    font-size: 15vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #part9 p {
+    font-size: 40rem;
+  }
 }
 
 #part10 {
-  opacity: 1;
   padding: 10vh 5vw;
 }
 #part10 p {
   z-index: 3;
-  font-size: 12rem;
   text-shadow: 0px 0px 120px #ffb039;
+  font-size: 13vw;
+}
+@media screen and (max-width: 319px) {
+  #part10 p {
+    font-size: 12vw;
+  }
+}
+@media screen and (min-width: 481px) {
+  #part10 p {
+    font-size: 14vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  #part10 p {
+    font-size: 15vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #part10 p {
+    font-size: 12vw;
+  }
 }
 
 #radiance {
@@ -425,6 +553,7 @@ h1 {
   max-height: 95%;
   height: auto;
   filter: blur(2px);
+  display: none;
 }
 
 .testimonials {
