@@ -142,18 +142,18 @@
     <div class="container">
       <div class="slider">
 
-        <div class="button-container">
+        <div class="quote-buttons">
           <!-- &#10094 and &#10095 are unicode symbols for < and > -->
           <a
             class="previous"
-            onclick="plusSlides(-1)"
-            alt="button to view previous photo"
+            onclick="plusQuote(-1)"
+            alt="button to view previous testimonial"
             >&#10094;</a
           >
           <a
             class="next"
-            onclick="plusSlides(1)"
-            alt="button to view next photo"
+            onclick="plusQuote(1)"
+            alt="button to view next testimonial"
             >&#10095;</a
           >
         </div>
@@ -368,32 +368,33 @@
               </cite>
             </div>
           </div>
-          <div class="quote-container">
-            <div class="quote">
-              <div class="divider-left">
-                <img class="portrait" src="photos/testimonials/Quentin Moors_400.png"
-                  alt="image of Quentin Moors, Sales Representative" />
-              </div>
-              <div class="divider-right">
-                <img class="quotation-marks" src="photos/testimonials/Quotes Right Up.png" />
-                <blockquote>
-                  <p>
-                    My man!! We go way back. This homie’s always got your
-                    back. You need anything, he’ll get it done. He may seem like
-                    a tiny guy, but this guy’s sure got heart!
-                  </p>
-                </blockquote>
-                <cite>
-                  <span>
-                    <p class="person">Quentin Moors</p>
-                  </span>
-                  <span class="role">Sales Representative</span>
-                </cite>
-              </div> <!-- close divider-right -->
-            </div> <!-- close quote -->
-          </div> <!-- close quote-container -->
-        </div> <!-- close slider -->
-
+        </div>
+        <div class="quote-container">
+          <div class="quote">
+            <div class="divider-left">
+              <img class="portrait" src="photos/testimonials/Quentin Moors_400.png"
+                alt="image of Quentin Moors, Sales Representative" />
+            </div>
+            <div class="divider-right">
+              <img class="quotation-marks" src="photos/testimonials/Quotes Right Up.png" />
+              <blockquote>
+                <p>
+                  My man!! We go way back. This homie’s always got your
+                  back. You need anything, he’ll get it done. He may seem like
+                  a tiny guy, but this guy’s sure got heart!
+                </p>
+              </blockquote>
+              <cite>
+                <span>
+                  <p class="person">Quentin Moors</p>
+                </span>
+                <span class="role">Sales Representative</span>
+              </cite>
+            </div>      <!-- close divider-right -->
+          </div>      <!-- close quote -->
+        </div>      <!-- close quote-container -->
+      </div>      <!-- close slider -->
+    </div>      <!-- close container -->
   </section> <!-- close testimonials -->
 
     <div class="call-to-action">
@@ -407,7 +408,52 @@
       </a>
     </div>
 
+    <script>
+      var quoteNumber = 1;
+      showQuote(quoteNumber);
 
+      // Next and Previous image controls
+      function plusQuote(n) {
+        showQuote((quoteNumber += n));
+      }
+
+      // // Thumbnail image selection control
+      // function currentQuote(n) {
+      //   showQuote((quoteNumber = n));
+      // }
+
+      function showQuote(n) {
+        var i;
+        var quote = document.getElementsByClassName("quote-container");
+        // var thumbnails = document.getElementsByClassName("thumbnail");
+
+        // If it goes past the last slide, returns to Slide 1
+        if (n > quote.length) {
+          quoteNumber = 1;
+        }
+
+        // If it goes left past first slide, goes to the last slide
+        if (n < 1) {
+          quoteNumber = quote.length;
+        }
+
+        for (i = 0; i < quote.length; i++) {
+          quote[i].style.display = "none";
+        }
+
+        // for (i = 0; i < thumbnails.length; i++) {
+        //   thumbnails[i].className = thumbnails[i].className.replace(
+        //     " active",
+        //     ""
+        //   );
+        // }
+
+        quote[quoteNumber - 1].style.display = "block";
+        // thumbnails[quoteNumber - 1].className += " active";
+      }
+    </script>
+
+    
     <!-- formspree message icon script -->
     <script>
       /* paste this in verbatim */
