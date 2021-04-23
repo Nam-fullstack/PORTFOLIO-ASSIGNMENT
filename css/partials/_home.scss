@@ -39,7 +39,8 @@ h1 {
         @include tablet {
             margin-top: 60px;
         }
-        padding: 47vh 30vw;
+        padding: 47vh 0vw;
+        overflow: none;
         @include flex;
         @include center;
         flex-direction: column;
@@ -118,20 +119,20 @@ h1 {
             #stack {
                 width: 20%;
                 margin-right: 5vw;   
-                padding: 20vw 0;
+                padding: 15vw 0;
                 
                 @include laptop {
-                    padding: 8vw 0;
+                    padding: 3vw 0;
                 }
-                @include desktop {
-                    width: 20%; 
-                    padding: 10vw 0;
+                @include desktop { 
+                    padding: 2vw 0;
                 }
             }
             .stack-box {
                 @include flex;
                 @include center;
                 flex-wrap: flex;
+                padding: 0 2vw;
             }
             p {
                 font-size: ($landing-s * 1);
@@ -143,10 +144,10 @@ h1 {
                     font-size: ($landing-m * 0.9);
                 }
                 @include laptop {
-                    font-size: ($landing-l * 0.9);
+                    font-size: ($landing-l * 0.8);
                 }
                 @include desktop {
-                    font-size: 10rem;
+                    font-size: ($landing-l * 0.8);
                 }
             }
         }
@@ -164,7 +165,7 @@ h1 {
                 font-size: ($landing-l * 1);
             }
             @include desktop {
-                font-size: 14rem;
+                font-size: ($landing-l * 0.9);
             }    
         }
         
@@ -182,7 +183,7 @@ h1 {
                     font-size: ($landing-l * 1);
                 }
                 @include desktop {
-                    font-size: 14rem;
+                    font-size: ($landing-l * 0.9);
                 }
             }
         }
@@ -204,16 +205,16 @@ h1 {
                 font-size: ($landing-s * 4);
                 
                 @include xsphone {
-                    font-size: ($landing-xs * 4);
+                    font-size: ($landing-xs * 3.7);
                 }
                 @include tablet {
-                    font-size: ($landing-m * 4);
+                    font-size: ($landing-m * 3.5);
                 }
                 @include laptop {
-                    font-size: ($landing-l * 4);
+                    font-size: ($landing-l * 3);
                 }
                 @include desktop {
-                    font-size: 40rem;
+                    font-size: ($landing-l * 3);
                 }
             }
         }
@@ -243,15 +244,21 @@ h1 {
             }
         }
 
+        .background-overflow {
+            overflow: none;
+            position: relative;
+        }
         #radiance {
             position: absolute;
             min-width: 100vw;
             max-height: 95%;
             height: auto;
             opacity: 0;
-            filter: blur(2px);
+            filter: blur(0px);
             animation: showme 3.5s linear ($animation-length * 9);
         
+            // cannot put infinite for this, since it'll just keep appearing as the animation delay doesn't
+            // keep repeating.
         }
 
     }
@@ -263,14 +270,19 @@ h1 {
     10% {
         transform: scale(1);
         opacity: 1;
+        filter: blur(5px);
+    }
+    90% {
+        filter: blur(0px);
     }
     98% {
         transform: scale(1.05);
         opacity: 1;
+        
     }
     100% {
         transform: scale(1.05);
-        opacity: 1;
+        opacity: 0;
     }
 }
 
@@ -292,21 +304,23 @@ h1 {
 
 // in the same #part, but don't have time to go back and change everything and do all the keyframes and again.
 
+// Starting transform: sclae(1) at 0% is smoother than starting it at 2%. Want it to already by growing without
+// any noticeable pause before it starts. 
+
 @keyframes showtime {
     0% {
         opacity: 0;
-        transform: scale(1);
+        transform: scale(0.9);
     }
     2% {
         opacity: 1;
-        transform: scale(1);
     }
     8% {
         opacity: 1;
     }
     10% {  
         opacity: 0;
-        transform: scale(1.1);
+        transform: scale(1);
     }
     100% {
         opacity: 0;
