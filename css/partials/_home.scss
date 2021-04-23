@@ -283,6 +283,15 @@ h1 {
 // Once a part appears, it is constantly zooming out. 1.1 was a gentle and smooth number for duration.
 // Then for the remainder of the animation, each part is hidden. 
 
+
+// Ideally, I should have put
+
+//   Creativity 
+//      Meets
+//   Practicality
+
+// in the same #part, but don't have time to go back and change everything and do all the keyframes and again.
+
 @keyframes showtime {
     0% {
         opacity: 0;
