@@ -380,8 +380,8 @@ h1 {
   text-align: center;
   opacity: 0;
   transform: scale(1);
-  -webkit-animation: showtime 35s linear;
-          animation: showtime 35s linear;
+  -webkit-animation: showtime 35s linear infinite;
+          animation: showtime 35s linear infinite;
 }
 .homepage .container #part1 {
   -webkit-animation-delay: 0s;
@@ -661,6 +661,7 @@ h1 {
   }
   2% {
     opacity: 1;
+    transform: scale(1);
   }
   8% {
     opacity: 1;
@@ -680,6 +681,7 @@ h1 {
   }
   2% {
     opacity: 1;
+    transform: scale(1);
   }
   8% {
     opacity: 1;
