@@ -66,6 +66,7 @@
             }
             
             .preview {
+                border: none;           // removes hideous default border around button
                 font-size: 1rem;
                 border-radius: 8px;
                 padding: 1.5% 5%;

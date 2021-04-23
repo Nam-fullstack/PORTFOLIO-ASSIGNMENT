@@ -1117,6 +1117,7 @@ h1 {
   font-size: 1rem;
 }
 .portfolio .container .grid .preview {
+  border: none;
   font-size: 1rem;
   border-radius: 8px;
   padding: 1.5% 5%;
