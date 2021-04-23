@@ -68,59 +68,53 @@ h1 {
             opacity: 0;
             text-align: center;
         }
-
-        #part1 {
-            p {
-                font-size: 40rem;
-            }
-        }
-        #part2 {
-            p {
-                font-size: 15rem;
-            }
-        }
-        #part3 {       
-            #stack {
-                width: 20%; 
-                margin-right: 5vw;   
-            }
-            .stack-box {
-                @include flex;
-                @include center;
-                flex-wrap: flex;
-            }
-            p {
-                font-size: 10rem;
-            }
-        }
-        #part4, #part5, #part6, #part7, #part8 {
-            p {
-                font-size: 14rem;
-            }
-        }
-        #part9 {
-            p {
-                font-size: 40rem;
-            }
-        }
-        #part10 {
-            opacity:1;
-            padding: 10vh 5vw;
-
-            p {
-                z-index: 3;
-                font-size: 12rem;
-                text-shadow: 0px 0px 120px rgb(255, 176, 57);
-            }
-
-            // background: rgba(255, 255, 0, 0.297);
-            // box-shadow: 0 0 200px 60px rgba(255, 255, 0, 0.297);
-        }
-
- 
-
     }
+}
+#part1 {
+    p {
+        font-size: 40rem;
+    }
+}
+#part2 {
+    p {
+        font-size: 15rem;
+    }
+}
+#part3 {       
+    #stack {
+        width: 20%; 
+        margin-right: 5vw;   
+    }
+    .stack-box {
+        @include flex;
+        @include center;
+        flex-wrap: flex;
+    }
+    p {
+        font-size: 10rem;
+    }
+}
+#part4, #part5, #part6, #part7, #part8 {
+    p {
+        font-size: 14rem;
+    }
+}
+#part9 {
+    p {
+        font-size: 40rem;
+    }
+}
+#part10 {
+    opacity:1;
+    padding: 10vh 5vw;
 
+    p {
+        z-index: 3;
+        font-size: 12rem;
+        text-shadow: 0px 0px 120px rgb(255, 176, 57);
+    }
+    // background: rgba(255, 255, 0, 0.297);
+    // box-shadow: 0 0 200px 60px rgba(255, 255, 0, 0.297);
 }
 
 #radiance {
@@ -132,3 +126,4 @@ h1 {
     // opacity: 0;
     filter: blur(2px);
 }
+

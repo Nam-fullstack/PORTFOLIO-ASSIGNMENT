@@ -377,37 +377,43 @@ h1 {
   opacity: 0;
   text-align: center;
 }
-.homepage .container #part1 p {
+
+#part1 p {
   font-size: 40rem;
 }
-.homepage .container #part2 p {
+
+#part2 p {
   font-size: 15rem;
 }
-.homepage .container #part3 #stack {
+
+#part3 #stack {
   width: 20%;
   margin-right: 5vw;
 }
-.homepage .container #part3 .stack-box {
+#part3 .stack-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   flex-wrap: flex;
 }
-.homepage .container #part3 p {
+#part3 p {
   font-size: 10rem;
 }
-.homepage .container #part4 p, .homepage .container #part5 p, .homepage .container #part6 p, .homepage .container #part7 p, .homepage .container #part8 p {
+
+#part4 p, #part5 p, #part6 p, #part7 p, #part8 p {
   font-size: 14rem;
 }
-.homepage .container #part9 p {
+
+#part9 p {
   font-size: 40rem;
 }
-.homepage .container #part10 {
+
+#part10 {
   opacity: 1;
   padding: 10vh 5vw;
 }
-.homepage .container #part10 p {
+#part10 p {
   z-index: 3;
   font-size: 12rem;
   text-shadow: 0px 0px 120px #ffb039;
