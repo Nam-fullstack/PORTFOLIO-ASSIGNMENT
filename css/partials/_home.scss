@@ -64,14 +64,18 @@ h1 {
             padding: 10px 2vw;
             position: absolute;
             text-align: center;
-            opacity: 0;
-            transform: scale(1);
-            // animation: zoomout 5s linear;
-            animation: showtime 35s linear; 
+            opacity: 0;                             // Hides all the text, so it'll only show when keyframe opacity is 1
+            transform: scale(1);                    // Sets it so it starts at standard width, don't want to leave anything to chance
+            animation: showtime 35s linear infinite;         // Animation settings
         }
 
+    // The $animation-length variable has been defined in variables, for each part, I just multiply the animation delay 
+    // starting from 0 increasing by 1 for each part up to * 9.
+    // with the sizing, I've preset sizes based on vw, they're generally 12vw - 16vw.
+    // simply just multiplied the variable sizes to make them bigger by a specific amount for each part.
+
         #part1 {
-            animation-delay: 0s;
+            animation-delay: ($animation-length * 0);
             p {
                 font-size: ($landing-s * 4);
                 
@@ -252,7 +256,6 @@ h1 {
 
     }
 }
-
 @keyframes showme {
     0% {
         opacity: 0;
@@ -271,6 +274,15 @@ h1 {
     }
 }
 
+// Since there are 10 parts, and each part plays for 3.5seconds (1 interval) 
+// I've divided the entire animation time into 10, and set animation-delay for each interval accordingly
+// i.e. part 1: 0s delay, part 2: 3.5s delay, part 3: 7s delay and so forth.
+// Such that the next part will only start once the current part's 3.5s showtime has lapsed.
+// So the time for each part is only lasts for 10%, 1% is equivalent to 350ms
+// Starts at opacity: 0; so it takes 0.7s to fade in, likewise with fading out
+// Once a part appears, it is constantly zooming out. 1.1 was a gentle and smooth number for duration.
+// Then for the remainder of the animation, each part is hidden. 
+
 @keyframes showtime {
     0% {
         opacity: 0;
@@ -278,6 +290,7 @@ h1 {
     }
     2% {
         opacity: 1;
+        transform: scale(1);
     }
     8% {
         opacity: 1;
