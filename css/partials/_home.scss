@@ -33,6 +33,7 @@ h1 {
 .homepage {
 
     .container {
+        // border: 20px solid red;
         width: 100%;
         margin-top: 40px;
         @include tablet {
@@ -46,7 +47,6 @@ h1 {
         color: white;
         font-weight: 900;
         font-size: 10vw;
-        @include bred;
 
         b {
             color: red;
@@ -69,18 +69,17 @@ h1 {
     }
 }
 #part1 {
-opacity: 1;
     p {
-        font-size: $landing-s;
-
+        font-size: ($landing-s * 4);
+        
         @include xsphone {
-            font-size: $landing-xs;
+            font-size: ($landing-xs * 4);
         }
         @include tablet {
-            font-size: $landing-m;
+            font-size: ($landing-m * 3.5);
         }
         @include laptop {
-            font-size: $landing-l;
+            font-size: ($landing-l * 3);
         }
         @include desktop {
             font-size: 40rem;
@@ -89,18 +88,18 @@ opacity: 1;
 }
 #part2 {
     p {
-        font-size: $landing-s;
-
+        font-size: ($landing-s * 2);
+        
         @include xsphone {
-            font-size: $landing-xs;
+            font-size: ($landing-xs * 2.5);
         }
         @include tablet {
-            font-size: $landing-m;
+            font-size: ($landing-m * 1.8);
         }
         @include laptop {
-            font-size: $landing-l;
+            font-size: ($landing-l * 1.5);
         }
-
+        
         @include desktop {
             font-size: 15rem;
         }
@@ -108,10 +107,16 @@ opacity: 1;
 }
 #part3 {       
     #stack {
-
+        width: 20%;
+        margin-right: 5vw;   
+        padding: 20vw 0;
+        
+        @include laptop {
+            padding: 8vw 0;
+        }
         @include desktop {
             width: 20%; 
-            margin-right: 5vw;   
+            padding: 10vw 0;
         }
     }
     .stack-box {
@@ -120,58 +125,80 @@ opacity: 1;
         flex-wrap: flex;
     }
     p {
-        font-size: $landing-s;
-
+        font-size: ($landing-s * 1);
+        
         @include xsphone {
-            font-size: $landing-xs;
+            font-size: ($landing-xs * 1.1);
         }
         @include tablet {
-            font-size: $landing-m;
+            font-size: ($landing-m * 0.9);
         }
         @include laptop {
-            font-size: $landing-l;
+            font-size: ($landing-l * 0.9);
         }
         @include desktop {
             font-size: 10rem;
         }
     }
 }
-#part4, #part5, #part6, #part7, #part8 {
-    p {
-        font-size: $landing-s;
+#part4 {
+    font-size: ($landing-s * 1.7);
+    
+    @include xsphone {
+        font-size: ($landing-xs * 1.8);
+    }
+    @include tablet {
+        font-size: ($landing-m * 1.5);
+    }
+    @include laptop {
+        font-size: ($landing-l * 1);
+    }
+    @include desktop {
+        font-size: 14rem;
+    }    
+}
 
+#part5, #part6, #part7, #part8 {
+    p {
+        font-size: ($landing-s * 1.1);
+        
         @include xsphone {
-            font-size: $landing-xs;
+            font-size: ($landing-xs * 1.2);
         }
         @include tablet {
-            font-size: $landing-m;
+            font-size: ($landing-m * 1.1);
         }
         @include laptop {
-            font-size: $landing-l;
+            font-size: ($landing-l * 1);
         }
         @include desktop {
-         font-size: 14rem;
+            font-size: 14rem;
         }
     }
 }
 #part9 {
     p {
-        font-size: $landing-s;
-
+        font-size: ($landing-s * 4);
+        
         @include xsphone {
-            font-size: $landing-xs;
+            font-size: ($landing-xs * 4);
         }
         @include tablet {
-            font-size: $landing-m;
+            font-size: ($landing-m * 4);
         }
         @include laptop {
-            font-size: $landing-l;
+            font-size: ($landing-l * 4);
         }
         @include desktop {
             font-size: 40rem;
         }
     }
 }
+
+#part10 {
+    opacity: 1;
+}
+
 #part10 {
     // opacity:1;
     padding: 10vh 5vw;
@@ -180,23 +207,21 @@ opacity: 1;
         z-index: 3;
         text-shadow: 0px 0px 120px rgb(255, 176, 57);
         
-        font-size: $landing-s;
+        font-size: ($landing-s * 1);
 
         @include xsphone {
-            font-size: $landing-xs;
+            font-size: ($landing-xs * 1.1);
         }
         @include tablet {
-            font-size: $landing-m;
+            font-size: ($landing-m * 0.9);
         }
         @include laptop {
-            font-size: $landing-l;
+            font-size: ($landing-l * 0.9);
         }
         @include desktop {
             font-size: 12vw;
         }
     }
-    // background: rgba(255, 255, 0, 0.297);
-    // box-shadow: 0 0 200px 60px rgba(255, 255, 0, 0.297);
 }
 
 #radiance {
@@ -207,6 +232,5 @@ opacity: 1;
     height: auto;
     // opacity: 0;
     filter: blur(2px);
-    display: none;
 }
 
