@@ -11,6 +11,13 @@
 }
 
 .navbar {
+    display: flex;
+     .logo {
+         width: 56px;
+         margin: 0 20px;
+         padding-top: 2px;
+     }
+
     ul {
         @include flex;
         justify-content: flex-start;

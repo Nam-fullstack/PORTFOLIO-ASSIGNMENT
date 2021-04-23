@@ -27,10 +27,21 @@ img {
   height: 40px;
   background-color: rgba(19, 19, 19, 0.893);
   z-index: 51;
+  display: flex;
 }
 @media screen and (min-width: 481px) {
   .menu-bar {
     height: 60px;
+  }
+}
+.menu-bar .menu-logo {
+  width: 35px;
+  margin: 0 7px;
+  padding-top: 2px;
+}
+@media screen and (min-width: 481px) {
+  .menu-bar .menu-logo {
+    width: 56px;
   }
 }
 
@@ -222,6 +233,14 @@ img {
   display: none;
 }
 
+.navbar {
+  display: flex;
+}
+.navbar .logo {
+  width: 56px;
+  margin: 0 20px;
+  padding-top: 2px;
+}
 .navbar ul {
   display: flex;
   flex-wrap: wrap;
@@ -289,6 +308,14 @@ h1 {
 }
 ::-webkit-scrollbar {
   display: none;
+}
+
+header {
+  z-index: 10;
+  display: flex;
+}
+header .logo {
+  height: 100%;
 }
 
 h1 {
