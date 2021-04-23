@@ -59,6 +59,7 @@ h1 {
             color: rgb(255, 117, 11);
         }
         .vision {
+            font-family: 'Inter', 'Raleway', 'Roboto', sans-serif; 
             @include flex;
             @include center;
             // border: 4px solid orange;
@@ -125,7 +126,7 @@ h1 {
                     padding: 3vw 0;
                 }
                 @include desktop { 
-                    padding: 2vw 0;
+                    padding: 1vw 0;
                 }
             }
             .stack-box {
@@ -250,12 +251,14 @@ h1 {
         }
         #radiance {
             position: absolute;
+            top: -50vh;
+            left: -50vw;
             min-width: 100vw;
-            max-height: 95%;
-            height: auto;
-            opacity: 0;
+            max-height: 95vh;
+            padding-top: 30px;
             filter: blur(0px);
-            animation: showme 3.5s linear ($animation-length * 9);
+            opacity: 0;
+            animation: showme 35s linear infinite;
         
             // cannot put infinite for this, since it'll just keep appearing as the animation delay doesn't
             // keep repeating.
@@ -267,22 +270,22 @@ h1 {
     0% {
         opacity: 0;
     }
-    10% {
+    90% {
+        opacity: 0;
+        transform: scale(1);
+        filter: blur(5px);
+    }
+    92% {
         transform: scale(1);
         opacity: 1;
         filter: blur(5px);
     }
-    90% {
-        filter: blur(0px);
-    }
     98% {
-        transform: scale(1.05);
-        opacity: 1;
-        
+        filter: blur(0px);
     }
     100% {
         transform: scale(1.05);
-        opacity: 0;
+        opacity: 1;   
     }
 }
 

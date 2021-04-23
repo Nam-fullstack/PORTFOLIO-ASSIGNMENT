@@ -372,6 +372,7 @@ h1 {
   color: #ff750b;
 }
 .homepage .container .vision {
+  font-family: "Inter", "Raleway", "Roboto", sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -454,7 +455,7 @@ h1 {
 }
 @media screen and (min-width: 1025px) {
   .homepage .container #part3 #stack {
-    padding: 2vw 0;
+    padding: 1vw 0;
   }
 }
 .homepage .container #part3 .stack-box {
@@ -615,34 +616,37 @@ h1 {
 }
 .homepage .container #radiance {
   position: absolute;
+  top: -50vh;
+  left: -50vw;
   min-width: 100vw;
-  max-height: 95%;
-  height: auto;
-  opacity: 0;
+  max-height: 95vh;
+  padding-top: 30px;
   filter: blur(0px);
-  -webkit-animation: showme 3.5s linear 31.5s;
-          animation: showme 3.5s linear 31.5s;
+  opacity: 0;
+  -webkit-animation: showme 35s linear infinite;
+          animation: showme 35s linear infinite;
 }
 
 @-webkit-keyframes showme {
   0% {
     opacity: 0;
   }
-  10% {
+  90% {
+    opacity: 0;
+    transform: scale(1);
+    filter: blur(5px);
+  }
+  92% {
     transform: scale(1);
     opacity: 1;
     filter: blur(5px);
   }
-  90% {
-    filter: blur(0px);
-  }
   98% {
-    transform: scale(1.05);
-    opacity: 1;
+    filter: blur(0px);
   }
   100% {
     transform: scale(1.05);
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -650,21 +654,22 @@ h1 {
   0% {
     opacity: 0;
   }
-  10% {
+  90% {
+    opacity: 0;
+    transform: scale(1);
+    filter: blur(5px);
+  }
+  92% {
     transform: scale(1);
     opacity: 1;
     filter: blur(5px);
   }
-  90% {
-    filter: blur(0px);
-  }
   98% {
-    transform: scale(1.05);
-    opacity: 1;
+    filter: blur(0px);
   }
   100% {
     transform: scale(1.05);
-    opacity: 0;
+    opacity: 1;
   }
 }
 @-webkit-keyframes showtime {
