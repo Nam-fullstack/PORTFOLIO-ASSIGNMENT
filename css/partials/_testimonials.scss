@@ -1,44 +1,77 @@
 
-// main {
-//   border: 2px solid red;
-//   padding: 0;
-// }
 
 .testimonials {
-    background: linear-gradient(130deg, #07d9a3, #048fee);
-    background-size: 400% 400%;
-    animation: gradient 16s ease infinite;
-    width: 100%;
+  background: linear-gradient(130deg, #07d9a3, #048fee);
+  background-size: 400% 400%;
+  animation: gradient 16s ease infinite;
+  width: 100%;
   
-  .container {
-    background: none;
-    margin: auto;
-    padding: 20px;
+  
+  .wrapper {
+    background: none;  // to override landing text animation background
+    padding: 0px;
+    margin: 0px;
     width: 100%;
-    max-width: 1024px;
+    max-width: 1920px;
     min-width: 280px;
+    min-height: 650px;
+    @include flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
+    @include xsphone {
+      min-height: 650px;
+    }
+    @include tablet {
+      min-height: 550px;
+    }
+    @include laptop {
+      min-height: 500px;
+    }
+    h1 {
+      font-size: 6vw;
+      padding: 2vw 20px 40px;
+      margin-top: 20px;
+      color: white;
+  
+      @include tablet {
+        font-size: 4vw;
+      }
+    }
   }
   
   .slider {
 
     @include flex;
     flex-direction: row;
-    position: relative;   // sets it so the quote buttons container is relative to this
+    position: relative;   // sets it so the quote buttons container is relative to this 
 
     .quote-buttons {
       position: absolute;
       width: 100%;
-      @include bred;
       top: 150px;       // moving testimonial buttons down 
       @include flex;
       justify-content: space-between;
       z-index: 20;
 
+      @include xsphone {
+        top: 300px;
+      }
+      @include tablet {
+        top: 200px;
+      }
+      @include laptop {
+
+      }
+      @include desktop {
+        top: 200px;
+      }
+
       .previous, .next {
         background: none;
         font-size: 6vw;
-        padding: 0;
+        padding: 10px 20px;
         margin: 2vw;
       }
     }
@@ -47,95 +80,197 @@
       min-height: 200px;
       color: #666666;
       font-size: 36px;
-      margin: 0 20px;
+      padding: 0;
+      margin: 0;
       position: relative;
       width: 100%;
-      padding: 2vw 0;
-      
+      // @include flex;
+      // // flex-direction: column;
+      // // justify-content: flex-start;
+
       &:hover {
         cursor: grab;
+        
       }
       
       .quote {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0 auto;
+        width: 100%; 
+        padding: 1px;
+        margin: 1px;
+        @include flex;
+        // justify-content: center;
+        align-items: center;
         position: relative;
         z-index: 5;
-
+        flex-direction: column;
+        // margin: 0 auto;
+        @include desktop {
+          flex-direction: row;
+        }
 
 // padding: 40px 0 40px 180px;
 
 
         blockquote {
-          display: flex;
-          justify-content: center;
-          padding: 25px 0 0;
+          margin: 0;
+          width: 100%;
           
           p {
-            position: relative;
+            width: 100%;
+            text-align:center;
+            position: relative;           // need to declare this so that the quotation marks are relative to this
             margin-bottom: 20px;
-            font-size: 1.5rem;
+            font-size: $form-s;
+
             font-style: italic;
             line-height: 1.4;
             font-family: Calibri;
             font-weight: 500;
             color: rgba(255, 255, 255, 0.988);  // very slight opacity decrease makes it easier on the eyes than 100%
-            padding: 0 1.5rem;   
+            // padding: 0 1.5rem;   
             
+            @include xsphone {
+              font-size: $form-xs;
+            }
+            @include tablet {
+              font-size: $form-m;
+              text-align: justify;
+            }
+
+
+            &:first-child:before, &:first-child:after {
+              position: absolute;
+              color: rgba(213, 211, 211, 0.44); // transparent so will change colour with background
+              font-size: 12rem;
+              font-weight: 700;
+              line-height: 1;
+              opacity: 1;
+              z-index: -11;             // places it behind the testimonial text
+              
+              
+              @include xsphone {
+                font-size: 10rem;
+              }
+              @include tablet {
+                font-size: 13rem;
+              }
+              @include laptop {
+                font-size: 14rem;
+              }
+              @include desktop {
+                font-size: 15rem;
+              }
+            }
             // Left quotation mark
             &:first-child:before {
-              content: '\201C';     // unicode for left quotation mark
-              position: absolute;
-              color: rgba(255, 255, 255, 0.44); // transparent so will change colour with background
-              font-size: 20rem;
-              font-weight: 700;
-              opacity: 1;
-              top: -8rem;
-              left: -4rem;    
-              z-index: -11;             // places it behind the testimonial text
-              // font-family: ;
+              content: '\201C';         // unicode for left quotation mark
+              top: -3vw;                // positions the quotation mark up (from center) to the top of the quotes
+              left: -15vw;              // positions the quotation mark to the left of the quotes
+              // font-family: ;         // to change the look of the quotation marks, change font-family.
+
+              @include xsphone {
+                top: -1vw;
+                left: -16vw;
+              }
+              @include tablet {
+                top: -1vw;
+                left: -8vw;  
+              }
+              @include laptop {
+                top: -1vw;
+                left: -8vw;  
+              }
+              @include desktop {
+                top: -4vw;
+                left: -4vw;  
+              }
             }
 
             // Right quotation mark
             &:first-child:after {
-              content: '\201D';     // unicode for right quotation mark
-              position: absolute;
-              color: rgba(255, 255, 255, 0.44); // transparent so will change colour with background
-              font-size: 20rem;
-              font-weight: 700;
-              opacity: 1;
-              top: -5rem;
-              right: 3rem;    
-              z-index: -10;
+              content: '\201D';         // unicode for right quotation mark
+              top: -6vw;
+              right: -2vw; 
+
+              // top: -5rem;      Seems to not move around as much as vw
+              // right: 2rem;
+
+
+              @include xsphone {
+                top: -5vw;
+                right: -2vw;
+              }
+              @include tablet {
+                top: -4vw;
+                right: -2vw;
+              }
+              @include laptop {
+                top: -4vw;
+                right: -2vw;
+              }
+              @include desktop {
+                top: -3vw;
+                right: -2vw;
+              }
             }
           }
         }
         .divider-left {
-          width: 30%;
+          width: 100%;
           height: auto;
           @include flex;
           justify-content: center;
+          order: 1;
+
+          @include desktop {
+            order: 0;
+            width: 20%;
+          }
         
           .portrait {
             // position: absolute;
             border: 3px solid rgb(254, 168, 115);
             box-shadow: 1px 1px 9px 3px rgba(48, 48, 48, 0.653);
-            height: 20vw;
-            width: 20vw;
+            
+            margin-top: 5vw;
+            height: 50vw;
+            width: 50vw;
             overflow: hidden;
             border-radius: 100%;
+
+            @include xsphone {
+              height: 200px;
+              width: 200px;
+            }
+            @include tablet {
+              margin-top: -6vw;
+              height: 30vw;
+              width: 30vw;
+            }
+            @include laptop {
+              height: 25vw;
+              width: 25vw;  
+              position: relative;
+              left: 25%;
+            }
+            @include desktop {
+              margin-top: 0vw;
+              margin-left: 0vw;
+              height: 17vw;
+              width: 17vw;
+            }
           }
         }
 
         .divider-right {
           display: flex;
           flex-direction: column;
-          width: 70%;
           justify-content: center;
-        
+          width: 80%;
+          @include desktop {
+            width: 80%;
+            padding: 0 8vw;
+          }
           .quotation-marks {
             width: 8%;
             opacity: 0.3;
@@ -143,19 +278,30 @@
             top: 40px;
             right: 40px;
             display: none;
-          }
-
-          
+          }      
         }
-        
+
         cite {
           display: block;
-          font-size: 14px;
-          
+
           span {
             font-size: 16px;
             font-style: normal;
-            letter-spacing: 1px;
+            line-height: 0.4;
+
+            @include xsphone {
+              line-height: 0.2;
+              font-size: 16px;
+            }
+            @include tablet {
+            
+            }
+            @include laptop {
+            
+            }
+            @include desktop {
+              
+            }
             
           }
         }
@@ -164,9 +310,15 @@
         // text-transform: uppercase;
         font-style: normal;
         color: rgba(87, 87, 87, 0.749);
-        font-size: 2rem;
+        font-size: 1rem;
         // text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.619);
         
+        @include xsphone {
+          font-size: 1.5rem;
+        }
+        @include tablet {
+          font-size: 1.6rem;
+        }
       }
       .role {
         color: rgba(108, 107, 107, 0.749);
@@ -181,7 +333,26 @@
   }
 } 
 @keyframes gradient { 
-    0%{background-position:5% 0%}
-    50%{background-position:96% 100%}
-    100%{background-position:5% 0%}
+  0% {
+    background-position: 5% 0%
+  }
+  50% {
+    background-position:96% 100%
+  }
+  100% {
+    background-position:5% 0%
+  }
 }
+
+// @include xsphone {
+
+// }
+// @include tablet {
+
+// }
+// @include laptop {
+
+// }
+// @include desktop {
+
+// }

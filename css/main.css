@@ -345,7 +345,8 @@ h1 {
 .homepage .container {
   width: 100%;
   margin-top: 40px;
-  padding: 47vh 30vw;
+  padding: 47vh 0vw;
+  overflow: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -444,17 +445,16 @@ h1 {
 .homepage .container #part3 #stack {
   width: 20%;
   margin-right: 5vw;
-  padding: 20vw 0;
+  padding: 15vw 0;
 }
 @media screen and (min-width: 769px) {
   .homepage .container #part3 #stack {
-    padding: 8vw 0;
+    padding: 3vw 0;
   }
 }
 @media screen and (min-width: 1025px) {
   .homepage .container #part3 #stack {
-    width: 20%;
-    padding: 10vw 0;
+    padding: 2vw 0;
   }
 }
 .homepage .container #part3 .stack-box {
@@ -463,6 +463,7 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-wrap: flex;
+  padding: 0 2vw;
 }
 .homepage .container #part3 p {
   font-size: 13vw;
@@ -479,12 +480,12 @@ h1 {
 }
 @media screen and (min-width: 769px) {
   .homepage .container #part3 p {
-    font-size: 13.5vw;
+    font-size: 12vw;
   }
 }
 @media screen and (min-width: 1025px) {
   .homepage .container #part3 p {
-    font-size: 10rem;
+    font-size: 12vw;
   }
 }
 .homepage .container #part4 {
@@ -509,7 +510,7 @@ h1 {
 }
 @media screen and (min-width: 1025px) {
   .homepage .container #part4 {
-    font-size: 14rem;
+    font-size: 13.5vw;
   }
 }
 .homepage .container #part5 p, .homepage .container #part6 p, .homepage .container #part7 p, .homepage .container #part8 p {
@@ -532,7 +533,7 @@ h1 {
 }
 @media screen and (min-width: 1025px) {
   .homepage .container #part5 p, .homepage .container #part6 p, .homepage .container #part7 p, .homepage .container #part8 p {
-    font-size: 14rem;
+    font-size: 13.5vw;
   }
 }
 .homepage .container #part5 {
@@ -560,22 +561,22 @@ h1 {
 }
 @media screen and (max-width: 319px) {
   .homepage .container #part9 p {
-    font-size: 48vw;
+    font-size: 44.4vw;
   }
 }
 @media screen and (min-width: 481px) {
   .homepage .container #part9 p {
-    font-size: 56vw;
+    font-size: 49vw;
   }
 }
 @media screen and (min-width: 769px) {
   .homepage .container #part9 p {
-    font-size: 60vw;
+    font-size: 45vw;
   }
 }
 @media screen and (min-width: 1025px) {
   .homepage .container #part9 p {
-    font-size: 40rem;
+    font-size: 45vw;
   }
 }
 .homepage .container #part10 {
@@ -608,6 +609,10 @@ h1 {
     font-size: 12vw;
   }
 }
+.homepage .container .background-overflow {
+  overflow: none;
+  position: relative;
+}
 .homepage .container #radiance {
   position: absolute;
   min-width: 100vw;
@@ -628,10 +633,12 @@ h1 {
     opacity: 1;
     filter: blur(5px);
   }
+  90% {
+    filter: blur(0px);
+  }
   98% {
     transform: scale(1.05);
     opacity: 1;
-    filter: blur(0px);
   }
   100% {
     transform: scale(1.05);
@@ -648,10 +655,12 @@ h1 {
     opacity: 1;
     filter: blur(5px);
   }
+  90% {
+    filter: blur(0px);
+  }
   98% {
     transform: scale(1.05);
     opacity: 1;
-    filter: blur(0px);
   }
   100% {
     transform: scale(1.05);
@@ -661,7 +670,7 @@ h1 {
 @-webkit-keyframes showtime {
   0% {
     opacity: 0;
-    transform: scale(1);
+    transform: scale(0.9);
   }
   2% {
     opacity: 1;
@@ -671,7 +680,7 @@ h1 {
   }
   10% {
     opacity: 0;
-    transform: scale(1.1);
+    transform: scale(1);
   }
   100% {
     opacity: 0;
@@ -680,7 +689,7 @@ h1 {
 @keyframes showtime {
   0% {
     opacity: 0;
-    transform: scale(1);
+    transform: scale(0.9);
   }
   2% {
     opacity: 1;
@@ -690,7 +699,7 @@ h1 {
   }
   10% {
     opacity: 0;
-    transform: scale(1.1);
+    transform: scale(1);
   }
   100% {
     opacity: 0;
@@ -703,13 +712,45 @@ h1 {
           animation: gradient 16s ease infinite;
   width: 100%;
 }
-.testimonials .container {
+.testimonials .wrapper {
   background: none;
-  margin: auto;
-  padding: 20px;
+  padding: 0px;
+  margin: 0px;
   width: 100%;
-  max-width: 1024px;
+  max-width: 1920px;
   min-width: 280px;
+  min-height: 650px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 319px) {
+  .testimonials .wrapper {
+    min-height: 650px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .testimonials .wrapper {
+    min-height: 550px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .testimonials .wrapper {
+    min-height: 500px;
+  }
+}
+.testimonials .wrapper h1 {
+  font-size: 6vw;
+  padding: 2vw 20px 40px;
+  margin-top: 20px;
+  color: white;
+}
+@media screen and (min-width: 481px) {
+  .testimonials .wrapper h1 {
+    font-size: 4vw;
+  }
 }
 .testimonials .slider {
   display: flex;
@@ -720,27 +761,41 @@ h1 {
 .testimonials .slider .quote-buttons {
   position: absolute;
   width: 100%;
-  border: 1px solid red;
   top: 150px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   z-index: 20;
 }
+@media screen and (max-width: 319px) {
+  .testimonials .slider .quote-buttons {
+    top: 300px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .testimonials .slider .quote-buttons {
+    top: 200px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .testimonials .slider .quote-buttons {
+    top: 200px;
+  }
+}
 .testimonials .slider .quote-buttons .previous, .testimonials .slider .quote-buttons .next {
   background: none;
   font-size: 6vw;
-  padding: 0;
+  padding: 10px 20px;
   margin: 2vw;
 }
 .testimonials .slider .quote-container {
   min-height: 200px;
   color: #666666;
   font-size: 36px;
-  margin: 0 20px;
+  padding: 0;
+  margin: 0;
   position: relative;
   width: 100%;
-  padding: 2vw 0;
 }
 .testimonials .slider .quote-container:hover {
   cursor: -webkit-grab;
@@ -748,71 +803,197 @@ h1 {
 }
 .testimonials .slider .quote-container .quote {
   width: 100%;
+  padding: 1px;
+  margin: 1px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
+  align-items: center;
   position: relative;
   z-index: 5;
+  flex-direction: column;
+}
+@media screen and (min-width: 1025px) {
+  .testimonials .slider .quote-container .quote {
+    flex-direction: row;
+  }
 }
 .testimonials .slider .quote-container .quote blockquote {
-  display: flex;
-  justify-content: center;
-  padding: 25px 0 0;
+  margin: 0;
+  width: 100%;
 }
 .testimonials .slider .quote-container .quote blockquote p {
+  width: 100%;
+  text-align: center;
   position: relative;
   margin-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: 16px;
   font-style: italic;
   line-height: 1.4;
   font-family: Calibri;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.988);
-  padding: 0 1.5rem;
+}
+@media screen and (max-width: 319px) {
+  .testimonials .slider .quote-container .quote blockquote p {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .testimonials .slider .quote-container .quote blockquote p {
+    font-size: 18px;
+    text-align: justify;
+  }
+}
+.testimonials .slider .quote-container .quote blockquote p:first-child:before, .testimonials .slider .quote-container .quote blockquote p:first-child:after {
+  position: absolute;
+  color: rgba(213, 211, 211, 0.44);
+  font-size: 12rem;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 1;
+  z-index: -11;
+}
+@media screen and (max-width: 319px) {
+  .testimonials .slider .quote-container .quote blockquote p:first-child:before, .testimonials .slider .quote-container .quote blockquote p:first-child:after {
+    font-size: 10rem;
+  }
+}
+@media screen and (min-width: 481px) {
+  .testimonials .slider .quote-container .quote blockquote p:first-child:before, .testimonials .slider .quote-container .quote blockquote p:first-child:after {
+    font-size: 13rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .testimonials .slider .quote-container .quote blockquote p:first-child:before, .testimonials .slider .quote-container .quote blockquote p:first-child:after {
+    font-size: 14rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .testimonials .slider .quote-container .quote blockquote p:first-child:before, .testimonials .slider .quote-container .quote blockquote p:first-child:after {
+    font-size: 15rem;
+  }
 }
 .testimonials .slider .quote-container .quote blockquote p:first-child:before {
   content: "“";
-  position: absolute;
-  color: rgba(255, 255, 255, 0.44);
-  font-size: 20rem;
-  font-weight: 700;
-  opacity: 1;
-  top: -8rem;
-  left: -4rem;
-  z-index: -11;
+  top: -3vw;
+  left: -15vw;
+}
+@media screen and (max-width: 319px) {
+  .testimonials .slider .quote-container .quote blockquote p:first-child:before {
+    top: -1vw;
+    left: -16vw;
+  }
+}
+@media screen and (min-width: 481px) {
+  .testimonials .slider .quote-container .quote blockquote p:first-child:before {
+    top: -1vw;
+    left: -8vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .testimonials .slider .quote-container .quote blockquote p:first-child:before {
+    top: -1vw;
+    left: -8vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .testimonials .slider .quote-container .quote blockquote p:first-child:before {
+    top: -4vw;
+    left: -4vw;
+  }
 }
 .testimonials .slider .quote-container .quote blockquote p:first-child:after {
   content: "”";
-  position: absolute;
-  color: rgba(255, 255, 255, 0.44);
-  font-size: 20rem;
-  font-weight: 700;
-  opacity: 1;
-  top: -5rem;
-  right: 3rem;
-  z-index: -10;
+  top: -6vw;
+  right: -2vw;
+}
+@media screen and (max-width: 319px) {
+  .testimonials .slider .quote-container .quote blockquote p:first-child:after {
+    top: -5vw;
+    right: -2vw;
+  }
+}
+@media screen and (min-width: 481px) {
+  .testimonials .slider .quote-container .quote blockquote p:first-child:after {
+    top: -4vw;
+    right: -2vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .testimonials .slider .quote-container .quote blockquote p:first-child:after {
+    top: -4vw;
+    right: -2vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .testimonials .slider .quote-container .quote blockquote p:first-child:after {
+    top: -3vw;
+    right: -2vw;
+  }
 }
 .testimonials .slider .quote-container .quote .divider-left {
-  width: 30%;
+  width: 100%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  order: 1;
+}
+@media screen and (min-width: 1025px) {
+  .testimonials .slider .quote-container .quote .divider-left {
+    order: 0;
+    width: 20%;
+  }
 }
 .testimonials .slider .quote-container .quote .divider-left .portrait {
   border: 3px solid #fea873;
   box-shadow: 1px 1px 9px 3px rgba(48, 48, 48, 0.653);
-  height: 20vw;
-  width: 20vw;
+  margin-top: 5vw;
+  height: 50vw;
+  width: 50vw;
   overflow: hidden;
   border-radius: 100%;
+}
+@media screen and (max-width: 319px) {
+  .testimonials .slider .quote-container .quote .divider-left .portrait {
+    height: 200px;
+    width: 200px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .testimonials .slider .quote-container .quote .divider-left .portrait {
+    margin-top: -6vw;
+    height: 30vw;
+    width: 30vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .testimonials .slider .quote-container .quote .divider-left .portrait {
+    height: 25vw;
+    width: 25vw;
+    position: relative;
+    left: 25%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .testimonials .slider .quote-container .quote .divider-left .portrait {
+    margin-top: 0vw;
+    margin-left: 0vw;
+    height: 17vw;
+    width: 17vw;
+  }
 }
 .testimonials .slider .quote-container .quote .divider-right {
   display: flex;
   flex-direction: column;
-  width: 70%;
   justify-content: center;
+  width: 80%;
+}
+@media screen and (min-width: 1025px) {
+  .testimonials .slider .quote-container .quote .divider-right {
+    width: 80%;
+    padding: 0 8vw;
+  }
 }
 .testimonials .slider .quote-container .quote .divider-right .quotation-marks {
   width: 8%;
@@ -824,17 +1005,32 @@ h1 {
 }
 .testimonials .slider .quote-container .quote cite {
   display: block;
-  font-size: 14px;
 }
 .testimonials .slider .quote-container .quote cite span {
   font-size: 16px;
   font-style: normal;
-  letter-spacing: 1px;
+  line-height: 0.4;
+}
+@media screen and (max-width: 319px) {
+  .testimonials .slider .quote-container .quote cite span {
+    line-height: 0.2;
+    font-size: 16px;
+  }
 }
 .testimonials .slider .quote-container .person {
   font-style: normal;
   color: rgba(87, 87, 87, 0.749);
-  font-size: 2rem;
+  font-size: 1rem;
+}
+@media screen and (max-width: 319px) {
+  .testimonials .slider .quote-container .person {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 481px) {
+  .testimonials .slider .quote-container .person {
+    font-size: 1.6rem;
+  }
 }
 .testimonials .slider .quote-container .role {
   color: rgba(108, 107, 107, 0.749);
