@@ -446,6 +446,23 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  position: relative;
+}
+.testimonials .slider .quote-buttons {
+  position: absolute;
+  width: 100%;
+  border: 1px solid red;
+  top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 20;
+}
+.testimonials .slider .quote-buttons .previous, .testimonials .slider .quote-buttons .next {
+  background: none;
+  font-size: 6vw;
+  padding: 0;
+  margin: 2vw;
 }
 .testimonials .slider .quote-container {
   min-height: 200px;
