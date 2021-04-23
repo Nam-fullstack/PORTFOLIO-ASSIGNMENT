@@ -63,174 +63,233 @@ h1 {
             // border: 4px solid orange;
             padding: 10px 2vw;
             position: absolute;
-            opacity: 0;
             text-align: center;
+            opacity: 0;
+            transform: scale(1);
+            // animation: zoomout 5s linear;
+            animation: showtime 35s linear; 
         }
-    }
-}
-#part1 {
-    p {
-        font-size: ($landing-s * 4);
+
+        #part1 {
+            animation-delay: 0s;
+            p {
+                font-size: ($landing-s * 4);
+                
+                @include xsphone {
+                    font-size: ($landing-xs * 4);
+                }
+                @include tablet {
+                    font-size: ($landing-m * 3.5);
+                }
+                @include laptop {
+                    font-size: ($landing-l * 3);
+                }
+                @include desktop {
+                    font-size: 40rem;
+                }
+            }
+        }
+        #part2 {
+            animation-delay: ($animation-length * 1);
+            p {
+                font-size: ($landing-s * 2);
+                
+                @include xsphone {
+                    font-size: ($landing-xs * 2.5);
+                }
+                @include tablet {
+                    font-size: ($landing-m * 1.8);
+                }
+                @include laptop {
+                    font-size: ($landing-l * 1.5);
+                }
+                
+                @include desktop {
+                    font-size: 15rem;
+                }
+            }
+        }
+        #part3 {       
+            animation-delay: ($animation-length * 2);
+            #stack {
+                width: 20%;
+                margin-right: 5vw;   
+                padding: 20vw 0;
+                
+                @include laptop {
+                    padding: 8vw 0;
+                }
+                @include desktop {
+                    width: 20%; 
+                    padding: 10vw 0;
+                }
+            }
+            .stack-box {
+                @include flex;
+                @include center;
+                flex-wrap: flex;
+            }
+            p {
+                font-size: ($landing-s * 1);
+                
+                @include xsphone {
+                    font-size: ($landing-xs * 1.1);
+                }
+                @include tablet {
+                    font-size: ($landing-m * 0.9);
+                }
+                @include laptop {
+                    font-size: ($landing-l * 0.9);
+                }
+                @include desktop {
+                    font-size: 10rem;
+                }
+            }
+        }
+        #part4 {
+            animation-delay: ($animation-length * 3);
+            font-size: ($landing-s * 1.7);
+            
+            @include xsphone {
+                font-size: ($landing-xs * 1.8);
+            }
+            @include tablet {
+                font-size: ($landing-m * 1.5);
+            }
+            @include laptop {
+                font-size: ($landing-l * 1);
+            }
+            @include desktop {
+                font-size: 14rem;
+            }    
+        }
         
-        @include xsphone {
-            font-size: ($landing-xs * 4);
+        #part5, #part6, #part7, #part8 {
+            p {
+                font-size: ($landing-s * 1.1);
+                
+                @include xsphone {
+                    font-size: ($landing-xs * 1.2);
+                }
+                @include tablet {
+                    font-size: ($landing-m * 1.1);
+                }
+                @include laptop {
+                    font-size: ($landing-l * 1);
+                }
+                @include desktop {
+                    font-size: 14rem;
+                }
+            }
         }
-        @include tablet {
-            font-size: ($landing-m * 3.5);
+        #part5 {
+            animation-delay: ($animation-length * 4);
         }
-        @include laptop {
-            font-size: ($landing-l * 3);
+        #part6 {
+            animation-delay: ($animation-length * 5);
         }
-        @include desktop {
-            font-size: 40rem;
+        #part7 {
+            animation-delay: ($animation-length * 6);
         }
-    }
-}
-#part2 {
-    p {
-        font-size: ($landing-s * 2);
+        #part8 {
+            animation-delay: ($animation-length * 7);
+        }
+        #part9 {
+            animation-delay: ($animation-length * 8);
+            p {
+                font-size: ($landing-s * 4);
+                
+                @include xsphone {
+                    font-size: ($landing-xs * 4);
+                }
+                @include tablet {
+                    font-size: ($landing-m * 4);
+                }
+                @include laptop {
+                    font-size: ($landing-l * 4);
+                }
+                @include desktop {
+                    font-size: 40rem;
+                }
+            }
+        }
+                
+        #part10 {
+            animation-delay: ($animation-length * 9);
+            padding: 10vh 5vw;
+            
+            p {
+                z-index: 3;
+                text-shadow: 0px 0px 120px rgb(255, 176, 57);
+                
+                font-size: ($landing-s * 1);
         
-        @include xsphone {
-            font-size: ($landing-xs * 2.5);
+                @include xsphone {
+                    font-size: ($landing-xs * 1.1);
+                }
+                @include tablet {
+                    font-size: ($landing-m * 0.9);
+                }
+                @include laptop {
+                    font-size: ($landing-l * 0.9);
+                }
+                @include desktop {
+                    font-size: 12vw;
+                }
+            }
         }
-        @include tablet {
-            font-size: ($landing-m * 1.8);
-        }
-        @include laptop {
-            font-size: ($landing-l * 1.5);
-        }
+
+        #radiance {
+            position: absolute;
+            min-width: 100vw;
+            max-height: 95%;
+            height: auto;
+            opacity: 0;
+            filter: blur(2px);
+            animation: showme 3.5s linear ($animation-length * 9);
         
-        @include desktop {
-            font-size: 15rem;
         }
+
     }
-}
-#part3 {       
-    #stack {
-        width: 20%;
-        margin-right: 5vw;   
-        padding: 20vw 0;
-        
-        @include laptop {
-            padding: 8vw 0;
-        }
-        @include desktop {
-            width: 20%; 
-            padding: 10vw 0;
-        }
-    }
-    .stack-box {
-        @include flex;
-        @include center;
-        flex-wrap: flex;
-    }
-    p {
-        font-size: ($landing-s * 1);
-        
-        @include xsphone {
-            font-size: ($landing-xs * 1.1);
-        }
-        @include tablet {
-            font-size: ($landing-m * 0.9);
-        }
-        @include laptop {
-            font-size: ($landing-l * 0.9);
-        }
-        @include desktop {
-            font-size: 10rem;
-        }
-    }
-}
-#part4 {
-    font-size: ($landing-s * 1.7);
-    
-    @include xsphone {
-        font-size: ($landing-xs * 1.8);
-    }
-    @include tablet {
-        font-size: ($landing-m * 1.5);
-    }
-    @include laptop {
-        font-size: ($landing-l * 1);
-    }
-    @include desktop {
-        font-size: 14rem;
-    }    
 }
 
-#part5, #part6, #part7, #part8 {
-    p {
-        font-size: ($landing-s * 1.1);
-        
-        @include xsphone {
-            font-size: ($landing-xs * 1.2);
-        }
-        @include tablet {
-            font-size: ($landing-m * 1.1);
-        }
-        @include laptop {
-            font-size: ($landing-l * 1);
-        }
-        @include desktop {
-            font-size: 14rem;
-        }
+@keyframes showme {
+    0% {
+        opacity: 0;
     }
-}
-#part9 {
-    p {
-        font-size: ($landing-s * 4);
-        
-        @include xsphone {
-            font-size: ($landing-xs * 4);
-        }
-        @include tablet {
-            font-size: ($landing-m * 4);
-        }
-        @include laptop {
-            font-size: ($landing-l * 4);
-        }
-        @include desktop {
-            font-size: 40rem;
-        }
+    10% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    98% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.05);
+        opacity: 1;
     }
 }
 
-#part10 {
-    opacity: 1;
-}
-
-#part10 {
-    // opacity:1;
-    padding: 10vh 5vw;
-    
-    p {
-        z-index: 3;
-        text-shadow: 0px 0px 120px rgb(255, 176, 57);
-        
-        font-size: ($landing-s * 1);
-
-        @include xsphone {
-            font-size: ($landing-xs * 1.1);
-        }
-        @include tablet {
-            font-size: ($landing-m * 0.9);
-        }
-        @include laptop {
-            font-size: ($landing-l * 0.9);
-        }
-        @include desktop {
-            font-size: 12vw;
-        }
+@keyframes showtime {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    2% {
+        opacity: 1;
+    }
+    8% {
+        opacity: 1;
+    }
+    10% {  
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
     }
 }
 
-#radiance {
-    position: absolute;
-    // margin-top: 60px;
-    min-width: 100vw;
-    max-height: 95%;
-    height: auto;
-    // opacity: 0;
-    filter: blur(2px);
-}
+
 
