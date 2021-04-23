@@ -1,16 +1,8 @@
-::-webkit-scrollbar {
-    display: none;
-}
+
 
 header {
      z-index: 10;
-     display: flex;
-     .logo {
-         height: 100%;
-     }
 }
-
-
 
 h1 {
     margin-top: 5vh;
@@ -37,3 +29,101 @@ h1 {
         font-size: 0.6rem;
     }
 }
+
+.homepage {
+
+    .container {
+        width: 100%;
+        margin-top: 60px;
+        // height: 100vh;
+        padding-top: 60px;
+        padding: 47vh 30vw;
+        @include flex;
+        @include center;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.982);
+        color: white;
+        font-weight: 900;
+        font-size: 10rem;
+        @include bred;
+
+
+
+        b {
+            color: red;
+        }
+        .blue {
+            color: rgb(5, 159, 255);
+        }
+        .orange {
+            color: rgb(255, 117, 11);
+        }
+        .vision {
+            @include flex;
+            @include center;
+            // border: 4px solid orange;
+            padding: 10px 2vw;
+
+            position: absolute;
+            opacity: 0;
+            text-align: center;
+        }
+    }
+}
+#part1 {
+    p {
+        font-size: 40rem;
+    }
+}
+#part2 {
+    p {
+        font-size: 15rem;
+    }
+}
+#part3 {       
+    #stack {
+        width: 20%; 
+        margin-right: 5vw;   
+    }
+    .stack-box {
+        @include flex;
+        @include center;
+        flex-wrap: flex;
+    }
+    p {
+        font-size: 10rem;
+    }
+}
+#part4, #part5, #part6, #part7, #part8 {
+    p {
+        font-size: 14rem;
+    }
+}
+#part9 {
+    p {
+        font-size: 40rem;
+    }
+}
+#part10 {
+    opacity:1;
+    padding: 10vh 5vw;
+
+    p {
+        z-index: 3;
+        font-size: 12rem;
+        text-shadow: 0px 0px 120px rgb(255, 176, 57);
+    }
+    // background: rgba(255, 255, 0, 0.297);
+    // box-shadow: 0 0 200px 60px rgba(255, 255, 0, 0.297);
+}
+
+#radiance {
+    position: absolute;
+    // margin-top: 60px;
+    min-width: 100vw;
+    max-height: 95%;
+    height: auto;
+    // opacity: 0;
+    filter: blur(2px);
+}
+
