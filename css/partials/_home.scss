@@ -249,9 +249,11 @@ h1 {
             max-height: 95%;
             height: auto;
             opacity: 0;
-            filter: blur(2px);
+            filter: blur(0px);
             animation: showme 3.5s linear ($animation-length * 9);
         
+            // cannot put infinite for this, since it'll just keep appearing as the animation delay doesn't
+            // keep repeating.
         }
 
     }
@@ -263,14 +265,16 @@ h1 {
     10% {
         transform: scale(1);
         opacity: 1;
+        filter: blur(5px);
     }
     98% {
         transform: scale(1.05);
         opacity: 1;
+        filter: blur(0px);
     }
     100% {
         transform: scale(1.05);
-        opacity: 1;
+        opacity: 0;
     }
 }
 
@@ -292,6 +296,9 @@ h1 {
 
 // in the same #part, but don't have time to go back and change everything and do all the keyframes and again.
 
+// Starting transform: sclae(1) at 0% is smoother than starting it at 2%. Want it to already by growing without
+// any noticeable pause before it starts. 
+
 @keyframes showtime {
     0% {
         opacity: 0;
@@ -299,7 +306,6 @@ h1 {
     }
     2% {
         opacity: 1;
-        transform: scale(1);
     }
     8% {
         opacity: 1;
