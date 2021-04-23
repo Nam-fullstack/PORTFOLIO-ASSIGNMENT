@@ -355,7 +355,6 @@ h1 {
   color: white;
   font-weight: 900;
   font-size: 10vw;
-  border: 1px solid red;
 }
 @media screen and (min-width: 481px) {
   .homepage .container {
@@ -378,184 +377,321 @@ h1 {
   align-items: center;
   padding: 10px 2vw;
   position: absolute;
-  opacity: 0;
   text-align: center;
+  opacity: 0;
+  transform: scale(1);
+  -webkit-animation: showtime 35s linear;
+          animation: showtime 35s linear;
 }
-
-#part1 {
-  opacity: 1;
+.homepage .container #part1 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
-#part1 p {
-  font-size: 13vw;
+.homepage .container #part1 p {
+  font-size: 52vw;
 }
 @media screen and (max-width: 319px) {
-  #part1 p {
-    font-size: 12vw;
+  .homepage .container #part1 p {
+    font-size: 48vw;
   }
 }
 @media screen and (min-width: 481px) {
-  #part1 p {
-    font-size: 14vw;
+  .homepage .container #part1 p {
+    font-size: 49vw;
   }
 }
 @media screen and (min-width: 769px) {
-  #part1 p {
-    font-size: 15vw;
+  .homepage .container #part1 p {
+    font-size: 45vw;
   }
 }
 @media screen and (min-width: 1025px) {
-  #part1 p {
+  .homepage .container #part1 p {
     font-size: 40rem;
   }
 }
-
-#part2 p {
-  font-size: 13vw;
+.homepage .container #part2 {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+.homepage .container #part2 p {
+  font-size: 26vw;
 }
 @media screen and (max-width: 319px) {
-  #part2 p {
-    font-size: 12vw;
+  .homepage .container #part2 p {
+    font-size: 30vw;
   }
 }
 @media screen and (min-width: 481px) {
-  #part2 p {
-    font-size: 14vw;
+  .homepage .container #part2 p {
+    font-size: 25.2vw;
   }
 }
 @media screen and (min-width: 769px) {
-  #part2 p {
-    font-size: 15vw;
+  .homepage .container #part2 p {
+    font-size: 22.5vw;
   }
 }
 @media screen and (min-width: 1025px) {
-  #part2 p {
+  .homepage .container #part2 p {
     font-size: 15rem;
   }
 }
-
-@media screen and (min-width: 1025px) {
-  #part3 #stack {
-    width: 20%;
-    margin-right: 5vw;
+.homepage .container #part3 {
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+.homepage .container #part3 #stack {
+  width: 20%;
+  margin-right: 5vw;
+  padding: 20vw 0;
+}
+@media screen and (min-width: 769px) {
+  .homepage .container #part3 #stack {
+    padding: 8vw 0;
   }
 }
-#part3 .stack-box {
+@media screen and (min-width: 1025px) {
+  .homepage .container #part3 #stack {
+    width: 20%;
+    padding: 10vw 0;
+  }
+}
+.homepage .container #part3 .stack-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   flex-wrap: flex;
 }
-#part3 p {
+.homepage .container #part3 p {
   font-size: 13vw;
 }
 @media screen and (max-width: 319px) {
-  #part3 p {
-    font-size: 12vw;
+  .homepage .container #part3 p {
+    font-size: 13.2vw;
   }
 }
 @media screen and (min-width: 481px) {
-  #part3 p {
-    font-size: 14vw;
+  .homepage .container #part3 p {
+    font-size: 12.6vw;
   }
 }
 @media screen and (min-width: 769px) {
-  #part3 p {
-    font-size: 15vw;
+  .homepage .container #part3 p {
+    font-size: 13.5vw;
   }
 }
 @media screen and (min-width: 1025px) {
-  #part3 p {
+  .homepage .container #part3 p {
     font-size: 10rem;
   }
 }
-
-#part4 p, #part5 p, #part6 p, #part7 p, #part8 p {
-  font-size: 13vw;
+.homepage .container #part4 {
+  -webkit-animation-delay: 10.5s;
+          animation-delay: 10.5s;
+  font-size: 22.1vw;
 }
 @media screen and (max-width: 319px) {
-  #part4 p, #part5 p, #part6 p, #part7 p, #part8 p {
-    font-size: 12vw;
+  .homepage .container #part4 {
+    font-size: 21.6vw;
   }
 }
 @media screen and (min-width: 481px) {
-  #part4 p, #part5 p, #part6 p, #part7 p, #part8 p {
-    font-size: 14vw;
+  .homepage .container #part4 {
+    font-size: 21vw;
   }
 }
 @media screen and (min-width: 769px) {
-  #part4 p, #part5 p, #part6 p, #part7 p, #part8 p {
+  .homepage .container #part4 {
     font-size: 15vw;
   }
 }
 @media screen and (min-width: 1025px) {
-  #part4 p, #part5 p, #part6 p, #part7 p, #part8 p {
+  .homepage .container #part4 {
     font-size: 14rem;
   }
 }
-
-#part9 p {
-  font-size: 13vw;
+.homepage .container #part5 p, .homepage .container #part6 p, .homepage .container #part7 p, .homepage .container #part8 p {
+  font-size: 14.3vw;
 }
 @media screen and (max-width: 319px) {
-  #part9 p {
-    font-size: 12vw;
+  .homepage .container #part5 p, .homepage .container #part6 p, .homepage .container #part7 p, .homepage .container #part8 p {
+    font-size: 14.4vw;
   }
 }
 @media screen and (min-width: 481px) {
-  #part9 p {
-    font-size: 14vw;
+  .homepage .container #part5 p, .homepage .container #part6 p, .homepage .container #part7 p, .homepage .container #part8 p {
+    font-size: 15.4vw;
   }
 }
 @media screen and (min-width: 769px) {
-  #part9 p {
+  .homepage .container #part5 p, .homepage .container #part6 p, .homepage .container #part7 p, .homepage .container #part8 p {
     font-size: 15vw;
   }
 }
 @media screen and (min-width: 1025px) {
-  #part9 p {
+  .homepage .container #part5 p, .homepage .container #part6 p, .homepage .container #part7 p, .homepage .container #part8 p {
+    font-size: 14rem;
+  }
+}
+.homepage .container #part5 {
+  -webkit-animation-delay: 14s;
+          animation-delay: 14s;
+}
+.homepage .container #part6 {
+  -webkit-animation-delay: 17.5s;
+          animation-delay: 17.5s;
+}
+.homepage .container #part7 {
+  -webkit-animation-delay: 21s;
+          animation-delay: 21s;
+}
+.homepage .container #part8 {
+  -webkit-animation-delay: 24.5s;
+          animation-delay: 24.5s;
+}
+.homepage .container #part9 {
+  -webkit-animation-delay: 28s;
+          animation-delay: 28s;
+}
+.homepage .container #part9 p {
+  font-size: 52vw;
+}
+@media screen and (max-width: 319px) {
+  .homepage .container #part9 p {
+    font-size: 48vw;
+  }
+}
+@media screen and (min-width: 481px) {
+  .homepage .container #part9 p {
+    font-size: 56vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .homepage .container #part9 p {
+    font-size: 60vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .homepage .container #part9 p {
     font-size: 40rem;
   }
 }
-
-#part10 {
+.homepage .container #part10 {
+  -webkit-animation-delay: 31.5s;
+          animation-delay: 31.5s;
   padding: 10vh 5vw;
 }
-#part10 p {
+.homepage .container #part10 p {
   z-index: 3;
   text-shadow: 0px 0px 120px #ffb039;
   font-size: 13vw;
 }
 @media screen and (max-width: 319px) {
-  #part10 p {
-    font-size: 12vw;
+  .homepage .container #part10 p {
+    font-size: 13.2vw;
   }
 }
 @media screen and (min-width: 481px) {
-  #part10 p {
-    font-size: 14vw;
+  .homepage .container #part10 p {
+    font-size: 12.6vw;
   }
 }
 @media screen and (min-width: 769px) {
-  #part10 p {
-    font-size: 15vw;
+  .homepage .container #part10 p {
+    font-size: 13.5vw;
   }
 }
 @media screen and (min-width: 1025px) {
-  #part10 p {
+  .homepage .container #part10 p {
     font-size: 12vw;
   }
 }
-
-#radiance {
+.homepage .container #radiance {
   position: absolute;
   min-width: 100vw;
   max-height: 95%;
   height: auto;
+  opacity: 0;
   filter: blur(2px);
-  display: none;
+  -webkit-animation: showme 3.5s linear 31.5s;
+          animation: showme 3.5s linear 31.5s;
 }
 
+@-webkit-keyframes showme {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  98% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes showme {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  98% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes showtime {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  2% {
+    opacity: 1;
+  }
+  8% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes showtime {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  2% {
+    opacity: 1;
+  }
+  8% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .testimonials {
   background: linear-gradient(130deg, #07d9a3, #048fee);
   background-size: 400% 400%;
