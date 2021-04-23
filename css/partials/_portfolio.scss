@@ -23,11 +23,74 @@
             gap: 5px;
             
             .cell {
+                position: relative;
+                // width: 1000px;
                 border: 1px solid black;
+            }
+            
+            .site {
+                display: block;
+                width: 100%;
+            }
+            
+            .overlay {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $overlay-red;
+                // background: rgba(0, 0, 0, 0.55);
+                color: white;
+                opacity: 0;
+                transition: opacity 0.55s;
+                backdrop-filter: blur(4px);
+            }
+            
+             .overlay:hover { 
+                opacity: 1;
+            }
+            
+            
+            .overlay-title {
+                font-size: 1rem;
+
+                @include xsphone {
+
+                }
+                // font-weight: bold;
+            }
+            
+            .preview {
+                font-size: 1rem;
+                border-radius: 8px;
+                padding: 1.5% 5%;
+                position: absolute;
+                bottom: 8%;
+                background: rgb(37, 171, 255);    
+                // background: white;
+
+                &:hover {
+                    color: white;
+                    background: red;
+                    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.68);
+                    cursor: pointer;
+                }
+
+                @include tablet {
+                    font-size: 1.5rem;
+                    border-radius: 10px;
+                    padding: 2% 6%;
+                }
             }
         }
     }
 }
+
 
 .togglecontainer {
     padding: 20px;
@@ -38,6 +101,9 @@
         cursor: pointer;
     }
 
+    @include xsphone {
+        display: none;
+    }
     @include tablet {
         display: none;
     }       
@@ -51,6 +117,7 @@
         @include flex;
         flex-direction: column;
         justify-content: center;
+        flex-wrap: wrap;
         align-items: center;
         width: 100%;
         padding-top: 40px;
@@ -69,7 +136,7 @@
 
             @include laptop {
                 width: 100%;
-                height: 50%;
+                height: auto;
                 padding-left: 20px; 
 
                 h4 {
@@ -79,7 +146,7 @@
             }
 
             @include desktop {
-                width: 75;
+                width: 75%;
                 height: auto;
             }
         }
@@ -156,6 +223,10 @@
                 grid-template-columns: repeat(4, 1fr);
             }
         }
+    }
+    #box1 {
+        order: 1;
+
     }
 }
 

@@ -11,67 +11,71 @@
 </head>
 
 <body>
-  <header>
-    <div class="navigation" id="navigation-bar">
-      <div class="navbar">
-        <ul class="navigation-pages">
-          <li>
-            <a href="index.html" alt="link to home page">Home</a>
-          </li>
-          <li>
-            <a href="portfolio.html" alt="link to portfolio page">Portfolio</a>
-          </li>
-          <li>
-            <a href="experience.html" alt="link to experience page">Experience</a>
-          </li>
-          <li>
-            <a href="about-me.html" alt="link to about me page">About Me</a>
-          </li>
-          <li>
-            <a href="blog.html" alt="link to blog page">Blog</a>
-          </li>
-          <li>
-            <a href="contact.html" id="current-page" alt="link to contact page">Contact</a>
-          </li>
-        </ul>
-      </div>
+<header>
+  <div class="navigation" id="navigation-bar">
+    <div class="navbar">
+      <ul class="navigation-pages">
+        <li>
+          <a href="index.html" alt="link to home page">Home</a>
+        </li>
+        <li>
+          <a href="portfolio.html" alt="link to portfolio page">Portfolio</a>
+        </li>
+        <li>
+          <a href="experience.html" alt="link to experience page">Experience</a>
+        </li>
+        <li>
+          <a href="about-me.html" alt="link to about me page">About Me</a>
+        </li>
+        <li>
+          <a href="blog.html" alt="link to blog page">Blog</a>
+        </li>
+        <li>
+          <a href="contact.html" id="current-page" alt="link to contact page">Contact</a>
+        </li>
+      </ul>
     </div>
-    <div class="menu-bar" id="menubar">
-      <div class="menu-wrap" id="menubutton">
-        <input type="checkbox" class="toggler">
-        <div class="hamburger">
-          <div>
-          </div>
-        </div>
-        <div class="menu">
-          <div>
-            <div>
-              <ul>
-                <li><a href="index.html" alt="link to view home page">Home</a></li>
-                <li><a href="portfolio.html" alt="link to view portfolio page">Portfolio</a></li>
-                <li><a href="experience.html" alt="link to view experience page">Experience</a></li>
-                <li><a href="about-me.html" alt="link to view about me page">About Me</a></li>
-                <li><a href="blog.html" alt="link to view blog page">Blog</a></li>
-                <li><a href="contact.html" id="current-page" alt="link to view contact page">Contact</a></li>
-              </ul>
-            </div>
-          </div>
+  </div>
+  <div class="menu-bar" id="menubar">
+    <div class="menu-wrap" id="menubutton">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger">
+        <div>
         </div>
       </div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="index.html" alt="link to view home page">Home</a></li>
+              <li><a href="portfolio.html" alt="link to view portfolio page">Portfolio</a></li>
+              <li><a href="experience.html" alt="link to view experience page">Experience</a></li>
+              <li><a href="about-me.html" alt="link to view about me page">About Me</a></li>
+              <li><a href="blog.html" alt="link to view blog page">Blog</a></li>
+              <li><a href="contact.html" id="current-page" alt="link to view contact page">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
-  <main>
-    <div class="container">
-      <h1>Get in touch</h1>
-      <h2>Let's talk about <em id="client-project">your project</em></h2>
+  </div>
+</header>
+<main>
 
-      <h3>
+  <div class="container">
+    <h1>Get in touch</h1>
+    <h2>Let's talk about <em id="client-project">your project</em></h2>
+    <div class="instructions">
+      <h4>
         I'd love to hear from you. 
         Here's how you can reach me:
-        Fill out the form below, call me directly or contact me on any social media platform. 
-      </h3>
-      <div class="left-side-box"></div>
-      <div class="right-side-box">
+      <br>  
+        Fill out the form below, reach out on socials, or if you wish to have a chat, 
+        send me a message and I'll schedule in a time with you. 
+      </h4>
+    </div>
+    <div class="desktop-wrapper">
+      <div class="left-side-box">
         <form action="https://formspree.io/f/xnqlqegl" method="POST" class="contact-form">
           <div class="wrapper out">
             <div class="form-row1">
@@ -111,82 +115,64 @@
             </div>
 
             <div class="math-container">
-              <label for="bot-validation" id="math-text">How's your math?</label>
-              <img src="photos/Math Validation.png" alt="What is 4 plus 3" />
-              <input type="text" name="bot-validation" id="mathcheck" placeholder="Equals"
-                style="width: 100px; height: 30px" required />
+              <div class="mathwrapper">
+                <label for="bot-validation" id="math-text">How's your math?</label>
+                <img src="photos/Math Validation.png" class="calculation" alt="What is 4 plus 3" />
+                <input type="text" name="bot-validation" id="mathcheck" placeholder="Equals"
+                  style="width: 100px; height: 30px" required="7" />
+                </div>
+              </div>
             </div>
-          </div>
 
           <div class="form-row5">
             <button type="submit" id="submit-button">Send Message</button>
           </div>
       </div>
       </form>
-    
-      <div class="telephone">
-        <div class="call-area">
-          <a href="tel:0430954634">
-            <img srcset="    
-                    icons/Telephone_64.png 64w,
-                    icons/Telephone_96.png 96w
-                  " sizes="(max-width: 400px) 64px, (max-width: 600px) 96px, 96px" src="Telephone_96.png"
+      <div class="right-side-box">
+        <div class="telephone">
+          <div class="call-area">
+            <a href="tel:0430954635">
+              <img srcset="    
+              icons/Telephone_64.png 64w,
+              icons/Telephone_96.png 96w
+              " sizes="(max-width: 400px) 64px, (max-width: 600px) 96px, 96px" src="Telephone_96.png"
               id="call-button" alt="call my mobile" />
-          </a>
-          <h3>Let's have a chat</h3>
+            </a>
+            <h3>Let's have a chat</h3>
+          </div>
         </div>
-      </div>
-      <div class="social">
-        <h2>Connect with me</h2>
-        <div class="social-icons">
-          <a href="https://github.com/Nam-fullstack" alt="GitHub" target="_blank">
-            <img src="icons/GitHub-Light_64.png" class="social-icon" id="github" alt="GitHub" />
-          </a>
-          <a href="https://www.linkedin.com/in/nam-nguyen-full-stack-dev" alt="Linkedin" target="_blank">
-            <img src="icons/Linkedin_32.png" class="social-icon" alt="Linkedin" />
-          </a>
-          <a href="https://www.facebook.com/nam.nguyen.16906715" alt="facebook" target="_blank">
-            <img src="icons/Facebook_32.png" class="social-icon" alt="Facebook" />
-          </a>
-          <a href="https://www.instagram.com/wammies_/" alt="Instagram" target="_blank">
-            <img src="icons/Instagram_32.png" class="social-icon" alt="Instagram" />
-          </a>
-          <a href="https://twitter.com/NamNguy86048812" alt="Twitter" target="_blank">
-            <img src="icons/Twitter_32.png" class="social-icon" alt="Twitter" />
-          </a>
-        </div> <!-- close .social-icons -->
-      </div> <!-- close .social -->
-    </div> <!-- close .container -->
-
-    <script>
-      // JavaScript for label effects
-      $(window).load(function(){
-          $(".wrapper input").val("");
-          
-          $(".out input").focusout(function(){
-              if($(this).val() != ""){
-                  $(this).addClass("selected");
-                  $(label).value("opacity:0");
-              } else{
-                  $(this).removeClass("selected");
-              }
-          })
-      });
-    </script>
-
-
-
-
-
-
-
-  </main>
-
-  <footer>
-    <div class="site-map"></div>
-    <div class="copyright">
-      <p>&copy Copyright 2021 Nam Nguyen. All rights reserved.</p>
-    </div>
-  </footer>
+        <div class="social">
+          <h2>Connect with me</h2>
+          <div class="social-icons">
+            <a href="https://github.com/Nam-fullstack" alt="GitHub" target="_blank">
+              <img src="icons/GitHub-Light_64.png" class="social-icon" id="github" alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/nam-nguyen-full-stack-dev" alt="Linkedin" target="_blank">
+              <img src="icons/Linkedin_32.png" class="social-icon" alt="Linkedin" />
+            </a>
+            <a href="https://www.facebook.com/nam.nguyen.16906715" alt="facebook" target="_blank">
+              <img src="icons/Facebook_32.png" class="social-icon" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/wammies_/" alt="Instagram" target="_blank">
+              <img src="icons/Instagram_32.png" class="social-icon" alt="Instagram" />
+            </a>
+            <a href="https://twitter.com/NamNguy86048812" alt="Twitter" target="_blank">
+              <img src="icons/Twitter_32.png" class="social-icon" alt="Twitter" />
+            </a>
+          </div> <!-- close .social-icons -->
+        </div> <!-- close .social -->
+      </div>  <!-- close right-side-box -->
+    </div>  <!-- close desktop-wrapper -->
+  </div> <!-- close .container -->
+  <div class="background"></div>
+</main>
+  
+<footer>
+  <div class="site-map"></div>
+  <div class="copyright">
+    <p>&copy Copyright 2021 Nam Nguyen. All rights reserved.</p>
+  </div>
+</footer>
 </body>
 </html>

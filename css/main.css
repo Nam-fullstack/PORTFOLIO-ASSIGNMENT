@@ -308,6 +308,17 @@ h1 {
   }
 }
 
+.copyright {
+  height: 20px;
+  width: 100%;
+  padding: 1.5vh 5vw 3vh;
+  background-color: black;
+}
+.copyright p {
+  color: white;
+  font-size: 0.6rem;
+}
+
 .testimonials {
   background: linear-gradient(130deg, #07d9a3, #048fee);
   background-size: 400% 400%;
@@ -484,7 +495,56 @@ h1 {
   gap: 5px;
 }
 .portfolio .container .grid .cell {
+  position: relative;
   border: 1px solid black;
+}
+.portfolio .container .grid .site {
+  display: block;
+  width: 100%;
+}
+.portfolio .container .grid .overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(143, 16, 16, 0.8);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.55s;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.portfolio .container .grid .overlay:hover {
+  opacity: 1;
+}
+.portfolio .container .grid .overlay-title {
+  font-size: 1rem;
+}
+.portfolio .container .grid .preview {
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 1.5% 5%;
+  position: absolute;
+  bottom: 8%;
+  background: #25abff;
+}
+.portfolio .container .grid .preview:hover {
+  color: white;
+  background: red;
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.68);
+  cursor: pointer;
+}
+@media screen and (min-width: 481px) {
+  .portfolio .container .grid .preview {
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 2% 6%;
+  }
 }
 
 .togglecontainer {
@@ -496,6 +556,11 @@ h1 {
 }
 .togglecontainer img {
   cursor: pointer;
+}
+@media screen and (max-width: 319px) {
+  .togglecontainer {
+    display: none;
+  }
 }
 @media screen and (min-width: 481px) {
   .togglecontainer {
@@ -513,6 +578,7 @@ h1 {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
   padding-top: 40px;
@@ -534,7 +600,7 @@ h1 {
 @media screen and (min-width: 769px) {
   .media .youtube .youtube-box {
     width: 100%;
-    height: 50%;
+    height: auto;
     padding-left: 20px;
   }
   .media .youtube .youtube-box h4 {
@@ -544,7 +610,7 @@ h1 {
 }
 @media screen and (min-width: 1025px) {
   .media .youtube .youtube-box {
-    width: 75;
+    width: 75%;
     height: auto;
   }
 }
@@ -598,6 +664,10 @@ h1 {
   .portfolio .container .grid {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  #box1 {
+    order: 1;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -1159,9 +1229,35 @@ h1 {
   text-align: center;
   padding: 15px 0px;
 }
-.contact h3 {
+.contact .instructions {
+  margin: 5px auto;
+  width: 90%;
+}
+.contact .instructions h4 {
   color: white;
-  text-align: center;
+  text-align: left;
+  line-height: 1.7;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 769px) {
+  .contact .instructions h4 {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .contact .instructions h4 {
+    font-size: 1.1rem;
+  }
+}
+
+.desktop-wrapper {
+  display: block;
+}
+@media screen and (min-width: 1025px) {
+  .desktop-wrapper {
+    display: flex;
+  }
 }
 
 .wrapper {
@@ -1171,7 +1267,28 @@ h1 {
 }
 
 .left-side-box {
-  display: none;
+  width: 100%;
+}
+@media screen and (min-width: 1025px) {
+  .left-side-box {
+    width: 50%;
+  }
+}
+
+.right-side-box {
+  width: 100%;
+}
+.right-side-box h3 {
+  color: white;
+}
+@media screen and (min-width: 1025px) {
+  .right-side-box {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 #client-project {
@@ -1235,7 +1352,7 @@ textarea {
   transition: 0.55s;
 }
 
-/* Bottom border */
+/* Bottom + right border */
 .box ~ .border:after {
   top: auto;
   bottom: 0;
@@ -1243,7 +1360,7 @@ textarea {
   right: 0;
 }
 
-/* Top and bottom borders */
+/* Side borders */
 .box ~ .border i:before,
 .box ~ .border i:after {
   content: "";
@@ -1316,10 +1433,6 @@ textarea:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.selected {
-  border: 10px solid pink;
-}
-
 .form-row4 {
   display: flex;
   flex-wrap: wrap;
@@ -1334,6 +1447,7 @@ textarea:hover {
   align-items: flex-end;
   background-color: rgba(255, 255, 255, 0.906);
   border: 1px solid black;
+  display: none;
 }
 .form-row4 .recaptcha #recaptcha-text {
   padding: 0 50px 0 10px;
@@ -1346,6 +1460,7 @@ textarea:hover {
 }
 .form-row4 .recaptcha #bot-checkbox {
   transform: scale(1.5);
+  width: 20px;
 }
 .form-row4 .recaptcha #bot-checkbox:hover {
   box-shadow: 0 0 7px red;
@@ -1353,17 +1468,23 @@ textarea:hover {
 .form-row4 .math-container {
   display: flex;
   flex-wrap: wrap;
-  width: 40%;
-  height: 120px;
+  width: 20%;
+  height: auto;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin: 1px auto;
   padding: 5px 0px 5px 0px;
   background-color: rgba(255, 255, 255, 0.906);
   border: 1px solid black;
 }
-.form-row4 .math-container img {
-  width: 60%;
+@media screen and (min-width: 1025px) {
+  .form-row4 .math-container {
+    width: 30%;
+  }
+}
+.form-row4 .math-container .calculation {
+  width: 150px;
 }
 .form-row4 .math-container #math-text {
   font-weight: 600;
@@ -1456,17 +1577,6 @@ textarea:hover {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.934);
 }
 
-.copyright {
-  height: 20px;
-  width: 100%;
-  padding: 1.5vh 5vw 3vh;
-  background-color: black;
-}
-.copyright p {
-  color: white;
-  font-size: 0.6rem;
-}
-
 @-webkit-keyframes rumble {
   0% {
     transform: rotate(0deg) scale(1.3);
@@ -1513,7 +1623,7 @@ textarea:hover {
 }
 @media screen and (min-width: 481px) {
   .wrapper {
-    margin: px 3%;
+    margin: 3%;
   }
 
   .box ~ label {
