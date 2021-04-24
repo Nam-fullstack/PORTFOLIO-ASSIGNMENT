@@ -1,26 +1,65 @@
 .contact {
-    background-color: $bgcolor1;
+    .banner {
+        
+        .backgroundoverlay {
+            // the transparent black overlay helps make the text pop out and more readable.
+            background-color: rgba(0, 0, 0, 0.262); 
+            margin-top: 40px;               // gap between top and menu bar
+            @include flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
 
-
+            @include tablet {
+                margin-top: 60px;
+            }
+            
+            .bannertext {
+                @include flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;             // positions itself at the top, relative the its parent container.
+                bottom: 4%;
+                
+                h1 {
+                    color: $white-theme;
+                    font-size: $banner-s;
+                }
+            }
+            
+            #workingtogether {
+                z-index: -1;
+                filter: blur(1px);      // the blur, helps the viewer's eyes focused on the text
+                                        // while they can still see the details of the image behind.
+            }
+        }
+    }
+    
     .container {
+        background: $bgcolor1;
+        // background: rgba(0, 0, 0, 0.591);
+        z-index: -1;
         display: inline-block;
         width: 100%;
         min-height: 100vh;
         padding-bottom: 5vh;
-    }
+        
+        h1 {
+            color: $white-theme;
+            font-size: $h1-s;
+            padding: 0;
+        }
+        
 
-    h1 {
-        color: $white-theme;
-        text-align: center;
-        // font-size: $h1-xs;
+        h2 {
+            color: $white-theme;
+            text-align: center;
+            font-size: ($h1-s * 0.5);
+            padding: 15px 0px;
+        }
+        
     }
-
-    h2 {
-        color: $white-theme;
-        text-align: center;
-        padding: 15px 0px;
-    }
-
     .instructions {
         margin: 5px auto;   // centers the container
         width: 90%;
@@ -92,6 +131,7 @@
     padding: 20px 2vw;
     gap: 20px;
     width: 100%;
+    z-index: 5;
 }
 
 input {
@@ -99,6 +139,7 @@ input {
     border: 1px solid white;
     min-height: 50px;
     border-radius: 3px;
+    z-index: 3;
 }
 
 textarea {
@@ -194,8 +235,11 @@ left: 14px;                    // Absolute places it on the right outside of the
 top: 15px;                     // Positions it in the center vertically 
 color: #aaa;                 // Sets color of placeholder text 
 transition: 0.9s;              // Time it takes to go back into the box 
-z-index: -1;                   // Hides the placeholder text label if there's text content.
 font-size: $form-s;            // Placeholder text size
+z-index: 0;                    
+
+// Hides the placeholder text label if there's text content. This should be -1, 
+// but can't seem to get background not to go over the placeholder/label text
 }
 
 .box:focus ~ label,
@@ -234,7 +278,6 @@ textarea:hover {
 
 .form-row4 {
     @include flex;
-
     .recaptcha {
         @include flex;
         width: 60%;
@@ -244,9 +287,14 @@ textarea:hover {
         background-color: rgba(255, 255, 255, 0.906);
         border: 1px solid black;
 
+        .check {
+            @include flex;
+            gap: 7px;
+        }
         #recaptcha-text {
-            padding: 0 50px 0 10px;
-            font-size: 1.3rem;
+            padding: 0 50px 0px 10px;
+            font-size: 1.6rem;
+            line-height: 2;
         }
 
         #recaptcha-icon {
@@ -257,32 +305,39 @@ textarea:hover {
 
         #bot-checkbox {
             transform: scale(1.5);
-            width: 20px;
+            width: 25px;
+            height: 20px;
         }
 
         #bot-checkbox:hover {
             box-shadow: 0 0 7px red;
         }
-        display: none;
+        // display: none;  
+        // reason why I am hiding this feature is because Formspree actually has a reCAPTCHA validation after 
+        // user presses submit, where they need to select photos which contains "specified object" 
     }
 
     .math-container {
         @include flex;
-        width: 20%;
+        width: 50%;
         height: auto;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         margin: 1px auto;
-        padding: 5px 0px 5px 0px;
+        padding: 5px 0px 5px 10px;
         background-color: rgba(255, 255, 255, 0.906);
         border: 1px solid black;
 
         @include desktop {
-            width: 30%;
+            width: 40%;
         }
         .calculation {
             width: 150px;
+        }
+
+        .mathwrapper {
+            width: 100%;
         }
 
         #math-text {
@@ -316,9 +371,11 @@ textarea:hover {
     #submit-button {
         color: white;
         background-color: rgba(58, 163, 255, 0.762);
-        padding: 8px 40px;
+        padding: 8px 25px;
         font-size: 1.3rem;
         font-weight: 800;
+        border-radius: 3px;
+        border: none;
     }
 
     #submit-button:hover {
