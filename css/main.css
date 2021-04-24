@@ -315,18 +315,15 @@ header {
 }
 
 h1 {
-  margin-top: 5vh;
   padding-bottom: 2vh;
 }
 @media screen and (min-width: 769px) {
   h1 {
-    margin-top: 8vh;
     padding-bottom: 3vh;
   }
 }
 @media screen and (min-width: 1025px) {
   h1 {
-    margin-top: 8vh;
     padding-bottom: 4vh;
   }
 }
@@ -344,8 +341,7 @@ h1 {
 
 .homepage .container {
   width: 100%;
-  margin-top: 40px;
-  padding: 47vh 0vw;
+  padding: 25vh 0vw;
   overflow: none;
   display: flex;
   flex-wrap: wrap;
@@ -357,9 +353,9 @@ h1 {
   font-weight: 900;
   font-size: 10vw;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 1025px) {
   .homepage .container {
-    margin-top: 60px;
+    padding: 3vh 0vw;
   }
 }
 .homepage .container b {
@@ -382,8 +378,8 @@ h1 {
   text-align: center;
   opacity: 0;
   transform: scale(1);
-  -webkit-animation: showtime 35s linear infinite;
-          animation: showtime 35s linear infinite;
+  -webkit-animation: showtime 28s linear infinite;
+          animation: showtime 28s linear infinite;
 }
 .homepage .container #part1 {
   -webkit-animation-delay: 0s;
@@ -514,26 +510,26 @@ h1 {
     font-size: 13.5vw;
   }
 }
-.homepage .container #part5 p, .homepage .container #part6 p, .homepage .container #part7 p, .homepage .container #part8 p {
+.homepage .container #part5 p {
   font-size: 14.3vw;
 }
 @media screen and (max-width: 319px) {
-  .homepage .container #part5 p, .homepage .container #part6 p, .homepage .container #part7 p, .homepage .container #part8 p {
+  .homepage .container #part5 p {
     font-size: 14.4vw;
   }
 }
 @media screen and (min-width: 481px) {
-  .homepage .container #part5 p, .homepage .container #part6 p, .homepage .container #part7 p, .homepage .container #part8 p {
+  .homepage .container #part5 p {
     font-size: 15.4vw;
   }
 }
 @media screen and (min-width: 769px) {
-  .homepage .container #part5 p, .homepage .container #part6 p, .homepage .container #part7 p, .homepage .container #part8 p {
+  .homepage .container #part5 p {
     font-size: 15vw;
   }
 }
 @media screen and (min-width: 1025px) {
-  .homepage .container #part5 p, .homepage .container #part6 p, .homepage .container #part7 p, .homepage .container #part8 p {
+  .homepage .container #part5 p {
     font-size: 13.5vw;
   }
 }
@@ -544,132 +540,163 @@ h1 {
 .homepage .container #part6 {
   -webkit-animation-delay: 17.5s;
           animation-delay: 17.5s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: flex;
+  padding: 2vw 2vw;
+}
+.homepage .container #part6 p {
+  font-size: 14.3vw;
+  line-height: 2;
+}
+@media screen and (max-width: 319px) {
+  .homepage .container #part6 p {
+    font-size: 15.6vw;
+  }
+}
+@media screen and (min-width: 481px) {
+  .homepage .container #part6 p {
+    font-size: 14vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .homepage .container #part6 p {
+    font-size: 13.5vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .homepage .container #part6 p {
+    line-height: 1.5;
+    font-size: 12vw;
+  }
 }
 .homepage .container #part7 {
   -webkit-animation-delay: 21s;
           animation-delay: 21s;
 }
-.homepage .container #part8 {
-  -webkit-animation-delay: 24.5s;
-          animation-delay: 24.5s;
-}
-.homepage .container #part9 {
-  -webkit-animation-delay: 28s;
-          animation-delay: 28s;
-}
-.homepage .container #part9 p {
+.homepage .container #part7 p {
   font-size: 52vw;
 }
 @media screen and (max-width: 319px) {
-  .homepage .container #part9 p {
+  .homepage .container #part7 p {
     font-size: 44.4vw;
   }
 }
 @media screen and (min-width: 481px) {
-  .homepage .container #part9 p {
+  .homepage .container #part7 p {
     font-size: 49vw;
   }
 }
 @media screen and (min-width: 769px) {
-  .homepage .container #part9 p {
+  .homepage .container #part7 p {
     font-size: 45vw;
   }
 }
 @media screen and (min-width: 1025px) {
-  .homepage .container #part9 p {
+  .homepage .container #part7 p {
     font-size: 45vw;
   }
 }
-.homepage .container #part10 {
-  -webkit-animation-delay: 31.5s;
-          animation-delay: 31.5s;
+.homepage .container #part8 {
+  -webkit-animation-delay: 24.5s;
+          animation-delay: 24.5s;
   padding: 10vh 5vw;
 }
-.homepage .container #part10 p {
+.homepage .container #part8 p {
   z-index: 3;
   text-shadow: 0px 0px 120px #ffb039;
   font-size: 13vw;
 }
 @media screen and (max-width: 319px) {
-  .homepage .container #part10 p {
+  .homepage .container #part8 p {
     font-size: 13.2vw;
   }
 }
 @media screen and (min-width: 481px) {
-  .homepage .container #part10 p {
+  .homepage .container #part8 p {
     font-size: 12.6vw;
   }
 }
 @media screen and (min-width: 769px) {
-  .homepage .container #part10 p {
+  .homepage .container #part8 p {
     font-size: 13.5vw;
   }
 }
 @media screen and (min-width: 1025px) {
-  .homepage .container #part10 p {
+  .homepage .container #part8 p {
     font-size: 12vw;
   }
 }
 .homepage .container .background-overflow {
   overflow: none;
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .homepage .container #radiance {
-  position: absolute;
-  top: -50vh;
-  left: -50vw;
   min-width: 100vw;
   max-height: 95vh;
-  padding-top: 30px;
   filter: blur(0px);
-  opacity: 0;
-  -webkit-animation: showme 35s linear infinite;
-          animation: showme 35s linear infinite;
+  opacity: 1;
+  -webkit-animation: lightblur 28s linear infinite;
+          animation: lightblur 28s linear infinite;
 }
 
-@-webkit-keyframes showme {
+@-webkit-keyframes lightblur {
   0% {
     opacity: 0;
   }
-  90% {
+  88% {
     opacity: 0;
     transform: scale(1);
     filter: blur(5px);
   }
-  92% {
-    transform: scale(1);
+  90% {
+    transform: scale(1.01);
     opacity: 1;
     filter: blur(5px);
   }
-  98% {
+  93% {
     filter: blur(0px);
   }
-  100% {
+  98% {
     transform: scale(1.05);
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.06);
   }
 }
 
-@keyframes showme {
+@keyframes lightblur {
   0% {
     opacity: 0;
   }
-  90% {
+  88% {
     opacity: 0;
     transform: scale(1);
     filter: blur(5px);
   }
-  92% {
-    transform: scale(1);
+  90% {
+    transform: scale(1.01);
     opacity: 1;
     filter: blur(5px);
   }
-  98% {
+  93% {
     filter: blur(0px);
   }
-  100% {
+  98% {
     transform: scale(1.05);
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.06);
   }
 }
 @-webkit-keyframes showtime {
@@ -680,10 +707,10 @@ h1 {
   2% {
     opacity: 1;
   }
-  8% {
+  10% {
     opacity: 1;
   }
-  10% {
+  12% {
     opacity: 0;
     transform: scale(1);
   }
@@ -699,10 +726,10 @@ h1 {
   2% {
     opacity: 1;
   }
-  8% {
+  10% {
     opacity: 1;
   }
-  10% {
+  12% {
     opacity: 0;
     transform: scale(1);
   }
@@ -744,6 +771,11 @@ h1 {
 @media screen and (min-width: 769px) {
   .testimonials .wrapper {
     min-height: 500px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .testimonials .wrapper {
+    min-height: 550px;
   }
 }
 .testimonials .wrapper h1 {
@@ -976,8 +1008,6 @@ h1 {
   .testimonials .slider .quote-container .quote .divider-left .portrait {
     height: 25vw;
     width: 25vw;
-    position: relative;
-    left: 25%;
   }
 }
 @media screen and (min-width: 1025px) {

@@ -1,334 +1,350 @@
-
-
 header {
-     z-index: 10;
+  z-index: 10;
 }
 
 h1 {
-    margin-top: 5vh;
-    padding-bottom: 2vh;
+  // margin-top: 5vh;
+  padding-bottom: 2vh;
 
-    @include laptop {
-        margin-top: 8vh;
-        padding-bottom: 3vh;
-    }
-    @include desktop {
-        margin-top: 8vh;
-        padding-bottom: 4vh;
-    }
+  @include laptop {
+    // margin-top: 8vh;
+    padding-bottom: 3vh;
+  }
+  @include desktop {
+    // margin-top: 8vh;
+    padding-bottom: 4vh;
+  }
 }
 
 .copyright {
-    height: 20px;
-    width: 100%;
-    padding: 1.5vh 5vw 3vh;
-    background-color: black;
+  height: 20px;
+  width: 100%;
+  padding: 1.5vh 5vw 3vh;
+  background-color: black;
 
-    p {
-        color: $white-theme;
-        font-size: 0.6rem;
-    }
+  p {
+    color: $white-theme;
+    font-size: 0.6rem;
+  }
 }
 
 .homepage {
+  .container {
+    width: 100%;
+    padding: 25vh 0vw;
+    overflow: none;
+    @include flex;
+    @include center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.982);
+    color: white;
+    font-weight: 900;
+    font-size: 10vw;
 
-    .container {
-        // border: 20px solid red;
-        width: 100%;
-        margin-top: 40px;
-        @include tablet {
-            margin-top: 60px;
-        }
-        padding: 47vh 0vw;
-        overflow: none;
-        @include flex;
-        @include center;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.982);
-        color: white;
-        font-weight: 900;
-        font-size: 10vw;
+    @include desktop {
+      padding: 3vh 0vw;
+    }
 
-        b {
-            color: red;
-        }
-        .blue {
-            color: rgb(5, 159, 255);
-        }
-        .orange {
-            color: rgb(255, 117, 11);
-        }
-        .vision {
-            font-family: 'Inter', 'Raleway', 'Roboto', sans-serif; 
-            @include flex;
-            @include center;
-            // border: 4px solid orange;
-            padding: 10px 2vw;
-            position: absolute;
-            text-align: center;
-            opacity: 0;                             // Hides all the text, so it'll only show when keyframe opacity is 1
-            transform: scale(1);                    // Sets it so it starts at standard width, don't want to leave anything to chance
-            animation: showtime 35s linear infinite;         // Animation settings
-        }
+    b {
+      color: red;
+    }
+    .blue {
+      color: rgb(5, 159, 255);
+    }
+    .orange {
+      color: rgb(255, 117, 11);
+    }
+    .vision {
+      font-family: "Inter", "Raleway", "Roboto", sans-serif;
+      @include flex;
+      @include center;
+      // border: 4px solid orange;
+      padding: 10px 2vw;
+      position: absolute;
+      text-align: center;
+      opacity: 0; // Hides all the text, so it'll only show when keyframe opacity is 1
+      transform: scale(
+        1
+      ); // Sets it so it starts at standard width, don't want to leave anything to chance
+      animation: showtime 28s linear infinite; // Animation settings
+    }
 
-    // The $animation-length variable has been defined in variables, for each part, I just multiply the animation delay 
-    // starting from 0 increasing by 1 for each part up to * 9.
+    // The $animation-length variable has been defined in variables, for each part, I just multiply the animation delay
+    // starting from 0 increasing by 1 for each part up to * 7.
     // with the sizing, I've preset sizes based on vw, they're generally 12vw - 16vw.
     // simply just multiplied the variable sizes to make them bigger by a specific amount for each part.
 
-        #part1 {
-            animation-delay: ($animation-length * 0);
-            p {
-                font-size: ($landing-s * 4);
-                
-                @include xsphone {
-                    font-size: ($landing-xs * 4);
-                }
-                @include tablet {
-                    font-size: ($landing-m * 3.5);
-                }
-                @include laptop {
-                    font-size: ($landing-l * 3);
-                }
-                @include desktop {
-                    font-size: 40rem;
-                }
-            }
-        }
-        #part2 {
-            animation-delay: ($animation-length * 1);
-            p {
-                font-size: ($landing-s * 2);
-                
-                @include xsphone {
-                    font-size: ($landing-xs * 2.5);
-                }
-                @include tablet {
-                    font-size: ($landing-m * 1.8);
-                }
-                @include laptop {
-                    font-size: ($landing-l * 1.5);
-                }
-                
-                @include desktop {
-                    font-size: 15rem;
-                }
-            }
-        }
-        #part3 {       
-            animation-delay: ($animation-length * 2);
-            #stack {
-                width: 20%;
-                margin-right: 5vw;   
-                padding: 15vw 0;
-                
-                @include laptop {
-                    padding: 3vw 0;
-                }
-                @include desktop { 
-                    padding: 1vw 0;
-                }
-            }
-            .stack-box {
-                @include flex;
-                @include center;
-                flex-wrap: flex;
-                padding: 0 2vw;
-            }
-            p {
-                font-size: ($landing-s * 1);
-                
-                @include xsphone {
-                    font-size: ($landing-xs * 1.1);
-                }
-                @include tablet {
-                    font-size: ($landing-m * 0.9);
-                }
-                @include laptop {
-                    font-size: ($landing-l * 0.8);
-                }
-                @include desktop {
-                    font-size: ($landing-l * 0.8);
-                }
-            }
-        }
-        #part4 {
-            animation-delay: ($animation-length * 3);
-            font-size: ($landing-s * 1.7);
-            
-            @include xsphone {
-                font-size: ($landing-xs * 1.8);
-            }
-            @include tablet {
-                font-size: ($landing-m * 1.5);
-            }
-            @include laptop {
-                font-size: ($landing-l * 1);
-            }
-            @include desktop {
-                font-size: ($landing-l * 0.9);
-            }    
-        }
-        
-        #part5, #part6, #part7, #part8 {
-            p {
-                font-size: ($landing-s * 1.1);
-                
-                @include xsphone {
-                    font-size: ($landing-xs * 1.2);
-                }
-                @include tablet {
-                    font-size: ($landing-m * 1.1);
-                }
-                @include laptop {
-                    font-size: ($landing-l * 1);
-                }
-                @include desktop {
-                    font-size: ($landing-l * 0.9);
-                }
-            }
-        }
-        #part5 {
-            animation-delay: ($animation-length * 4);
-        }
-        #part6 {
-            animation-delay: ($animation-length * 5);
-        }
-        #part7 {
-            animation-delay: ($animation-length * 6);
-        }
-        #part8 {
-            animation-delay: ($animation-length * 7);
-        }
-        #part9 {
-            animation-delay: ($animation-length * 8);
-            p {
-                font-size: ($landing-s * 4);
-                
-                @include xsphone {
-                    font-size: ($landing-xs * 3.7);
-                }
-                @include tablet {
-                    font-size: ($landing-m * 3.5);
-                }
-                @include laptop {
-                    font-size: ($landing-l * 3);
-                }
-                @include desktop {
-                    font-size: ($landing-l * 3);
-                }
-            }
-        }
-                
-        #part10 {
-            animation-delay: ($animation-length * 9);
-            padding: 10vh 5vw;
-            
-            p {
-                z-index: 3;
-                text-shadow: 0px 0px 120px rgb(255, 176, 57);
-                
-                font-size: ($landing-s * 1);
-        
-                @include xsphone {
-                    font-size: ($landing-xs * 1.1);
-                }
-                @include tablet {
-                    font-size: ($landing-m * 0.9);
-                }
-                @include laptop {
-                    font-size: ($landing-l * 0.9);
-                }
-                @include desktop {
-                    font-size: 12vw;
-                }
-            }
-        }
+    #part1 {
+      animation-delay: ($animation-length * 0);
+      p {
+        font-size: ($landing-s * 4);
 
-        .background-overflow {
-            overflow: none;
-            position: relative;
+        @include xsphone {
+          font-size: ($landing-xs * 4);
         }
-        #radiance {
-            position: absolute;
-            top: -50vh;
-            left: -50vw;
-            min-width: 100vw;
-            max-height: 95vh;
-            padding-top: 30px;
-            filter: blur(0px);
-            opacity: 0;
-            animation: showme 35s linear infinite;
-        
-            // cannot put infinite for this, since it'll just keep appearing as the animation delay doesn't
-            // keep repeating.
+        @include tablet {
+          font-size: ($landing-m * 3.5);
         }
-
+        @include laptop {
+          font-size: ($landing-l * 3);
+        }
+        @include desktop {
+          font-size: 40rem;
+        }
+      }
     }
+    #part2 {
+      animation-delay: ($animation-length * 1);
+      p {
+        font-size: ($landing-s * 2);
+
+        @include xsphone {
+          font-size: ($landing-xs * 2.5);
+        }
+        @include tablet {
+          font-size: ($landing-m * 1.8);
+        }
+        @include laptop {
+          font-size: ($landing-l * 1.5);
+        }
+        @include desktop {
+          font-size: 15rem;
+        }
+      }
+    }
+    #part3 {
+      animation-delay: ($animation-length * 2);
+      #stack {
+        width: 20%;
+        margin-right: 5vw;
+        padding: 15vw 0;
+
+        @include laptop {
+          padding: 3vw 0;
+        }
+        @include desktop {
+          padding: 1vw 0;
+        }
+      }
+      .stack-box {
+        @include flex;
+        @include center;
+        flex-wrap: flex;
+        padding: 0 2vw;
+      }
+      p {
+        font-size: ($landing-s * 1);
+
+        @include xsphone {
+          font-size: ($landing-xs * 1.1);
+        }
+        @include tablet {
+          font-size: ($landing-m * 0.9);
+        }
+        @include laptop {
+          font-size: ($landing-l * 0.8);
+        }
+        @include desktop {
+          font-size: ($landing-l * 0.8);
+        }
+      }
+    }
+    #part4 {
+      animation-delay: ($animation-length * 3);
+      font-size: ($landing-s * 1.7);
+
+      @include xsphone {
+        font-size: ($landing-xs * 1.8);
+      }
+      @include tablet {
+        font-size: ($landing-m * 1.5);
+      }
+      @include laptop {
+        font-size: ($landing-l * 1);
+      }
+      @include desktop {
+        font-size: ($landing-l * 0.9);
+      }
+    }
+
+    #part5 {
+      p {
+        font-size: ($landing-s * 1.1);
+
+        @include xsphone {
+          font-size: ($landing-xs * 1.2);
+        }
+        @include tablet {
+          font-size: ($landing-m * 1.1);
+        }
+        @include laptop {
+          font-size: ($landing-l * 1);
+        }
+        @include desktop {
+          font-size: ($landing-l * 0.9);
+        }
+      }
+    }
+    #part5 {
+      animation-delay: ($animation-length * 4);
+    }
+    #part6 {
+      animation-delay: ($animation-length * 5);
+      @include flex;
+      @include center;
+      flex-direction: column;
+      flex-wrap: flex;
+      padding: 2vw 2vw;
+
+      p {
+        font-size: ($landing-s * 1.1);
+        line-height: 2;
+      }
+
+      @include xsphone {
+        p {
+          font-size: ($landing-xs * 1.3);
+        }
+      }
+      @include tablet {
+        p {
+          font-size: ($landing-m * 1);
+        }
+      }
+      @include laptop {
+        p {
+          font-size: ($landing-l * 0.9);
+        }
+      }
+      @include desktop {
+        p {
+          line-height: 1.5;
+          font-size: ($landing-l * 0.8);
+        }
+      }
+    }
+
+    #part7 {
+      animation-delay: ($animation-length * 6);
+      p {
+        font-size: ($landing-s * 4);
+
+        @include xsphone {
+          font-size: ($landing-xs * 3.7);
+        }
+        @include tablet {
+          font-size: ($landing-m * 3.5);
+        }
+        @include laptop {
+          font-size: ($landing-l * 3);
+        }
+        @include desktop {
+          font-size: ($landing-l * 3);
+        }
+      }
+    }
+
+    #part8 {
+      animation-delay: ($animation-length * 7);
+      padding: 10vh 5vw;
+
+      p {
+        z-index: 3;
+        text-shadow: 0px 0px 120px rgb(255, 176, 57);
+        font-size: ($landing-s * 1);
+
+        @include xsphone {
+          font-size: ($landing-xs * 1.1);
+        }
+        @include tablet {
+          font-size: ($landing-m * 0.9);
+        }
+        @include laptop {
+          font-size: ($landing-l * 0.9);
+        }
+        @include desktop {
+          font-size: 12vw;
+        }
+      }
+    }
+
+    .background-overflow {
+      overflow: none;
+      @include flex;
+      @include center;
+    }
+    #radiance {
+      min-width: 100vw;
+      max-height: 95vh;
+      filter: blur(0px);
+      opacity: 1;
+      animation: lightblur 28s linear infinite;
+    }
+  }
 }
-@keyframes showme {
-    0% {
-        opacity: 0;
-    }
-    90% {
-        opacity: 0;
-        transform: scale(1);
-        filter: blur(5px);
-    }
-    92% {
-        transform: scale(1);
-        opacity: 1;
-        filter: blur(5px);
-    }
-    98% {
-        filter: blur(0px);
-    }
-    100% {
-        transform: scale(1.05);
-        opacity: 1;   
-    }
+@keyframes lightblur {
+  0% {
+    opacity: 0;
+  }
+  88% {
+    opacity: 0;
+    transform: scale(1);
+    filter: blur(5px);
+  }
+  90% {
+    transform: scale(1.01);
+    opacity: 1;
+    filter: blur(5px);
+  }
+  93% {
+    filter: blur(0px);
+  }
+  98% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.06);
+  }
 }
 
-// Since there are 10 parts, and each part plays for 3.5seconds (1 interval) 
+@keyframes showtime {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  2% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// Since there are 10 parts, and each part plays for 3.5seconds (1 interval)
 // I've divided the entire animation time into 10, and set animation-delay for each interval accordingly
 // i.e. part 1: 0s delay, part 2: 3.5s delay, part 3: 7s delay and so forth.
 // Such that the next part will only start once the current part's 3.5s showtime has lapsed.
 // So the time for each part is only lasts for 10%, 1% is equivalent to 350ms
 // Starts at opacity: 0; so it takes 0.7s to fade in, likewise with fading out
 // Once a part appears, it is constantly zooming out. 1.1 was a gentle and smooth number for duration.
-// Then for the remainder of the animation, each part is hidden. 
-
+// Then for the remainder of the animation, each part is hidden.
 
 // Ideally, I should have put
 
-//   Creativity 
+//   Creativity
 //      Meets
 //   Practicality
 
 // in the same #part, but don't have time to go back and change everything and do all the keyframes and again.
 
 // Starting transform: sclae(1) at 0% is smoother than starting it at 2%. Want it to already by growing without
-// any noticeable pause before it starts. 
-
-@keyframes showtime {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    2% {
-        opacity: 1;
-    }
-    8% {
-        opacity: 1;
-    }
-    10% {  
-        opacity: 0;
-        transform: scale(1);
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-
-
+// any noticeable pause before it starts.

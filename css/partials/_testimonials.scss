@@ -29,6 +29,9 @@
     @include laptop {
       min-height: 500px;
     }
+    @include desktop {
+      min-height: 550px;
+    }
     h1 {
       font-size: 6vw;
       padding: 2vw 20px 40px;
@@ -220,6 +223,7 @@
           height: auto;
           @include flex;
           justify-content: center;
+          // @include bred;
           order: 1;
 
           @include desktop {
@@ -250,8 +254,6 @@
             @include laptop {
               height: 25vw;
               width: 25vw;  
-              position: relative;
-              left: 25%;
             }
             @include desktop {
               margin-top: 0vw;
