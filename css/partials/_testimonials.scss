@@ -110,8 +110,7 @@
         @include desktop {
           flex-direction: row;
         }
-
-// padding: 40px 0 40px 180px;
+        animation: slide 0.9s linear;
 
 
         blockquote {
@@ -346,15 +345,17 @@
   }
 }
 
-// @include xsphone {
-
-// }
-// @include tablet {
-
-// }
-// @include laptop {
-
-// }
-// @include desktop {
-
-// }
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  10% {
+    transform: translateX(90%);
+  }
+  90% {
+    transform: translateX(10%);  
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
