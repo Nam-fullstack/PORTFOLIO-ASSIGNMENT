@@ -22,9 +22,25 @@
                 position: absolute;             // positions itself at the top, relative the its parent container.
                 bottom: 4%;
                 
+                @include tablet {
+                    bottom: 20%;
+                }
                 h1 {
                     color: $white-theme;
                     font-size: $banner-s;
+                    @include xsphone {
+                        font-size: $banner-xs;
+                    }
+                    @include tablet {
+                        font-size: $banner-m;
+                    }
+                    @include laptop {
+                        font-size: $banner-l;
+                    }
+                    @include desktop {
+                        font-size: $banner-xl;
+
+                    }
                 }
             }
             
@@ -286,7 +302,7 @@ textarea:hover {
         align-items: flex-end;
         background-color: rgba(255, 255, 255, 0.906);
         border: 1px solid black;
-
+        
         .check {
             @include flex;
             gap: 7px;
@@ -296,27 +312,27 @@ textarea:hover {
             font-size: 1.6rem;
             line-height: 2;
         }
-
+        
         #recaptcha-icon {
             height: 64px;
             width: 64px;
             justify-self: flex-end;
         }
-
+        
         #bot-checkbox {
             transform: scale(1.5);
             width: 25px;
             height: 20px;
         }
-
+        
         #bot-checkbox:hover {
             box-shadow: 0 0 7px red;
         }
-        // display: none;  
+        display: none;  
         // reason why I am hiding this feature is because Formspree actually has a reCAPTCHA validation after 
         // user presses submit, where they need to select photos which contains "specified object" 
     }
-
+    
     .math-container {
         @include flex;
         width: 50%;
@@ -328,18 +344,18 @@ textarea:hover {
         padding: 5px 0px 5px 10px;
         background-color: rgba(255, 255, 255, 0.906);
         border: 1px solid black;
-
+        
         @include desktop {
             width: 40%;
         }
         .calculation {
             width: 150px;
         }
-
+        
         .mathwrapper {
             width: 100%;
         }
-
+        
         #math-text {
             font-weight: 600;
             font-size: 1.3rem;
@@ -469,9 +485,6 @@ textarea:hover {
 }
 
 @include tablet {
-    .wrapper {
-        margin: 3%;
-    }
     .box ~ label {
         font-size: $form-m;
     }

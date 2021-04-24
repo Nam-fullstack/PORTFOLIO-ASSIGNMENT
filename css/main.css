@@ -1800,6 +1800,7 @@ h1 {
 
   .details-about-me {
     width: 75%;
+    background-color: rgba(255, 255, 255, 0.714);
   }
   .details-about-me p {
     font-size: 15px;
@@ -1864,9 +1865,34 @@ h1 {
   position: absolute;
   bottom: 4%;
 }
+@media screen and (min-width: 481px) {
+  .contact .banner .backgroundoverlay .bannertext {
+    bottom: 20%;
+  }
+}
 .contact .banner .backgroundoverlay .bannertext h1 {
   color: white;
   font-size: 6vw;
+}
+@media screen and (max-width: 319px) {
+  .contact .banner .backgroundoverlay .bannertext h1 {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 481px) {
+  .contact .banner .backgroundoverlay .bannertext h1 {
+    font-size: 4vw;
+  }
+}
+@media screen and (min-width: 769px) {
+  .contact .banner .backgroundoverlay .bannertext h1 {
+    font-size: 4vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .contact .banner .backgroundoverlay .bannertext h1 {
+    font-size: 3vw;
+  }
 }
 .contact .banner .backgroundoverlay #workingtogether {
   z-index: -1;
@@ -2111,6 +2137,7 @@ textarea:hover {
   align-items: flex-end;
   background-color: rgba(255, 255, 255, 0.906);
   border: 1px solid black;
+  display: none;
 }
 .form-row4 .recaptcha .check {
   display: flex;
@@ -2297,10 +2324,6 @@ textarea:hover {
   }
 }
 @media screen and (min-width: 481px) {
-  .wrapper {
-    margin: 3%;
-  }
-
   .box ~ label {
     font-size: 18px;
   }
