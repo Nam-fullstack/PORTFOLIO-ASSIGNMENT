@@ -1538,7 +1538,7 @@ h1 {
 }
 @media screen and (min-width: 1025px) {
   .experience .outer-container #academic, .experience .outer-container #work-experience {
-    padding-left: 40px;
+    padding-left: 100px;
   }
   .experience .outer-container #academic h2, .experience .outer-container #work-experience h2 {
     font-size: 1.7rem;
@@ -1692,6 +1692,22 @@ h1 {
   bottom: 0;
 }
 
+@media screen and (min-width: 769px) {
+  .about-me-section {
+    background-image: url(../../photos/backgrounds/Studio_1024.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .about-me-section h1 {
+    color: white;
+    font-size: 4.5rem;
+    background: rgba(0, 0, 0, 0.406);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+  }
+}
+
 .carousel-container {
   position: relative;
   background-color: black;
@@ -1816,16 +1832,30 @@ h1 {
 }
 
 .details-about-me {
+  width: 90%;
+  padding: 20px 5%;
   height: auto;
-  width: 80%;
   margin: 0 auto;
   padding-bottom: 40px;
+}
+@media screen and (min-width: 769px) {
+  .details-about-me {
+    background: rgba(0, 0, 0, 0.41);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+  }
 }
 .details-about-me p {
   margin: 20px 0;
   font-size: 12px;
   line-height: 2;
   text-align: justify;
+}
+.details-about-me a {
+  color: rgba(252, 53, 53, 0.838);
+}
+.details-about-me a:hover {
+  text-decoration: underline;
 }
 
 @-webkit-keyframes fade {
@@ -1895,7 +1925,6 @@ h1 {
 
   .details-about-me {
     width: 75%;
-    background-color: rgba(255, 255, 255, 0.714);
   }
   .details-about-me p {
     font-size: 15px;
@@ -1935,6 +1964,7 @@ h1 {
     font-size: 18px;
     line-height: 3;
     padding-bottom: 10px;
+    color: white;
   }
 }
 .contact .banner .backgroundoverlay {

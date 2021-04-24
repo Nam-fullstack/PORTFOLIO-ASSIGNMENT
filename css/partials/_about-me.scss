@@ -1,3 +1,20 @@
+.about-me-section {
+    @include laptop {
+        background-image: url(../../photos/backgrounds/Studio_1024.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;       // background will stay fixed regardless of scrolling
+        
+        h1 {
+            color: $white-theme;
+            font-size: $h1-l;
+            background: rgba(0, 0, 0, 0.406);
+            backdrop-filter: blur(4px);
+        }
+    
+    }
+}
+
 .carousel-container {
     position: relative;
     background-color: black;
@@ -121,16 +138,34 @@
 }
 
 .details-about-me {
+    width: 90%;
+    padding: 20px 5%;
     height: auto;
-    width: 80%;
     margin: 0 auto;
+
+    @include laptop {
+        background: rgba(0, 0, 0, 0.41);
+        backdrop-filter: blur(4px);           
+        // blurs the transparent background, to make the text more "readable".
+        // 4px was the perfect balance between readability and also not losing too mucch detail in the background
+    }
+    
+    
     p {
         margin: 20px 0;
         font-size: 12px;
         line-height: 2;
         text-align: justify;
+        // color: $white-theme;
     }
     padding-bottom: 40px;
+    a {
+        color: $red-theme;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 
@@ -188,7 +223,7 @@
 
     .details-about-me {
         width: $tablet;
-        background-color: rgba(255, 255, 255, 0.714);
+
         p {
             font-size: 15px;
             line-height: 2.5;
@@ -227,6 +262,9 @@
             font-size: 18px;
             line-height: 3;
             padding-bottom: 10px;
+            color: $white-theme;
         }
-    }
+       
+        
+    }    
 }
