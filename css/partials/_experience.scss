@@ -27,7 +27,7 @@
             }
         }
 
-        #academic {
+        #academic, #work-experience {
             @include flex;
             flex-direction: column;
             justify-content: center;
@@ -91,6 +91,19 @@
             
            }
         }
+
+        .resume {
+            text-decoration: none;
+            font-size: 20px;
+            margin: 20px;
+            padding: 30px;
+
+            a:hover {
+                color: red;
+            }
+        }
+
+        //               ******************** BACKGROUND *******************
         // .overlay {
         //     width: 100%;
         //     background: rgba(255, 255, 255, 0.7);
@@ -189,20 +202,16 @@
                 margin: 0 auto;
             }
         }
-        
-        
-        
-        
-        
-     
-
-
-
     }
-
 }
 
-
+.work-icon {
+    width: 50%;
+    
+}
+#briefcase {
+    transform: scale(0.85);
+}
    
 .certificates {
     @include flex;

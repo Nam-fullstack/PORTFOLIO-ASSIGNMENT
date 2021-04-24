@@ -223,7 +223,6 @@
           height: auto;
           @include flex;
           justify-content: center;
-          // @include bred;
           order: 1;
 
           @include desktop {
@@ -247,17 +246,18 @@
               width: 200px;
             }
             @include tablet {
-              margin-top: -6vw;
+              margin-top: -6vw;           // Shifts photo up, so it's not at the bottom, and closer to the text
               height: 30vw;
               width: 30vw;
             }
             @include laptop {
               height: 25vw;
               width: 25vw;  
+              
             }
             @include desktop {
-              margin-top: 0vw;
-              margin-left: 0vw;
+              margin-top: 0vw;    // Sets it so that the photo and testimonials don't ride up into the heading
+              transform: translateX(30%);   // Shifts the photo a bit closer to the right, rather than being on the edge
               height: 17vw;
               width: 17vw;
             }
@@ -312,7 +312,7 @@
         // text-transform: uppercase;
         font-style: normal;
         color: rgba(87, 87, 87, 0.749);
-        font-size: 1rem;
+        font-size: 1.4rem;
         // text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.619);
         
         @include xsphone {

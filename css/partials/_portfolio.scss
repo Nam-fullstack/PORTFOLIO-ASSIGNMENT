@@ -43,7 +43,8 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: $overlay-red;
+                // This was slightly too overpowering and not easy on the eyes, decided to go back to transparent black 
+                background: $overlay-red;           
                 // background: rgba(0, 0, 0, 0.55);
                 color: white;
                 opacity: 0;
