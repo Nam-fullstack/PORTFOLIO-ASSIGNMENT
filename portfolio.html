@@ -1,260 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <script src="navbar.js"></script>
+    <title>Nam Nguyen</title>
+    <link rel="icon" href="logo/logo-red_64.png" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/main.css" type="text/css" />
-  <script src="navbar.js"></script>
-  <title>Nam Nguyen</title>
-  <link rel="icon" href="logo/logo-red_64.png" />
-</head>
+  <body class="portfolio-body">
+    <header>
+      <div class="navigation" id="navigation-bar">
+        <div class="navbar">
+          <div class="logo">
+            <img src="logo/logo-red_64.png" alt="my logo" />
+          </div>
+          <ul class="navigation-pages">
+            <li>
+              <a href="index.html" alt="link to home page">Home</a>
+            </li>
+            <li>
+              <a
+                href="portfolio.html"
+                id="current-page"
+                alt="link to portfolio page"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="experience.html" alt="link to experience page"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a href="about-me.html" alt="link to about me page">About Me</a>
+            </li>
+            <li>
+              <a href="blog.html" alt="link to blog page">Blog</a>
+            </li>
+            <li>
+              <a href="contact.html" alt="link to contact page">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-<body>
-  <header>
-    <div class="navigation" id="navigation-bar">
-      <div class="navbar">
-        <div class="logo">
+      <div class="menu-bar" id="menubar">
+        <div class="menu-logo">
           <img src="logo/logo-red_64.png" alt="my logo" />
         </div>
-        <ul class="navigation-pages">
-          <li>
-            <a href="index.html" alt="link to home page">Home</a>
-          </li>
-          <li>
-            <a href="portfolio.html" id="current-page" alt="link to portfolio page">Portfolio</a>
-          </li>
-          <li>
-            <a href="experience.html" alt="link to experience page">Experience</a>
-          </li>
-          <li>
-            <a href="about-me.html" alt="link to about me page">About Me</a>
-          </li>
-          <li>
-            <a href="blog.html" alt="link to blog page">Blog</a>
-          </li>
-          <li>
-            <a href="contact.html" alt="link to contact page">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="menu-bar" id="menubar">
-      <div class="menu-logo">
-        <img src="logo/logo-red_64.png" alt="my logo" />
-      </div>
-      <div class="menu-wrap" id="menubutton">
-        <input type="checkbox" class="toggler" />
-        <div class="hamburger">
-          <div></div>
-        </div>
-        <div class="menu">
-          <div>
+        <div class="menu-wrap" id="menubutton">
+          <input type="checkbox" class="toggler" />
+          <div class="hamburger">
+            <div></div>
+          </div>
+          <div class="menu">
             <div>
-              <ul>
-                <li>
-                  <a href="index.html" alt="link to view home page">Home</a>
-                </li>
-                <li>
-                  <a href="portfolio.html" id="current-page" alt="link to view portfolio page">Portfolio</a>
-                </li>
-                <li>
-                  <a href="experience.html" alt="link to view experience page">Experience</a>
-                </li>
-                <li>
-                  <a href="about-me.html" alt="link to view about me page">About Me</a>
-                </li>
-                <li>
-                  <a href="blog.html" alt="link to view blog page">Blog</a>
-                </li>
-                <li>
-                  <a href="contact.html" alt="link to view contact page">Contact</a>
-                </li>
-              </ul>
+              <div>
+                <ul>
+                  <li>
+                    <a href="index.html" alt="link to view home page">Home</a>
+                  </li>
+                  <li>
+                    <a
+                      href="portfolio.html"
+                      id="current-page"
+                      alt="link to view portfolio page"
+                      >Portfolio</a
+                    >
+                  </li>
+                  <li>
+                    <a href="experience.html" alt="link to view experience page"
+                      >Experience</a
+                    >
+                  </li>
+                  <li>
+                    <a href="about-me.html" alt="link to view about me page"
+                      >About Me</a
+                    >
+                  </li>
+                  <li>
+                    <a href="blog.html" alt="link to view blog page">Blog</a>
+                  </li>
+                  <li>
+                    <a href="contact.html" alt="link to view contact page"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="portfolio">
-    <script>
-      // Targets the element with #gridToggle, sets the styling for this element's grid-template-columns to be = " "
-      // When slideshowview is click, it hides the entire container to display the image carousel. Need to change
-      // it back to display: grid for it to show back up.
-      function wideview() {
-        document.getElementById("gridToggle").style.display = "grid";
-        document.getElementById("gridToggle").style.gridTemplateColumns =
-          "minmax(10px, 1fr)";
-        document.getElementById("gridToggle").style.gridTemplateRows =
-          "repeat(8, minmax(10px, auto))";
+    <main class="portfolio">
+      <script>
+        // Targets the element with #gridToggle, sets the styling for this element's grid-template-columns to be = " "
+        // When slideshowview is click, it hides the entire container to display the image carousel. Need to change
+        // it back to display: grid for it to show back up.
+        function wideview() {
+          document.getElementById("gridToggle").style.display = "grid";
+          document.getElementById("gridToggle").style.gridTemplateColumns =
+            "minmax(10px, 1fr)";
+          document.getElementById("gridToggle").style.gridTemplateRows =
+            "repeat(8, minmax(10px, auto))";
+        }
 
-      }
+        function gridview() {
+          document.getElementById("gridToggle").style.display = "grid";
+          document.getElementById("gridToggle").style.gridTemplateColumns =
+            "repeat(2, minmax(10px, 1fr))";
+          document.getElementById("gridToggle").style.gridTemplateRows =
+            "repeat(4, minmax(10px, auto))";
+        }
 
-      function gridview() {
-        document.getElementById("gridToggle").style.display = "grid";
-        document.getElementById("gridToggle").style.gridTemplateColumns =
-          "repeat(2, minmax(10px, 1fr))";
-        document.getElementById("gridToggle").style.gridTemplateRows =
-          "repeat(4, minmax(10px, auto))";
+        function slideshowview() {
+          document.getElementById("gridToggle").style.display = "none";
+          // Didn't have time to do this section, to make the carousel, but essentially it's just like the carousel in about-me page
+          // Would have been nice to have this completed.
+        }
+      </script>
 
-      }
+      <h1>Portfolio</h1>
+      <div class="container">
+        <div class="togglecontainer">
+          <img
+            src="icons/Wide-active_32.png"
+            alt="wide photo view"
+            onclick="wideview()"
+          />
+          <img
+            src="icons/grid-inactive_32.png"
+            alt="grid photo view"
+            onclick="gridview()"
+          />
+          <img
+            src="icons/Carousel_32.png"
+            alt="slideshow view"
+            onclick="slideshowview()"
+          />
+        </div>
+        <div class="grid" id="gridToggle">
+          <div class="cell">
+            <img
+              class="site"
+              src="photos/sites/Recipe_960.png"
+              alt="Preview of my recipe challenge website"
+            />
+            <div class="overlay" class="back-blur">
+              <div class="overlay-title">Recipe Challenge</div>
+              <button class="preview" id="modalbutton">Preview</button>
+            </div>
+          </div>
 
-      function slideshowview() {
-        document.getElementById("gridToggle").style.display = "none";
-      }
-    </script>
+          <div class="cell">
+            <img
+              class="site"
+              src="photos/sites/Band1_960.png"
+              alt="Preview of my band challenge website"
+            />
+            <div class="overlay" class="back-blur">
+              <div class="overlay-title">Band Challenge</div>
+              <button class="preview" id="modalbutton">Preview</button>
+            </div>
+          </div>
 
-    <h1>Portfolio</h1>
-    <div class="container">
-      <div class="togglecontainer">
-        <img src="icons/Wide-active_32.png" alt="wide photo view" onclick="wideview()" />
-        <img src="icons/grid-inactive_32.png" alt="grid photo view" onclick="gridview()" />
-        <img src="icons/Carousel_32.png" alt="slideshow view" onclick="slideshowview()" />
+          <div class="cell">
+            <img
+              class="site"
+              src="photos/sites/Broadway_960.png"
+              alt="Preview of Broadway website"
+            />
+            <div class="overlay" class="back-blur">
+              <div class="overlay-title">Broadway Website</div>
+              <button class="preview" id="modalbutton">Preview</button>
+            </div>
+          </div>
+
+          <div class="cell">
+            <img
+              class="site"
+              src="photos/sites/Typography_960.png"
+              alt="Preview of Typography website"
+            />
+            <div class="overlay" class="back-blur">
+              <div class="overlay-title">Typography Website</div>
+              <button class="preview" id="modalbutton">Preview</button>
+            </div>
+          </div>
+
+          <div class="cell">
+            <img
+              class="site"
+              src="photos/sites/PaintStore_960.png"
+              alt="Preview of Paint Store website"
+            />
+            <div class="overlay" class="back-blur">
+              <div class="overlay-title">Paint Store Site</div>
+              <button class="preview" id="modalbutton">Preview</button>
+            </div>
+          </div>
+
+          <div class="cell">
+            <img
+              class="site"
+              src="photos/sites/BBQBurger_960.png"
+              alt="Preview of BBQ Burger website"
+            />
+            <div class="overlay" class="back-blur">
+              <div class="overlay-title">BBQ Burger Site</div>
+              <button class="preview" id="modalbutton">Preview</button>
+            </div>
+          </div>
+
+          <div class="cell">
+            <img
+              class="site"
+              src="photos/sites/Savoury_960.png"
+              alt="Preview of Savoury Grid website"
+            />
+            <div class="overlay" class="back-blur">
+              <div class="overlay-title">Savoury Website</div>
+              <button class="preview" id="modalbutton">Preview</button>
+            </div>
+          </div>
+
+          <div class="cell">
+            <img
+              class="site"
+              src="photos/sites/Innovation_960.png"
+              alt="Preview of Innovation Cloud website"
+            />
+            <div class="overlay" class="back-blur">
+              <div class="overlay-title">Innovation Cloud Site</div>
+              <button class="preview" id="modalbutton">Preview</button>
+            </div>
+          </div>
+        </div>
+        <!-- close grid -->
       </div>
-      <div class="grid" id="gridToggle">
-        <div class="cell">
-          <img class="site" src="photos/sites/Recipe_960.png" alt="Preview of my recipe challenge website" />
-          <div class="overlay" class="back-blur">
-            <div class="overlay-title">Recipe Challenge</div>
-            <button class="preview" id="modalbutton">Preview</button>
+      <!-- close container -->
+
+      <section class="media">
+        <section class="youtube" id="box1">
+          <!-- YouTube embed of Reminisce Javascript Automation -->
+          <div class="youtube-box">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/dgJ6mAUf64M"
+              title="YouTube music video of a song, Reminisce, I co-produced using Javascript Automation"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              id="reminisce"
+              alt="YouTube music video for Reminisce, a song I co-produced using Javascript and other various automation techniques."
+            >
+            </iframe>
+            <h4>
+              Produced using automation scripts in Logic Pro and wide array of
+              VSTs
+            </h4>
           </div>
-        </div>
 
-        <div class="cell">
-          <img class="site" src="photos/sites/Band1_960.png" alt="Preview of my band challenge website" />
-          <div class="overlay" class="back-blur">
-            <div class="overlay-title">Band Challenge</div>
-            <button class="preview" id="modalbutton">Preview</button>
+          <!-- YouTube embed of a music video cover of Mr. Loser, I composed the piano accompaniment -->
+          <div class="youtube-box">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/w6makw8QFVI"
+              title="YouTube music video cover of Mr Loser, I composed the piano accompaniment"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              id="mrloser"
+              alt="YouTube music video of a cover song, Mr. Loser, that I composed the piano accompaniment for"
+            >
+            </iframe>
+            <h4>Cover song of Mr. Loser, composed piano accompaniment</h4>
           </div>
-        </div>
+        </section>
+        <section class="soundcloud" id="box2">
+          <h3>Two #1 hit singles from our album, My Heart</h3>
 
-        <div class="cell">
-          <img class="site" src="photos/sites/Broadway_960.png" alt="Preview of Broadway website" />
-          <div class="overlay" class="back-blur">
-            <div class="overlay-title">Broadway Website</div>
-            <button class="preview" id="modalbutton">Preview</button>
+          <!-- SoundCloud embed of You're The Only One -->
+          <div class="soundcloud-box">
+            <iframe
+              width="100%"
+              height="300"
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              id="youretheonlyone"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1025093854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+              alt="Soundcloud file for You're The Only One, one of my band's number one hit singles from our EP album My Heart"
+            >
+            </iframe>
+            <h4>You're The Only One</h4>
           </div>
-        </div>
 
-        <div class="cell">
-          <img class="site" src="photos/sites/Typography_960.png" alt="Preview of Typography website" />
-          <div class="overlay" class="back-blur">
-            <div class="overlay-title">Typography Website</div>
-            <button class="preview" id="modalbutton">Preview</button>
+          <!-- Soundcloud embed of My Heart -->
+          <div class="soundcloud-box">
+            <iframe
+              width="100%"
+              height="300"
+              scrolling="no"
+              frameborder="no"
+              allow="autoplay"
+              id="myheart"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1025099812&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+              alt="Soundcloud file for My Heart, one of my band's number one hit singles from our EP album My Heart"
+            >
+            </iframe>
+            <h4>My Heart</h4>
           </div>
-        </div>
-
-        <div class="cell">
-          <img class="site" src="photos/sites/PaintStore_960.png" alt="Preview of Paint Store website" />
-          <div class="overlay" class="back-blur">
-            <div class="overlay-title">Paint Store Site</div>
-            <button class="preview" id="modalbutton">Preview</button>
+        </section>
+      </section>
+      <section class="modals">
+        <div class="modalbackground">
+          <div class="modalcontent">
+            <h2 class="modal-title"></h2>
+            <div class="picturepreviews"></div>
           </div>
-        </div>
-
-        <div class="cell">
-          <img class="site" src="photos/sites/BBQBurger_960.png" alt="Preview of BBQ Burger website" />
-          <div class="overlay" class="back-blur">
-            <div class="overlay-title">BBQ Burger Site</div>
-            <button class="preview" id="modalbutton">Preview</button>
-          </div>
-        </div>
-
-        <div class="cell">
-          <img class="site" src="photos/sites/Savoury_960.png" alt="Preview of Savoury Grid website" />
-          <div class="overlay" class="back-blur">
-            <div class="overlay-title">Savoury Website</div>
-            <button class="preview" id="modalbutton">Preview</button>
-          </div>
-        </div>
-
-        <div class="cell">
-          <img class="site" src="photos/sites/Innovation_960.png" alt="Preview of Innovation Cloud website" />
-          <div class="overlay" class="back-blur">
-            <div class="overlay-title">Innovation Cloud Site</div>
-            <button class="preview" id="modalbutton">Preview</button>
-          </div>
-        </div>
-
-
-
-      </div>  <!-- close grid -->
-    </div><!-- close container -->
-    
-
-    <section class="media">
-      <section class="youtube" id="box1">
-        <!-- YouTube embed of Reminisce Javascript Automation -->
-        <div class="youtube-box">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/dgJ6mAUf64M" title="YouTube music video of a song, Reminisce, I co-produced using Javascript Automation"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen id="reminisce"
-            alt="YouTube music video for Reminisce, a song I co-produced using Javascript and other various automation techniques.">
-          </iframe>
-          <h4>
-            Produced using automation scripts in Logic Pro and wide array of
-            VSTs
-          </h4>
-        </div>
-
-        <!-- YouTube embed of a music video cover of Mr. Loser, I composed the piano accompaniment -->
-        <div class="youtube-box">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/w6makw8QFVI" title="YouTube music video cover of Mr Loser, I composed the piano accompaniment"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen id="mrloser"
-            alt="YouTube music video of a cover song, Mr. Loser, that I composed the piano accompaniment for"></iframe>
-          <h4>Cover song of Mr. Loser, composed piano accompaniment</h4>
         </div>
       </section>
-      <section class="soundcloud" id="box2">
-        <h3>Two #1 hit singles from our album, My Heart</h3>
+    </main>
 
-        <!-- SoundCloud embed of You're The Only One -->
-        <div class="soundcloud-box">
-          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" id="youretheonlyone"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1025093854&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-            alt="Soundcloud file for You're The Only One, one of my band's number one hit singles from our EP album My Heart">
-          </iframe>
-          <h4>You're The Only One</h4>
-        </div>
-
-        <!-- Soundcloud embed of My Heart -->
-        <div class="soundcloud-box">
-          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" id="myheart"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1025099812&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-            alt="Soundcloud file for My Heart, one of my band's number one hit singles from our EP album My Heart">
-          </iframe>
-          <h4>My Heart</h4>
-        </div>
-      </section>
-    </section>
-    <section class="modals">
-      <div class="modalbackground">
-        <div class="modalcontent">
-          <h2 class="modal-title">
-
-          </h2>
-          <div class="picturepreviews">
-            
-          </div>
-        </div>
+    <footer>
+      <div class="site-map"></div>
+      <div class="copyright">
+        <p>&copy Copyright 2021 Nam Nguyen. All rights reserved.</p>
       </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="site-map"></div>
-    <div class="copyright">
-      <p>&copy Copyright 2021 Nam Nguyen. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>

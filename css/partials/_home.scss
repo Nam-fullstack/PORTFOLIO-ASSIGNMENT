@@ -282,6 +282,12 @@ h1 {
     }
   }
 }
+
+.call-to-action {
+  @include bred;
+}
+
+
 @keyframes lightblur {
   0% {
     opacity: 0;

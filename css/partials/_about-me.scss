@@ -10,8 +10,7 @@
             font-size: $h1-l;
             background: rgba(0, 0, 0, 0.406);
             backdrop-filter: blur(4px);
-        }
-    
+        }    
     }
 }
 
@@ -149,8 +148,7 @@
         // blurs the transparent background, to make the text more "readable".
         // 4px was the perfect balance between readability and also not losing too mucch detail in the background
     }
-    
-    
+       
     p {
         margin: 20px 0;
         font-size: 12px;
@@ -161,14 +159,13 @@
     padding-bottom: 40px;
     a {
         color: $red-theme;
+        font-weight: bold;
 
         &:hover {
             text-decoration: underline;
         }
     }
 }
-
-
 
 @keyframes fade {
     from {
@@ -193,10 +190,6 @@
     }
 }
 
-// @include xsphone {
-
-// }
-
 @include tablet {
     .carousel-container {
         width: $tablet;
@@ -216,14 +209,11 @@
             }
         }
     }
-
     .button-container {
         top: 21vw;
     }
-
     .details-about-me {
         width: $tablet;
-
         p {
             font-size: 15px;
             line-height: 2.5;
@@ -250,21 +240,16 @@
             }
         }
     }
-
     .button-container {
         top: 18vw;
     }
-
     .details-about-me {
-        width: $desktop;
-        
+        width: $desktop;       
         p {
             font-size: 18px;
             line-height: 3;
             padding-bottom: 10px;
             color: $white-theme;
-        }
-       
-        
+        }       
     }    
 }

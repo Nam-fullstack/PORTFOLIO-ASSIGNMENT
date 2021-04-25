@@ -649,6 +649,10 @@ h1 {
           animation: lightblur 28s linear infinite;
 }
 
+.call-to-action {
+  border: 1px solid red;
+}
+
 @-webkit-keyframes lightblur {
   0% {
     opacity: 0;
@@ -817,12 +821,8 @@ h1 {
     top: 200px;
   }
 }
-@media screen and (min-width: 1025px) {
-  .testimonials .slider .quote-buttons {
-    top: 200px;
-  }
-}
-.testimonials .slider .quote-buttons .previous, .testimonials .slider .quote-buttons .next {
+.testimonials .slider .quote-buttons .previous,
+.testimonials .slider .quote-buttons .next {
   background: none;
   font-size: 6vw;
   padding: 10px 20px;
@@ -1075,11 +1075,10 @@ h1 {
 .testimonials .slider .quote-container .role {
   color: rgba(108, 107, 107, 0.749);
 }
-.testimonials .slider .quote-container .dragging .quote-container {
+.testimonials .slider .quote-container .role .dragging .quote-container {
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
-
 @-webkit-keyframes gradient {
   0% {
     background-position: 5% 0%;
@@ -1091,7 +1090,6 @@ h1 {
     background-position: 5% 0%;
   }
 }
-
 @keyframes gradient {
   0% {
     background-position: 5% 0%;
@@ -1131,8 +1129,29 @@ h1 {
     transform: translateX(0%);
   }
 }
+
+@media screen and (min-width: 769px) {
+  .portfolio-body {
+    background-image: url(../../photos/backgrounds/Portfolio_1024.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
 .portfolio h1 {
   font-size: 2.5rem;
+}
+@media screen and (min-width: 769px) {
+  .portfolio {
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.25);
+  }
+  .portfolio h1 {
+    color: white;
+    font-size: 4.5rem;
+  }
 }
 .portfolio .container {
   width: 100%;
@@ -1171,7 +1190,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(143, 16, 16, 0.8);
+  background: rgba(0, 0, 0, 0.55);
   color: white;
   opacity: 0;
   transition: opacity 0.55s;
@@ -1233,6 +1252,11 @@ h1 {
   flex-wrap: wrap;
   padding: 20px 0 50px 0;
 }
+@media screen and (min-width: 769px) {
+  .media {
+    color: white;
+  }
+}
 .media .youtube {
   display: flex;
   flex-wrap: wrap;
@@ -1257,15 +1281,18 @@ h1 {
   flex-direction: column;
   align-items: center;
 }
+.media .youtube .youtube-box h4 {
+  padding: 5px;
+}
 @media screen and (min-width: 769px) {
   .media .youtube .youtube-box {
     width: 100%;
     height: auto;
-    padding-left: 20px;
   }
   .media .youtube .youtube-box h4 {
+    width: 100%;
     font-size: 1rem;
-    padding-bottom: 20px;
+    padding: 10px 10px 20px 10px;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -1279,6 +1306,7 @@ h1 {
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
+  padding: 0 2vw;
 }
 @media screen and (min-width: 769px) {
   .media .soundcloud {
@@ -1456,9 +1484,6 @@ h1 {
     width: 100%;
   }
 }
-.experience h1 {
-  content: "";
-}
 .experience .outer-container {
   width: 100%;
   height: 100%;
@@ -1510,7 +1535,7 @@ h1 {
     width: 50%;
   }
 }
-.experience .outer-container #academic .studybox, .experience .outer-container #work-experience .studybox {
+.experience .outer-container #academic .studybox, .experience .outer-container #academic .workbox, .experience .outer-container #work-experience .studybox, .experience .outer-container #work-experience .workbox {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -1518,35 +1543,35 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-.experience .outer-container #academic .studybox .text-wrapper, .experience .outer-container #work-experience .studybox .text-wrapper {
+.experience .outer-container #academic .studybox .text-wrapper, .experience .outer-container #academic .workbox .text-wrapper, .experience .outer-container #work-experience .studybox .text-wrapper, .experience .outer-container #work-experience .workbox .text-wrapper {
   width: 100%;
 }
 @media screen and (max-width: 319px) {
-  .experience .outer-container #academic, .experience .outer-container #work-experience {
+  .experience .outer-container #academic .studybox, .experience .outer-container #academic .workbox, .experience .outer-container #work-experience .studybox, .experience .outer-container #work-experience .workbox {
     padding: 20px 20px;
   }
 }
 @media screen and (min-width: 481px) {
-  .experience .outer-container #academic, .experience .outer-container #work-experience {
+  .experience .outer-container #academic .studybox, .experience .outer-container #academic .workbox, .experience .outer-container #work-experience .studybox, .experience .outer-container #work-experience .workbox {
     padding-left: 20px;
   }
 }
 @media screen and (min-width: 769px) {
-  .experience .outer-container #academic, .experience .outer-container #work-experience {
+  .experience .outer-container #academic .studybox, .experience .outer-container #academic .workbox, .experience .outer-container #work-experience .studybox, .experience .outer-container #work-experience .workbox {
     padding-left: 30px;
   }
 }
 @media screen and (min-width: 1025px) {
-  .experience .outer-container #academic, .experience .outer-container #work-experience {
+  .experience .outer-container #academic .studybox, .experience .outer-container #academic .workbox, .experience .outer-container #work-experience .studybox, .experience .outer-container #work-experience .workbox {
     padding-left: 100px;
   }
-  .experience .outer-container #academic h2, .experience .outer-container #work-experience h2 {
+  .experience .outer-container #academic .studybox h2, .experience .outer-container #academic .workbox h2, .experience .outer-container #work-experience .studybox h2, .experience .outer-container #work-experience .workbox h2 {
     font-size: 1.7rem;
   }
-  .experience .outer-container #academic h3, .experience .outer-container #work-experience h3 {
+  .experience .outer-container #academic .studybox h3, .experience .outer-container #academic .workbox h3, .experience .outer-container #work-experience .studybox h3, .experience .outer-container #work-experience .workbox h3 {
     font-size: 1.3rem;
   }
-  .experience .outer-container #academic h4, .experience .outer-container #work-experience h4 {
+  .experience .outer-container #academic .studybox h4, .experience .outer-container #academic .workbox h4, .experience .outer-container #work-experience .studybox h4, .experience .outer-container #work-experience .workbox h4 {
     padding-top: 40px;
     font-size: 1.2rem;
   }
@@ -1656,10 +1681,10 @@ h1 {
   background-color: rgba(0, 0, 0, 0.4);
   width: 500px;
   max-width: 80%;
+  /* Modal Content/Box */
+  /* The Close Button */
 }
-
-/* Modal Content/Box */
-.modal-content {
+.modal .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
@@ -1668,23 +1693,19 @@ h1 {
   max-width: 800px;
   transform: scale(0.5);
 }
-
-/* The Close Button */
-.close {
+.modal .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-
-.close:hover,
-.close:focus {
+.modal .close:hover,
+.modal .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
-
-.modaloverlay {
+.modal .modaloverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -1853,6 +1874,7 @@ h1 {
 }
 .details-about-me a {
   color: rgba(252, 53, 53, 0.838);
+  font-weight: bold;
 }
 .details-about-me a:hover {
   text-decoration: underline;

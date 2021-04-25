@@ -1,6 +1,25 @@
+
+.portfolio-body{
+    @include laptop {
+        background-image: url(../../photos/backgrounds/Portfolio_1024.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;       // background will stay fixed regardless of scrolling
+    }
+}
 .portfolio {
     h1 {
         font-size: $h1-s;
+    }
+    
+    @include laptop {
+        backdrop-filter: blur(3px);
+        background: rgba(0, 0, 0, 0.25);
+        
+        h1 {
+            color: $white-theme;
+            font-size: $h1-l;
+        }    
     }
 
     .container {
@@ -12,6 +31,8 @@
         justify-content: center;
         display: inline-block;
         padding-bottom: 5vw;
+
+
         .grid {
             @include grid;
             $y:1;
@@ -44,8 +65,9 @@
                 width: 100%;
                 height: 100%;
                 // This was slightly too overpowering and not easy on the eyes, decided to go back to transparent black 
-                background: $overlay-red;           
-                // background: rgba(0, 0, 0, 0.55);
+                // background: $overlay-red;           
+                background: rgba(0, 0, 0, 0.55);
+                    // Transparent black looked more elegant, red was just a tad too overpowering for this context
                 color: white;
                 opacity: 0;
                 transition: opacity 0.55s;
@@ -59,10 +81,8 @@
             
             .overlay-title {
                 font-size: 1rem;
-
-                @include xsphone {
-
-                }
+                // @include xsphone {
+                // }
                 // font-weight: bold;
             }
             
@@ -115,6 +135,10 @@
     @include flex;
     padding: 20px 0 50px 0;
 
+    @include laptop {
+        color: $white-theme;
+    }
+
     .youtube {
         @include flex;
         flex-direction: column;
@@ -135,18 +159,19 @@
             @include flex;
             flex-direction: column;
             align-items: center;
+            h4 {
+                padding: 5px;
+            }
 
             @include laptop {
                 width: 100%;
                 height: auto;
-                padding-left: 20px; 
-
                 h4 {
+                    width: 100%;
                     font-size: 1rem;
-                    padding-bottom: 20px;
+                    padding: 10px 10px 20px 10px;
                 }
             }
-
             @include desktop {
                 width: 75%;
                 height: auto;
@@ -157,34 +182,31 @@
     .soundcloud {
         @include flex;
         flex-direction: column;
-        
         width: 100%;
+        padding: 0 2vw;
 
         @include laptop {
             width: 50%;
         }
 
         h3 {
+
             padding-bottom: 20px;
             text-align: center;
         }
 
         .soundcloud-box {
             width: 100%;
-
             iframe{
                 height: 150px;
             }
         }
-
         h4 {
             padding: 15px 0 50px 10px;
-        }
-
+        }    
     }
-
-
 }
+
 
 @include xsphone {
     .portfolio {
