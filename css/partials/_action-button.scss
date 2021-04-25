@@ -17,6 +17,7 @@ a {
     color: white;   
     &:hover {
         cursor: pointer;
+        // color: red;      This changes color of the <   >  buttons too for some reason.
     }
     
     &:visited {

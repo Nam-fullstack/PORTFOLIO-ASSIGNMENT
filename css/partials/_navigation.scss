@@ -3,32 +3,33 @@
     background-color: $bgcolor1;
     height: 60px;
     @include bsb;
-    position: fixed;                // Remains in this position irrespective of scrolling
-    top: 0;                         // Stays on the top of the page
-    transition: top 0.7s;           // Smoothly transitions in and out when scrolling down/up
-    z-index: 50;                    // So it is displayed in top of everything else.
+    position: fixed; // Remains in this position irrespective of scrolling
+    top: 0; // Stays on the top of the page
+    transition: top 0.7s; // Smoothly transitions in and out when scrolling down/up
+    z-index: 50; // So it is displayed in top of everything else.
     display: none;
 }
 
 .navbar {
     display: flex;
-     .logo {
-         width: 56px;
-         margin: 0 20px;
-         padding-top: 2px;
-     }
+
+    .logo {
+        width: 56px;
+        margin: 0 20px;
+        padding-top: 2px;
+    }
 
     ul {
         @include flex;
         justify-content: flex-start;
-        list-style-type: none;         // removes bullets from ul 
+        list-style-type: none; // removes bullets from ul 
         margin-top: 20px;
 
-        li { 
-            text-decoration: none;  
+        li {
+            text-decoration: none;
         }
     }
-    
+
     a {
         padding: 20px 4vw;
         text-decoration: none;
@@ -39,7 +40,7 @@
 
     li:hover a {
         color: $red-theme;
-    }  
+    }
 }
 
 #current-page {
@@ -63,29 +64,33 @@ h1 {
 @include xsphone {
     .navigation {
         display: none;
-    }    
+    }
 }
 
 @include tablet {
     .navigation {
         display: none;
-    }    
+    }
 }
 
 @include laptop {
     .navigation {
         display: flex;
     }
-    .menu-bar, .menu-wrap {
+
+    .menu-bar,
+    .menu-wrap {
         display: none;
-    }    
+    }
 }
 
 @include desktop {
     .navigation {
         display: flex;
     }
-    .menu-bar, .menu-wrap {
+
+    .menu-bar,
+    .menu-wrap {
         display: none;
     }
 }

@@ -6,8 +6,6 @@
     font-family: $font, sans-serif;
     max-width: 100% !important;
     overflow-x: none;
-
-    //   @include bred;
 }
 
 // hides scrollbar
@@ -24,7 +22,7 @@ main {
 }
 
 // Removes the white space underneath images as it's default is inline and 
-// browser adds some whitespace under the baseline to adjust other inline elements
+// browser adds some whitespace under the baseline to level/adjust other inline elements to same height
 img {
     display: block;         
 }

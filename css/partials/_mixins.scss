@@ -8,6 +8,7 @@
     border: 1px solid yellow;
 }
 
+// for Samsung Z-Fold, width: 280px, or for any phone smaller than 320px
 @mixin xsphone {
     @media screen and (max-width: 319px){
         @content;

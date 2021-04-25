@@ -50,7 +50,8 @@ img {
   }
 }
 
-.menu-bar, .menu-wrap {
+.menu-bar,
+.menu-wrap {
   transition: top 1.1s;
 }
 
@@ -298,7 +299,8 @@ h1 {
     display: flex;
   }
 
-  .menu-bar, .menu-wrap {
+  .menu-bar,
+.menu-wrap {
     display: none;
   }
 }
@@ -307,7 +309,8 @@ h1 {
     display: flex;
   }
 
-  .menu-bar, .menu-wrap {
+  .menu-bar,
+.menu-wrap {
     display: none;
   }
 }
@@ -670,6 +673,9 @@ h1 {
   color: white;
   font-weight: 900;
   font-size: 1.5rem;
+}
+.navigational-buttons .call-to-action a:hover {
+  color: red;
 }
 .navigational-buttons .up-top {
   padding-right: 20px;
@@ -1551,123 +1557,6 @@ a:visited {
     order: 1;
   }
 }
-#myImg0, #myImg1, #myImg2 {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#myImg0:hover, #myImg1:hover, #myImg2:hover {
-  opacity: 0.7;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 75%;
-}
-
-/* Caption of Modal Image */
-/* Add Animation */
-.modal-content, #caption {
-  -webkit-animation-name: zoom;
-          animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-}
-
-.out {
-  -webkit-animation-name: zoom-out;
-          animation-name: zoom-out;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {
-    transform: scale(0.4);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(0.4);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-@-webkit-keyframes zoom-out {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0);
-  }
-}
-@keyframes zoom-out {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0);
-  }
-}
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
-  }
-}
 @media screen and (min-width: 769px) {
   .exp-body {
     background-image: url(../../photos/backgrounds/Work.jpeg);
@@ -1801,6 +1690,9 @@ a:visited {
   font-size: 20px;
   margin: 20px;
   padding: 30px;
+}
+.experience .outer-container .resume a {
+  color: #195bff;
 }
 .experience .outer-container .resume a:hover {
   color: red;
