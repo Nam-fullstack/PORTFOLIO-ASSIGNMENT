@@ -283,12 +283,47 @@ h1 {
   }
 }
 
-.call-to-action {
-  @include bred;
+.navigational-buttons {
+  width: 100%;
+  height: auto;
+  @include flex;
+  @include center;
+  flex-direction: column;
+  overflow: auto;
+  background: $bgcolor1;
+  .call-to-action {
+    padding: 20px 40px;
+    text-align: center;
+    
+    a {
+      color: white;
+      font-weight: 900;
+      font-size: 1.5rem;
+    }
+  } 
+  .back-to-top {
+    width: 100vw;
+    height: auto;
+    @include flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: $bgcolor1;
+    border: 20px solid red;
+    padding-right: 20px;
+    a {
+      color: red;
+      text-align: right;
+    }
+    img {
+      align-self: flex-end;
+    }
+  }
 }
 
 
-@keyframes lightblur {
+  
+  
+  @keyframes lightblur {
   0% {
     opacity: 0;
   }

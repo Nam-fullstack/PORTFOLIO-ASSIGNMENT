@@ -1,0 +1,102 @@
+.CTA-button {
+    background: rgba(80, 80, 80, 0.804);
+    padding: 20px 25px;
+    margin: 12px;
+    display: inline-block;
+    transform: translate(0%, 0%);
+    overflow: hidden;           // Hides border lines from going outside the box
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 1;
+}
+a {
+    color: white;   
+    &:hover {
+        cursor: pointer;
+    }
+    
+    &:visited {
+        color: white;
+    } 
+}
+  
+  .CTA-button span {
+    position: absolute;
+  }
+  
+  .CTA-button span:nth-child(1) {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, rgba(43, 8, 8, 0), red);
+    animation: 2s animateTop linear infinite;
+  }
+  
+  @keyframes animateTop {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .CTA-button span:nth-child(2) {
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to top, rgba(43, 8, 8, 0), red);
+    animation: 2s animateRight linear -1s infinite;
+  }
+  
+  @keyframes animateRight {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  .CTA-button span:nth-child(3) {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(43, 8, 8, 0), red);
+    animation: 2s animateBottom linear infinite;
+  }
+  
+  @keyframes animateBottom {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .CTA-button span:nth-child(4) {
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(43, 8, 8, 0), red);
+    animation: 2s animateLeft linear -1s infinite;
+  }
+  
+  @keyframes animateLeft {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  

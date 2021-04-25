@@ -15,7 +15,7 @@
 </head>
 
 <body class="homepage">
-  <header>
+  <header id="top">
     <div class="navigation" id="navigation-bar">
       <div class="navbar">
         <div class="logo">
@@ -395,18 +395,25 @@
       </div>      <!-- close slider -->
     </div>      <!-- close container -->
   </section> <!-- close testimonials -->
-
-    <div class="call-to-action">
-      <a href="portfolio.html" alt="link to go to my portfolio page">
+  <div class="navigational-buttons">  
+    <div class="call-to-action"></div>
+      <a href="portfolio.html" class="CTA-button" alt="link to go to my portfolio page">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         View My Work
       </a>
     </div>
     <div class="back-to-top">
-      <a href="#top" alt="take me back to the top of the page">
-        Back to top
+      <a href="#top" title="back to top" alt="take me back to the top of the page">
+        <img src="icons/Arrow_32.png" alt="take me back to the top of the page" /> 
       </a>
     </div>
+  </div>
 
+
+  <!-- script for testimonial section -->
     <script>
       var quoteNumber = 1;
       showQuote(quoteNumber);
@@ -416,15 +423,9 @@
         showQuote((quoteNumber += n));
       }
 
-      // // Thumbnail image selection control
-      // function currentQuote(n) {
-      //   showQuote((quoteNumber = n));
-      // }
-
       function showQuote(n) {
         var i;
         var quote = document.getElementsByClassName("quote-container");
-        // var thumbnails = document.getElementsByClassName("thumbnail");
 
         // If it goes past the last slide, returns to Slide 1
         if (n > quote.length) {
@@ -440,21 +441,12 @@
           quote[i].style.display = "none";
         }
 
-        // for (i = 0; i < thumbnails.length; i++) {
-        //   thumbnails[i].className = thumbnails[i].className.replace(
-        //     " active",
-        //     ""
-        //   );
-        // }
-
         quote[quoteNumber - 1].style.display = "block";
-        // thumbnails[quoteNumber - 1].className += " active";
       }
     </script>
 
-    
     <!-- formspree message icon script -->
-    <script>
+    <!-- <script>
       /* paste this in verbatim */
       window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments);};
     
@@ -486,7 +478,7 @@
         },
         initiallyVisible: true
       });
-    </script>
+    </script> -->
 
   </main>
   <footer>
