@@ -1,25 +1,25 @@
-
-.portfolio-body{
+.portfolio-body {
     @include laptop {
         background-image: url(../../photos/backgrounds/Portfolio_1024.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;       // background will stay fixed regardless of scrolling
+        background-attachment: fixed; // background will stay fixed regardless of scrolling
     }
 }
+
 .portfolio {
     h1 {
         font-size: $h1-s;
     }
-    
+
     @include laptop {
         backdrop-filter: blur(3px);
         background: rgba(0, 0, 0, 0.25);
-        
+
         h1 {
             color: $white-theme;
             font-size: $h1-l;
-        }    
+        }
     }
 
     .container {
@@ -35,25 +35,25 @@
 
         .grid {
             @include grid;
-            $y:1;
-            
+            $y: 1;
+
             $x: (8/$y);
             grid-template-rows: repeat($x, minmax(10px, auto));
             grid-template-columns: repeat($y, minmax(10px, 1fr));
             grid-auto-rows: minmax(10px, auto);
             gap: 5px;
-            
+
             .cell {
                 position: relative;
                 // width: 1000px;
                 border: 1px solid black;
             }
-            
+
             .site {
                 display: block;
                 width: 100%;
             }
-            
+
             .overlay {
                 position: absolute;
                 display: flex;
@@ -67,34 +67,48 @@
                 // This was slightly too overpowering and not easy on the eyes, decided to go back to transparent black 
                 // background: $overlay-red;           
                 background: rgba(0, 0, 0, 0.55);
-                    // Transparent black looked more elegant, red was just a tad too overpowering for this context
+                // Transparent black looked more elegant, red was just a tad too overpowering for this context
                 color: white;
                 opacity: 0;
-                transition: opacity 0.55s;
+                transition: opacity 0.2s linear;
                 backdrop-filter: blur(4px);
             }
-            
-             .overlay:hover { 
+
+            .overlay:hover {
                 opacity: 1;
             }
-            
-            
+
+
             .overlay-title {
-                font-size: 1rem;
-                // @include xsphone {
-                // }
-                // font-weight: bold;
+                font-size: 1.4rem;
+                font-weight: bold;
+                @include xsphone {
+                    font-size: 1.2rem;
+                }
+                @include tablet {
+                    font-size: 1.7rem;
+                }
+                @include laptop {
+                    font-size: 1.3rem;
+                }
+                @include desktop {
+                    font-size: 1.5rem;
+                }
             }
-            
+
             .preview {
-                border: none;           // removes hideous default border around button
+                border: none; // removes hideous default border around button
                 font-size: 1rem;
                 border-radius: 8px;
                 padding: 1.5% 5%;
                 position: absolute;
                 bottom: 8%;
-                background: rgb(37, 171, 255);    
+                background: rgb(37, 171, 255);
                 // background: white;
+
+                a {
+                    color: $white-theme;
+                }
 
                 &:hover {
                     color: white;
@@ -119,6 +133,7 @@
     @include flex;
     gap: 10px;
     justify-content: flex-end;
+
     img {
         cursor: pointer;
     }
@@ -126,9 +141,10 @@
     @include xsphone {
         display: none;
     }
+
     @include tablet {
         display: none;
-    }       
+    }
 }
 
 .media {
@@ -147,9 +163,9 @@
         align-items: center;
         width: 100%;
         padding-top: 40px;
-        
+
         @include laptop {
-            width: 50%;        
+            width: 50%;
         }
 
         .youtube-box {
@@ -159,6 +175,7 @@
             @include flex;
             flex-direction: column;
             align-items: center;
+
             h4 {
                 padding: 5px;
             }
@@ -166,12 +183,14 @@
             @include laptop {
                 width: 100%;
                 height: auto;
+
                 h4 {
                     width: 100%;
                     font-size: 1rem;
                     padding: 10px 10px 20px 10px;
                 }
             }
+
             @include desktop {
                 width: 75%;
                 height: auto;
@@ -197,13 +216,15 @@
 
         .soundcloud-box {
             width: 100%;
-            iframe{
+
+            iframe {
                 height: 150px;
             }
         }
+
         h4 {
             padding: 15px 0 50px 10px;
-        }    
+        }
     }
 }
 
@@ -213,6 +234,7 @@
         h1 {
             font-size: $h1-xs;
         }
+
         .container {
             .grid {
                 grid-template-rows: repeat(8, 1fr);
@@ -227,6 +249,7 @@
         h1 {
             font-size: $h1-m;
         }
+
         .container {
             .grid {
                 grid-template-rows: repeat(4, 1fr);
@@ -241,6 +264,7 @@
         h1 {
             font-size: $h1-l;
         }
+
         .container {
             .grid {
                 grid-template-rows: repeat(2, 1fr);
@@ -248,6 +272,7 @@
             }
         }
     }
+
     #box1 {
         order: 1;
 
@@ -260,6 +285,7 @@
             font-size: $h1-l;
         }
     }
+
     #box1 {
         order: 1;
 

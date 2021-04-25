@@ -160,6 +160,7 @@
     a {
         color: $red-theme;
         font-weight: bold;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.31);
 
         &:hover {
             text-decoration: underline;

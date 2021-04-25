@@ -1193,7 +1193,7 @@ h1 {
   background: rgba(0, 0, 0, 0.55);
   color: white;
   opacity: 0;
-  transition: opacity 0.55s;
+  transition: opacity 0.2s linear;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
 }
@@ -1201,7 +1201,28 @@ h1 {
   opacity: 1;
 }
 .portfolio .container .grid .overlay-title {
-  font-size: 1rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 319px) {
+  .portfolio .container .grid .overlay-title {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 481px) {
+  .portfolio .container .grid .overlay-title {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .portfolio .container .grid .overlay-title {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .portfolio .container .grid .overlay-title {
+    font-size: 1.5rem;
+  }
 }
 .portfolio .container .grid .preview {
   border: none;
@@ -1211,6 +1232,9 @@ h1 {
   position: absolute;
   bottom: 8%;
   background: #25abff;
+}
+.portfolio .container .grid .preview a {
+  color: white;
 }
 .portfolio .container .grid .preview:hover {
   color: white;
@@ -1484,6 +1508,27 @@ h1 {
     width: 100%;
   }
 }
+@media screen and (min-width: 769px) {
+  .exp-body {
+    background-image: url(../../photos/backgrounds/Work.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .experience {
+    color: white;
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.25);
+  }
+  .experience h1 {
+    color: white;
+    font-size: 4.5rem;
+  }
+}
 .experience .outer-container {
   width: 100%;
   height: 100%;
@@ -1513,8 +1558,8 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  padding: 50px;
+  width: 100%;
+  padding: 20px;
   height: 100%;
 }
 .experience .outer-container #academic img, .experience .outer-container #work-experience img {
@@ -1527,6 +1572,7 @@ h1 {
 }
 @media screen and (min-width: 481px) {
   .experience .outer-container #academic, .experience .outer-container #work-experience {
+    width: 50%;
     padding: 50px 0px;
   }
 }
@@ -1546,32 +1592,46 @@ h1 {
 .experience .outer-container #academic .studybox .text-wrapper, .experience .outer-container #academic .workbox .text-wrapper, .experience .outer-container #work-experience .studybox .text-wrapper, .experience .outer-container #work-experience .workbox .text-wrapper {
   width: 100%;
 }
+.experience .outer-container #academic .studybox .text-wrapper h2, .experience .outer-container #academic .workbox .text-wrapper h2, .experience .outer-container #work-experience .studybox .text-wrapper h2, .experience .outer-container #work-experience .workbox .text-wrapper h2 {
+  font-size: 1.5rem;
+}
+.experience .outer-container #academic .studybox .text-wrapper h3, .experience .outer-container #academic .workbox .text-wrapper h3, .experience .outer-container #work-experience .studybox .text-wrapper h3, .experience .outer-container #work-experience .workbox .text-wrapper h3 {
+  font-size: 1.15rem;
+}
+.experience .outer-container #academic .studybox .text-wrapper h4, .experience .outer-container #academic .workbox .text-wrapper h4, .experience .outer-container #work-experience .studybox .text-wrapper h4, .experience .outer-container #work-experience .workbox .text-wrapper h4 {
+  padding-top: 30px;
+  font-size: 1rem;
+}
 @media screen and (max-width: 319px) {
-  .experience .outer-container #academic .studybox, .experience .outer-container #academic .workbox, .experience .outer-container #work-experience .studybox, .experience .outer-container #work-experience .workbox {
-    padding: 20px 20px;
+  .experience .outer-container #academic .studybox .text-wrapper, .experience .outer-container #academic .workbox .text-wrapper, .experience .outer-container #work-experience .studybox .text-wrapper, .experience .outer-container #work-experience .workbox .text-wrapper {
+    padding: 20px;
   }
 }
 @media screen and (min-width: 481px) {
-  .experience .outer-container #academic .studybox, .experience .outer-container #academic .workbox, .experience .outer-container #work-experience .studybox, .experience .outer-container #work-experience .workbox {
-    padding-left: 20px;
+  .experience .outer-container #academic .studybox .text-wrapper, .experience .outer-container #academic .workbox .text-wrapper, .experience .outer-container #work-experience .studybox .text-wrapper, .experience .outer-container #work-experience .workbox .text-wrapper {
+    padding: 0px 40px 0px 30px;
   }
 }
 @media screen and (min-width: 769px) {
-  .experience .outer-container #academic .studybox, .experience .outer-container #academic .workbox, .experience .outer-container #work-experience .studybox, .experience .outer-container #work-experience .workbox {
+  .experience .outer-container #academic .studybox .text-wrapper, .experience .outer-container #academic .workbox .text-wrapper, .experience .outer-container #work-experience .studybox .text-wrapper, .experience .outer-container #work-experience .workbox .text-wrapper {
     padding-left: 30px;
+  }
+  .experience .outer-container #academic .studybox .text-wrapper h4, .experience .outer-container #academic .workbox .text-wrapper h4, .experience .outer-container #work-experience .studybox .text-wrapper h4, .experience .outer-container #work-experience .workbox .text-wrapper h4 {
+    padding-top: 40px;
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 1025px) {
-  .experience .outer-container #academic .studybox, .experience .outer-container #academic .workbox, .experience .outer-container #work-experience .studybox, .experience .outer-container #work-experience .workbox {
+  .experience .outer-container #academic .studybox .text-wrapper, .experience .outer-container #academic .workbox .text-wrapper, .experience .outer-container #work-experience .studybox .text-wrapper, .experience .outer-container #work-experience .workbox .text-wrapper {
     padding-left: 100px;
   }
-  .experience .outer-container #academic .studybox h2, .experience .outer-container #academic .workbox h2, .experience .outer-container #work-experience .studybox h2, .experience .outer-container #work-experience .workbox h2 {
+  .experience .outer-container #academic .studybox .text-wrapper h2, .experience .outer-container #academic .workbox .text-wrapper h2, .experience .outer-container #work-experience .studybox .text-wrapper h2, .experience .outer-container #work-experience .workbox .text-wrapper h2 {
     font-size: 1.7rem;
   }
-  .experience .outer-container #academic .studybox h3, .experience .outer-container #academic .workbox h3, .experience .outer-container #work-experience .studybox h3, .experience .outer-container #work-experience .workbox h3 {
+  .experience .outer-container #academic .studybox .text-wrapper h3, .experience .outer-container #academic .workbox .text-wrapper h3, .experience .outer-container #work-experience .studybox .text-wrapper h3, .experience .outer-container #work-experience .workbox .text-wrapper h3 {
     font-size: 1.3rem;
   }
-  .experience .outer-container #academic .studybox h4, .experience .outer-container #academic .workbox h4, .experience .outer-container #work-experience .studybox h4, .experience .outer-container #work-experience .workbox h4 {
+  .experience .outer-container #academic .studybox .text-wrapper h4, .experience .outer-container #academic .workbox .text-wrapper h4, .experience .outer-container #work-experience .studybox .text-wrapper h4, .experience .outer-container #work-experience .workbox .text-wrapper h4 {
     padding-top: 40px;
     font-size: 1.2rem;
   }
@@ -1653,7 +1713,7 @@ h1 {
 }
 
 #briefcase {
-  transform: scale(0.85);
+  transform: scale(0.85) translateY(-10%);
 }
 
 .certificates {
@@ -1875,6 +1935,7 @@ h1 {
 .details-about-me a {
   color: rgba(252, 53, 53, 0.838);
   font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.31);
 }
 .details-about-me a:hover {
   text-decoration: underline;
