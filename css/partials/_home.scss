@@ -21,7 +21,7 @@ h1 {
   width: 100%;
   padding: 1.5vh 5vw 3vh;
   background-color: black;
-
+  bottom: 0;
   p {
     color: $white-theme;
     font-size: 0.6rem;
@@ -287,9 +287,9 @@ h1 {
   width: 100%;
   height: auto;
   @include flex;
-  @include center;
   flex-direction: column;
-  overflow: auto;
+  @include center;
+  overflow: visible;
   background: $bgcolor1;
   .call-to-action {
     padding: 20px 40px;
@@ -301,29 +301,13 @@ h1 {
       font-size: 1.5rem;
     }
   } 
-  .back-to-top {
-    width: 100vw;
-    height: auto;
-    @include flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    background: $bgcolor1;
-    border: 20px solid red;
+  .up-top {
     padding-right: 20px;
-    a {
-      color: red;
-      text-align: right;
-    }
-    img {
-      align-self: flex-end;
-    }
   }
 }
-
-
   
   
-  @keyframes lightblur {
+@keyframes lightblur {
   0% {
     opacity: 0;
   }
