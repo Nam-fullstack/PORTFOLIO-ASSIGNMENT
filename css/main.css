@@ -6,6 +6,7 @@
   text-decoration: none;
   font-family: Roboto, helvetica, sans-serif;
   max-width: 100% !important;
+  overflow-x: none;
 }
 
 ::-webkit-scrollbar {
@@ -2210,6 +2211,72 @@ a:visited {
     color: white;
   }
 }
+.blog {
+  min-height: 100vh;
+}
+.blog h1 {
+  font-size: 2.5rem;
+}
+.blog .blog-container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(10px, 1fr));
+  grid-template-rows: repeat(5, minmax(10px, 1fr));
+  grid-auto-flow: row;
+  gap: 10px;
+}
+@media screen and (min-width: 769px) {
+  .blog .blog-container {
+    grid-template-columns: repeat(2, minmax(10px, 1fr));
+    grid-template-rows: repeat(3, minmax(10px, 1fr));
+    gap: 15px;
+  }
+}
+.blog .card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.194);
+}
+.blog .published {
+  padding: 10px;
+  text-align: right;
+}
+.blog .pictextbox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-bottom: 15px;
+}
+.blog .pictextbox .picturebox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  cursor: pointer;
+}
+.blog .pictextbox .picturebox .blogtitle {
+  font-size: 18px;
+  padding: 15px;
+}
+.blog .pictextbox .picturebox .blogtitle:hover {
+  color: rgba(252, 53, 53, 0.838);
+}
+@media screen and (min-width: 481px) {
+  .blog .pictextbox .picturebox {
+    width: 50%;
+  }
+}
+.blog .pictextbox .blogtext {
+  font-family: "raleway", Arial, Helvetica, sans-serif;
+  padding: 0 15px;
+  text-align: justify;
+}
+@media screen and (min-width: 481px) {
+  .blog .pictextbox .blogtext {
+    width: 50%;
+  }
+}
+
 .contact .banner .backgroundoverlay {
   background-color: rgba(0, 0, 0, 0.262);
   margin-top: 40px;

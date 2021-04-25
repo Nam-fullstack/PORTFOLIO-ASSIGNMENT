@@ -4,7 +4,7 @@
     margin: 12px;
     display: inline-block;
     transform: translate(0%, 0%);
-    overflow: hidden;           // Hides border lines from going outside the box
+    overflow: hidden;           // Hides border lines from going past outside the box
     color: white;
     font-size: 20px;
     letter-spacing: 1px;
