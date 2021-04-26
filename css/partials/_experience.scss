@@ -1,3 +1,17 @@
+//  ****************************************
+//  This is styling for a graphic component. A photo background for just laptop displays and bigger
+//  Having a background for smaller screens was too busy and too distracting. 
+//  The background styling is fixed, so it will stay in placed regardless of scrolling
+//  It's size is set to cover so that it covers the entire screen width and height.
+//  No-repeat means that there is only 1 iteration of this background rather than multiple copies 
+//  to fill the page. Additional styling so text is readable is adding a transparent black background overlay
+//  and also including some backdrop-filter: blur to give a very slight blur to the background to enhance contrast
+//  for the text components. They are the priority and styling the photo in such a way really enhances
+// text and make it stick out even more than traditional black text on a white background. The white text is really
+// elevated and makes the viewer more engaged as it does grab their attention.  
+//  ****************************************
+
+
 .exp-body {
     @include laptop {
         background-image: url(../../photos/backgrounds/Work.jpeg);
@@ -280,5 +294,17 @@
     left: 0;
     right: 0;
     bottom: 0;  
+    }
+}
+
+
+// Set it so that the icons change to the white ones for desktop view
+// as it has the background. And for anything smaller, the black icons are used.
+@include desktop {
+    #briefcase {
+        content: url(/icons/Work_128px.png);
+    }
+    #hat {
+        content: url(/icons/Study_128px.png);
     }
 }

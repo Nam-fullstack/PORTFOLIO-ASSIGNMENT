@@ -1,6 +1,13 @@
 .contact {
+
+// ***************************************
+// This is both a text and graphical component. The background photo is layered with
+// a transparent black overlay, in addition to a backdrop filter blur of 1px to just
+// give it the slightest blur whilst still have the clarity for the viewer to see the
+// details of the image and enabling the white title text to have contrast and be clear
+// and readable.
+// ***************************************    
     .banner {
-        
         .backgroundoverlay {
             // the transparent black overlay helps make the text pop out and more readable.
             background-color: rgba(0, 0, 0, 0.262); 

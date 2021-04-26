@@ -32,6 +32,14 @@
     display: inline-block;
     padding-bottom: 5vw;
 
+// ***************************************
+// This is a graphical component display of my portfolio websites
+// Using grid, based on the screen width, it sets how many columns there are
+// For phone there is a toggle switch selector to choose between single column
+// wide view, 2x4 grid view or carousel view.
+// For ipad it is 2x4 and desktop is 4x2.
+// ***************************************
+
     .grid {
       @include grid;
       $y: 1;

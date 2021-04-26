@@ -18,6 +18,17 @@
         }
     }
 
+// ***************************************
+// This is both a text and graphical component. Each card is composed of a row/div
+// for date publish, a pictextbox which is a container that is comprisesd of two components
+// 1) a picturebox container which is made up of an image and the title. This is displayed 
+// as a column, so picture is always on top, and title is below it.
+// 2) a blogtext container which contains the placeholder text preview for the blog.
+// Depending on the display size, the grid layout changes. Phones and iPad being single column,
+// and larger display have a 2 grid column structure. 
+// ***************************************
+
+
     .card {
         @include flex;
         flex-direction: column;

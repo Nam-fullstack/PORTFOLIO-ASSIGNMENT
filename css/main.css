@@ -304,7 +304,7 @@ h1 {
     display: none;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .navigation {
     display: flex;
   }
@@ -328,7 +328,7 @@ h1 {
     padding-bottom: 3vh;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   h1 {
     margin-top: 8vh;
     padding-bottom: 4vh;
@@ -361,7 +361,7 @@ h1 {
   font-weight: 900;
   font-size: 10vw;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .homepage .container {
     padding: 3vh 0vw;
   }
@@ -411,7 +411,7 @@ h1 {
     font-size: 45vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .homepage .container #part1 p {
     font-size: 40rem;
   }
@@ -438,7 +438,7 @@ h1 {
     font-size: 22.5vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .homepage .container #part2 p {
     font-size: 15rem;
   }
@@ -457,7 +457,7 @@ h1 {
     padding: 3vw 0;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .homepage .container #part3 #stack {
     padding: 1vw 0;
   }
@@ -488,7 +488,7 @@ h1 {
     font-size: 12vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .homepage .container #part3 p {
     font-size: 12vw;
   }
@@ -513,7 +513,7 @@ h1 {
     font-size: 15vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .homepage .container #part4 {
     font-size: 13.5vw;
   }
@@ -536,7 +536,7 @@ h1 {
     font-size: 15vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .homepage .container #part5 p {
     font-size: 13.5vw;
   }
@@ -575,7 +575,7 @@ h1 {
     font-size: 13.5vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .homepage .container #part6 p {
     line-height: 1.5;
     font-size: 12vw;
@@ -603,7 +603,7 @@ h1 {
     font-size: 45vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .homepage .container #part7 p {
     font-size: 45vw;
   }
@@ -633,7 +633,7 @@ h1 {
     font-size: 13.5vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .homepage .container #part8 p {
     font-size: 12vw;
   }
@@ -946,7 +946,7 @@ a:visited {
     min-height: 500px;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .testimonials .wrapper {
     min-height: 550px;
   }
@@ -1020,7 +1020,7 @@ a:visited {
   -webkit-animation: slide 0.9s linear;
           animation: slide 0.9s linear;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .testimonials .slider .quote-container .quote {
     flex-direction: row;
   }
@@ -1076,7 +1076,7 @@ a:visited {
     font-size: 14rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .testimonials .slider .quote-container .quote blockquote p:first-child:before, .testimonials .slider .quote-container .quote blockquote p:first-child:after {
     font-size: 15rem;
   }
@@ -1104,7 +1104,7 @@ a:visited {
     left: -8vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .testimonials .slider .quote-container .quote blockquote p:first-child:before {
     top: -4vw;
     left: -4vw;
@@ -1133,7 +1133,7 @@ a:visited {
     right: -2vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .testimonials .slider .quote-container .quote blockquote p:first-child:after {
     top: -3vw;
     right: -2vw;
@@ -1147,7 +1147,7 @@ a:visited {
   justify-content: center;
   order: 1;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .testimonials .slider .quote-container .quote .divider-left {
     order: 0;
     width: 20%;
@@ -1181,7 +1181,7 @@ a:visited {
     width: 25vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .testimonials .slider .quote-container .quote .divider-left .portrait {
     margin-top: 0vw;
     transform: translateX(30%);
@@ -1195,7 +1195,7 @@ a:visited {
   justify-content: center;
   width: 80%;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .testimonials .slider .quote-container .quote .divider-right {
     width: 80%;
     padding: 0 8vw;
@@ -1385,7 +1385,7 @@ a:visited {
     font-size: 1.3rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .portfolio .container .grid .overlay-title {
     font-size: 1.5rem;
   }
@@ -1485,7 +1485,7 @@ a:visited {
     padding: 10px 10px 20px 10px;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .media .youtube .youtube-box {
     width: 75%;
     height: auto;
@@ -1548,7 +1548,7 @@ a:visited {
     order: 1;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .portfolio h1 {
     font-size: 4.5rem;
   }
@@ -1592,7 +1592,7 @@ a:visited {
   justify-content: center;
   flex-direction: row;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .experience .outer-container #work-experience {
     width: 50%;
     order: -1;
@@ -1625,7 +1625,7 @@ a:visited {
     padding: 50px 0px;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .experience .outer-container #academic, .experience .outer-container #work-experience {
     width: 50%;
   }
@@ -1670,7 +1670,7 @@ a:visited {
     font-size: 1.2rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .experience .outer-container #academic .studybox .text-wrapper, .experience .outer-container #academic .workbox .text-wrapper, .experience .outer-container #work-experience .studybox .text-wrapper, .experience .outer-container #work-experience .workbox .text-wrapper {
     padding-left: 100px;
   }
@@ -1746,7 +1746,7 @@ a:visited {
     gap: 8vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .experience .outer-container h1 {
     font-size: 6rem;
   }
@@ -1826,6 +1826,15 @@ a:visited {
   bottom: 0;
 }
 
+@media screen and (min-width: 1023px) {
+  #briefcase {
+    content: url(/icons/Work_128px.png);
+  }
+
+  #hat {
+    content: url(/icons/Study_128px.png);
+  }
+}
 @media screen and (min-width: 769px) {
   .about-me-section {
     background-image: url(../../photos/backgrounds/Studio_1024.jpg);
@@ -2216,7 +2225,7 @@ a:visited {
     font-size: 4vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .contact .banner .backgroundoverlay .bannertext h1 {
     font-size: 3vw;
   }
@@ -2260,7 +2269,7 @@ a:visited {
     font-size: 1rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .contact .instructions h4 {
     font-size: 1.1rem;
   }
@@ -2269,7 +2278,7 @@ a:visited {
 .desktop-wrapper {
   display: block;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .desktop-wrapper {
     display: flex;
   }
@@ -2284,7 +2293,7 @@ a:visited {
 .left-side-box {
   width: 100%;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .left-side-box {
     width: 50%;
   }
@@ -2296,7 +2305,7 @@ a:visited {
 .right-side-box h3 {
   color: white;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .right-side-box {
     width: 50%;
     display: flex;
@@ -2502,7 +2511,7 @@ textarea:hover {
   background-color: rgba(255, 255, 255, 0.906);
   border: 1px solid black;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .form-row4 .math-container {
     width: 40%;
   }
@@ -2663,7 +2672,7 @@ textarea:hover {
     font-weight: 500;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1023px) {
   .wrapper {
     margin: 8px 3%;
   }

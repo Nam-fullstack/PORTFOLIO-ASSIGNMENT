@@ -1,13 +1,20 @@
+    // **********************************
+    // This is the styling for a text component, the navigation bar on the top of the page.
+    // It is comprised of an unordered list, with the list items being the pages in this website.
+    // The bullet points are hidden using: list-style-type: none;
+    // Active page is highlighted in red with a bottom border. Hovered page links will appear red.
+    // **********************************
+
 .navigation {
     width: 100%;
     background-color: $bgcolor1;
     height: 60px;
     @include bsb;
-    position: fixed; // Remains in this position irrespective of scrolling
-    top: 0; // Stays on the top of the page
-    transition: top 0.7s; // Smoothly transitions in and out when scrolling down/up
-    z-index: 50; // So it is displayed in top of everything else.
-    display: none;
+    position: fixed;        // Remains in this position irrespective of scrolling
+    top: 0;                 // Stays on the top of the page
+    transition: top 0.7s;   // Smoothly transitions in and out when scrolling down/up
+    z-index: 50;            // So it is displayed in top of everything else.
+    display: none;          // Hidden in phont and tablet views, only shows for laptop & desktop
 }
 
 .navbar {
@@ -22,7 +29,7 @@
     ul {
         @include flex;
         justify-content: flex-start;
-        list-style-type: none; // removes bullets from ul 
+        list-style-type: none;          // removes bullets from ul 
         margin-top: 20px;
 
         li {

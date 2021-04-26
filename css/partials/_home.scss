@@ -54,6 +54,16 @@ h1 {
     .orange {
       color: rgb(255, 117, 11);
     }
+
+    // **********************************
+    // Text and graphical content. This is the text animation that's divided to 8 parts,
+    // each part has an ID #part1-8 which specific styling can be applied to each individual part
+    // In the final part, there is an image of radiant sunlight going through trees that's initially
+    // blurred out and comes into focus, to resemble being able to have and see an idea clearly.
+    // The text is SUPER BIG, and is scaled so it is constantly zooming in, with a gentle fade/opacity 
+    // effect. Which gives the impression that it's a video, but it's just a simple animation using keyframes.
+    // **********************************
+
     .vision {
       font-family: "Inter", "Raleway", "Roboto", sans-serif;
       @include flex;

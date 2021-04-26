@@ -1,3 +1,13 @@
+// ***************************************
+// This is both a text and graphical component. There is a quotation block of text,
+// along with the person's name and role which each have different styling. There's 
+// various styling and positioning for the portrait photo too based on device's screen
+// width. Layout changes from having a full width spanning quotation text to having the 
+// portrait and text side by side in a 20% to 80% width for the containers of the image
+// and text, respectively.
+// ***************************************
+
+
 .testimonials {
   background: linear-gradient(130deg, #07d9a3, #048fee);
   background-size: 400% 400%;

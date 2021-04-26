@@ -14,6 +14,20 @@
     }
 }
 
+// ***************************************
+// This is both a text and graphical component. There is a main image component that has 
+// scaling and opacity transition effects applied to it such that it appears that it's being
+// zoomed in and has a gentle fade in, fade out when switching between images. There is an outer
+// container which prevents any overflow, so when the photo is being scaled to a larger value,
+// the box in which the photo is in does not allow it to grow outside it. There is also
+// a thumbnail preview of each photo, in which the selected photo has full opacity and a white
+// border. When hovered over, the thumbnail will have full opacity and a red border with a pointer
+// cursor to indicate that the user can click on it. The user will also be able to click on the 
+// < and > buttons to scroll to the next or previous photo. This component also includes an
+// image caption which is derived from the alt text for the photo. 
+// ***************************************
+
+
 .carousel-container {
     position: relative;
     background-color: black;
