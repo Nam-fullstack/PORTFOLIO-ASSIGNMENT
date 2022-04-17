@@ -297,25 +297,53 @@ h1 {
   width: 100%;
   height: auto;
   @include flex;
-  flex-direction: column;
-  @include center;
-  overflow: visible;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   background: $bgcolor1;
+  position: relative;
+
+
   .call-to-action {
-    padding: 20px 40px;
+    padding: 15px 0px 10px;
     text-align: center;
+    z-index: 20;
     
     a {
       color: white;
       font-weight: 900;
-      font-size: 1.5rem;
+      font-size: 1rem;
       &:hover {
         color: red;
+      }
+
+      @include xsphone {
+        font-size: 1rem;
+      }
+
+      @include tablet {
+        font-size: 1.2rem;
+      }
+
+      @include desktop {
+        font-size: 1.5rem;
       }
     }
   } 
   .up-top {
     padding-right: 20px;
+    z-index: 20;
+    position: absolute;
+    right: 0px;
+
+    @include xsphone {
+      right: 0px;
+    }
+
+    @include tablet {
+      right: 20px;
+    }
   }
 }
   

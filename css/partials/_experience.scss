@@ -1,278 +1,286 @@
 //  ****************************************
 //  This is styling for a graphic component. A photo background for just laptop displays and bigger
-//  Having a background for smaller screens was too busy and too distracting. 
+//  Having a background for smaller screens was too busy and too distracting.
 //  The background styling is fixed, so it will stay in placed regardless of scrolling
 //  It's size is set to cover so that it covers the entire screen width and height.
-//  No-repeat means that there is only 1 iteration of this background rather than multiple copies 
+//  No-repeat means that there is only 1 iteration of this background rather than multiple copies
 //  to fill the page. Additional styling so text is readable is adding a transparent black background overlay
 //  and also including some backdrop-filter: blur to give a very slight blur to the background to enhance contrast
 //  for the text components. They are the priority and styling the photo in such a way really enhances
 // text and make it stick out even more than traditional black text on a white background. The white text is really
-// elevated and makes the viewer more engaged as it does grab their attention.  
+// elevated and makes the viewer more engaged as it does grab their attention.
 //  ****************************************
 
-
 .exp-body {
-    @include laptop {
-        background-image: url(../../photos/backgrounds/Work.jpeg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed; // background will stay fixed regardless of scrolling
-    }
+  @include laptop {
+    background-image: url(../../photos/backgrounds/Work.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; // background will stay fixed regardless of scrolling
+  }
 }
 
 .experience {
-    @include laptop {
-        color: $white-theme;
-        backdrop-filter: blur(3px);
-        background: rgba(0, 0, 0, 0.25);
+  @include laptop {
+    color: $white-theme;
+    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.25);
 
-        h1 {
-            color: $white-theme;
-            font-size: $h1-l;
-        }
+    h1 {
+      color: $white-theme;
+      font-size: $h1-l;
+    }
+  }
+
+  .outer-container {
+    width: 100%;
+    height: 100%;
+    @include flex;
+    justify-content: center;
+
+    #work-experience {
+      max-width: 600px !important;
+      height: 100%;
+      @include flex;
+      justify-content: center;
+      flex-direction: row;
+
+      @include desktop {
+        width: 50%;
+        order: -1;
+      }
     }
 
+    #academic,
+    #work-experience {
+      @include flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 600px !important;
+      padding: 20px;
+      height: 100%;
+      img {
+        width: 128px;
+      }
 
-    .outer-container {
+      @include xsphone {
+        padding: 20px 0px;
+      }
+      @include tablet {
+        width: 50%;
+        padding: 50px 0px;
+      }
+      @include desktop {
+        width: 50%;
+        // order: 3;
+      }
+
+      .studybox,
+      .workbox {
         width: 100%;
-        height: 100%;
+        max-width: 600px !important;
         @include flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-        #work-experience {
-            width: 50%;
-            height: 100%;
-            @include flex;
-            justify-content: center;
-            flex-direction: row;
-
-            @include desktop {
-                width: 50%;
-                order: -1;
-            }
-            .workbox {
-                width: 100%;
-            }
-        }
-
-        #academic, #work-experience {
-            @include flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
+        .text-wrapper {
+          width: 100%;
+          h2 {
+            font-size: 1.5rem;
+          }
+          h3 {
+            font-size: 1.15rem;
+          }
+          h4 {
+            padding-top: 30px;
+            font-size: 1rem;
+          }
+          @include xsphone {
             padding: 20px;
-            height: 100%;
-                img {
-                    width: 128px;
-                }
-
-            @include xsphone{
-                padding: 20px 0px;
+          }
+          @include tablet {
+            padding: 0px 40px 0px 30px;
+          }
+          @include laptop {
+            padding-left: 30px;
+            h4 {
+              padding-top: 40px;
+              font-size: 1.2rem;
             }
-            @include tablet {
-                width: 50%;
-                padding: 50px 0px;
-            }
-            @include desktop {
-                width: 50%;
-                // order: 3;
-            }
-
-            .studybox, .workbox {
-                width: 100%;
-                @include flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                    
-                .text-wrapper {
-                    width: 100%;
-                    h2 {
-                        font-size: 1.5rem;
-                    }
-                    h3 {
-                        font-size: 1.15rem;
-                    }
-                    h4 {
-                        padding-top: 30px;
-                        font-size: 1rem;
-                    } 
-                    @include xsphone {
-                        padding: 20px;
-                    }
-                    @include tablet {
-                        padding: 0px 40px 0px 30px;
-                    }
-                    @include laptop {
-                        padding-left: 30px;
-                        h4 {
-                            padding-top: 40px;
-                            font-size: 1.2rem;
-                        }  
-                    }
-                    @include desktop {
-                        padding-left: 100px;
-                        
-                        h2 {
-                            font-size: 1.7rem;
-                        }
-                        h3 {
-                            font-size: 1.3rem;
-                        }
-                        h4 {
-                            padding-top: 40px;
-                            font-size: 1.2rem;
-                        }       
-                    }
-                }
-            }
-        }
-        .resume {
-            text-decoration: none;
-            font-size: 20px;
-            margin: 20px;
-            padding: 30px;
-
-            a {
-                color: rgb(25, 91, 255);
-            }
-            a:hover {
-                color: red;
-            }
-        }
-
-        #skills {
-            width: 100%;          
-            // Was trying to have skills in the middle box, but just didn't work 
-            // very well with the text for academic and work sections
-            // @include desktop {
-            //     width: 30%;
-            //     order: -1;
-            // }
-            
-            background: rgba(255, 255, 255, 0.139);
+          }
+          @include desktop {
+            padding-left: 100px;
 
             h2 {
-                text-align: center;
-                padding: 20px 30px;
+              font-size: 1.7rem;
             }
+            h3 {
+              font-size: 1.3rem;
+            }
+            h4 {
+              padding-top: 40px;
+              font-size: 1.2rem;
+            }
+          }
         }
-        
-        
-        .skills-icon {
-            width: 18%;
-        }
-        
-        .container {
-            @include flex;
-            justify-content: center;
-            align-items: center;
-            padding: $pad-all;
-            gap: 15vw;
-        }
-        
-        @include xsphone {
-            .skills {
-                h1 {
-                    font-size: 2rem;
-                }
-            }
-            .container {
-                gap: 10vw;
-            }
-        }
-        
-        @include tablet {
-            h1 {
-                font-size: 4rem;
-            }
-            .skills-icon {
-                width: 4rem;
-            }
-            .container {
-                gap: 10vw;
-            }
-        }
-        
-        @include laptop {
-            h1 {
-                font-size: 5rem;
-            }
-            .skills-icon {
-                width: 5rem;
-            }
-            .container {
-                gap: 8vw;
-            }
-        }
-        
-        @include desktop {
-            h1 {
-                font-size: 6rem;
-            }
-            .skills-icon {
-                width: 5rem;
-                margin: 3vh 2vw;
-            }
-            .container {
-                gap: 0;
-                width: 100%;
-                margin: 0 auto;
-            }
-        }
+      }
     }
+    .resume {
+      text-decoration: none;
+      font-size: 20px;
+      margin: 20px;
+      padding: 30px;
+
+      a {
+        color: rgb(25, 91, 255);
+      }
+      a:hover {
+        color: red;
+      }
+    }
+
+    #skills {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      background: rgba(255, 255, 255, 0.139);
+
+      h2 {
+        text-align: center;
+        padding: 20px 30px;
+      }
+
+      .skill-icons {
+        max-width: 600px !important;
+
+        @include tablet {
+          max-width: 800px !important;
+        }
+
+        @include desktop {
+          max-width: 1000px !important;
+        }
+      }
+    }
+
+    .skills-icon {
+      width: 18%;
+    }
+
+    .container {
+      @include flex;
+      justify-content: center;
+      align-items: center;
+      padding: $pad-all;
+      gap: 15vw;
+    }
+
+    @include xsphone {
+      .skills {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+      .container {
+        gap: 10vw;
+      }
+    }
+
+    @include tablet {
+      h1 {
+        font-size: 4rem;
+      }
+      .skills-icon {
+        width: 4rem;
+      }
+      .container {
+        gap: 10vw;
+      }
+    }
+
+    @include laptop {
+      h1 {
+        font-size: 5rem;
+      }
+      .skills-icon {
+        width: 5rem;
+      }
+      .container {
+        gap: 8vw;
+      }
+    }
+
+    @include desktop {
+      h1 {
+        font-size: 6rem;
+      }
+      .skills-icon {
+        width: 5rem;
+        margin: 3vh 2vw;
+      }
+      .container {
+        gap: 0;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
 .work-icon {
-    width: 50%;
-    
+  width: 50%;
 }
 #briefcase {
-    transform: scale(0.85) translateY(-10%); 
-    // Makes it the same size as the study icon and positions it to be the same on the horizontal axis
+  transform: scale(0.85) translateY(-10%);
+  // Makes it the same size as the study icon and positions it to be the same on the horizontal axis
 }
-   
+
 .certificates {
-    @include flex;
-    width: 100%;
-    margin: 30px 0;
-    justify-content: space-evenly;
-    
-    img {
-        border: 1px solid black;
-        width: 320px;
-        height: auto;
-        cursor: pointer;
-    }
+  @include flex;
+  width: 100%;
+  margin: 30px 0;
+  justify-content: space-evenly;
+
+  img {
+    border: 1px solid black;
+    width: 320px;
+    height: auto;
+    cursor: pointer;
+  }
 }
 
 .modal {
-    // display: none;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-    background-color: rgb(0,0,0); // Fallback color
-    background-color: rgba(0,0,0,0.4);
-    width: 500px;
-    max-width: 80%;
-  
+  // display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  background-color: rgb(0, 0, 0); // Fallback color
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 500px;
+  max-width: 80%;
+
   // Was attempting to get all the modals to work, but never managed to get it to fully work
   // Would be ideal to have to keep the viewer in the site, keeping them engaged without having them leave until the end/contacting.
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;   // 15% from the top and centered
+    margin: 15% auto; // 15% from the top and centered
     padding: 20px;
     border: 1px solid #888;
     width: 60%;
-    max-width: 800px; 
+    max-width: 800px;
     transform: scale(0.5);
   }
-  
+
   /* The Close Button */
   .close {
     color: #aaa;
@@ -280,7 +288,7 @@
     font-size: 28px;
     font-weight: bold;
   }
-  
+
   .close:hover,
   .close:focus {
     color: black;
@@ -288,23 +296,22 @@
     cursor: pointer;
   }
 
-    .modaloverlay {
+  .modaloverlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;  
-    }
+    bottom: 0;
+  }
 }
-
 
 // Set it so that the icons change to the white ones for desktop view
 // as it has the background. And for anything smaller, the black icons are used.
 @include desktop {
-    #briefcase {
-        content: url(/icons/Work_128px.png);
-    }
-    #hat {
-        content: url(/icons/Study_128px.png);
-    }
+  #briefcase {
+    content: url(/icons/Work_128px.png);
+  }
+  #hat {
+    content: url(/icons/Study_128px.png);
+  }
 }
