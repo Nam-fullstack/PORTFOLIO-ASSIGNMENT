@@ -1,4 +1,9 @@
 .about-me-section {
+    padding-top: 8vh;
+    @include flex;
+    flex-direction: column;
+    align-items: center;
+
     @include laptop {
         background-image: url(../../photos/backgrounds/Studio_1024.jpg);
         background-size: cover;
@@ -10,6 +15,11 @@
             font-size: $h1-l;
             background: rgba(0, 0, 0, 0.406);
             backdrop-filter: blur(4px);
+            margin-top: 0px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 70%;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
         }    
     }
 }
@@ -156,11 +166,15 @@
     height: auto;
     margin: 0 auto;
 
+    
+
     @include laptop {
         background: rgba(0, 0, 0, 0.41);
         backdrop-filter: blur(4px);           
         // blurs the transparent background, to make the text more "readable".
         // 4px was the perfect balance between readability and also not losing too mucch detail in the background
+        
+        text-shadow: 2px 2px 4px rgba(0 ,0, 0, 0.85);
     }
        
     p {
@@ -174,7 +188,10 @@
     a {
         color: $red-theme;
         font-weight: bold;
-        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.31);
+        
+        @include laptop {
+          text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.90);
+        }
 
         &:hover {
             text-decoration: underline;

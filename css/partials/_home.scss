@@ -29,6 +29,12 @@ h1 {
 }
 
 .homepage {
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 100vw;
+  max-width: 100vw;
+  overflow-y: scroll;
+
   .container {
     width: 100%;
     padding: 25vh 0vw;
@@ -412,5 +418,5 @@ h1 {
 
 // in the same #part, but don't have time to go back and change everything and do all the keyframes and again.
 
-// Starting transform: sclae(1) at 0% is smoother than starting it at 2%. Want it to already by growing without
+// Starting transform: scale(1) at 0% is smoother than starting it at 2%. Want it to already by growing without
 // any noticeable pause before it starts.
